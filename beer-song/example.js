@@ -5,7 +5,7 @@
     var str = "";
 
     if (number === 0) {
-      str = "no more bottles";
+      str = "No more bottles";
     } else if (number === 1) {
       str = "1 bottle";
     } else {
@@ -29,7 +29,7 @@
   }
 
   function next_bottle(current_verse) {
-    return bottles(next_verse(current_verse)) + " of beer on the wall.\n";
+    return bottles(next_verse(current_verse)).toLowerCase() + " of beer on the wall.\n";
   }
 
   function next_verse(current_verse) {
@@ -53,15 +53,11 @@
   };
 
   exports.verse = function(number) {
-    var line1 = bottles(number).capitalize() + " of beer on the wall, ";
-    var line2 = bottles(number) + " of beer.\n";
+    var line1 = bottles(number) + " of beer on the wall, ";
+    var line2 = bottles(number).toLowerCase() + " of beer.\n";
     var line3 = action(number);
     var line4 = next_bottle(number);
 
     return [line1, line2, line3, line4].join("");
-  };
-
-  String.prototype.capitalize = function() {
-    return this.charAt(0).toUpperCase() + this.slice(1);
   };
 })();
