@@ -35,4 +35,9 @@ describe("words()", function() {
     var expectedCounts = { constructor: 2 };
     expect(words("constructor Constructor")).toEqual(expectedCounts);
   });
+  
+  xit("counts properly international characters", function() {
+    var expectedCounts = { hola: 1, "qué": 1, tal: 1, "привет": 1 };
+    expect(words("¡Hola! ¿Qué tal? Привет!")).toEqual(expectedCounts);
+  });
 });
