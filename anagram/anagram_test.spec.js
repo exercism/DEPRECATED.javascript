@@ -55,4 +55,10 @@ describe('Anagram', function() {
     var matches = detector.match(['Banana']);
     expect(matches).toEqual([]);
   });
+
+  xit("also accepts a string as an argument",function() {
+    var detector = new Anagram("ant");
+    var matches = detector.match("tan");
+    expect(matches).toEqual(["tan"]);
+  });
 });
