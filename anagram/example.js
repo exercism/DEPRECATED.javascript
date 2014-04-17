@@ -1,34 +1,30 @@
-(function() {
-  'use strict';
+"use strict";
+module.exports = anagram;
 
-  function Anagram(word) {
-    this.word = word.toLowerCase();
-  }
-
-  Anagram.prototype.match = function(words) {
-    var matches = [];
-
-    for(var i = 0; i < words.length; i++) {
-      var currentWord = words[i];
-
-      if (currentWord.length == this.word.length && currentWord.toLowerCase() != this.word) {
-        var currentWordLetters = currentWord.toLowerCase().split('').sort();
-        var matchingWordLetters = this.word.split('').sort();
-
-        var isMatch = true;
-
-        for (var j = 0; j < currentWordLetters.length; j++) {
-          if (currentWordLetters[j] != matchingWordLetters[j]) {
-            isMatch = false;
-          }
-        }
-
-        if (isMatch) { matches.push(currentWord); }
-      }
-
-    }
-    return matches;
+function anagram(word) {
+  return {
+    // public API
+    matches: matches.bind(this, word)
   };
+}
 
-  module.exports = Anagram;
-})();
+function matches(word, words) {
+  words = Array.isArray(words) ? words : [].slice.call(arguments, 1);
+
+  return words.filter(function (candidate) {
+    return !sameWord(word, candidate) && isAnagram(word, candidate);
+  });
+}
+
+function sameWord(word, candidate) {
+  return word.toLowerCase() === candidate.toLowerCase();
+}
+
+function isAnagram(word, candiate) {
+  return normalize(word) === normalize(candiate);
+}
+
+function normalize(string) {
+  return string.toLowerCase().split("").sort().toString();
+}
+
