@@ -65,4 +65,11 @@ describe('Anagram', function() {
     expect(matches).toEqual([]);
   });
 
+  it("matches() accepts string arguments",function() {
+    var subject = anagram("ant");
+    var matches = subject.matches("stand", "tan", "at");
+
+    expect(matches).toEqual(["tan"]);
+  });
+
 });

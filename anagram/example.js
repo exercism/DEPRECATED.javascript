@@ -9,7 +9,7 @@ function anagram(word) {
 }
 
 function matches(word, words) {
-  words = Array.isArray(words) ? words : [words];
+  words = Array.isArray(words) ? words : [].slice.call(arguments, 1);
 
   return words.filter(function (candidate) {
     return !sameWord(word, candidate) && isAnagram(word, candidate);
