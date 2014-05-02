@@ -8,16 +8,16 @@ describe("Robot", function() {
 
     for (var i = 0; i < directions.length; i++) {
       var currentDirection = directions[i];
-      robot.orient(currentDirection)
+      robot.orient(currentDirection);
       expect(robot.bearing).toEqual(currentDirection);
-    };
+    }
   });
 
   xit("invalid robot bearing", function() {
     try {
       robot.orient("crood");
     } catch(exception) {
-      expect(exception).toEqual("Invalid Robot Bearing")
+      expect(exception).toEqual("Invalid Robot Bearing");
     }
   });
 
@@ -123,19 +123,19 @@ describe("Robot", function() {
   xit("series of instructions", function() {
     expect(robot.instructions("RAAL"))
       .toEqual(["turnRight", "advance", "advance", "turnLeft"]);
-  })
+  });
 
   xit("instruct robot", function() {
     robot.place({x: -2, y: 1, direction: "east"});
-    robot.evaluate("RLAALAL")
+    robot.evaluate("RLAALAL");
     expect(robot.coordinates).toEqual([0,2]);
     expect(robot.bearing).toEqual("west");
   });
 
   xit("instruct many robots", function() {
-    var robot1 = new Robot
-    var robot2 = new Robot
-    var robot3 = new Robot
+    var robot1 = new Robot();
+    var robot2 = new Robot();
+    var robot3 = new Robot();
     robot1.place({x: 0, y: 0, direction: "north"});
     robot2.place({x: 2, y: -7, direction: "east"});
     robot3.place({x: 8, y: 4, direction: "south"});
