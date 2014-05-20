@@ -59,5 +59,8 @@
     "saddle-points",
     "ocr-numbers",
     "meetup"
+  ],
+  "ignore": [
+    "node_modules"
   ]
 }
