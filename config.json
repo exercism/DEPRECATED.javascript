@@ -22,6 +22,7 @@
     "grains",
     "gigasecond",
     "triangle",
+    "clock",
     "scrabble-score",
     "roman-numerals",
     "circular-buffer",
