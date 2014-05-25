@@ -1,33 +1,34 @@
-var min = 1000 * 60;
-var hr = min * 60;
+exports.at = at;
 
-var at = exports.at = function (hours, minutes) {
-  var out = (~~hours * hr) + (~~minutes * min);
+function at(hours, minutes) {
+  var min = 1000 * 60;
+  var hr = min * 60;
 
-  var self = {
-    valueOf: function () {
-      return out;
-    },
+  var clock = {};
+  var value = (~~hours * hr) + (~~minutes * min);
 
-    toString: function () {
-      var time = new Date(+self).toISOString().split('T')[1].split(':');
-      return time[0] + ":" + time[1];
-    },
+  clock.valueOf = function () {
+    return value;
+  };
 
-    plus: function (minutes) {
-      out += ~~minutes * min;
-      return self;
-    },
+  clock.toString = function () {
+    var time = new Date(value).toISOString().split('T')[1].split(':');
+    return time[0] + ":" + time[1];
+  };
 
-    minus: function (minutes) {
-      out -= ~~minutes * min;
-      return self;
-    },
+  clock.plus = function (minutes) {
+    value += ~~minutes * min;
+    return clock;
+  };
 
-    equals: function (clock) {
-      return +self === +clock;
-    }
-  }
+  clock.minus = function (minutes) {
+    value -= ~~minutes * min;
+    return clock;
+  };
 
-  return self;
+  clock.equals = function (other) {
+    return +clock === +other;
+  };
+
+  return Object.create(clock);
 };
