@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = function Palindromes(options) {
-
   this.maxFactor = options.maxFactor;
   this.minFactor = options.minFactor || 1;
 
