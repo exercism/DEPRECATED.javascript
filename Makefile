@@ -1,6 +1,7 @@
 # assignments
 ASSIGNMENT ?= ""
-ASSIGNMENTS = $(shell find . -maxdepth 1 -mindepth 1 -type d -not -path '*/\.*' | tr -d './' | sort | grep -Ev node_modules | grep -Ev bin)
+IGNOREDIRS := ".git|node_modules|bin"
+ASSIGNMENTS = $(shell find . -maxdepth 1 -mindepth 1 -type d -not -path '*/\.*' | tr -d './' | sort | grep -Ev $(IGNOREDIRS))
 
 # output directories
 TMPDIR ?= "/tmp"
