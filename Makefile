@@ -1,6 +1,6 @@
 # assignments
 ASSIGNMENT ?= ""
-IGNOREDIRS := "^(.git|node_modules|bin)$$"
+IGNOREDIRS := "^(\.git|bin|node_modules)$$"
 ASSIGNMENTS = $(shell find . -maxdepth 1 -mindepth 1 -type d -exec basename {} \; | sort | grep -Ev $(IGNOREDIRS))
 
 # output directories
