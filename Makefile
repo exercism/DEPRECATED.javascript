@@ -1,7 +1,7 @@
 # assignments
 ASSIGNMENT ?= ""
 IGNOREDIRS := "^(\.git|bin|node_modules)$$"
-ASSIGNMENTS = $(shell find . -maxdepth 1 -mindepth 1 -type d -exec basename {} \; | sort | grep -Ev $(IGNOREDIRS))
+ASSIGNMENTS = $(shell find . -maxdepth 1 -mindepth 1 -type d -exec basename -a {} + | sort | grep -Ev $(IGNOREDIRS))
 
 # output directories
 TMPDIR ?= "/tmp"
