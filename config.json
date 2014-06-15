@@ -66,7 +66,7 @@
   "deprecated": [
 
   ],
-  "ignore": [
+  "ignored": [
     "node_modules"
   ]
 }
