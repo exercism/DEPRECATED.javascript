@@ -68,5 +68,8 @@
   ],
   "ignored": [
     "node_modules"
+  ],
+  "foregone": [
+
   ]
 }
