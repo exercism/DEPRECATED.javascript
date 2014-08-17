@@ -5,7 +5,7 @@
     var splitDNA = dnaString.split('');
 
     this.nucleotideCounts = { A : 0, T : 0, C : 0, G : 0 };
-    this.validNucleotides = 'ATCGU';
+    this.validNucleotides = 'ATCG';
 
     splitDNA.reduce(this.countAll, this.nucleotideCounts);
   }
