@@ -35,11 +35,6 @@ describe('DNA', function() {
     expect(dna.count('T')).toEqual(2);
   });
 
-  xit('has no uracil', function(){
-    var dna = new DNA('GGTTGG');
-    expect(dna.count('U')).toEqual(0);
-  });
-
   xit('validates nucleotides', function(){
     var dna = new DNA('GGTTGG');
     expect(function(){
