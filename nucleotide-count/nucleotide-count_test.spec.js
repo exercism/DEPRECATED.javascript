@@ -1,51 +1,44 @@
-var DNA = require('./nucleotide-count');
+var dna = require('./nucleotide-count');
 
 describe('DNA', function() {
 
-  it('has no nucleotides', function(){
-    var expected = { A : 0, T : 0, C : 0, G : 0 },
-        dna = new DNA('');
-    expect(dna.nucleotideCounts).toEqual(expected);
+  it('Empty DNA strand has no adenosine', function() {
+    expect(0, dna().count('A'));
   });
 
-  xit('has no adenosine', function(){
-    var dna = new DNA('');
-    expect(dna.count('A')).toEqual(0);
+  xit('Repetitive cytidine gets counted', function() {
+    expect(5, dna('CCCCC').count('C'));
   });
 
-  xit('repetitive cytidine gets counts', function(){
-    var dna = new DNA('CCCCC');
-    expect(dna.count('C')).toEqual(5);
+  xit('Counts only thymidine', function() {
+    expect(1, dna('GGGGGTAACCCGG').count('T'));
   });
 
-  xit('repetitive sequence has only guanosine', function(){
-    var dna = new DNA('GGGGGGGG'),
-        expected = { A : 0, T : 0, C : 0, G : 8 };
-    expect(dna.nucleotideCounts).toEqual(expected);
+  xit('Counts a nucleotide only once', function() {
+    var acid = dna('CGATTGGG');
+    acid.count('T');
+    acid.count('T');
+    expect(2, acid.count('T'));
   });
 
-  xit('counts only thymidine', function(){
-    var dna = new DNA('GGGGTAACCCGG');
-    expect(dna.count('T')).toEqual(1);
+  xit('Empty DNS strand has no nucleotides', function() {
+    var expected = {A: 0, T: 0, C: 0, G: 0};
+    expect(expected, dna().histogram());
   });
 
-  xit('counts a nucleotide only once', function(){
-    var dna = new DNA('GGTTGG');
-    dna.count('T');
-    expect(dna.count('T')).toEqual(2);
+  xit('Repetitive sequence has only guanosine', function() {
+    var expected = {A: 0, T: 0, C: 0, G: 8};
+    expect(expected, dna('GGGGGGGG').histogram());
   });
 
-  xit('validates nucleotides', function(){
-    var dna = new DNA('GGTTGG');
-    expect(function(){
-      dna.count('X');
-    }).toThrow(new Error("Invalid Nucleotide"));
+  xit('Counts all nucleotides', function() {
+    var strand = 'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC';
+    var expected = {A: 20, T: 21, C: 17, G: 12};
+    expect(expected, dna(strand).histogram());
   });
 
-  xit('counts all nucleotides', function(){
-    var dna = new DNA("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"),
-        expected = { A : 20, T : 21, G : 17, C : 12 };
-    expect(dna.nucleotideCounts).toEqual(expected);
+  xit('Validates DNA', function() {
+    expect(dna.bind(null, 'JOHNNYAPPLESEED')).toThrow();
   });
 
 });
