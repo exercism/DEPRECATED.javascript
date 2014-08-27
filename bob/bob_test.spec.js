@@ -59,7 +59,7 @@ describe("Bob", function() {
   });
 
   xit("calmly speaking about umlauts", function() {
-    var result = bob.hey("\xdcML\xe4\xdcTS");
+    var result = bob.hey("\xfcML\xe4\xdcTS");
     expect(result).toEqual('Whatever.');
   });
 
