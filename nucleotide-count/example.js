@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = dna;
+// module.exports = dna;
 
 function dna(strand) {
   var acids = (strand || '');
@@ -22,9 +22,9 @@ function count(acids, acid) {
 
 function histogram(acids) {
   return {
-    A: count.call(acids, 'A'),
-    C: count.call(acids, 'C'),
-    G: count.call(acids, 'G'),
-    T: count.call(acids, 'T')
+    A: count(acids, 'A'),
+    C: count(acids, 'C'),
+    G: count(acids, 'G'),
+    T: count(acids, 'T')
   };
 }
