@@ -1,6 +1,6 @@
 'use strict';
 
-// module.exports = dna;
+module.exports = dna;
 
 function dna(strand) {
   var acids = (strand || '');
