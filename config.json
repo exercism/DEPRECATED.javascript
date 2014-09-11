@@ -61,7 +61,8 @@
     "queen-attack",
     "saddle-points",
     "ocr-numbers",
-    "meetup"
+    "meetup",
+    "bracket-push"
   ],
   "deprecated": [
 
