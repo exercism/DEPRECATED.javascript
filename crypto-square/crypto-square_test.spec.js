@@ -1,4 +1,4 @@
-var Crypto = require('./example');
+var Crypto = require('./crypto-square');
 
 describe("Crypto",function() {
   it("normalize strange characters",function() {
