@@ -48,7 +48,7 @@ describe("Crypto",function() {
 
   xit("normalized cipher text",function() {
     var crypto = new Crypto('Madness, and then illumination.');
-    expect(crypto.normalizeCiphertext()).toEqual('msemo aanin dninn dlaet ltshu i');
+    expect(crypto.normalizeCiphertext()).toEqual('msemoa anindn inndla etltsh ui');
   });
 
   xit("more normalized cipher text",function() {

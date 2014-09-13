@@ -16,7 +16,7 @@ module.exports = function(input) {
 		var plainText = this.normalizePlaintext();
 		var chunkSize = this.size();
 
-		var splitRegex = new RegExp(".{1," + chunkSize + "}","g");
+		var splitRegex = new RegExp('.{1,' + chunkSize + '}','g');
 		return plainText.match(splitRegex);
 	};
 
@@ -33,21 +33,23 @@ module.exports = function(input) {
 
 		for (i = 0; i < textSegments.length; i++) {
 			currentSegment = textSegments[i];
-			
+
 			for (j = 0; j < currentSegment.length; j++) {
 				currentLetter = currentSegment[j];
-				columns[j].push(currentLetter);	
+				columns[j].push(currentLetter);
 			}
 		}
 
 		for (i = 0; i < columns.length; i++) {
-			columns[i] = columns[i].join("");
+			columns[i] = columns[i].join('');
 		}
 
-		return columns.join("");
+		return columns.join('');
 	};
 
 	this.normalizeCiphertext = function() {
-		return this.ciphertext().match(/.{1,5}/g).join(" ");
+    var chunkSize = this.size();
+    var splitRegex = new RegExp('.{1,' + chunkSize + '}','g');
+		return this.ciphertext().match(splitRegex).join(' ');
 	};
 };
