@@ -10,7 +10,7 @@ describe("Bob", function() {
 
   xit("shouting", function() {
     var result = bob.hey('WATCH OUT!');
-    expect(result).toEqual('Woah, chill out!');
+    expect(result).toEqual('Whoa, chill out!');
   });
 
   xit("asking a question", function() {
@@ -30,12 +30,12 @@ describe("Bob", function() {
 
   xit("forceful questions", function() {
     var result = bob.hey('WHAT THE HELL WERE YOU THINKING?');
-    expect(result).toEqual('Woah, chill out!');
+    expect(result).toEqual('Whoa, chill out!');
   });
 
   xit("shouting numbers", function() {
     var result = bob.hey('1, 2, 3 GO!');
-    expect(result).toEqual('Woah, chill out!');
+    expect(result).toEqual('Whoa, chill out!');
   });
 
   xit("only numbers", function() {
@@ -50,12 +50,12 @@ describe("Bob", function() {
 
   xit("shouting with special characters", function() {
     var result = bob.hey('ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!');
-    expect(result).toEqual('Woah, chill out!');
+    expect(result).toEqual('Whoa, chill out!');
   });
 
   xit("shouting with umlauts", function() {
     var result = bob.hey("\xdcML\xc4\xdcTS!");
-    expect(result).toEqual('Woah, chill out!');
+    expect(result).toEqual('Whoa, chill out!');
   });
 
   xit("calmly speaking about umlauts", function() {
@@ -65,7 +65,7 @@ describe("Bob", function() {
 
   xit("shouting with no exclamation mark", function () {
     var result = bob.hey('I HATE YOU');
-    expect(result).toEqual('Woah, chill out!');
+    expect(result).toEqual('Whoa, chill out!');
   });
 
   xit("statement containing question mark", function() {
