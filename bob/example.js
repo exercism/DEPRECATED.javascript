@@ -17,7 +17,7 @@ function Bob() {
     if (isSilence(message)) {
       return "Fine. Be that way!";
     } else if (isShouting(message)) {
-      return "Woah, chill out!";
+      return "Whoa, chill out!";
     } else if (isAQuestion(message)) {
       return "Sure.";
     } else {
