@@ -2,10 +2,9 @@
 
 module.exports = function (input) {
   var counts = {};
-  var tokens = String(input).match(/\b[a-z0-9]+\b/gi) || [];
+  var words = input.split(/\s/);
 
-  tokens.forEach(function (token) {
-    var word = token.toLowerCase();
+  words.forEach(function (word) {
     counts[word] = counts.hasOwnProperty(word) ? counts[word] + 1 : 1;
   });
 
