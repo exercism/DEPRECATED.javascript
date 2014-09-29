@@ -22,12 +22,12 @@ describe('Hamming', function () {
     expect(compute('GGACG', 'GGTCG')).toEqual(1);
   });
 
-  xit('ignores extra length on first strand when longer', function () {
-    expect(compute('AAAG', 'AAA')).toEqual(0);
+  xit('no defined hamming distance for unequal string (first way)', function () {
+    expect(compute('AAAG', 'AAA')).toBeUndefined();
   });
 
-  xit('ignores extra length on other strand when longer', function () {
-    expect(compute('AAA', 'AAAG')).toEqual(0);
+  xit('no defined hamming distance for unequal string (second way)', function () {
+    expect(compute('AAA', 'AAAG')).toBeUndefined();
   });
 
   xit('large hamming distance', function () {
