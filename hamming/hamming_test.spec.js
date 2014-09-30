@@ -22,14 +22,6 @@ describe('Hamming', function () {
     expect(compute('GGACG', 'GGTCG')).toEqual(1);
   });
 
-  xit('no defined hamming distance for unequal string (first way)', function () {
-    expect(compute('AAAG', 'AAA')).toBeUndefined();
-  });
-
-  xit('no defined hamming distance for unequal string (second way)', function () {
-    expect(compute('AAA', 'AAAG')).toBeUndefined();
-  });
-
   xit('large hamming distance', function () {
     expect(compute('GATACA', 'GCATAA')).toEqual(4);
   });
