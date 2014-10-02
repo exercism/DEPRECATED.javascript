@@ -18,9 +18,9 @@ describe("Space Age", function() {
   });
 
   xit("age in venus years", function() {
-    var age = new SpaceAge(189839836);
-    expect(age.onEarth()).toEqual(6.02);
-    expect(age.onVenus()).toEqual(9.78);
+    var age = new SpaceAge(189717963);
+    expect(age.onEarth()).toEqual(6.01);
+    expect(age.onVenus()).toEqual(9.77);
   });
 
   xit("age in mars years", function() {
