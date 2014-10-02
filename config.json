@@ -12,7 +12,6 @@
     "beer-song",
     "nucleotide-count",
     "rna-transcription",
-    "point-mutations",
     "phone-number",
     "grade-school",
     "robot-name",
@@ -65,7 +64,7 @@
     "bracket-push"
   ],
   "deprecated": [
-
+    "point-mutations"
   ],
   "ignored": [
     "node_modules"
