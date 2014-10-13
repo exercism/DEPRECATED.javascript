@@ -3,7 +3,7 @@ var Robot = require('./robot-name');
 describe("Robot", function() {
   it("has a name", function() {
     var robot = new Robot();
-    expect(robot.name).toMatch(/\w{2}\d{3}/);
+    expect(robot.name).toMatch(/^[A-Z]{2}\d{3}$/);
   });
 
   xit("name is the same each time", function() {
