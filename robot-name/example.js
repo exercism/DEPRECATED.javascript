@@ -2,7 +2,7 @@ function Robot() {
   'use strict';
 
   this.generateName = function() {
-    return this.generateRandomChars(3) + this.generateRandomNumbers(3);
+    return this.generateRandomChars(2) + this.generateRandomNumbers(3);
   };
 
   this.generateRandomChars = function(count) {
@@ -30,7 +30,7 @@ function Robot() {
   this.name = this.generateName();
 
   this.reset = function() {
-    this.name = "ABC123";
+    this.name = null;
   };
 }
 
