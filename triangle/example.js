@@ -7,7 +7,7 @@ function Triangle(a,b,c) {
     var name = "scalene";
 
     if (this.isIllegal()) {
-      name = "illegal";
+      throw new TypeError('illegal');
     } else if (this.isEquilateral()) {
       name = "equilateral";
     } else if (this.isIsosceles()) {
