@@ -61,7 +61,8 @@
     "saddle-points",
     "ocr-numbers",
     "meetup",
-    "bracket-push"
+    "bracket-push",
+    "two-bucket"
   ],
   "deprecated": [
     "point-mutations"
