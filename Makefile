@@ -21,6 +21,7 @@ test-assignment: node_modules
 	@echo "running tests for: $(ASSIGNMENT)"
 	@cp $(ASSIGNMENT)/$(TSTFILE) $(OUTDIR)
 	@cp $(ASSIGNMENT)/$(EXAMPLE) $(OUTDIR)/$(ASSIGNMENT).$(FILEEXT)
+	@sed -i.original 's/\bxit\b/it/g' $(OUTDIR)/*spec.$(FILEEXT)
 	@./node_modules/.bin/jasmine-node --captureExceptions $(OUTDIR)/$(TSTFILE)
 
 test:
