@@ -9,6 +9,10 @@ describe("bracket push", function() {
     expect(bracket("{{")).toEqual(false);
   });
 
+  xit("returns false if brackets are out of order", function() {
+    expect(bracket("}{")).toEqual(false);
+  });
+
   xit("checks bracketing in more than one pair of brackets", function() {
     expect(bracket("{}[]")).toEqual(true);
   });
