@@ -21,6 +21,14 @@ describe('SumOfMultiples', function () {
     expect(SumOfMultiples([7, 13, 17]).to(20)).toBe(51);
   });
 
+  xit('[4, 6] to 15', function () {
+    expect(SumOfMultiples([4, 6]).to(15)).toBe(30);
+  });
+
+  xit('[5, 6, 8] to 150', function () {
+    expect(SumOfMultiples([5, 6, 8]).to(150)).toBe(4419);
+  });
+
   xit('[43, 47] to 10000', function () {
     expect(SumOfMultiples([43, 47]).to(10000)).toBe(2203160);
   });
