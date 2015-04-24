@@ -27,14 +27,14 @@ describe("Queens", function() {
   xit("toString representation", function() {
     var positioning = {white: [2, 4], black: [6, 6]};
     var queens = new Queens(positioning);
-    var board = "O O O O O O O O\n\
-O O O O O O O O\n\
-O O O O W O O O\n\
-O O O O O O O O\n\
-O O O O O O O O\n\
-O O O O O O O O\n\
-O O O O O O B O\n\
-O O O O O O O O\n\
+    var board = "_ _ _ _ _ _ _ _\n\
+_ _ _ _ _ _ _ _\n\
+_ _ _ _ W _ _ _\n\
+_ _ _ _ _ _ _ _\n\
+_ _ _ _ _ _ _ _\n\
+_ _ _ _ _ _ _ _\n\
+_ _ _ _ _ _ B _\n\
+_ _ _ _ _ _ _ _\n\
 "
     expect(queens.toString()).toEqual(board);
   });
