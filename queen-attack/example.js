@@ -42,7 +42,7 @@ module.exports = function(options) {
         } else if (this.black[0] === i && this.black[1] === j) {
           boardRepresentation += "B";
         } else {
-          boardRepresentation += "O";
+          boardRepresentation += "_";
         }
 
         if (j < 7) { boardRepresentation += " "; }
