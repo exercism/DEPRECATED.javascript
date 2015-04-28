@@ -1,19 +1,19 @@
 var toRna = require('./rna-transcription');
 
 describe("toRna()", function() {
-  it("transcribes cytidine to guanosine", function() {
+  it("transcribes cytosine to guanine", function() {
     expect(toRna('C')).toEqual('G');
   });
 
-  xit("transcribes guanosine to cytidine", function() {
+  xit("transcribes guanine to cytosine", function() {
     expect(toRna('G')).toEqual('C');
   });
 
-  xit("transcribes adenosine to uracil", function() {
+  xit("transcribes adenine to uracil", function() {
     expect(toRna('A')).toEqual('U');
   });
 
-  xit("transcribes thymidine to adenosine", function() {
+  xit("transcribes thymine to adenine", function() {
     expect(toRna('T')).toEqual('A');
   });
 
