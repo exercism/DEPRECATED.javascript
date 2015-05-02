@@ -68,6 +68,7 @@
     "point-mutations"
   ],
   "ignored": [
+    "docs",
     "node_modules"
   ],
   "foregone": [
