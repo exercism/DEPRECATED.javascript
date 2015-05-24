@@ -23,7 +23,7 @@ function Triangle(a,b,c) {
 
   this.violatesInequality = function() {
     var a = this.sides[0], b = this.sides[1], c = this.sides[2];
-    return (a + b <= c) || (a + c <= b) || (b + c <= a);
+    return (a + b < c) || (a + c < b) || (b + c < a);
   };
 
   this.hasImpossibleSides = function() {
