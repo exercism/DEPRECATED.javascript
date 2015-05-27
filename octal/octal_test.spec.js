@@ -38,4 +38,8 @@ describe('octal', function() {
     expect(new Octal('carrot').toDecimal()).toEqual(0);
   });
 
+  xit('considers the digit 8 as invalid', function() {
+    expect(new Octal('12345678').toDecimal()).toEqual(0);
+  });
+
 });
