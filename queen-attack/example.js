@@ -22,10 +22,14 @@ module.exports = function(options) {
       canAttack = true;
     }
 
-    var yDiagonal = this.white[0] - this.black[0];
-    var xDiagonal = this.white[1] - this.black[1];
+    var yDistance = this.white[0] - this.black[0];
+    var xDistance = this.white[1] - this.black[1];
 
-    if (xDiagonal === yDiagonal) {
+    if (xDistance === yDistance) {
+      canAttack = true;
+    }
+
+    if (xDistance === -yDistance) {
       canAttack = true;
     }
 
