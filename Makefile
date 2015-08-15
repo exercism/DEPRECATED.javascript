@@ -19,6 +19,7 @@ node_modules: package.json
 
 test-assignment: node_modules
 	@echo "running tests for: $(ASSIGNMENT)"
+	@cp big-integer.$(FILEEXT) $(OUTDIR)
 	@cp $(ASSIGNMENT)/$(TSTFILE) $(OUTDIR)
 	@cp $(ASSIGNMENT)/$(EXAMPLE) $(OUTDIR)/$(ASSIGNMENT).$(FILEEXT)
 	@sed -i.original 's/\bxit\b/it/g' $(OUTDIR)/*spec.$(FILEEXT)
