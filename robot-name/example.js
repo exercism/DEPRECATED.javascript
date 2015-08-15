@@ -1,37 +1,53 @@
+function randomLetter () {
+  var letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  return letters.charAt(Math.floor(Math.random() * letters.length));
+}
+
 function Robot() {
   'use strict';
 
-  this.generateName = function() {
-    return this.generateRandomChars(2) + this.generateRandomNumbers(3);
-  };
+  this._name = this.generateName();
+}
 
-  this.generateRandomChars = function(count) {
-    return this.randomCharsFromString("ABCDEFGHIJKLMNOPQRSTUVWXYZ",count);
-  };
+Robot.usedNames = {};
 
-  this.generateRandomNumbers = function(count) {
-    return this.randomCharsFromString("0123456789",count);
-  };
+Robot.prototype = {
+  constructor: Robot,
 
-  this.randomCharsFromString = function(string,count) {
-    var selectedChars = "";
+  generateName: function () {
+    // This awesome err msg will never see the light of day. ;_; Checking the
+    // length was slowing down the program too much.
+    //
+//     if (Object.keys(this.constructor.usedNames).length >= 676000) {
+//       throw new Error("All possible names have been taken. " +
+//                       "Our robots are taking over the world! : D");
+//     }
 
-    for (var i = 0; i < count; i++) {
-      selectedChars += this.randomCharFromString(string);
+    var name = randomLetter().toUpperCase();
+    name += randomLetter().toUpperCase();
+    name += (Math.random() + '').substr(2, 3);
+
+    if (this.constructor.usedNames[name]) {
+      return this.generateName();
     }
 
-    return selectedChars;
-  };
+    this.constructor.usedNames[name] = true;
 
-  this.randomCharFromString = function(string) {
-    return string[Math.floor(Math.random() * string.length)];
-  };
+    return name;
+  },
 
-  this.name = this.generateName();
+  get name () { return this._name; },
 
-  this.reset = function() {
-    this.name = null;
-  };
-}
+  set name (newName) {
+    if (!(/^[A-Z]{2}\d{3}$/).test(newName)) {
+      throw new Error("Name must be 2 capital letters followed by 3 ints.");
+    }
+
+    this._name = newName;
+  },
+
+  reset: function() { this.name = this.generateName(); }
+};
 
 module.exports = Robot;
