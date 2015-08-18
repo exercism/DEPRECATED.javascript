@@ -27,7 +27,7 @@
   };
 
   CustomSet.prototype.disjoint = function(other) {
-    if (this.data.length === 0) { return false };
+    if (this.data.length === 0) { return true };
     for (var i = 0; i < this.data.length; i++) {
       if (other.data.indexOf(this.data[i]) !== -1) {
         return false;

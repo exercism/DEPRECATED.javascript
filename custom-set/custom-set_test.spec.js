@@ -27,7 +27,7 @@ describe('CustomSet', function() {
     var actual2 = new CustomSet([1, 2]).disjoint(new CustomSet([2, 3]));
     expect(actual2).toBe(false);
     var actual3 = new CustomSet().disjoint(new CustomSet());
-    expect(actual3).toBe(false);
+    expect(actual3).toBe(true);
   });
 
   xit('can be emptied', function() {
