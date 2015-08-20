@@ -1,21 +1,35 @@
-(function () {
-  'use strict';
+var BigInt = require('./big_integer');
 
-  function Grains() {}
+/**
+ * @author github.com/nonsensery
+ * @class Grains
+ *
+ * Computes the number of grains on the squares of a
+ * chess board, starting with one grain on the first
+ * square, and doubling with each successive square.
+ */
+function Grains() {
+  // no op!
+}
 
-  Grains.prototype.square = function (n) {
-    return Math.pow(2, n - 1);
-  };
+/**
+ * Gets the number of grains on the nth square.
+ */
+Grains.prototype.square = function(num) {
+  return BigInt(2).pow(num - 1).toString();
+};
 
-  Grains.prototype.total = function () {
-    var n, total = 0;
+/**
+ * Gets the total number of grains on all squares.
+ */
+Grains.prototype.total = function () {
+  var total = BigInt(0);
 
-    for (n = 1; n <= 64; n++) {
-      total += this.square(n);
-    }
+  for (var squareNum = 1; squareNum <= 64; ++squareNum) {
+    total = total.add(this.square(squareNum));
+  }
 
-    return total;
-  };
+  return total.toString();
+};
 
-  module.exports = Grains;
-})();
+module.exports = Grains;
