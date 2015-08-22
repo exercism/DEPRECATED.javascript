@@ -5,22 +5,21 @@
   "active": true,
   "problems": [
     "hello-world",
-    "bob",
-    "word-count",
+		"leap",
     "hamming",
+		"rna-transcription",
+		"bob",
+		"gigasecond",
+		"word-count",
+		"beer-song",
+    "phone-number",
     "anagram",
     "food-chain",
-    "beer-song",
-    "nucleotide-count",
-    "rna-transcription",
-    "phone-number",
     "grade-school",
     "robot-name",
-    "leap",
     "etl",
     "space-age",
     "grains",
-    "gigasecond",
     "triangle",
     "clock",
     "scrabble-score",
@@ -67,6 +66,7 @@
     "two-bucket"
   ],
   "deprecated": [
+		"nucleotide-count",
     "point-mutations"
   ],
   "ignored": [
