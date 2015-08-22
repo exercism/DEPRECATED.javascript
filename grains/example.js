@@ -1,4 +1,4 @@
-var BigInt = require('./big-integer');
+var BigInt = require('./big_integer');
 
 /**
  * @author github.com/nonsensery
