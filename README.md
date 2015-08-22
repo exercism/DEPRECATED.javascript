@@ -4,6 +4,8 @@ Exercism exercises in JavaScript
 
 ## Running Unit Test Suite
 
+The following commands assume that you are in the 'xjavascript' directory:
+
 ### All Assignments
 
     % make test
