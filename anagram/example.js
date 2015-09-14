@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 module.exports = anagram;
 
 function anagram(word) {
@@ -25,6 +25,6 @@ function isAnagram(word, candiate) {
 }
 
 function normalize(string) {
-  return string.toLowerCase().split("").sort().toString();
+  return string.toLowerCase().split('').sort().toString();
 }
 

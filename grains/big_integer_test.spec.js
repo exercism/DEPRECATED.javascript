@@ -1,7 +1,7 @@
 var BigInt = require('./big_integer');
 
 
-describe("The big-integer module's returned object", function () {
+describe('The big-integer module\'s returned object', function () {
   var bigI;
 
   beforeEach(function() {
@@ -12,13 +12,13 @@ describe("The big-integer module's returned object", function () {
     bigI = null;
   });
 
-  it("is not a number", function () {
+  it('is not a number', function () {
     expect(typeof 42).toBe('number');
     expect(typeof bigI).not.toBe('number');
     expect(typeof bigI).toBe('object');
   });
 
-  it("can be compared to a stringified number by calling '.toString()'",
+  it('can be compared to a stringified number by calling \'.toString()\'',
      function () {
 
     expect(bigI).not.toBe(42);
@@ -34,20 +34,20 @@ describe("The big-integer module's returned object", function () {
     // "Expected false to be true."
   });
 
-  it("is immutable", function () {
+  it('is immutable', function () {
     bigI.add(10);
     expect(bigI.toString()).toBe('42');
     bigI.subtract(10);
     expect(bigI.toString()).toBe('42');
   });
 
-  it("can add", function () {
+  it('can add', function () {
     bigI = bigI.add(42);
 
     expect(bigI.toString()).toBe('84');
   });
 
-  it("can perform power operations", function () {
+  it('can perform power operations', function () {
     bigI = BigInt(10);
     bigI = bigI.pow(2);
     expect(bigI.toString()).toBe('100');

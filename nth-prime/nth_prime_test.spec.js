@@ -21,7 +21,7 @@ describe('Prime',function() {
   xit('weird case',function() {
     expect( function () {
       prime.nth(0);
-    }).toThrow(new Error("Prime is not possible"));
+    }).toThrow(new Error('Prime is not possible'));
   });
 
 });

@@ -2,7 +2,7 @@
 
 module.exports = {
   nth: function(nthPrime) {
-    if (nthPrime === 0) { throw new Error("Prime is not possible"); }
+    if (nthPrime === 0) { throw new Error('Prime is not possible'); }
     this.generatePrimes(200000);
     return this.realPrimes[nthPrime - 1];
   },

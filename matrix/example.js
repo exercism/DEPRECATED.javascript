@@ -12,7 +12,7 @@ function columnsFromRows(rows) {
 }
 
 function parseRows(description) {
-  return description.split("\n").map(function (row) {
+  return description.split('\n').map(function (row) {
     return row.split(' ').map(function (char) {
       return parseInt(char, 10);
     });

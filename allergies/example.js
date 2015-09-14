@@ -4,8 +4,8 @@ function Allergies(allergenIndex) {
   this.allergenIndex = allergenIndex;
 }
 
-Allergies.possibleAllergies = [ "eggs", "peanuts", "shellfish", "strawberries",
-                                 "tomatoes", "chocolate", "pollen", "cats"];
+Allergies.possibleAllergies = [ 'eggs', 'peanuts', 'shellfish', 'strawberries',
+                                 'tomatoes', 'chocolate', 'pollen', 'cats'];
 
 Allergies.prototype = {
   list: function() {

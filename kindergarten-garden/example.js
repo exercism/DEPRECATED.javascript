@@ -33,7 +33,7 @@ function getPlants(pots, index) {
 }
 
 function parse(diagram) {
-  return diagram.split("\n").map(function (row) {
+  return diagram.split('\n').map(function (row) {
     return row.split('').map(function (sign) {
       return plants[sign];
     });

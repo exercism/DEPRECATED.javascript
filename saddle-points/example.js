@@ -8,11 +8,11 @@ module.exports = function Matrix(matrix) {
   this.rows = [];
   this.columns = [];
 
-  var rows = matrix.split("\n");
+  var rows = matrix.split('\n');
   var i, j, currentRow;
 
   for (i = 0; i < rows.length; i++) {
-    currentRow = rows[i].replace(/^\s+|\s+$/g,'').split(" ").map( toInt );
+    currentRow = rows[i].replace(/^\s+|\s+$/g,'').split(' ').map( toInt );
     this.rows.push(currentRow);
   }
 

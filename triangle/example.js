@@ -4,14 +4,14 @@ function Triangle(a,b,c) {
   this.sides = [ a, b, c ];
 
   this.kind = function() {
-    var name = "scalene";
+    var name = 'scalene';
 
     if (this.isIllegal()) {
       throw new TypeError('illegal');
     } else if (this.isEquilateral()) {
-      name = "equilateral";
+      name = 'equilateral';
     } else if (this.isIsosceles()) {
-      name = "isosceles";
+      name = 'isosceles';
     }
 
     return name;

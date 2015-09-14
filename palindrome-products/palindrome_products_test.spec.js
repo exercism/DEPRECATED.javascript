@@ -1,9 +1,9 @@
 'use strict';
 var Palindromes = require('./palindrome_products');
 
-describe("Palindrome", function() {
+describe('Palindrome', function() {
 
-  it("largest palindrome from single digit factors", function() {
+  it('largest palindrome from single digit factors', function() {
     var palindromes = new Palindromes({maxFactor: 9});
     palindromes.generate();
 
@@ -12,7 +12,7 @@ describe("Palindrome", function() {
     expect([[[3, 3], [1, 9]], [[1, 9], [3, 3]]]).toContain(largest.factors);
   });
 
-  xit("largets palindrome from double digit factors", function() {
+  xit('largets palindrome from double digit factors', function() {
     var palindromes = new Palindromes({ maxFactor: 99, minFactor: 10 });
     palindromes.generate();
 
@@ -21,7 +21,7 @@ describe("Palindrome", function() {
     expect(largest.factors).toEqual([[91, 99]]);
   });
 
-  xit("smallest palindrome from double digit factors", function() {
+  xit('smallest palindrome from double digit factors', function() {
     var palindromes = new Palindromes({ maxFactor: 99, minFactor: 10 });
     palindromes.generate();
 
@@ -30,7 +30,7 @@ describe("Palindrome", function() {
     expect(smallest.factors).toEqual([[11, 11]]);
   });
 
-  xit("largest palindrome from triple digit factors", function() {
+  xit('largest palindrome from triple digit factors', function() {
     var palindromes = new Palindromes({ maxFactor: 999, minFactor: 100 });
     palindromes.generate();
 
@@ -39,7 +39,7 @@ describe("Palindrome", function() {
     expect(largest.factors).toEqual([[913, 993]]);
   });
 
-  xit("smallest palindrome from triple digit factors", function() {
+  xit('smallest palindrome from triple digit factors', function() {
     var palindromes = new Palindromes({ maxFactor: 999, minFactor: 100 });
     palindromes.generate();
 

@@ -14,7 +14,7 @@ Octal.prototype.toDecimal = function() {
 Octal.prototype.digitValue = function(value) {
   var result = Number(value);
   return (result < BASE)? result : Number.NaN;
-}
+};
 
 Octal.prototype.accumulator = function(decimal, digit, index) {
   return decimal += digit * Math.pow(BASE, index);

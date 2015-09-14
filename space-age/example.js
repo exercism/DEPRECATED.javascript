@@ -21,35 +21,35 @@ function SpaceAge(seconds) {
   };
 
   this.onMercury = function() {
-    return this.yearsOnPlanet("mercury");
+    return this.yearsOnPlanet('mercury');
   };
 
   this.onVenus = function() {
-    return this.yearsOnPlanet("venus");
+    return this.yearsOnPlanet('venus');
   };
 
   this.onEarth = function() {
-    return this.yearsOnPlanet("earth");
+    return this.yearsOnPlanet('earth');
   };
 
   this.onMars = function() {
-    return this.yearsOnPlanet("mars");
+    return this.yearsOnPlanet('mars');
   };
 
   this.onJupiter = function() {
-    return this.yearsOnPlanet("jupiter");
+    return this.yearsOnPlanet('jupiter');
   };
 
   this.onSaturn = function() {
-    return this.yearsOnPlanet("saturn");
+    return this.yearsOnPlanet('saturn');
   };
 
   this.onUranus = function() {
-    return this.yearsOnPlanet("uranus");
+    return this.yearsOnPlanet('uranus');
   };
 
   this.onNeptune = function() {
-    return this.yearsOnPlanet("neptune");
+    return this.yearsOnPlanet('neptune');
   };
 }
 

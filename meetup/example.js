@@ -1,6 +1,6 @@
 function MeetupDayException(message) {
   this.message = message;
-  this.name = "MeetupDayException";
+  this.name = 'MeetupDayException';
 }
 
 function meetupDay (year, month, day_of_week, which) {
@@ -25,7 +25,7 @@ function meetupDay (year, month, day_of_week, which) {
     res = candidates.slice(which, which + 1).pop();
   }
 
-  if (!res) { throw new MeetupDayException("Day not found! ;_;"); }
+  if (!res) { throw new MeetupDayException('Day not found! ;_;'); }
 
   return res;
 }

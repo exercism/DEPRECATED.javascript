@@ -6,7 +6,7 @@ module.exports = function(options) {
   }
 
   if (options.white[0] === options.black[0] && options.white[1] === options.black[1]) {
-    throw "Queens cannot share the same space";
+    throw 'Queens cannot share the same space';
   }
 
   this.white = options.white;
@@ -37,21 +37,21 @@ module.exports = function(options) {
   };
 
   this.boardRepresentation = function() {
-    var boardRepresentation = "";
+    var boardRepresentation = '';
 
     for (var i = 0; i < 8; i++) {
       for (var j = 0; j < 8; j++) {
         if (this.white[0] === i && this.white[1] === j) {
-          boardRepresentation += "W";
+          boardRepresentation += 'W';
         } else if (this.black[0] === i && this.black[1] === j) {
-          boardRepresentation += "B";
+          boardRepresentation += 'B';
         } else {
-          boardRepresentation += "_";
+          boardRepresentation += '_';
         }
 
-        if (j < 7) { boardRepresentation += " "; }
+        if (j < 7) { boardRepresentation += ' '; }
       }
-      boardRepresentation += "\n";
+      boardRepresentation += '\n';
     }
 
     return boardRepresentation;

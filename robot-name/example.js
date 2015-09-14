@@ -1,5 +1,5 @@
 function randomLetter () {
-  var letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
   return letters.charAt(Math.floor(Math.random() * letters.length));
 }
@@ -41,7 +41,7 @@ Robot.prototype = {
 
   set name (newName) {
     if (!(/^[A-Z]{2}\d{3}$/).test(newName)) {
-      throw new Error("Name must be 2 capital letters followed by 3 ints.");
+      throw new Error('Name must be 2 capital letters followed by 3 ints.');
     }
 
     this._name = newName;

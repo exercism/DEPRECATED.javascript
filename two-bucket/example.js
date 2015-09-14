@@ -18,7 +18,7 @@ function TwoBucket(x,y,z,starter) {
 			reached = true;
 		}
 		return reached;
-	}
+	};
 
 	this.bigFirst = function(measurements, moveCount, prBool) {
 		var j = measurements[0], k = measurements[1];
@@ -43,7 +43,7 @@ function TwoBucket(x,y,z,starter) {
 			prBool ? prBool = false : prBool = true;
 		}
 		return moveCount;
-	}
+	};
 
 	this.smallFirst = function(measurements, moveCount, prBool) {
 		var j = measurements[0], k = measurements[1];
@@ -69,7 +69,7 @@ function TwoBucket(x,y,z,starter) {
 			prBool ? prBool = false : prBool = true;
 		}
 		return moveCount;
-	}
+	};
 }
 
 TwoBucket.prototype.moves = function() {
@@ -84,6 +84,6 @@ TwoBucket.prototype.moves = function() {
 		moveCount = this.bigFirst(measurements, moveCount, prBool);
 	}
 	return moveCount + 1; //accounts for first move made before loop (and moveCount starts at zero before loop)
-}
+};
 
 module.exports = TwoBucket;

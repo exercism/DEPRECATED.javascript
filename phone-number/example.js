@@ -10,10 +10,10 @@ Phone.prototype.cleanNumber = function(number) {
 
   if (num.length === 10) {
     return num;
-  } else if (num.length === 11 && num[0] === "1") {
+  } else if (num.length === 11 && num[0] === '1') {
     return num.substr(1,num.length);
   } else {
-    return "0000000000";
+    return '0000000000';
   }
 };
 
@@ -34,6 +34,6 @@ Phone.prototype.subscriberNumber = function() {
 };
 
 Phone.prototype.toString = function() {
-  return "(" + this.areaCode() + ") " + this.exchangeCode() + "-" + this.subscriberNumber();
+  return '(' + this.areaCode() + ') ' + this.exchangeCode() + '-' + this.subscriberNumber();
 };
 

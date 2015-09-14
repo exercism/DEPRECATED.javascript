@@ -1,12 +1,12 @@
-"use strict";
+'use strict';
 
 module.exports = toRna;
 
 var dnaToRna = {
-  G: "C",
-  C: "G",
-  T: "A",
-  A: "U"
+  G: 'C',
+  C: 'G',
+  T: 'A',
+  A: 'U'
 };
 
 function toRna(dna) {

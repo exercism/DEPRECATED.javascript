@@ -2,7 +2,7 @@ function Bob() {
   'use strict';
 
   function isSilence(message) {
-    return message.replace(/\s+/g, '') === "";
+    return message.replace(/\s+/g, '') === '';
   }
 
   function isShouting(message) {
@@ -10,16 +10,16 @@ function Bob() {
   }
 
   function isAQuestion(message) {
-    return message[message.length - 1] === "?";
+    return message[message.length - 1] === '?';
   }
 
   this.hey = function(message) {
     if (isSilence(message)) {
-      return "Fine. Be that way!";
+      return 'Fine. Be that way!';
     } else if (isShouting(message)) {
-      return "Whoa, chill out!";
+      return 'Whoa, chill out!';
     } else if (isAQuestion(message)) {
-      return "Sure.";
+      return 'Sure.';
     } else {
       return 'Whatever.';
     }

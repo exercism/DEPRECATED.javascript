@@ -27,7 +27,7 @@ LinkedList.prototype.unshift = function LinkedList_unshift(value) {
 };
 
 LinkedList.prototype.pop = function LinkedList_pop() {
-  if (this._front === null) {return undefined};
+  if (this._front === null) {return undefined;};
   this._front = this._front.prev;
   return this.shift();
 };
