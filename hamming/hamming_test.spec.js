@@ -1,4 +1,4 @@
-var compute = require('./hamming').compute;
+var compute = require('./hamming');
 
 describe('Hamming', function () {
 

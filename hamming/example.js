@@ -1,4 +1,4 @@
-exports.compute = function (strand1, strand2) {
+module.exports = function (strand1, strand2) {
   var len1 = strand1.length;
   var len2 = strand2.length;
 
