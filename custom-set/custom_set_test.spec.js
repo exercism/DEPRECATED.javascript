@@ -40,8 +40,8 @@ describe('CustomSet', function() {
   });
 
   xit('can check for intersection', function() {
-    var actual = new CustomSet(["a", "b", "c"]).intersection(new CustomSet(["a", "c", "d"]));
-    var expected = new CustomSet(["a", "c"]);
+    var actual = new CustomSet(['a', 'b', 'c']).intersection(new CustomSet(['a', 'c', 'd']));
+    var expected = new CustomSet(['a', 'c']);
     expect(actual.eql(expected)).toBe(true);
 
     var actual2 = new CustomSet([1, 2, 3]).intersection(new CustomSet([3, 5, 4]));

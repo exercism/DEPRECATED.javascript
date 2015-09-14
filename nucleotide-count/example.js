@@ -7,7 +7,7 @@ function dna(strand) {
   var index = histogram(acids);
 
   for (var acid in acids) {
-    if (!index.hasOwnProperty(acids[acid])) throw new RangeError("Invalid DNA " + strand);
+    if (!index.hasOwnProperty(acids[acid])) throw new RangeError('Invalid DNA ' + strand);
   }
 
   return Object.create({

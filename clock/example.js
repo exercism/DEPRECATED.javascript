@@ -13,7 +13,7 @@ function at(hours, minutes) {
 
   clock.toString = function () {
     var time = new Date(value).toISOString().split('T')[1].split(':');
-    return time[0] + ":" + time[1];
+    return time[0] + ':' + time[1];
   };
 
   clock.plus = function (minutes) {

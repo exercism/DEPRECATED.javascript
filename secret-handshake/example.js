@@ -1,11 +1,11 @@
 'use strict';
 
 function SecretHandshake(handshake) {
-  SecretHandshake.allCommands = [ "wink", "double blink", "close your eyes", "jump", "REVERSE" ];
+  SecretHandshake.allCommands = [ 'wink', 'double blink', 'close your eyes', 'jump', 'REVERSE' ];
   var handshakeCommands = SecretHandshake.allCommands;
 
   if (typeof handshake !== 'number') {
-    throw new Error("Handshake must be a number");
+    throw new Error('Handshake must be a number');
   }
 
   this.commands = function() {
@@ -21,7 +21,7 @@ function SecretHandshake(handshake) {
       var handshakeHasCommand = (handshake & Math.pow(2,i));
 
       if (handshakeHasCommand) {
-        if (currentCommand === "REVERSE") {
+        if (currentCommand === 'REVERSE') {
           shakeWith.reverse();
         } else {
           shakeWith.push(handshakeCommands[i]);

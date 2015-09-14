@@ -1,37 +1,37 @@
-var transform = require("./etl");
+var transform = require('./etl');
 
-describe("Transform", function() {
+describe('Transform', function() {
 
-  it("transforms one value", function() {
-    var old = { 1: ["A"] };
+  it('transforms one value', function() {
+    var old = { 1: ['A'] };
     var expected = { a: 1 };
 
     expect(transform(old)).toEqual(expected);
   });
 
-  xit("transforms more values", function() {
-    var old = { 1: ["A", "E", "I", "O", "U"] };
+  xit('transforms more values', function() {
+    var old = { 1: ['A', 'E', 'I', 'O', 'U'] };
     var expected = { a: 1, e: 1, i: 1, o: 1, u: 1 };
 
     expect(transform(old)).toEqual(expected);
   });
 
-  xit("transforms more keys", function() {
-    var old = { 1: ["A", "E"], 2: ["D", "G"] };
+  xit('transforms more keys', function() {
+    var old = { 1: ['A', 'E'], 2: ['D', 'G'] };
     var expected = { a: 1, e: 1, d: 2, g: 2 };
 
     expect(transform(old)).toEqual(expected);
   });
 
-  xit("transforms a full dataset", function() {
+  xit('transforms a full dataset', function() {
     var old = {
-      1: [ "A", "E", "I", "O", "U", "L", "N", "R", "S", "T" ],
-      2: [ "D", "G" ],
-      3: [ "B", "C", "M", "P" ],
-      4: [ "F", "H", "V", "W", "Y" ],
-      5: [ "K" ],
-      8: [ "J", "X" ],
-      10: [ "Q", "Z" ]
+      1: [ 'A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T' ],
+      2: [ 'D', 'G' ],
+      3: [ 'B', 'C', 'M', 'P' ],
+      4: [ 'F', 'H', 'V', 'W', 'Y' ],
+      5: [ 'K' ],
+      8: [ 'J', 'X' ],
+      10: [ 'Q', 'Z' ]
     };
     var expected = {
       a: 1, b: 3,  c: 3, d: 2, e: 1,

@@ -15,7 +15,7 @@ function letterScore(letter) {
 }
 
 module.exports = function(word) {
-  word || (word = "");
+  word || (word = '');
   word = word.toLowerCase();
 
   var sum = 0;

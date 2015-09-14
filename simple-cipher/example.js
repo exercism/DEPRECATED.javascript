@@ -48,6 +48,6 @@ module.exports = function (userDefinedKey) {
   key = this.key;
 
   if (userDefinedKey === '' || key.match(/[\dA-Z]/)) {
-    throw new Error("Bad key");
+    throw new Error('Bad key');
   }
 };

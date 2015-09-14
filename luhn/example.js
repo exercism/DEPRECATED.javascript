@@ -10,7 +10,7 @@ function Luhn(number) {
 Luhn.prototype = {
   calculateAddends: function(number) {
 
-    var numberAsString = "" + number + "";
+    var numberAsString = '' + number + '';
     var numbers = numberAsString.split('');
     var addends = [];
 

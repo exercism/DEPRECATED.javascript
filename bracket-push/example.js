@@ -9,12 +9,12 @@ var bracketPush = module.exports = function(input) {
   bracketArray = input;
   var iArr = [];
 
-  if (typeof input === "string") {
-    bracketArray = input.split("");
+  if (typeof input === 'string') {
+    bracketArray = input.split('');
   }
 
-  var openArray = ["{", "[", "("];
-  var closeArray = ["}", "]", ")"];
+  var openArray = ['{', '[', '('];
+  var closeArray = ['}', ']', ')'];
 
   for (var i = 0; i < bracketArray.length; i++) {
     for (var j = 0; j < openArray.length; j++) {

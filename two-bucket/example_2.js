@@ -6,10 +6,10 @@ function TwoBucket(bucket1, bucket2, goal, startingBucket) {
 	this.b2max = bucket2;
 	this.goalAmount = goal;
 	this.states = {};
-	var invalid = (startingBucket == "one" ? 0 : this.b1max) + "," + (startingBucket == "two" ? 0 : this.b2max)
+	var invalid = (startingBucket == 'one' ? 0 : this.b1max) + ',' + (startingBucket == 'two' ? 0 : this.b2max);
 	this.beenHere = {};
 	this.beenHere[invalid] = true;
-	var bestSolution = this.solve((startingBucket == "one" ? this.b1max : 0), (startingBucket == "two" ? this.b2max : 0))
+	var bestSolution = this.solve((startingBucket == 'one' ? this.b1max : 0), (startingBucket == 'two' ? this.b2max : 0));
 	this.goalBucket = bestSolution.goalBucket;
 	this.otherBucket = bestSolution.otherBucketFill;
 	this.minMoves = 1 + bestSolution.numMoves;
@@ -21,19 +21,19 @@ TwoBucket.prototype.moves = function() {
 
 TwoBucket.prototype.solve = function(bucket1fill, bucket2fill) {
 	// if you've already been in this state, return
-	if (this.beenHere[bucket1fill + "," + bucket2fill]) return {goalBucket: null};
-	else this.beenHere[bucket1fill + "," + bucket2fill] = true;
+	if (this.beenHere[bucket1fill + ',' + bucket2fill]) return {goalBucket: null};
+	else this.beenHere[bucket1fill + ',' + bucket2fill] = true;
 
 	// if either bucket is filled to the goal amount, you've found a solution
 	if (bucket1fill == this.goalAmount) {
-		return {numMoves: 0, goalBucket: "one", otherBucketFill: bucket2fill};
+		return {numMoves: 0, goalBucket: 'one', otherBucketFill: bucket2fill};
 	}
 	if (bucket2fill == this.goalAmount) {
-		return {numMoves: 0, goalBucket: "two", otherBucketFill: bucket1fill};
+		return {numMoves: 0, goalBucket: 'two', otherBucketFill: bucket1fill};
 	}
 
-	if (this.states[bucket1fill + "," + bucket2fill]) {
-		return this.states[bucket1fill + "," + bucket2fill];
+	if (this.states[bucket1fill + ',' + bucket2fill]) {
+		return this.states[bucket1fill + ',' + bucket2fill];
 	}
 
 
@@ -79,12 +79,12 @@ TwoBucket.prototype.solve = function(bucket1fill, bucket2fill) {
 		bestSolution = betterSolution(testObj, bestSolution);
 	}
 
-	this.states[bucket1fill + "," + bucket2fill] = bestSolution;
-	if (typeof bestSolution.numMoves === "number") {
+	this.states[bucket1fill + ',' + bucket2fill] = bestSolution;
+	if (typeof bestSolution.numMoves === 'number') {
 		bestSolution.numMoves++;
 	}
 	return bestSolution;
-}
+};
 
 function betterSolution(test, currentBest) {
 	if (test.goalBucket) {

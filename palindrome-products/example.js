@@ -48,7 +48,7 @@ module.exports = function Palindromes(options) {
 
   this.isPalindrome = function(number) {
     var numberAsString = number.toString();
-    var reversedString = numberAsString.split("").reverse().join("");
+    var reversedString = numberAsString.split('').reverse().join('');
     return (numberAsString === reversedString);
   };
 };

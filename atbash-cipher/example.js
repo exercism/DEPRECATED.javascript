@@ -4,7 +4,7 @@ var LETTERS = 'abcdefghijklmnopqrstuvwxyz';
 var REVERSED_LETTERS = 'zyxwvutsrqponmlkjihgfedcba';
 
 function insertSpacing(s, interval) {
-  var matcher = new RegExp(".{1," + interval + "}", "g");
+  var matcher = new RegExp('.{1,' + interval + '}', 'g');
   return s.match(matcher).join(' ');
 }
 

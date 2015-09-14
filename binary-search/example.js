@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 function BinarySearch(array) {
 
@@ -14,7 +14,7 @@ function BinarySearch(array) {
   //use binary search for indexOf
   this.indexOf = function(value) {
     return recursiveSearch(this.array, value, 0, this.array.length);
-  }
+  };
 }
 
 

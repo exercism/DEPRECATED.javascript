@@ -11,7 +11,7 @@ Robot.prototype.at = function (xcoord, ycoord) {
 
 Robot.prototype.orient = function (direction) {
   this.bearing = direction;
-  return "The robot is pointed " + direction;
+  return 'The robot is pointed ' + direction;
 };
 
 Robot.prototype.advance = function () {

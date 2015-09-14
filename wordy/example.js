@@ -38,7 +38,7 @@ WordProblem.prototype.tooComplicated = function() {
 
 WordProblem.prototype.answer = function() {
   if (this.tooComplicated()) {
-    throw new ArgumentError("I don't understand the question");
+    throw new ArgumentError('I don\'t understand the question');
   }
   return this.evaluate();
 };

@@ -1,46 +1,46 @@
 'use strict';
 
 var PATTERNS = {
-  0: [" _ ",
-      "| |",
-      "|_|",
-      "   "],
-  1: ["   ",
-      "  |",
-      "  |",
-      "   "],
-  2: [" _ ",
-      " _|",
-      "|_ ",
-      "   "],
-  3: [" _ ",
-      " _|",
-      " _|",
-      "   "],
-  4: ["   ",
-      "|_|",
-      "  |",
-      "   "],
-  5: [" _ ",
-      "|_ ",
-      " _|",
-      "   "],
-  6: [" _ ",
-      "|_ ",
-      "|_|",
-      "   "],
-  7: [" _ ",
-      "  |",
-      "  |",
-      "   "],
-  8: [" _ ",
-      "|_|",
-      "|_|",
-      "   "],
-  9: [" _ ",
-      "|_|",
-      " _|",
-      "   "]
+  0: [' _ ',
+      '| |',
+      '|_|',
+      '   '],
+  1: ['   ',
+      '  |',
+      '  |',
+      '   '],
+  2: [' _ ',
+      ' _|',
+      '|_ ',
+      '   '],
+  3: [' _ ',
+      ' _|',
+      ' _|',
+      '   '],
+  4: ['   ',
+      '|_|',
+      '  |',
+      '   '],
+  5: [' _ ',
+      '|_ ',
+      ' _|',
+      '   '],
+  6: [' _ ',
+      '|_ ',
+      '|_|',
+      '   '],
+  7: [' _ ',
+      '  |',
+      '  |',
+      '   '],
+  8: [' _ ',
+      '|_|',
+      '|_|',
+      '   '],
+  9: [' _ ',
+      '|_|',
+      ' _|',
+      '   ']
 };
 
 function getDigit(text) {
@@ -56,7 +56,7 @@ function getDigit(text) {
 
 function splitIntoDigits(row) {
   var digits = [];
-  var rows = row.split("\n");
+  var rows = row.split('\n');
   for (var digitNumber = 0; digitNumber < rows[0].length; digitNumber += 3) {
     var digit = '';
     for (var rowNumber = 0; rowNumber < rows.length; rowNumber++) {
@@ -69,11 +69,11 @@ function splitIntoDigits(row) {
 
 function splitIntoRows(text) {
   var rows = [];
-  var lines = text.split("\n");
+  var lines = text.split('\n');
   for (var rowNumber = 0; rowNumber < lines.length; rowNumber += 4) {
     var row = '';
     for (var rowLine = 0; rowLine < 4; rowLine++) {
-      row += lines[rowNumber + rowLine] + "\n";
+      row += lines[rowNumber + rowLine] + '\n';
     }
     rows.push(row.slice(0, -1));
   }

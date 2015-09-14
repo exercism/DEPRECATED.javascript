@@ -2,34 +2,34 @@
   'use strict';
 
   function bottles(number) {
-    var str = "";
+    var str = '';
 
     if (number === 0) {
-      str = "No more bottles";
+      str = 'No more bottles';
     } else if (number === 1) {
-      str = "1 bottle";
+      str = '1 bottle';
     } else {
-      str = number + " bottles";
+      str = number + ' bottles';
     }
 
     return str;
   }
 
   function action(current_verse) {
-    var sbj, str = "";
+    var sbj, str = '';
 
     if (current_verse === 0) {
-      str = "Go to the store and buy some more, ";
+      str = 'Go to the store and buy some more, ';
     } else {
-      sbj = (current_verse === 1 ? "it" : "one");
-      str = "Take " + sbj + " down and pass it around, ";
+      sbj = (current_verse === 1 ? 'it' : 'one');
+      str = 'Take ' + sbj + ' down and pass it around, ';
     }
 
     return str;
   }
 
   function next_bottle(current_verse) {
-    return bottles(next_verse(current_verse)).toLowerCase() + " of beer on the wall.\n";
+    return bottles(next_verse(current_verse)).toLowerCase() + ' of beer on the wall.\n';
   }
 
   function next_verse(current_verse) {
@@ -49,15 +49,15 @@
       verses.push(this.verse(i));
     }
 
-    return verses.join("\n");
+    return verses.join('\n');
   };
 
   exports.verse = function(number) {
-    var line1 = bottles(number) + " of beer on the wall, ";
-    var line2 = bottles(number).toLowerCase() + " of beer.\n";
+    var line1 = bottles(number) + ' of beer on the wall, ';
+    var line2 = bottles(number).toLowerCase() + ' of beer.\n';
     var line3 = action(number);
     var line4 = next_bottle(number);
 
-    return [line1, line2, line3, line4].join("");
+    return [line1, line2, line3, line4].join('');
   };
 })();
