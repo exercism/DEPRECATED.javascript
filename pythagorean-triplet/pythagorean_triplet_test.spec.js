@@ -15,7 +15,7 @@ describe('Triplet', function () {
   });
 
   xit('can recognize a non pythagorean triplet', function () {
-    expect(new Triplet(5, 6, 7).isPythagorean()).not.toBe(true);
+    expect(new Triplet(5, 6, 7).isPythagorean()).toBe(false);
   });
 
   xit('can make triplets up to 10', function () {
