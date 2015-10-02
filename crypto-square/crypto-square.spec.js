@@ -50,15 +50,4 @@ describe('Crypto',function() {
     var crypto = new Crypto('We all know interspecies romance is weird.');
     expect(crypto.ciphertext()).toEqual('wneiaweoreneawssciliprerlneoidktcms');
   });
-
-  xit('normalized cipher text',function() {
-    var crypto = new Crypto('Madness, and then illumination.');
-    expect(crypto.normalizeCiphertext()).toEqual('msemoa anindn inndla etltsh ui');
-  });
-
-  xit('more normalized cipher text',function() {
-    var crypto = new Crypto('Vampires are people too!');
-    expect(crypto.normalizeCiphertext()).toEqual('vrela epems etpao oirpo');
-  });
-
 });
