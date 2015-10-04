@@ -1,24 +1,49 @@
-var toRna = require('./rna_transcription');
+var DnaTranscriber = require('./rna_transcription');
+var dnaTranscriber = new DnaTranscriber();
 
 describe('toRna()', function() {
+
   it('transcribes cytosine to guanine', function() {
-    expect(toRna('C')).toEqual('G');
+    expect(dnaTranscriber.toRna('C')).toEqual('G');
   });
 
   xit('transcribes guanine to cytosine', function() {
-    expect(toRna('G')).toEqual('C');
+    expect(dnaTranscriber.toRna('G')).toEqual('C');
   });
 
   xit('transcribes adenine to uracil', function() {
-    expect(toRna('A')).toEqual('U');
+    expect(dnaTranscriber.toRna('A')).toEqual('U');
   });
 
   xit('transcribes thymine to adenine', function() {
-    expect(toRna('T')).toEqual('A');
+    expect(dnaTranscriber.toRna('T')).toEqual('A');
   });
 
   xit('transcribes all dna nucleotides to their rna complements', function() {
-    expect(toRna('ACGTGGTCTTAA'))
+    expect(dnaTranscriber.toRna('ACGTGGTCTTAA'))
         .toEqual('UGCACCAGAAUU');
+  });
+});
+
+xdescribe('toDna()', function() {
+  it('transcribes cytosine to guanine', function() {
+    expect(dnaTranscriber.toDna('C')).toEqual('G');
+  });
+
+  xit('transcribes guanine to cytosine', function() {
+    expect(dnaTranscriber.toDna('G')).toEqual('C');
+  });
+
+  xit('transcribes adenine to uracil', function() {
+    expect(dnaTranscriber.toDna('U')).toEqual('A');
+  });
+
+  xit('transcribes thymine to adenine', function() {
+    expect(dnaTranscriber.toDna('A')).toEqual('T');
+  });
+
+  xit('transcribes all dna nucleotides to their rna complements', function() {
+    expect(dnaTranscriber.toDna('UGAACCCGACAUG'))
+        .toEqual('ACTTGGGCTGTAC');
   });
 });
