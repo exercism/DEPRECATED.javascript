@@ -4,7 +4,7 @@ describe('accumulate()', function() {
 
   it('accumulation empty', function() {
     var accumulator = function(e) { return e * e; };
-    expect([]).toEqual(accumulate([], accumulator));
+    expect(accumulate([], accumulator)).toEqual([]);
   });
 
   xit('accumulate squares', function() {
@@ -14,7 +14,7 @@ describe('accumulate()', function() {
 
     var result = accumulate([1, 2, 3], accumulator);
 
-    expect([1, 4, 9]).toEqual(result);
+    expect(result).toEqual([1, 4, 9]);
   });
 
   xit('accumulate upcases', function() {
@@ -24,7 +24,7 @@ describe('accumulate()', function() {
 
     var result = accumulate('hello world'.split(/\s/), accumulator);
 
-    expect(['HELLO', 'WORLD']).toEqual(result);
+    expect(result).toEqual(['HELLO', 'WORLD']);
   });
 
   xit('accumulate reversed strings', function() {
@@ -34,7 +34,7 @@ describe('accumulate()', function() {
 
     var result = accumulate('the quick brown fox etc'.split(/\s/), accumulator);
 
-    expect(['eht', 'kciuq', 'nworb', 'xof', 'cte']).toEqual(result);
+    expect(result).toEqual(['eht', 'kciuq', 'nworb', 'xof', 'cte']);
   });
 
   xit('accumulate recursively', function() {
@@ -44,7 +44,7 @@ describe('accumulate()', function() {
       });
     });
 
-    expect([['a1', 'a2', 'a3'], ['b1', 'b2', 'b3'], ['c1', 'c2', 'c3']]).toEqual(result);
+    expect(result).toEqual([['a1', 'a2', 'a3'], ['b1', 'b2', 'b3'], ['c1', 'c2', 'c3']]);
   });
 
 });
