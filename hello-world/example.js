@@ -3,7 +3,7 @@
 var HelloWorld = function() {};
 
 HelloWorld.prototype.hello = function(name) {
-  name = name || 'world';
+  name = name || 'World';
   return 'Hello, ' + name + '!';
 };
 
