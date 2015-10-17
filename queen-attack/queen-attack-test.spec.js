@@ -1,4 +1,4 @@
-var Queens = require('./queen_attack');
+var Queens = require('./queen-attack');
 
 describe('Queens', function() {
   it('has the correct default positions', function() {

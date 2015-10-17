@@ -1,4 +1,4 @@
-var DNA = require('./point_mutations');
+var DNA = require('./point-mutations');
 
 describe('DNA', function() {
 

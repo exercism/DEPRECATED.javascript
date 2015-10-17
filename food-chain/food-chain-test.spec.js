@@ -1,4 +1,4 @@
-var song = require('./food_chain');
+var song = require('./food-chain');
 
 describe('Food Chain', function () {
 

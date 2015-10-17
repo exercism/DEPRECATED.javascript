@@ -1,5 +1,5 @@
 'use strict';
-var Palindromes = require('./palindrome_products');
+var Palindromes = require('./palindrome-products');
 
 describe('Palindrome', function() {
 

@@ -1,4 +1,4 @@
-var Beer = require('./beer_song');
+var Beer = require('./beer-song');
 
 describe('Beer', function() {
 

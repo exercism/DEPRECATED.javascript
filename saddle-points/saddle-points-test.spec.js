@@ -1,4 +1,4 @@
-var Matrix = require('./saddle_points');
+var Matrix = require('./saddle-points');
 
 describe('Matrix', function() {
   it('extracts a row', function() {

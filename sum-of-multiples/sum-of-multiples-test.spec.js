@@ -1,4 +1,4 @@
-var SumOfMultiples = require('./sum_of_multiples');
+var SumOfMultiples = require('./sum-of-multiples');
 
 describe('SumOfMultiples', function () {
   it('to 1', function () {

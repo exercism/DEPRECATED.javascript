@@ -1,4 +1,4 @@
-var Cipher = require('./simple_cipher');
+var Cipher = require('./simple-cipher');
 
 describe('Random key cipher', function () {
   var cipher = new Cipher();
