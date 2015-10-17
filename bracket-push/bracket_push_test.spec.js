@@ -21,6 +21,10 @@ describe('bracket push', function() {
     expect(bracket('{[]}')).toEqual(true);
   });
 
+  xit('rejects brackets that are properly balanced but improperly nested', function() {
+    expect(bracket('{[}]')).toEqual(false);
+  });
+
   xit('checks bracket closure with deeper nesting', function() {
     expect(bracket('{[)][]}')).toEqual(false);
   });
