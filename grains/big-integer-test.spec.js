@@ -1,4 +1,4 @@
-var BigInt = require('./big_integer');
+var BigInt = require('./big-integer');
 
 
 describe('The big-integer module\'s returned object', function () {

@@ -3,5 +3,5 @@
 Execute the tests with:
 
 ```bash
-$ jasmine-node bob_test.spec.js
+$ jasmine-node bob-test.spec.js
 ```
