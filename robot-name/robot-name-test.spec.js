@@ -1,4 +1,4 @@
-var Robot = require('./robot_name');
+var Robot = require('./robot-name');
 
 describe('Robot', function() {
   // NOTE: The 'beforeEach()' and 'afterEach()' act as setup/teardown for this

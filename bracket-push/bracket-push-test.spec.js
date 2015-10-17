@@ -1,4 +1,4 @@
-var bracket = require('./bracket_push');
+var bracket = require('./bracket-push');
 
 describe('bracket push', function() {
   it('checks for appropriate bracketing in a set of brackets', function() {

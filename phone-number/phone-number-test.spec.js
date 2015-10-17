@@ -1,4 +1,4 @@
-var PhoneNumber = require('./phone_number');
+var PhoneNumber = require('./phone-number');
 
 describe('PhoneNumber()', function() {
   it('cleans the number (123) 456-7890', function() {

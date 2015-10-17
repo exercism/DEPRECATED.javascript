@@ -1,4 +1,4 @@
-var CustomSet = require('./custom_set');
+var CustomSet = require('./custom-set');
 
 describe('CustomSet', function() {
 

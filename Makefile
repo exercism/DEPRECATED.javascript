@@ -10,7 +10,7 @@ OUTDIR := $(shell mktemp -d "$(TMPDIR)/$(ASSIGNMENT).XXXXXXXXXX")
 # language specific config (tweakable per language)
 FILEEXT := "js"
 EXAMPLE := "example.$(FILEEXT)"
-TSTFILE := "$(subst -,-,$(ASSIGNMENT))-test.spec.$(FILEEXT)"
+TSTFILE := "$(subst _,-,$(ASSIGNMENT))-test.spec.$(FILEEXT)"
 
 # development dependencies
 node_modules: package.json
@@ -21,7 +21,7 @@ test-assignment: node_modules
 	@echo "running tests for: $(ASSIGNMENT)"
 	@cp big-integer.$(FILEEXT) $(OUTDIR)
 	@cp $(ASSIGNMENT)/$(TSTFILE) $(OUTDIR)
-	@cp $(ASSIGNMENT)/$(EXAMPLE) $(OUTDIR)/$(subst -,_,$(ASSIGNMENT)).$(FILEEXT)
+	@cp $(ASSIGNMENT)/$(EXAMPLE) $(OUTDIR)/$(subst _,-,$(ASSIGNMENT)).$(FILEEXT)
 	@sed -i.original 's/\bxit\b/it/g' $(OUTDIR)/*spec.$(FILEEXT)
 	@./node_modules/.bin/jasmine-node --captureExceptions $(OUTDIR)/$(TSTFILE)
 

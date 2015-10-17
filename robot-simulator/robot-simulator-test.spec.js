@@ -1,4 +1,4 @@
-var Robot = require('./robot_simulator');
+var Robot = require('./robot-simulator');
 
 describe('Robot', function() {
   var robot = new Robot();
