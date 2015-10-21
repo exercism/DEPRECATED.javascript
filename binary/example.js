@@ -3,7 +3,11 @@
 module.exports = Binary;
 
 function Binary(binary) {
-  this.binary = parseInt(binary, 2);
+  if (binary.match(/^[01]*$/)) {
+    this.binary = parseInt(binary, 2);
+  } else {
+    this.binary = 0;
+  }
 }
 
 Binary.prototype.toDecimal = function () {
