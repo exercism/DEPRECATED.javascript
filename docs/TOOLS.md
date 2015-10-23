@@ -26,7 +26,7 @@ If you have a paid version of Visual Studio, you should install the [Web Essenti
 You can run the unit tests from a node.js command line using the batch file in the project.
 
 ```
-C:\Src\exercises\javascript>test example\bob-test.spec.js
+C:\Src\exercises\javascript>test example\bob.spec.js
 .................
 
 Finished in 0.02 seconds
