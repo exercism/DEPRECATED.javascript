@@ -22,8 +22,8 @@ function CircularBuffer(capacity) {
 
       forceWrite: function(data) {
         updateBuffer(data, function(){
-          buffer[writePoint] = data;
           if (isBufferFull()) { updateReadPoint(); }
+          buffer[writePoint] = data;
         });
       },
 
