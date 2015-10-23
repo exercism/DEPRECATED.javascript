@@ -10,7 +10,7 @@ OUTDIR := $(shell mktemp -d "$(TMPDIR)/$(ASSIGNMENT).XXXXXXXXXX")
 # language specific config (tweakable per language)
 FILEEXT := "js"
 EXAMPLE := "example.$(FILEEXT)"
-TSTFILE := "$(subst _,-,$(ASSIGNMENT))-test.spec.$(FILEEXT)"
+TSTFILE := "$(subst _,-,$(ASSIGNMENT)).spec.$(FILEEXT)"
 
 # development dependencies
 node_modules: package.json
