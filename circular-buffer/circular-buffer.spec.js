@@ -82,6 +82,15 @@ describe('CircularBuffer', function() {
     expect(buffer.read).toThrow(bufferEmptyException());
   });
 
+  xit('forced writes act like write in a non-full buffer', function() {
+    var buffer = circularBuffer(2);
+    buffer.write('1');
+    buffer.forceWrite('2');
+    expect(buffer.read()).toBe('1');
+    expect(buffer.read()).toBe('2');
+    expect(buffer.read).toThrow(bufferEmptyException());
+  });
+
   xit('alternate force write and read into full buffer', function() {
     var buffer = circularBuffer(5);
     [1,2,3].map(function(i) { buffer.write(i.toString()); });
