@@ -1,8 +1,11 @@
 var Binary = require('./binary');
 
 describe('binary', function() {
+  it('0 is decimal 0', function() {
+    expect(new Binary('0').toDecimal()).toEqual(0);
+  });
 
-  it('1 is decimal 1', function() {
+  xit('1 is decimal 1', function() {
     expect(new Binary('1').toDecimal()).toEqual(1);
   });
 
@@ -30,8 +33,15 @@ describe('binary', function() {
     expect(new Binary('10001101000').toDecimal()).toEqual(1128);
   });
 
-  xit('carrot is decimal 0', function() {
+  xit('00011111 is decimal 31', function() {
+    expect(new Binary('00011111').toDecimal()).toEqual(31);
+  });
+
+  xit('invalid inputs are decimal 0', function() {
     expect(new Binary('carrot').toDecimal()).toEqual(0);
+    expect(new Binary('012').toDecimal()).toEqual(0);
+    expect(new Binary('10nope').toDecimal()).toEqual(0);
+    expect(new Binary('nope10').toDecimal()).toEqual(0);
   });
 
 });
