@@ -27,7 +27,6 @@
  * See its tests in this folder for a quick primer on how to use it! ( :
  */
 
-var BigInt = require('./big-integer');
 var Grains = require('./grains');
 
 describe('Grains', function () {
