@@ -1,26 +1,27 @@
-var transform = require('./etl');
+var ETL = require('./etl');
 
 describe('Transform', function() {
+  var etl = new ETL();
 
   it('transforms one value', function() {
     var old = { 1: ['A'] };
     var expected = { a: 1 };
 
-    expect(transform(old)).toEqual(expected);
+    expect(etl.transform(old)).toEqual(expected);
   });
 
   xit('transforms more values', function() {
     var old = { 1: ['A', 'E', 'I', 'O', 'U'] };
     var expected = { a: 1, e: 1, i: 1, o: 1, u: 1 };
 
-    expect(transform(old)).toEqual(expected);
+    expect(etl.transform(old)).toEqual(expected);
   });
 
   xit('transforms more keys', function() {
     var old = { 1: ['A', 'E'], 2: ['D', 'G'] };
     var expected = { a: 1, e: 1, d: 2, g: 2 };
 
-    expect(transform(old)).toEqual(expected);
+    expect(etl.transform(old)).toEqual(expected);
   });
 
   xit('transforms a full dataset', function() {
@@ -42,7 +43,7 @@ describe('Transform', function() {
       z: 10
     };
 
-    expect(transform(old)).toEqual(expected);
+    expect(etl.transform(old)).toEqual(expected);
   });
 
 });

@@ -1,19 +1,15 @@
 'use strict';
-module.exports = anagram;
 
-function anagram(word) {
-  return {
-    // public API
-    matches: matches.bind(this, word)
-  };
+function Anagram(word) {
+  this.word = word;
 }
 
-function matches(word, words) {
-  words = Array.isArray(words) ? words : [].slice.call(arguments, 1);
+Anagram.prototype.matches = function (words) {
+  words = Array.isArray(words) ? words : [].slice.call(arguments, 0);
 
   return words.filter(function (candidate) {
-    return !sameWord(word, candidate) && isAnagram(word, candidate);
-  });
+    return !sameWord(this.word, candidate) && isAnagram(this.word, candidate);
+  }, this);
 }
 
 function sameWord(word, candidate) {
@@ -27,4 +23,6 @@ function isAnagram(word, candiate) {
 function normalize(string) {
   return string.toLowerCase().split('').sort().toString();
 }
+
+module.exports = Anagram;
 

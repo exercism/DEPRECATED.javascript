@@ -1,4 +1,6 @@
-module.exports = function (strand1, strand2) {
+function Hamming() {}
+
+Hamming.prototype.compute = function (strand1, strand2) {
   var len1 = strand1.length;
   var len2 = strand2.length;
 
@@ -16,3 +18,6 @@ module.exports = function (strand1, strand2) {
 
   return out;
 };
+
+module.exports = Hamming;
+
