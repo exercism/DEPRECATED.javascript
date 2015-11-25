@@ -1,6 +1,7 @@
-var song = require('./food-chain');
+var FoodChain = require('./food-chain');
 
 describe('Food Chain', function () {
+  var song = new FoodChain();
 
   it('fly', function () {
     var expected = 'I know an old lady who swallowed a fly.\nI don\'t know why she swallowed the fly. Perhaps she\'ll die.\n';

@@ -36,7 +36,9 @@
     return current_verse === 0 ? 99 : (current_verse - 1);
   }
 
-  exports.sing = function(first, last) {
+  function BeerSong() {}
+
+  BeerSong.prototype.sing = function(first, last) {
     if (typeof(first) === 'undefined') {
       first = 99;
     }
@@ -52,7 +54,7 @@
     return verses.join('\n');
   };
 
-  exports.verse = function(number) {
+  BeerSong.prototype.verse = function(number) {
     var line1 = bottles(number) + ' of beer on the wall, ';
     var line2 = bottles(number).toLowerCase() + ' of beer.\n';
     var line3 = action(number);
@@ -60,4 +62,6 @@
 
     return [line1, line2, line3, line4].join('');
   };
+
+  module.exports = BeerSong;
 })();

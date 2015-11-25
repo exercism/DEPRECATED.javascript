@@ -1,6 +1,6 @@
-exports.verses = verses;
-exports.verse  = verse;
-exports.sing   = verses.bind(null, 1, 8);
+'use strict';
+
+function FoodChain() {}
 
 /**
  * Return portion of song corresponding to requested verse number range (inclusive).
@@ -14,14 +14,13 @@ exports.sing   = verses.bind(null, 1, 8);
  * @return {String}
  * corresponding portion of song
  */
-
-function verses(first, last) {
+FoodChain.prototype.verses = function (first, last) {
   var idx = first - 1;
   var end = last;
   var str = [];
 
   while (++idx <= end) {
-    str.push(verse(idx));
+    str.push(this.verse(idx));
   }
 
   return str.join('\n') + '\n';
@@ -36,8 +35,7 @@ function verses(first, last) {
  * @return {String}
  * song verse
  */
-
-function verse(number) {
+FoodChain.prototype.verse = function (number) {
   switch (number) {
     case 1: return '' +
       'I know an old lady who swallowed a fly.\n' + 'I don\'t know why she swallowed the fly. Perhaps she\'ll die.\n';
@@ -78,3 +76,6 @@ function verse(number) {
   };
 };
 
+FoodChain.prototype.sing = FoodChain.prototype.verses.bind(null, 1, 8);
+
+module.exports = FoodChain;

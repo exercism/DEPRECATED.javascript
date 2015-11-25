@@ -1,6 +1,8 @@
 'use strict';
 
-module.exports = function (input) {
+function Words() {}
+
+Words.prototype.count = function (input) {
   var counts = {};
   var words = input.match(/\S+/g);
 
@@ -10,3 +12,6 @@ module.exports = function (input) {
 
   return counts;
 };
+
+module.exports = Words;
+

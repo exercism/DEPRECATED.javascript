@@ -1,6 +1,8 @@
 'use strict';
 
-module.exports = function(input) {
+function ETL() {}
+
+ETL.prototype.transform = function(input) {
   var output = {};
   var object = Object.keys(input);
 
@@ -17,3 +19,6 @@ module.exports = function(input) {
 
   return output;
 };
+
+module.exports = ETL;
+
