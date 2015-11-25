@@ -22,7 +22,8 @@ test-assignment: node_modules
 	@cp big-integer.$(FILEEXT) $(OUTDIR)
 	@cp $(ASSIGNMENT)/$(TSTFILE) $(OUTDIR)
 	@cp $(ASSIGNMENT)/$(EXAMPLE) $(OUTDIR)/$(subst _,-,$(ASSIGNMENT)).$(FILEEXT)
-	@sed -i.original 's/\bxit\b/it/g' $(OUTDIR)/*spec.$(FILEEXT)
+	#@sed -i.original 's/\bxit\b/it/g' $(OUTDIR)/*spec.$(FILEEXT)
+	@sed 's/xit/it/g' $(ASSIGNMENT)/$(TSTFILE) > $(OUTDIR)/$(TSTFILE)
 	@./node_modules/.bin/jasmine-node --captureExceptions $(OUTDIR)/$(TSTFILE)
 
 test:
