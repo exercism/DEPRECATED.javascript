@@ -17,6 +17,14 @@ describe('SumOfMultiples', function () {
     expect(SumOfMultiples().to(1000)).toBe(233168);
   });
 
+  xit('[3, 5] to 10', function () {
+    expect(SumOfMultiples([3, 5]).to(10)).toBe(23);
+  });
+
+  xit('[3, 5] to 100', function () {
+    expect(SumOfMultiples([3, 5]).to(100)).toBe(2249);
+  });
+
   xit('[7, 13, 17] to 20', function () {
     expect(SumOfMultiples([7, 13, 17]).to(20)).toBe(51);
   });
