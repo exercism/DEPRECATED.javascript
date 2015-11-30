@@ -13,6 +13,10 @@ describe('SumOfMultiples', function () {
     expect(SumOfMultiples().to(10)).toBe(23);
   });
 
+  xit('to 100', function () {
+    expect(SumOfMultiples().to(100)).toBe(2318);
+  });
+
   xit('to 1000', function () {
     expect(SumOfMultiples().to(1000)).toBe(233168);
   });
