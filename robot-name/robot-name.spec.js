@@ -22,6 +22,11 @@ describe('Robot', function() {
   });
 
   xit('different robots have different names', function() {
+    var differentRobot = new Robot();
+    expect(differentRobot.name).not.toEqual(robot.name);
+  });
+
+  xit('there can be lots of robots with different names each', function() {
     var i,
         numRobots = 10000,
         usedNames = {};
