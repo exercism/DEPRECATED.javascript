@@ -34,15 +34,15 @@ xdescribe('toDna()', function() {
     expect(dnaTranscriber.toDna('G')).toEqual('C');
   });
 
-  xit('transcribes adenine to uracil', function() {
+  xit('transcribes uracil to adenine', function() {
     expect(dnaTranscriber.toDna('U')).toEqual('A');
   });
 
-  xit('transcribes thymine to adenine', function() {
+  xit('transcribes adenine to thymine', function() {
     expect(dnaTranscriber.toDna('A')).toEqual('T');
   });
 
-  xit('transcribes all dna nucleotides to their rna complements', function() {
+  xit('transcribes all rna nucleotides to their dna complements', function() {
     expect(dnaTranscriber.toDna('UGAACCCGACAUG'))
         .toEqual('ACTTGGGCTGTAC');
   });
