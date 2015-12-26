@@ -24,26 +24,3 @@ describe('toRna()', function() {
         .toEqual('UGCACCAGAAUU');
   });
 });
-
-xdescribe('toDna()', function() {
-  it('transcribes cytosine to guanine', function() {
-    expect(dnaTranscriber.toDna('C')).toEqual('G');
-  });
-
-  xit('transcribes guanine to cytosine', function() {
-    expect(dnaTranscriber.toDna('G')).toEqual('C');
-  });
-
-  xit('transcribes uracil to adenine', function() {
-    expect(dnaTranscriber.toDna('U')).toEqual('A');
-  });
-
-  xit('transcribes adenine to thymine', function() {
-    expect(dnaTranscriber.toDna('A')).toEqual('T');
-  });
-
-  xit('transcribes all rna nucleotides to their dna complements', function() {
-    expect(dnaTranscriber.toDna('UGAACCCGACAUG'))
-        .toEqual('ACTTGGGCTGTAC');
-  });
-});
