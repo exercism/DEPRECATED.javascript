@@ -61,6 +61,6 @@ describe('Allergies',function() {
 
   xit('ignore non allergen score parts', function() {
     var allergies = new Allergies(509);
-    expect(allergies.list()).toEqual(['eggs', 'shellfish', 'strawberries', 'tomatoes', 'chocolate', 'pollen', 'cats']);
+    expect(allergies.list()).toEqual(['eggs', 'peanuts', 'shellfish', 'strawberries', 'tomatoes', 'chocolate', 'pollen', 'cats']);
   });
 });
