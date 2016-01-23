@@ -41,13 +41,23 @@ describe('Series', function () {
     expect(new Series(largeNumber).largestProduct(6)).toBe(23520);
   });
 
-  xit('returns 1 for no digits', function () {
+  xit('returns 1 for empty string and zero slice length', function () {
     expect(new Series('').largestProduct(0)).toBe(1);
+  });
+
+  xit('returns 1 for non-empty string and zero slice length', function () {
+    expect(new Series('123').largestProduct(0)).toBe(1);
   });
 
   xit('throws an error for slices bigger than the number', function () {
     expect(function () {
       new Series('123').largestProduct(4);
+    }).toThrow(new Error('Slice size is too big.'));
+  });
+
+  xit('throws an error for empty string and non-zero slice length', function () {
+    expect(function () {
+      new Series('').largestProduct(1);
     }).toThrow(new Error('Slice size is too big.'));
   });
 
