@@ -41,6 +41,14 @@ describe('Series', function () {
     expect(new Series(largeNumber).largestProduct(6)).toBe(23520);
   });
 
+  xit('returns 0 if all digits are zero', function () {
+    expect(new Series('0000').largestProduct(2)).toBe(0);
+  });
+
+  xit('returns 0 if all spans contain zero', function () {
+    expect(new Series('99099').largestProduct(3)).toBe(0);
+  });
+
   xit('returns 1 for empty string and zero slice length', function () {
     expect(new Series('').largestProduct(0)).toBe(1);
   });
