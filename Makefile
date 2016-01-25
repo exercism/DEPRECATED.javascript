@@ -1,7 +1,7 @@
 # assignments
 ASSIGNMENT ?= ""
 IGNOREDIRS := "^(\.git|docs|bin|node_modules|.idea)$$"
-ASSIGNMENTS = $(shell find . -maxdepth 1 -mindepth 1 -type d | cut -d'/' -f2 | sort | grep -Ev $(IGNOREDIRS))
+ASSIGNMENTS = $(shell find ./exercises -maxdepth 1 -mindepth 1 -type d | cut -d'/' -f3 | sort | grep -Ev $(IGNOREDIRS))
 
 # output directories
 TMPDIR ?= "/tmp"
@@ -20,10 +20,10 @@ node_modules: package.json
 test-assignment: node_modules
 	@echo "running tests for: $(ASSIGNMENT)"
 	@cp big-integer.$(FILEEXT) $(OUTDIR)
-	@cp $(ASSIGNMENT)/$(TSTFILE) $(OUTDIR)
-	@cp $(ASSIGNMENT)/$(EXAMPLE) $(OUTDIR)/$(subst _,-,$(ASSIGNMENT)).$(FILEEXT)
+	@cp exercises/$(ASSIGNMENT)/$(TSTFILE) $(OUTDIR)
+	@cp exercises/$(ASSIGNMENT)/$(EXAMPLE) $(OUTDIR)/$(subst _,-,$(ASSIGNMENT)).$(FILEEXT)
 	#@sed -i.original 's/\bxit\b/it/g' $(OUTDIR)/*spec.$(FILEEXT)
-	@sed 's/xit/it/g' $(ASSIGNMENT)/$(TSTFILE) > $(OUTDIR)/$(TSTFILE)
+	@sed 's/xit/it/g' exercises/$(ASSIGNMENT)/$(TSTFILE) > $(OUTDIR)/$(TSTFILE)
 	@./node_modules/.bin/jasmine-node --captureExceptions $(OUTDIR)/$(TSTFILE)
 
 test:
