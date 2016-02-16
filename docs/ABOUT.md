@@ -14,3 +14,8 @@ You should learn JavaScript because:
 * It's versatile in the sense that it's multi-paradigm supporting procedural, event based, object oriented and functional programming.
 * It's Open Source.
 * JavaScript programming skills are in high demand.
+
+---
+
+_This track is intended for widely supported JavaScript, for code that could be executed in almost all existing browsers. If you're looking for experimenting with newer features of the language try the [ECMAScript](http://exercism.io/languages/ecmascript) track._
+
