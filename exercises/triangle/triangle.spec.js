@@ -17,6 +17,11 @@ describe('Triangle', function() {
     expect(triangle.kind()).toEqual('isosceles');
   });
 
+  xit('isosceles triangles have first two sides equal', function() {
+    var triangle = new Triangle(2,2,3);
+    expect(triangle.kind()).toEqual('isosceles');
+  });
+
   xit('isosceles trianges have first and last sides equal', function() {
     var triangle = new Triangle(4,3,4);
     expect(triangle.kind()).toEqual('isosceles');
