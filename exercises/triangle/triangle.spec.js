@@ -72,11 +72,6 @@ describe('Triangle', function() {
     expect(triangle.kind.bind(triangle)).toThrow();
   });
 
-  xit('edge cases of triangle inequality are in fact legal', function() {
-    var triangle = new Triangle(2,4,2);
-    expect(triangle.kind.bind(triangle)).not.toThrow();
-  });
-
   xit('triangles violating triangle inequality are illegal 2', function() {
     var triangle = new Triangle(7,3,2);
     expect(triangle.kind.bind(triangle)).toThrow();
