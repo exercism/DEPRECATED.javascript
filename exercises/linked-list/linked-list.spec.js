@@ -42,10 +42,6 @@ describe('LinkedList', function () {
     expect(list.pop()).toBe(50);
     expect(list.shift()).toBe(30);
   });
-  xit('pops undefined when there are no elements', function () {
-    var list = new LinkedList();
-    expect(list.pop()).toBe(undefined);
-  });
   xit('can count its elements', function () {
     var list = new LinkedList();
     expect(list.count()).toBe(0);
