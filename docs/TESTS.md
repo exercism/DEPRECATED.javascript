@@ -33,11 +33,11 @@ To get started, you can download a Visual Studio solution that is already set up
 
 1. Download the [Exercism.io Visual Studio Template](https://github.com/rprouse/Exercism.VisualStudio) from GitHub by clicking the Download Zip button on the page.
 2. Unzip the template into your exercises directory, for example `C:\src\exercises`
-2. Install the [Exercism CLI](http://help.exercism.io/installing-the-cli.html)
-3. Open a command prompt to your exercise directory 
+2. Install the [Exercism CLI](http://exercism.io/cli)
+3. Open a command prompt to your exercise directory
 4. Add your API key to exercism `exercism configure --key=YOUR_API_KEY`
 5. Configure your source directory in exercism `exercism configure --dir=C:\src\exercises`
-6. [Fetch your first exercise](http://help.exercism.io/fetching-exercises.html) `exercism fetch javascript`
+6. [Fetch your first exercise](http://exercism.io/languages/javascript) `exercism fetch javascript`
 7. Open the Exercism solution in Visual Studio
 8. Expand the Exercism.javascript project
 9. Click on **Show All Files** in Solution Explorer (See below)
@@ -67,4 +67,3 @@ A linter is like a tester for your code's style and formatting. In some language
 The old standard linter for JavaScript is [JSLint](http://jslint.com). However, it is controversially picky. [JSHint](http://jshint.com) is another popular linter. We suggest using [ESLint](http://eslint.org), which is more customizable than either JSLint or JSHint, and is well-run.
 
 To get started using ESLint, follow the instructions [here](http://eslint.org/docs/user-guide/command-line-interface.html). Once you have ESLint installed, you'll be able to lint your code with a simple ```eslint [options] [file|dir]*``` command. Eg, if you're in the hello-world directory, ```eslint .``` would lint all files in that directory.
-
