@@ -7,7 +7,8 @@ Words.prototype.count = function (input) {
   var words = input.match(/\S+/g);
 
   words.forEach(function (word) {
-    counts[word] = counts.hasOwnProperty(word) ? counts[word] + 1 : 1;
+    var lcWord = word.toLowerCase();
+    counts[lcWord] = counts.hasOwnProperty(lcWord) ? counts[lcWord] + 1 : 1;
   });
 
   return counts;
