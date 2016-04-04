@@ -28,7 +28,7 @@ describe('School', function() {
   xit('adding students to different grades adds them to the roster', function() {
     school.add('Chelsea',3);
     school.add('Logan',7);
-    var expectedDb = { 3 : [ 'Chelsea' ], 7 : [ 'Logan'] };
+    var expectedDb = { 3 : [ 'Chelsea' ], 7 : [ 'Logan' ] };
     expect(school.roster()).toEqual(expectedDb);
   });
 
@@ -49,10 +49,10 @@ describe('School', function() {
     school.add('Kareem', 6);
     school.add('Christopher', 4);
     school.add('Kyle', 3);
-    sorted = {
-      3 : ['Kyle'],
-      4 : ['Christopher', 'Jennifer'],
-      6 : ['Kareem']
+    var sorted = {
+      3 : [ 'Kyle' ],
+      4 : [ 'Christopher', 'Jennifer' ],
+      6 : [ 'Kareem' ]
     };
     expect(school.roster()).toEqual(sorted);
   });
