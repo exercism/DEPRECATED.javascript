@@ -42,6 +42,7 @@ describe('binary', function() {
     expect(new Binary('012').toDecimal()).toEqual(0);
     expect(new Binary('10nope').toDecimal()).toEqual(0);
     expect(new Binary('nope10').toDecimal()).toEqual(0);
+    expect(new Binary('10nope10').toDecimal()).toEqual(0);
   });
 
 });
