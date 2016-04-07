@@ -22,6 +22,6 @@ describe('Scrabble', function() {
   });
 
   xit('scores case insensitive words',function() {
-    expect(score('MULTIBILLIONAIRE')).toEqual(20);
+    expect(score('OXYPHENBUTAZONE')).toEqual(41);
   });
 });
