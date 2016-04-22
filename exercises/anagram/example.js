@@ -25,4 +25,3 @@ function normalize(string) {
 }
 
 module.exports = Anagram;
-

@@ -1,3 +1,9 @@
+//
+// This is only a SKELETON file for the "Phone Number" exercise. It's been provided as a
+// convenience to get you started writing code faster.
+// Make sure to look at test.script.js--that should give you some hints about what is
+// expected here.
+
 'use strict';
 
 var Phone = module.exports = function Phone(number) {
@@ -6,15 +12,9 @@ var Phone = module.exports = function Phone(number) {
 };
 
 Phone.prototype.cleanNumber = function(number) {
-  var num = number.replace(/\D/g,'');
-
-  if (num.length === 10) {
-    return num;
-  } else if (num.length === 11 && num[0] === '1') {
-    return num.substr(1,num.length);
-  } else {
-    return '0000000000';
-  }
+//
+// YOUR CODE GOES HERE
+//
 };
 
 Phone.prototype.number = function() {
@@ -22,17 +22,25 @@ Phone.prototype.number = function() {
 };
 
 Phone.prototype.areaCode = function() {
-  return this.number().substr(0,3);
+//
+// YOUR CODE GOES HERE
+//
 };
 
 Phone.prototype.exchangeCode = function() {
-  return this.number().substr(3,3);
+//
+// YOUR CODE GOES HERE
+//
 };
 
 Phone.prototype.subscriberNumber = function() {
-  return this.number().substr(6,4);
+//
+// YOUR CODE GOES HERE
+//
 };
 
 Phone.prototype.toString = function() {
-  return '(' + this.areaCode() + ') ' + this.exchangeCode() + '-' + this.subscriberNumber();
+//
+// YOUR CODE GOES HERE
+//
 };

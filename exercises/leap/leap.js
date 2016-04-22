@@ -1,3 +1,9 @@
+//
+// This is only a SKELETON file for the 'Leap' exercise. It's been provided as a
+// convenience to get you started writing code faster.
+// Make sure to look at test.script.js--that should give you some hints about what is
+// expected here.
+
 'use strict';
 
 /**
@@ -17,7 +23,10 @@ function Year(year) {
  * Whether given year is a leap year.
  */
 Year.prototype.isLeap = function () {
-  return (this.year % 400 == 0) || ((this.year % 4 == 0) && (this.year % 100 != 0));
+//
+// YOUR CODE GOES HERE
+// (you have to use this.year)
+//
 }
 
 module.exports = Year;

@@ -1,3 +1,5 @@
+'use strict';
+
 var notAlpha = /[^a-z]+/gi,
   ALPHA_LENGTH = 26,
   cleaned,

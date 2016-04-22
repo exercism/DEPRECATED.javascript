@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   parse: function (phrase) {
     return phrase.match(/[A-Z]+[a-z]*|[a-z]+/g)
