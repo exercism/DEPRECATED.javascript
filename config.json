@@ -6,6 +6,7 @@
   "test_pattern": ".*[.]spec[.]js$",
   "problems": [
     "hello-world",
+    "fizzbuzz",
 		"leap",
     "hamming",
 		"rna-transcription",

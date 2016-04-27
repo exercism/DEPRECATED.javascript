@@ -36,4 +36,3 @@ Phone.prototype.subscriberNumber = function() {
 Phone.prototype.toString = function() {
   return '(' + this.areaCode() + ') ' + this.exchangeCode() + '-' + this.subscriberNumber();
 };
-

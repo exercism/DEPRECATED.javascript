@@ -20,4 +20,3 @@ Hamming.prototype.compute = function (strand1, strand2) {
 };
 
 module.exports = Hamming;
-

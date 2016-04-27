@@ -4,6 +4,8 @@
 // Make sure to look at test.script.js--that should give you some hints about what is
 // expected here.
 
+'use strict';
+
 var HelloWorld = function() {};
 
 HelloWorld.prototype.hello = function(input) {

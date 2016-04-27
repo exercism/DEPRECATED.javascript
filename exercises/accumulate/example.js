@@ -1,3 +1,5 @@
+'use strict';
+
 var accumulate = module.exports = function (list, accumulator) {
   var out = [];
   var idx = -1;
@@ -9,4 +11,3 @@ var accumulate = module.exports = function (list, accumulator) {
 
   return out;
 };
-

@@ -15,4 +15,3 @@ Words.prototype.count = function (input) {
 };
 
 module.exports = Words;
-
