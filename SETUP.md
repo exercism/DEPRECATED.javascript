@@ -9,9 +9,7 @@ http://exercism.io/languages/javascript
 
 Execute the tests with:
 
-```bash
-$ jasmine-node .
-```
+    jasmine-node .
 
 In many test suites all but the first test have been skipped.
 
