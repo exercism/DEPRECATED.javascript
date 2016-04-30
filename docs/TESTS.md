@@ -1,24 +1,20 @@
 Execute the tests with:
 
-```bash
-$ jasmine-node bob_test.spec.js
-```
+    jasmine-node bob_test.spec.js
 
 ## Making Your First Node Module
 
 To create a module that can be loaded with `var Bob = require('./bob.js');`, put this code in `bob.js`:
 
-```javascript
-var Bob = function() {};
+    var Bob = function() {};
 
-Bob.prototype.hey = function(what) {
-	//
-	// Your solution to the exercise goes here
-	//
-};
+    Bob.prototype.hey = function(what) {
+      //
+      // Your solution to the exercise goes here
+      //
+    };
 
-module.exports = Bob;
-```
+    module.exports = Bob;
 
 You can find more information about modules in the [node documentation](http://nodejs.org/api/modules.html#modules_module_exports). To make it easier to get started, there's a "skeleton" bob.js file in the directory
 for the first exercise.
@@ -50,13 +46,11 @@ If you have a paid version of Visual Studio, you should install the [Web Essenti
 
 You can run the unit tests from a node.js command line using the batch file in the project.
 
-```
-C:\Src\exercises\javascript>test example\bob_test.spec.js
-.................
+    C:\Src\exercises\javascript>test example\bob_test.spec.js
+    .................
 
-Finished in 0.02 seconds
-17 tests, 17 assertions, 0 failures, 0 skipped
-```
+    Finished in 0.02 seconds
+    17 tests, 17 assertions, 0 failures, 0 skipped
 
 If you do not see any output from running the tests, you are likely not in a Node.js command prompt.
 
@@ -66,4 +60,4 @@ A linter is like a tester for your code's style and formatting. In some language
 
 The old standard linter for JavaScript is [JSLint](http://jslint.com). However, it is controversially picky. [JSHint](http://jshint.com) is another popular linter. We suggest using [ESLint](http://eslint.org), which is more customizable than either JSLint or JSHint, and is well-run.
 
-To get started using ESLint, follow the instructions [here](http://eslint.org/docs/user-guide/command-line-interface.html). Once you have ESLint installed, you'll be able to lint your code with a simple ```eslint [options] [file|dir]*``` command. Eg, if you're in the hello-world directory, ```eslint .``` would lint all files in that directory.
+To get started using ESLint, follow the instructions [here](http://eslint.org/docs/user-guide/command-line-interface.html). Once you have ESLint installed, you'll be able to lint your code with a simple `eslint [options] [file|dir]*` command. Eg, if you're in the hello-world directory, `eslint .` would lint all files in that directory.
