@@ -15,15 +15,15 @@ describe('BinarySearch', function() {
   });
 
   xit('should find the correct index of an included value', function() {
-    expect(2).toEqual(new BinarySearch(sortedArray).indexOf(3));
+    expect(new BinarySearch(sortedArray).indexOf(3)).toEqual(2);
   });
 
   xit('should search the middle of the array', function() {
-    expect(3).toEqual(new BinarySearch(sortedArrayOfOddLength).indexOf(2));
+    expect(new BinarySearch(sortedArrayOfOddLength).indexOf(2)).toEqual(3);
   });
 
   xit('should return -1 for a value not in the array', function() {
-    expect(-1).toEqual(new BinarySearch(sortedArray).indexOf(10));
+    expect(new BinarySearch(sortedArray).indexOf(10)).toEqual(-1);
   });
 });
 
