@@ -64,5 +64,7 @@ describe('LinkedList', function () {
     var list = new LinkedList();
     list.push(10);
     list.delete(10);
+
+    expect(list.count()).toBe(0);
   });
 });
