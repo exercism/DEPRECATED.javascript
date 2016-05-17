@@ -12,6 +12,7 @@ You should learn JavaScript because:
 
 * It's easy to learn.
 * It's versatile in the sense that it's multi-paradigm supporting procedural, event based, object oriented and functional programming.
+* It can be used for the frontend and backend.
 * It's Open Source.
 * JavaScript programming skills are in high demand.
 
