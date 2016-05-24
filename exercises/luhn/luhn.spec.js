@@ -17,7 +17,7 @@ describe('Luhn',function() {
     expect(luhn.addends).toEqual([1, 4, 1, 4, 1]);
   });
 
-  xit('too large added',function() {
+  xit('too large addend',function() {
     var luhn = new Luhn(8631);
     expect(luhn.addends).toEqual([7, 6, 6, 1]);
   });
