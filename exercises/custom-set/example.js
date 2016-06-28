@@ -6,6 +6,10 @@
     this.data = inputData || [];
   };
 
+  CustomSet.prototype.empty = function() {
+    return this.data.length === 0;
+  };
+
   CustomSet.prototype.delete = function(element) {
     var index = this.data.indexOf(element);
     if (index !== -1) {
@@ -36,7 +40,7 @@
     return true;
   };
 
-  CustomSet.prototype.empty = function() {
+  CustomSet.prototype.clear = function() {
     return new CustomSet([]);
   };
 
@@ -52,11 +56,11 @@
     return new CustomSet(result);
   };
 
-  CustomSet.prototype.member = function(datum) {
+  CustomSet.prototype.contains = function(datum) {
     return this.data.indexOf(datum) !== -1;
   };
 
-  CustomSet.prototype.put = function(datum) {
+  CustomSet.prototype.add = function(datum) {
     if (this.data.indexOf(datum) === -1) {
       this.data.push(datum);
     }
@@ -101,8 +105,8 @@
       return false;
     }
 
-    for (var i = 0; i < this.length; i++) {
-      if (thisData[i] !== otherData[i]) {
+    for (var i = 0; i < thisData.length; i++) {
+      if (thisData[i] !== thatData[i]) {
         return false;
       }
     }
