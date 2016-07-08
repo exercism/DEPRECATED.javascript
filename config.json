@@ -68,7 +68,8 @@
     "ocr-numbers",
     "meetup",
     "bracket-push",
-    "two-bucket"
+    "two-bucket",
+    "bowling"
   ],
   "deprecated": [
     "nucleotide-count",
