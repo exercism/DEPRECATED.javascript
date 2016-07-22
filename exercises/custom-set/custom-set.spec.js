@@ -2,7 +2,7 @@ var CustomSet = require('./custom-set');
 
 describe('CustomSet', function() {
 
-  xit('can test for no members', function() {
+  it('can test for no members', function() {
     var actual = new CustomSet().empty();
     expect(actual).toBe(true);
 
@@ -147,7 +147,7 @@ describe('CustomSet', function() {
     expect(actual4.eql(expected4)).toBe(true);
   });
 
-  it('can delete elements', function(){
+  xit('can delete elements', function(){
     var expected = new CustomSet([1, 3]);
     var actual = new CustomSet([3, 2, 1]).delete(2);
     expect(actual.eql(expected)).toBe(true);
