@@ -69,7 +69,8 @@
     "meetup",
     "bracket-push",
     "two-bucket",
-    "bowling"
+    "bowling",
+    "diamond"
   ],
   "exercises": [
     {
@@ -458,6 +459,12 @@
     },
     {
       "slug": "bowling",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+    {
+      "slug": "diamond",
       "difficulty": 1,
       "topics": [
       ]
