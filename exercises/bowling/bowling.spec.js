@@ -2,24 +2,9 @@ var Bowling = require('./bowling');
 
 describe('Bowling', function() {
   describe('Check game can be scored correctly.', function() {
-    it('should be able to score open frame', function() {
-      var rolls = [3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-      expect(new Bowling(rolls).score()).toEqual(7);
-    });
-
-    xit('should be able to score multiple frames', function() {
-      var rolls = [3, 4, 2, 3, 5, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-      expect(new Bowling(rolls).score()).toEqual(19);
-    });
-
-    xit('should be able to score a game with all gutterballs', function() {
+    it('should be able to score a game with all gutterballs', function() {
       var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       expect(new Bowling(rolls).score()).toEqual(0);
-    });
-
-    xit('should be able to score a game with all single pin rolls', function() {
-      var rolls = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-      expect(new Bowling(rolls).score()).toEqual(20);
     });
 
     xit('should be able to score a game with all open frames', function() {
@@ -27,14 +12,34 @@ describe('Bowling', function() {
       expect(new Bowling(rolls).score()).toEqual(90);
     });
 
-    xit('should be able to score a strike not in the last frame', function() {
-      var rolls = [10, 5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-      expect(new Bowling(rolls).score()).toEqual(26);
+    xit('a spare followed by zeros is worth ten points', function() {
+      var rolls = [6, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      expect(new Bowling(rolls).score()).toEqual(10);
     });
 
-    xit('should be able to score a spare not in the last frame', function() {
-      var rolls = [5, 5, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-      expect(new Bowling(rolls).score()).toEqual(20);
+    xit('points scored in the roll after a spare are counted twice', function() {
+      var rolls = [6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      expect(new Bowling(rolls).score()).toEqual(16);
+    });
+
+    xit('consecutive spares each get a one roll bonus', function() {
+      var rolls = [5, 5, 3, 7, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      expect(new Bowling(rolls).score()).toEqual(31);
+    });
+
+    xit('should allow fill ball when the last frame is a spare', function() {
+      var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 7];
+      expect(new Bowling(rolls).score()).toEqual(17);
+    });
+
+    xit('a strike earns ten points in a frame with a single roll', function() {
+      var rolls = [10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      expect(new Bowling(rolls).score()).toEqual(10);
+    });
+
+    xit('points scored in the two rolls after a strike are counted twice as a bonus', function() {
+      var rolls = [10, 5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      expect(new Bowling(rolls).score()).toEqual(26);
     });
 
     xit('should be able to score multiple strikes in a row', function() {
@@ -42,24 +47,24 @@ describe('Bowling', function() {
       expect(new Bowling(rolls).score()).toEqual(81);
     });
 
-    xit('should be able to score multiple spares in a row', function() {
-      var rolls = [5, 5, 3, 7, 4, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-      expect(new Bowling(rolls).score()).toEqual(32);
-    });
-
     xit('should allow fill balls when the last frame is a strike', function() {
       var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 7, 1];
       expect(new Bowling(rolls).score()).toEqual(18);
     });
 
-    xit('should allow fill ball when the last frame is a spare', function() {
-      var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 1, 7];
-      expect(new Bowling(rolls).score()).toEqual(17);
+    xit('rolling a spare with the two roll bonus does not get a bonus roll', function() {
+      var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 7, 3];
+      expect(new Bowling(rolls).score()).toEqual(20);
     });
 
-    xit('should allow fill balls to be a strike', function() {
+    xit('strikes with the two roll bonus do not get bonus rolls', function() {
       var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10];
       expect(new Bowling(rolls).score()).toEqual(30);
+    });
+
+    xit('a strike with the one roll bonus after a spare in the last frame does not get a bonus', function() {
+      var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 10];
+      expect(new Bowling(rolls).score()).toEqual(20);
     });
 
     xit('should be able to score a perfect game', function() {
@@ -69,60 +74,75 @@ describe('Bowling', function() {
   });
 
   describe('Check game rules.', function() {
-    xit('should not allow rolls with negative pins', function() {
-      var rolls = [-1];
+    xit('rolls can not score negative points', function() {
+      var rolls = [-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       expect(function() { new Bowling(rolls).score(); }).toThrow(
-        new Error('Pins must have a value from 0 to 10')
-      );
+        new Error('Pins must have a value from 0 to 10'));    
+	});
+
+    xit('a roll can not score more than 10 points', function() {
+      var rolls = [11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      expect(function() { new Bowling(rolls).score(); }).toThrow(
+        new Error('Pins must have a value from 0 to 10'));
+	});
+
+    xit('two rolls in a frame can not score more than 10 points', function() {
+      var rolls = [5, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      expect(function() { new Bowling(rolls).score(); }).toThrow(
+        new Error('Pin count exceeds pins on the lane'));
+	});
+
+    xit('two bonus rolls after a strike in the last frame can not score more than 10 points', function() {
+      var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 5, 6];
+      expect(function() { new Bowling(rolls).score(); }).toThrow(
+        new Error('Pin count exceeds pins on the lane'));    
+	});
+
+    xit('two bonus rolls after a strike in the last frame can score more than 10 points if one is a strike', function() {
+      var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 6];
+      expect(new Bowling(rolls).score()).toEqual(26);
     });
 
-    xit('should not allow rolls better than strike', function() {
-      var rolls = [11];
+    xit('the second bonus rolls after a strike in the last frame can not be a strike if the first one is not a strike', function() {
+      var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 6, 10];
       expect(function() { new Bowling(rolls).score(); }).toThrow(
-        new Error('Pins must have a value from 0 to 10')
-      );
+        new Error('Pin count exceeds pins on the lane'));    
     });
 
-    xit('should not allow two normal rolls better than strike', function() {
-      var rolls = [5, 6];
-      expect(function() { new Bowling(rolls).score(); }).toThrow(
-        new Error('Pin count exceeds pins on the lane')
-      );
-    });
-
-    xit('should not allow two normal rolls better than strike in last frame', function() {
-      var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 6];
-      expect(function() { new Bowling(rolls).score(); }).toThrow(
-        new Error('Pin count exceeds pins on the lane')
-      );
-    });
-
-    xit('should not allow to take score at the beginning of the game', function() {
+    xit('an unstarted game can not be scored', function() {
       var rolls = [];
       expect(function() { new Bowling(rolls).score(); }).toThrow(
-        new Error('Score cannot be taken until the end of the game')
-      );
+        new Error('Score cannot be taken until the end of the game'));
     });
 
-    xit('should not allow to take score before the game has ended', function() {
-      var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    xit('an incomplete game can not be scored', function() {
+      var rolls = [0, 0];
       expect(function() { new Bowling(rolls).score(); }).toThrow(
-        new Error('Score cannot be taken until the end of the game')
-      );
+        new Error('Score cannot be taken until the end of the game'));
     });
 
-    xit('should not allow rolls after the tenth frame', function() {
+    xit('a game with more than ten frames and no last frame spare or strike can not be scored', function() {
       var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       expect(function() { new Bowling(rolls).score(); }).toThrow(
-        new Error('Should not be able to roll after game is over')
-      );
+        new Error('Should not be able to roll after game is over'));
     });
 
-    xit('should not calculate score before fill balls have been played', function() {
-      var rolls = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10];
+    xit('bonus rolls for a strike in the last frame must be rolled before score can be calculated', function() {
+      var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10];
       expect(function() { new Bowling(rolls).score(); }).toThrow(
-        new Error('Score cannot be taken until the end of the game')
-      );
+        new Error('Score cannot be taken until the end of the game'));
+    });
+
+    xit('both bonus rolls for a strike in the last frame must be rolled before score can be calculated', function() {
+      var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10];
+      expect(function() { new Bowling(rolls).score(); }).toThrow(
+        new Error('Score cannot be taken until the end of the game'));
+    });
+
+    xit('bonus roll for a spare in the last frame must be rolled before score can be calculated', function() {
+      var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3];
+      expect(function() { new Bowling(rolls).score(); }).toThrow(
+        new Error('Score cannot be taken until the end of the game'));
     });
   });
 });
