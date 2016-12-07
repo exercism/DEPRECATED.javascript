@@ -70,7 +70,8 @@
     "bracket-push",
     "two-bucket",
     "bowling",
-    "diamond"
+    "diamond",
+    "all-your-base"
   ],
   "exercises": [
     {
@@ -465,6 +466,12 @@
     },
     {
       "slug": "diamond",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+    {
+      "slug": "all-your-base",
       "difficulty": 1,
       "topics": [
       ]
