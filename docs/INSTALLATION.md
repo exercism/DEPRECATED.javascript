@@ -6,7 +6,7 @@ There are at least two common options to run JavaScript code: the browsers and [
 
 **Mac OS X users**: same as Windows users, you will find official installers on [Node.js downloads](https://nodejs.org/en/download/). Choose the LTS version. It will install Node.js and `npm` on your machine.
 
-**Linux users**: there are binaries for `node` and `npm` tools on the Node.js downloads page, but the recommended way to install them on a Linux machine is via a package manager. As of writing this, the recommended version of Node.js to install is 4.x. To install it on a Debian or Ubuntu Linux distribuion just execute these commands:
+**Linux users**: there are binaries for `node` and `npm` tools on the Node.js downloads page, but the recommended way to install them on a Linux machine is via a package manager. As of writing this, the recommended version of Node.js to install is 4.x. To install it on a Debian or Ubuntu Linux distribution just execute these commands:
 
     curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
     sudo apt-get install -y nodejs
