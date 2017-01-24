@@ -3,12 +3,12 @@
 // convenience to get you started writing code faster.
 //
 
-var Bob = function() {};
+var Year = function() {};
 
-Bob.prototype.hey = function(input) {
+Year.prototype.isLeap = function(input) {
 //
 // YOUR CODE GOES HERE
 //
 };
 
-module.exports = Bob;
+module.exports = Year;
