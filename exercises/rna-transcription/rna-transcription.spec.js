@@ -25,12 +25,14 @@ describe('toRna()', function() {
   });
 
   xit('correctly handles completely invalid input', function () {
-     expect(dnaTranscriber.toRna('XXX'))
-         .toEqual('');
+     expect(function () { dnaTranscriber.toRna('XXX') }).toThrow(
+          new Error('Invalid input')
+      );
   });
 
   xit('correctly handles partially invalid input', function () {
-      expect(dnaTranscriber.toRna('ACGTXXXCTTAA'))
-          .toEqual('');
+      expect(function () { dnaTranscriber.toRna('ACGTXXXCTTAA') }).toThrow(
+          new Error('Invalid input')
+      );
   });
 });
