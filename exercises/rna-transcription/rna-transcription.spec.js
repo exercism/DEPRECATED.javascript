@@ -23,4 +23,14 @@ describe('toRna()', function() {
     expect(dnaTranscriber.toRna('ACGTGGTCTTAA'))
         .toEqual('UGCACCAGAAUU');
   });
+
+  xit('correctly handles completely invalid input', function () {
+     expect(dnaTranscriber.toRna('XXX'))
+         .toEqual('');
+  });
+
+  xit('correctly handles partially invalid input', function () {
+      expect(dnaTranscriber.toRna('ACGTXXXCTTAA'))
+          .toEqual('');
+  });
 });
