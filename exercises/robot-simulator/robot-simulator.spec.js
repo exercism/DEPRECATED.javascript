@@ -14,11 +14,11 @@ describe('Robot', function() {
   });
 
   xit('invalid robot bearing', function() {
-    try {
+    var incorrectlyOrientRobot = function () {
       robot.orient('crood');
-    } catch(exception) {
-      expect(exception).toEqual('Invalid Robot Bearing');
-    }
+    };
+
+    expect(incorrectlyOrientRobot).toThrow(new Error('Invalid Robot Bearing'));
   });
 
   xit('turn right from north', function() {
