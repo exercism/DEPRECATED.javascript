@@ -10,6 +10,13 @@ Robot.prototype.at = function (xcoord, ycoord) {
 };
 
 Robot.prototype.orient = function (direction) {
+  if (direction != 'north' &&
+      direction != 'south' &&
+      direction != 'east' &&
+      direction != 'west') {
+    throw 'Invalid Robot Bearing'
+  }
+
   this.bearing = direction;
   return 'The robot is pointed ' + direction;
 };
