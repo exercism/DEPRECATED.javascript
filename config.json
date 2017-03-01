@@ -100,9 +100,28 @@
       ]
     },
     {
+      "slug": "pangram",
+      "difficulty": 1,
+      "topics": [
+        "Control flow (conditionals)",
+        "Control flow (loops)",
+        "Lists",
+        "Strings",
+        "Maps",
+        "Algorithms",
+        "Searching"
+      ]
+    },
+    {
       "slug": "bob",
       "difficulty": 1,
       "topics": [
+        "Control flow (conditionals)",
+        "Polymorfism",
+        "Strings",
+        "Unicode",
+        "Pattern recognition",
+        "Regular expressions"
       ]
     },
     {
@@ -112,19 +131,7 @@
       ]
     },
     {
-      "slug": "word-count",
-      "difficulty": 1,
-      "topics": [
-      ]
-    },
-    {
       "slug": "isogram",
-      "difficulty": 1,
-      "topics": [
-      ]
-    },
-    {
-      "slug": "pangram",
       "difficulty": 1,
       "topics": [
       ]
@@ -193,6 +200,17 @@
       "slug": "clock",
       "difficulty": 1,
       "topics": [
+      ]
+    },
+    {
+      "slug": "word-count",
+      "difficulty": 1,
+      "topics": [
+        "Control flow (loops)",
+        "Lists",
+        "Strings",
+        "Unicode",
+        "Regular expressions"
       ]
     },
     {
