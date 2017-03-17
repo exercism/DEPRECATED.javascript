@@ -1,4 +1,8 @@
-var ListOps = require('./ListOps');
+'use strict';
+
+var ListOps = require('./list-ops');
+
+const ListOps = new ListOps();
 
 describe('ListOps', function () {
 
