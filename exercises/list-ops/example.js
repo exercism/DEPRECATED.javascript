@@ -1,31 +1,31 @@
 (function() {
   'use strict';
 
-  function length(List) {
-    return List.size();
+  function length(list) {
+    return list.size();
   }
 
-  function reverse(List) {
-    var result = new Array(List);
+  function reverse(list) {
+    var result = new Array(list);
     result.reverse();
     return result;
   }
+/*
+  function map(list) {
 
-  function map(List) {
-    
   }
 
-  function reduce(List) {
-    
+  function reduce(list) {
+
   }
 
-  function filter(List) {
-    
-  }
+  function filter(list) {
 
-  function concat(List1,List2) {
-    var r1 = new Array(List1);
-    var r2 = new Array(List2);
+  }
+*/
+  function concat(list1,list2) {
+    var r1 = new Array(list1);
+    var r2 = new Array(list2);
     var final = r1.concat(r2);
     return final;
   }
