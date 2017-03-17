@@ -1,4 +1,4 @@
-var ListOps = require('./list_ops');
+var ListOps = require('./list-ops');
 
 describe('ListOps', function () {
 
