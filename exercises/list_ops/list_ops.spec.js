@@ -1,9 +1,9 @@
-var ListOps = require('./list-ops');
+var ListOps = require('./list_ops');
 
 describe('ListOps', function () {
 
   it('lengthOfAnEmptyListShouldBeZero', function () {
-  var list = new ListOps();  
+  var list = new ListOps();
   var expected = 0;
   var actual = list.length("")
   assert.deepEqual(expected,actual);
@@ -12,9 +12,9 @@ describe('ListOps', function () {
   xit('shouldReturnTheCorrectLengthOfAnNonEmptyList', function () {
    var listeInt = new Array(0,1,2,3,4);
    var list = new ListOps();
-   var actual = list.length("listeInt")
+   var actual = list.length(listeInt)
    var expected = listeInt.size() ;
-   assert.deepEqual(expected,actual);   
+   assert.deepEqual(expected,actual);
   });
 
   xit('shouldReverseAnEmptyList', function () {
@@ -22,7 +22,7 @@ describe('ListOps', function () {
    var actual = list.reverse("");
 
    assert.notEqual(actual, null);
-   assert.isTrue(actual == "");  
+   assert.isTrue(actual == "");
   });
 
   xit('shouldReverseANonEmptyList', function () {
@@ -33,7 +33,7 @@ describe('ListOps', function () {
    assert.isFalse(actual == "");
    assert.deepEqual(expected,actual);
   });
-
+/*
   xit('shouldMapAnEmptyListAndReturnAnEmptyList', function () {
    var list = new ListOps();
    // manque un code
@@ -61,9 +61,9 @@ describe('ListOps', function () {
    assert.isTrue(actual == "");
   });
 
-/*
+
   xit('shouldFilterNonEmptyList', function () {
-   var listInt = 
+   var listInt =
    //manque un code
 
    assert.notEqual(actual,null);
