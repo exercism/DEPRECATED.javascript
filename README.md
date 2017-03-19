@@ -1,4 +1,4 @@
-# xJavaScript [![Build Status](https://travis-ci.org/exercism/xjavascript.png?branch=master)](https://travis-ci.org/exercism/xjavascript)
+# xJavaScript [![Build Status](https://travis-ci.org/exercism/xjavascript.svg?branch=master)](https://travis-ci.org/exercism/xjavascript)
 
 Exercism exercises in JavaScript
 
