@@ -72,7 +72,8 @@
     "bowling",
     "diamond",
     "all-your-base",
-    "run-length-encoding"
+    "run-length-encoding",
+		"prefect-numbers"
   ],
   "exercises": [
     {
@@ -497,6 +498,12 @@
     },
     {
       "slug": "run-length-encoding",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+		{
+      "slug": "perfect-numbers",
       "difficulty": 1,
       "topics": [
       ]
