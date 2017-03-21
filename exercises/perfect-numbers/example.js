@@ -1,15 +1,40 @@
 'use strict';
 
-var Divisors = require('./divisors');
-
 var PerfectNumbers = function() {
 
+};
+
+/**
+ * Calculate all the divisors for a given number and return them as an array.
+ * Note: the actual number is not include in the returned array.
+ */
+PerfectNumbers.prototype.getDivisors = function(number) {
+
+  var i;
+  var divs = new Array();
+
+  // Accepts only natura numbers greater than 1.
+  if (number <= 1) {
+    return divs;
+	}
+
+  // 1 always divides everyone!
+  divs.push(1);
+
+  // Calculate the divisors up the the half of the number + 1
+  for (i = 2; i <= number / 2; i++) {
+
+    if (number % i === 0) {
+      divs.push(i);
+		}
+  }
+
+  return divs;
 };
 
 PerfectNumbers.prototype.classify = function(number) {
 
   var i, sum, result;
-  var divisors = new Divisors();
 
   // Check if the input is valid
   if (number <= 0) {
@@ -17,7 +42,7 @@ PerfectNumbers.prototype.classify = function(number) {
   }
 
   // Factorize the current number.
-  var divsArray = divisors.getDivisors(number);
+  var divsArray = this.getDivisors(number);
 
   // Sum the factors.
   sum = 0;
