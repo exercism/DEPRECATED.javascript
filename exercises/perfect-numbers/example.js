@@ -4,7 +4,7 @@ var Divisors = require('./divisors');
 
 var PerfectNumbers = function() {
 
-}
+};
 
 PerfectNumbers.prototype.classify = function(number) {
 
@@ -12,8 +12,9 @@ PerfectNumbers.prototype.classify = function(number) {
   var divisors = new Divisors();
 
   // Check if the input is valid
-  if (number <= 0)
+  if (number <= 0) {
     return 'Classification is only possible for natural numbers.';
+  }
 
   // Factorize the current number.
   var divsArray = divisors.getDivisors(number);
@@ -25,16 +26,17 @@ PerfectNumbers.prototype.classify = function(number) {
   }
 
   // Check if the number is perfect.
-  if (sum === number)
+  if (sum === number) {
     result = 'perfect';
-
-  else if (sum > number)
+  }
+  else if (sum > number) {
     result = 'abundant';
-
-  else
+  }
+  else {
     result = 'deficient';
+  }
 
   return result;
-}
+};
 
 module.exports = PerfectNumbers;
