@@ -1,4 +1,12 @@
-After configuring `exercism` command-line client and fetching your first JavaScript exercise (see [command-line interface overview](http://exercism.io/cli)) is time to run some tests. Move to the folder where that exercise's files are located (a path similar to `<EXERCISM_HOME_DIR>/<TRACK_ID>/<EXERCISE>`) and run the tests with the `jasmine-node` command you should have installed on *Installing JavaScript* step:
+After configuring `exercism` command-line client you can fetch the very next exercise
+
+    exercism fetch javascript
+
+or you can fetch a specific exercise, passing the exercise name after the language. For example, to fetch the `bob` exercise:
+
+    exercism fetch javascript bob
+
+Now, it's time to run some tests. Move to the folder where that exercise's files are located (a path similar to `<EXERCISM_HOME_DIR>/<TRACK_ID>/<EXERCISE>`) and run the tests with the `jasmine-node` command you should have installed on the *Installing JavaScript* step:
 
     cd ~/exercism/javascript/bob
     jasmine-node bob_test.spec.js
