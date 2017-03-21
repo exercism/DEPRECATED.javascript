@@ -11,6 +11,7 @@
     "rna-transcription",
     "bob",
     "gigasecond",
+		"perfect-numbers",
     "word-count",
     "isogram",
     "pangram",
@@ -72,8 +73,7 @@
     "bowling",
     "diamond",
     "all-your-base",
-    "run-length-encoding",
-		"perfect-numbers"
+    "run-length-encoding"
   ],
   "exercises": [
     {
@@ -199,6 +199,12 @@
     },
     {
       "slug": "clock",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+		{
+      "slug": "perfect-numbers",
       "difficulty": 1,
       "topics": [
       ]
@@ -498,12 +504,6 @@
     },
     {
       "slug": "run-length-encoding",
-      "difficulty": 1,
-      "topics": [
-      ]
-    },
-		{
-      "slug": "perfect-numbers",
       "difficulty": 1,
       "topics": [
       ]
