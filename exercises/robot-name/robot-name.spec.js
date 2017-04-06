@@ -26,19 +26,6 @@ describe('Robot', function() {
     expect(differentRobot.name).not.toEqual(robot.name);
   });
 
-  xit('there can be lots of robots with different names each', function() {
-    var i,
-        numRobots = 10000,
-        usedNames = {};
-
-    for (i = 0; i < numRobots; i++) {
-      var newRobot = new Robot();
-      usedNames[newRobot.name] = true;
-    }
-
-    expect(Object.keys(usedNames).length).toEqual(numRobots);
-  });
-
   xit('is able to reset the name', function() {
     var originalName = robot.name;
     robot.reset();
@@ -60,5 +47,19 @@ describe('Robot', function() {
     }
 
     expect(Object.keys(usedNames).length).toEqual(numResets + 1);
+  });
+  
+  //This test is optional. 
+  xit('there can be lots of robots with different names each', function() {
+    var i,
+        numRobots = 10000,
+        usedNames = {};
+
+    for (i = 0; i < numRobots; i++) {
+      var newRobot = new Robot();
+      usedNames[newRobot.name] = true;
+    }
+
+    expect(Object.keys(usedNames).length).toEqual(numRobots);
   });
 });
