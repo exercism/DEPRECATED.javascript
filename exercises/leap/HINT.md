@@ -1,9 +1,11 @@
 This is the first test for this exercise:
 
+```javascript
   it('is not very common', function() {
     var year = new Year(2015);
     expect(year.isLeap()).toBe(false);
   });
+```
 
 Each test in the exercise follows the same pattern: 
 
@@ -14,7 +16,9 @@ The `Year` function is a constructor, which means that it is specifically design
 
 When a new `Year` object is created:
 
+```javascript
   var year = new Year(2015);
+```
 
 We expect `year` to, at the very least, have a specific value (in this case 2015) assigned to it.  Otherwise it would not represent an actual year.
 
@@ -22,17 +26,21 @@ This means that we must store the value passed as a parameter when the new `Year
 
 The way a constructor stores these fundamental values (instance variables) is like this:
 
+```javascript
   var Constructor = function(input) {
     this.value = input;
   };
+```
 
 The `this` in the constructor refers to the newly created instance of the `Constructor`.
 
 Once the input (parameter) is stored in an instance variable, any instance methods, such as:
 
+```javascript
   Constructor.prototype.instanceMethod = function() {
     // this method can now access the input by calling `this.value`
   };
+```
 
 The instance method accesses the input using `this.value` (in this example).
 
