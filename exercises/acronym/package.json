@@ -7,6 +7,6 @@
     "test": "make test"
   },
   "devDependencies": {
-    "jasmine-node": "*"
+    "jasmine": "*"
   }
 }

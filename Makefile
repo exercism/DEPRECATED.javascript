@@ -24,8 +24,7 @@ test-assignment: node_modules
 	@cp exercises/$(ASSIGNMENT)/$(EXAMPLE) $(OUTDIR)/$(subst _,-,$(ASSIGNMENT)).$(FILEEXT)
 	#@sed -i.original 's/\bxit\b/it/g' $(OUTDIR)/*spec.$(FILEEXT)
 	@sed 's/xit/it/g' exercises/$(ASSIGNMENT)/$(TSTFILE) > $(OUTDIR)/$(TSTFILE)
-	@./node_modules/.bin/jasmine-node --captureExceptions $(OUTDIR)/$(TSTFILE)
+	@./node_modules/.bin/jasmine --captureExceptions $(OUTDIR)/$(TSTFILE)
 
 test:
 	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment $(MAKE) -s test-assignment || exit 1; done
-
