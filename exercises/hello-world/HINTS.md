@@ -24,7 +24,7 @@ This is the first test:
 
 Run the test now, with the following command on the command-line:
 
-    jasmine-node .
+    jasmine .
 
 The test fails, which makes sense since you've not written any code yet.
 
@@ -76,7 +76,7 @@ Try changing the function in hello-world.js so that it says
 
 Then run the tests again from the command-line:
 
-    jasmine-node .
+    jasmine .
 
 Notice how it changes the failure message.
 
@@ -89,7 +89,7 @@ Once the test is passing, look at the second test in hello-world.spec.js. It loo
     });
 
 This test starts with `xit` instead of `it`.
-That means that when jasmine-node runs the tests,
+That means that when Jasmine runs the tests,
 the test will be skipped.
 
 Change the test so that it starts with `it`,

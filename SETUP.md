@@ -9,10 +9,9 @@ http://exercism.io/languages/javascript
 
 Execute the tests with:
 
-    jasmine-node .
+    jasmine .
 
 In many test suites all but the first test have been skipped.
 
 Once you get a test passing, you can unskip the next one by
 changing `xit` to `it`.
-
