@@ -1,88 +1,87 @@
-'use strict';
+var Robot = (function () {
+  'use strict';
 
-var Robot = function () {
-  this.coordinates = [0, 0];
-  this.bearing = 'north';
-};
-
-Robot.prototype.at = function (xcoord, ycoord) {
-  this.coordinates = [xcoord, ycoord];
-};
-
-Robot.prototype.orient = function (direction) {
-  if (direction != 'north' &&
-      direction != 'south' &&
-      direction != 'east' &&
-      direction != 'west') {
-    throw 'Invalid Robot Bearing'
+  var VALID_DIRECTIONS = ['north', 'east', 'south', 'west']
+  var INSTRUCTION_KEYS = {
+    A: 'advance',
+    L: 'turnLeft',
+    R: 'turnRight'
   }
 
-  this.bearing = direction;
-  return 'The robot is pointed ' + direction;
-};
+  function Robot () {
+    this.coordinates = [0, 0];
+    this.bearing = 'north';
+  };
 
-Robot.prototype.advance = function () {
+  Robot.prototype.at = function (x, y) {
+    this.coordinates = [x, y];
+  };
 
-  if (this.bearing === 'north') {
-    this.coordinates[1] += 1;
-  } else if (this.bearing === 'south') {
-    this.coordinates[1] -= 1;
-  } else if (this.bearing === 'east') {
-    this.coordinates[0] += 1;
-  } else if (this.bearing === 'west') {
-    this.coordinates[0] -= 1;
-  }
-};
-
-Robot.prototype.turnLeft = function () {
-
-  if (this.bearing === 'north') {
-    this.orient('west');
-  } else if (this.bearing === 'south') {
-    this.orient('east');
-  } else if (this.bearing === 'east') {
-    this.orient('north');
-  } else if (this.bearing === 'west') {
-    this.orient('south');
-  }
-};
-
-Robot.prototype.turnRight = function () {
-
-  if (this.bearing === 'north') {
-    this.orient('east');
-  } else if (this.bearing === 'south') {
-    this.orient('west');
-  } else if (this.bearing === 'east') {
-    this.orient('south');
-  } else if (this.bearing === 'west') {
-    this.orient('north');
-  }
-};
-
-Robot.prototype.instructions = function (s) {
-  var result = [];
-  s.split('').forEach(function (character) {
-    if (character === 'L') {
-      result.push('turnLeft');
-    } else if (character === 'R') {
-      result.push('turnRight');
-    } else if (character === 'A') {
-      result.push('advance');
+  Robot.prototype.orient = function (direction) {
+    if (VALID_DIRECTIONS.indexOf(direction) === -1) {
+      throw new Error('Invalid Robot Bearing');
     }
-  });
-  return result;
-};
 
-Robot.prototype.place = function (args) {
-  this.coordinates = [args.x, args.y];
-  this.bearing = args.direction;
-};
+    this.bearing = direction;
+  };
 
-Robot.prototype.evaluate = function (s) {
-  this.instructions(s).forEach(function (instruction) {
-    this[instruction]();
-  }, this);
-};
+  Robot.prototype.advance = function () {
+    switch (this.bearing) {
+      case 'north':
+        this.coordinates[1]++;
+        break;
+      case 'east':
+        this.coordinates[0]++;
+        break;
+      case 'south':
+        this.coordinates[1]--;
+        break;
+      case 'west':
+        this.coordinates[0]--;
+        break;
+    };
+  };
+
+  Robot.prototype.turnLeft = function () {
+    var directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
+
+    if (directionPosition > 0) {
+      this.orient(VALID_DIRECTIONS[--directionPosition]);
+    } else {
+      this.orient(VALID_DIRECTIONS[VALID_DIRECTIONS.length - 1]);
+    }
+  };
+
+  Robot.prototype.turnRight = function () {
+    var directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
+
+    if (directionPosition < (VALID_DIRECTIONS.length - 1)) {
+      this.orient(VALID_DIRECTIONS[++directionPosition]);
+    } else {
+      this.orient(VALID_DIRECTIONS[0]);
+    }
+  };
+
+  Robot.prototype.instructions = function (instructionKeys) {
+    return instructionKeys.split('')
+      .map(function (key) {
+        return INSTRUCTION_KEYS[key];
+      });
+  };
+
+  Robot.prototype.place = function (args) {
+    this.coordinates = [args.x, args.y];
+    this.bearing = args.direction;
+  };
+
+  Robot.prototype.evaluate = function (instructionKeys) {
+    this.instructions(instructionKeys)
+      .forEach(function (instruction) {
+        this[instruction]();
+      }, this);
+  };
+
+  return Robot
+})()
 
 module.exports = Robot;
