@@ -1,36 +1,22 @@
-After configuring `exercism` command-line client you can fetch the very next exercise
+With the first few exercises, you will get a skeleton file with the exported modules.
+For later ones, you can find more information about modules in the [node documentation](http://nodejs.org/api/modules.html#modules_module_exports).
 
-    exercism fetch javascript
-
-or you can fetch a specific exercise, passing the exercise name after the language. For example, to fetch the `bob` exercise:
-
-    exercism fetch javascript bob
-
-Now, it's time to run some tests. Move to the folder where that exercise's files are located (a path similar to `<EXERCISM_HOME_DIR>/<TRACK_ID>/<EXERCISE>`) and run the tests with the `jasmine` command you should have installed on the *Installing JavaScript* step:
+For running tests, install `jasmine` as described in the [Installing Javascript section](http://exercism.io/languages/javascript/installing).
+Move to the folder where that exercise's files are located (a path similar to <EXERCISM_HOME_DIR>/javascript/<EXERCISE>).
 
     cd ~/exercism/javascript/bob
     jasmine bob_test.spec.js
 
-*Note that `~/exercism` is the default folder for `EXERCISM_HOME_DIR`. Be sure you use your configured folder for it*
+Only the first test will be executed, all the others have been marked pending using `xit` or `xdescribe`.
+As you keep solving the exercise, one by one change all `xit` and `xdescribe` to `it` and `describe` respectively to run all the tests.
+See [Test Driven Development (TDD)](https://en.wikipedia.org/wiki/Test-driven_development) to know more about this approach.
+When all tests pass, you are ready to submit!
 
-## Making Your First Node Module
-
-To create a module that can be loaded with `var Bob = require('./bob.js');`, put this code in `bob.js`:
-
-    var Bob = function() {};
-
-    Bob.prototype.hey = function(what) {
-      //
-      // Your solution to the exercise goes here
-      //
-    };
-
-    module.exports = Bob;
-
-You can find more information about modules in the [node documentation](http://nodejs.org/api/modules.html#modules_module_exports). To make it easier to get started, there's a "skeleton" bob.js file in the directory
-for the first exercise.
 
 ## Visual Studio on Windows
+
+You can use any editor of your choice to write javascript. Here are just some instructions for using and running tests in `Visual Studio`.
+You are free to skip this section if you are not using `Visual Studio` on `Windows`.
 
 Install [Visual Studio Express 2013 for web](http://www.visualstudio.com/en-us/products/visual-studio-express-vs.aspx). This will include the IDE and web development tools.
 
@@ -66,6 +52,8 @@ You can run the unit tests from a node.js command line using the batch file in t
 If you do not see any output from running the tests, you are likely not in a Node.js command prompt.
 
 ## Setting Up a Linter
+
+** Note: This section is completely optional **
 
 A linter is like a tester for your code's style and formatting. In some languages there are many acceptable styles, and using a linter allows you to be internally consistent (e.g. Ruby), or adhere to one of many common styles. In other languages there are fewer choices, and a linter allows programmers to look at code from a great variety of sources and still feel at home (e.g. Go). You can read more [here](https://en.wikipedia.org/wiki/Lint_(software)).
 
