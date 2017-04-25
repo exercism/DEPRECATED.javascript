@@ -12,19 +12,14 @@ FILEEXT := "js"
 EXAMPLE := "example.$(FILEEXT)"
 TSTFILE := "$(subst _,-,$(ASSIGNMENT)).spec.$(FILEEXT)"
 
-# development dependencies
-node_modules: package.json
-	@npm prune
-	@npm install
-
-test-assignment: node_modules
+test-assignment:
 	@echo "running tests for: $(ASSIGNMENT)"
 	@cp big-integer.$(FILEEXT) $(OUTDIR)
 	@cp exercises/$(ASSIGNMENT)/$(TSTFILE) $(OUTDIR)
 	@cp exercises/$(ASSIGNMENT)/$(EXAMPLE) $(OUTDIR)/$(subst _,-,$(ASSIGNMENT)).$(FILEEXT)
 	#@sed -i.original 's/\bxit\b/it/g' $(OUTDIR)/*spec.$(FILEEXT)
 	@sed 's/xit/it/g' exercises/$(ASSIGNMENT)/$(TSTFILE) > $(OUTDIR)/$(TSTFILE)
-	@./node_modules/.bin/jasmine --captureExceptions $(OUTDIR)/$(TSTFILE)
+	@jasmine --random=true $(OUTDIR)/$(TSTFILE)
 
 test:
 	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment $(MAKE) -s test-assignment || exit 1; done

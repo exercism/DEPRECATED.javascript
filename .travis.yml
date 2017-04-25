@@ -5,8 +5,10 @@ sudo: false
 node_js:
   - 5.7
 
+install:
+  - "npm install -g jasmine"
+
 script:
   - "make test"
   - "./bin/fetch-configlet"
   - "./bin/configlet ."
-
