@@ -48,6 +48,7 @@
     "series",
     "difference-of-squares",
     "secret-handshake",
+    "proverb",
     "linked-list",
     "wordy",
     "flatten-array",
@@ -350,6 +351,14 @@
       "slug": "secret-handshake",
       "difficulty": 1,
       "topics": [
+      ]
+    },
+    {
+      "slug": "proverb",
+      "difficulty": 1,
+      "topics": [
+        "Arrays",
+        "Optional values"
       ]
     },
     {
