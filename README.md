@@ -2,9 +2,9 @@
 
 Exercism exercises in JavaScript
 
-## Installing Javascript
+## Installing
 
-For information about installing Javascript, see the [Javascript](http://exercism.io/languages/javascript/about) page.
+To run the tests, you'll need node.js and Jasmine. For information on how to install them, see the [Javascript](http://exercism.io/languages/javascript/about) page.
 
 ## Running Unit Test Suite
 
