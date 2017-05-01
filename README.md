@@ -2,6 +2,10 @@
 
 Exercism exercises in JavaScript
 
+## Installing Javascript
+
+For information about installing Javascript, see the [Javascript](http://exercism.io/languages/javascript/about) page.
+
 ## Running Unit Test Suite
 
 The following commands assume that you are in the 'xjavascript' directory:
