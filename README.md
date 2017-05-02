@@ -2,6 +2,10 @@
 
 Exercism exercises in JavaScript
 
+## Installing
+
+To run the tests, you'll need NodeJS and Jasmine. For information about how to install these tools, see the [Javascript](http://exercism.io/languages/javascript/about) page.
+
 ## Running Unit Test Suite
 
 The following commands assume that you are in the 'xjavascript' directory:
