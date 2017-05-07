@@ -22,7 +22,7 @@ Install [Visual Studio Express 2013 for web](http://www.visualstudio.com/en-us/p
 
 To get started, you can download a Visual Studio solution that is already set up to work with JavaScript and the other languages that Visual Studio supports.
 
-![Solution Explorer](http://x.exercism.io/v3/tracks/javascript/docs/img/SolutionExplorer.png)
+![Solution Explorer](./img/SolutionExplorer.png)
 
 1. Download the [Exercism.io Visual Studio Template](https://github.com/rprouse/Exercism.VisualStudio) from GitHub by clicking the Download Zip button on the page.
 2. Unzip the template into your exercises directory, for example `C:\src\exercises`
@@ -37,7 +37,7 @@ To get started, you can download a Visual Studio solution that is already set up
 10. The exercise you just fetched will appear greyed out. Right click on the folder and **Include In Project**
 11. Get coding...
 
-![Add files](http://x.exercism.io/v3/tracks/javascript/docs/img/AddFiles.png)
+![Add files](./img/AddFiles.png)
 
 If you have a paid version of Visual Studio, you should install the [Web Essentials](http://vswebessentials.com/) extension. It will make working with Javascript much easier.
 
