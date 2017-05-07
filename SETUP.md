@@ -9,7 +9,12 @@ http://exercism.io/languages/javascript
 
 Execute the tests with:
 
-    jasmine .
+    jasmine <exercise-name>.spec.js
+
+Replace `<exercise-name>` with the name of the current exercise. E.g., to
+test the Hello World exercise:
+
+    jasmine hello-world.spec.js
 
 In many test suites all but the first test have been skipped.
 
