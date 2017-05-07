@@ -24,7 +24,7 @@ This is the first test:
 
 Run the test now, with the following command on the command-line:
 
-    jasmine .
+    jasmine hello-world.spec.js
 
 The test fails, which makes sense since you've not written any code yet.
 
@@ -76,7 +76,7 @@ Try changing the function in hello-world.js so that it says
 
 Then run the tests again from the command-line:
 
-    jasmine .
+    jasmine hello-world.spec.js
 
 Notice how it changes the failure message.
 
