@@ -14,23 +14,12 @@ var Minesweeper = function() {
   ]
 };
 
-Minesweeper.prototype.rowsToArrays = function(rows) {
-  var output = [];
-  for(var x = 0; x < rows.length; x++) {
-    output[x] = [];
-    var columns = rows[x].split("");
-    for(var y = 0; y < columns.length; y++) {
-      output[x][y] = columns[y];
-    }
-  }
-  return output;
-};
 
 Minesweeper.prototype.annotate = function(rows) {
   if(rows.length === 0 || rows[0].length === 0) {
     return rows;
   }
-  var board = this.rowsToArrays(rows);
+  var board = rows.map(function(row) { return row.split(""); });
   var outBoard = [];
   for(var x = 0; x < board.length; x++) {
     outBoard[x] = [];
