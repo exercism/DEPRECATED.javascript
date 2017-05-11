@@ -11,7 +11,7 @@
     "rna-transcription",
     "bob",
     "gigasecond",
-		"perfect-numbers",
+    "perfect-numbers",
     "word-count",
     "isogram",
     "pangram",
@@ -522,6 +522,9 @@
       "slug": "minesweeper",
       "difficulty": 7,
       "topics": [
+        "games",
+        "arrays",
+        "algorithms"
       ]
     }
   ],

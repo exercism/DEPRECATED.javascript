@@ -86,6 +86,7 @@ describe('Minesweeper()', function() {
       ];
     expect(minesweeper.annotate(input)).toEqual(expected);
   });
+
   xit('handles horizontal line', function() {
     var minesweeper = new Minesweeper();
     var input = [" * * "];
