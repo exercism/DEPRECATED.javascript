@@ -82,24 +82,37 @@
       "slug": "hello-world",
       "difficulty": 1,
       "topics": [
+        "Control-flow (conditionals)",
+        "Optional values",
+        "Strings",
+        "Text formatting"
       ]
     },
     {
       "slug": "leap",
       "difficulty": 1,
       "topics": [
+        "Booleans",
+        "Integers",
+        "Logic"
       ]
     },
     {
       "slug": "hamming",
       "difficulty": 1,
       "topics": [
+        "Control-flow (loops)",
+        "Control-flow (conditionals)",
+        "Equality",
+        "Strings"
       ]
     },
     {
       "slug": "rna-transcription",
       "difficulty": 1,
       "topics": [
+        "Strings",
+        "Transforming"
       ]
     },
     {
@@ -131,6 +144,7 @@
       "slug": "gigasecond",
       "difficulty": 1,
       "topics": [
+        "Time"
       ]
     },
     {
