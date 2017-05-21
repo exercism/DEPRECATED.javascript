@@ -137,30 +137,41 @@
       "slug": "isogram",
       "difficulty": 1,
       "topics": [
+        "Strings",
+        "Filtering"
       ]
     },
     {
       "slug": "beer-song",
       "difficulty": 1,
       "topics": [
+        "Looping",
+        "Conditionals",
+        "Strings"
       ]
     },
     {
       "slug": "phone-number",
       "difficulty": 1,
       "topics": [
+        "Parsing",
+        "Transforming"
       ]
     },
     {
       "slug": "anagram",
       "difficulty": 1,
       "topics": [
+        "Strings",
+        "Filtering"
       ]
     },
     {
       "slug": "food-chain",
       "difficulty": 1,
       "topics": [
+        "Text formatting",
+        "Algorithms"
       ]
     },
     {
