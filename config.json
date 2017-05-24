@@ -75,7 +75,8 @@
     "diamond",
     "all-your-base",
     "run-length-encoding",
-    "minesweeper"
+    "minesweeper",
+    "alphametics"
   ],
   "exercises": [
     {
@@ -538,6 +539,14 @@
       "topics": [
         "games",
         "arrays",
+        "algorithms"
+      ]
+    },
+    {
+      "slug": "alphametics",
+      "difficulty": 7,
+      "topics": [
+        "games",
         "algorithms"
       ]
     }
