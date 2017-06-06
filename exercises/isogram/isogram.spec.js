@@ -60,5 +60,11 @@ describe('Isogram Test Suite', function () {
 
     expect(word.isIsogram()).toEqual(false);
   });
+  
+  xit('Àcrobàt', function () {
+    var word = new Isogram('Àcrobàt');
+
+    expect(word.isIsogram()).toEqual(false);
+  });
 
 });
