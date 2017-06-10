@@ -548,11 +548,6 @@
     "nucleotide-count",
     "point-mutations"
   ],
-  "ignored": [
-    "docs",
-    "node_modules",
-    "img"
-  ],
   "foregone": [
 
   ]
