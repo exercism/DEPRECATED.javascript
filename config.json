@@ -1,7 +1,7 @@
 {
   "slug": "javascript",
   "language": "JavaScript",
-  "repository": "https://github.com/exercism/xjavascript",
+  "repository": "https://github.com/exercism/javascript",
   "active": true,
   "test_pattern": ".*[.]spec[.]js$",
   "exercises": [
