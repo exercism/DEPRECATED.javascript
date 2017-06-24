@@ -8,12 +8,12 @@ var Phone = module.exports = function Phone(number) {
 Phone.prototype.cleanNumber = function(number) {
   var num = number.replace(/\D/g,'');
 
-  if (num.length === 10) {
+  if (num.length === 10 && num[0]>=2&& num[3]>=2) {
     return num;
   } else if (num.length === 11 && num[0] === '1') {
     return num.substr(1,num.length);
   } else {
-    return '0000000000';
+    return null;
   }
 };
 
