@@ -14,8 +14,7 @@ but it helps to understand what a test looks like, and what
 it is doing.
 
 Open up the test file, hello-world.spec.js.
-
-This is the first test:
+There is one test inside:
 
     it('says hello world', function() {
       expect(helloWorld.hello()).toEqual('Hello, World!');
@@ -46,7 +45,7 @@ Now look at the test definition again:
     });
 
 The text 'says hello world' is repeated.
-This is how you know which test failed.
+This is how you know the test failed.
 
 The failure message explains what is wrong:
 
