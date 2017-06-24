@@ -6,7 +6,7 @@
 
 var HelloWorld = function() {};
 
-HelloWorld.prototype.hello = function(input) {
+HelloWorld.prototype.hello = function() {
 //
 // YOUR CODE GOES HERE
 //
