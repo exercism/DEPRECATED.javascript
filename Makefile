@@ -15,6 +15,7 @@ TSTFILE := "$(subst _,-,$(ASSIGNMENT)).spec.$(FILEEXT)"
 test-assignment:
 	@echo "running tests for: $(ASSIGNMENT)"
 	@cp big-integer.$(FILEEXT) $(OUTDIR)
+	@eslint --fix exercises/$(ASSIGNMENT)/{$(TSTFILE),$(EXAMPLE)}
 	@cp exercises/$(ASSIGNMENT)/$(TSTFILE) $(OUTDIR)
 	@cp exercises/$(ASSIGNMENT)/$(EXAMPLE) $(OUTDIR)/$(subst _,-,$(ASSIGNMENT)).$(FILEEXT)
 	#@sed -i.original 's/\bxit\b/it/g' $(OUTDIR)/*spec.$(FILEEXT)
