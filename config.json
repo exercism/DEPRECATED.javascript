@@ -542,6 +542,13 @@
         "games",
         "algorithms"
       ]
+    },
+    {
+      "slug": "simple-linked-list",
+      "difficulty": 8,
+      "topics": [
+        "data-structures"
+      ]
     }
   ],
   "deprecated": [
