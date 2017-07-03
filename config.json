@@ -551,6 +551,15 @@
         "Data structures",
         "Lists"
       ]
+    },
+    {
+      "slug": "list-ops",
+      "difficulty": 8,
+      "topics": [
+        "Data structures",
+        "Lists",
+        "Recursion"
+      ]
     }
   ],
   "deprecated": [
