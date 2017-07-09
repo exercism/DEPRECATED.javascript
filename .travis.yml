@@ -11,4 +11,4 @@ install:
 script:
   - "make test"
   - "./bin/fetch-configlet"
-  - "./bin/configlet ."
+  - "./bin/configlet lint ."
