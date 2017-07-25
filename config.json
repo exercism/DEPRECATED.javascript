@@ -189,6 +189,17 @@
       ]
     },
     {
+      "uuid": "4a83a72c-db0a-45b6-b77c-1949cb24fbae",
+      "slug": "sublist",
+      "difficulty": 4,
+      "core": false,
+      "unlocked_by": "linked-list",
+      "topics": [
+        "Lists",
+        "Arrays"
+      ]
+    },
+    {
       "uuid": "b668e11a-a8ce-4e94-ba68-3a1f0fa3f6c8",
       "slug": "space-age",
       "core": false,
@@ -310,7 +321,7 @@
       "uuid": "f1943e87-182a-44f5-a885-3d68a0c0a0dc",
       "slug": "circular-buffer",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "linked-list",
       "difficulty": 8,
       "topics": [
         "Control flow (conditionals)",
@@ -690,7 +701,7 @@
       "uuid": "5991c379-f033-4b46-9702-6b7fd03640e8",
       "slug": "binary-search",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "linked-list",
       "difficulty": 7,
       "topics": [
         "Control flow (conditionals)",
@@ -1018,7 +1029,7 @@
       "uuid": "c21ab6e8-b845-49d0-a2f6-1c89c7a07626",
       "slug": "simple-linked-list",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "linked-list",
       "difficulty": 8,
       "topics": [
         "Arrays",
