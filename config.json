@@ -6,8 +6,7 @@
     {
       "uuid": "4756cfc9-7509-4783-8be7-60e3376b8256",
       "slug": "hello-world",
-      "core": false,
-      "unlocked_by": null,
+      "core": true,
       "difficulty": 1,
       "topics": [
         "Control-flow (conditionals)",
@@ -19,8 +18,7 @@
     {
       "uuid": "0c231a1c-55f7-47b6-8a54-ccae4ab0c65b",
       "slug": "leap",
-      "core": false,
-      "unlocked_by": null,
+      "core": true,
       "difficulty": 1,
       "topics": [
         "Booleans",
@@ -29,23 +27,9 @@
       ]
     },
     {
-      "uuid": "3e1358c8-2bea-41f9-bc9e-8277f354a4e0",
-      "slug": "hamming",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 2,
-      "topics": [
-        "Control-flow (loops)",
-        "Control-flow (conditionals)",
-        "Equality",
-        "Strings"
-      ]
-    },
-    {
       "uuid": "d7f57ab9-2edb-44cb-a04e-c575c0f4be4c",
       "slug": "rna-transcription",
-      "core": false,
-      "unlocked_by": null,
+      "core": true,
       "difficulty": 1,
       "topics": [
         "Strings",
@@ -53,10 +37,25 @@
       ]
     },
     {
+      "uuid": "fff57c49-cde9-4a0c-b70b-2903cef212af",
+      "slug": "simple-cipher",
+      "core": true,
+      "difficulty": 1,
+      "topics": [
+        "Control flow (conditionals)",
+        "Control flow (loops)",
+        "Algorithms",
+        "Mathematics",
+        "Strings",
+        "Randomness",
+        "Text formatting",
+        "Transforming"
+      ]
+    },
+    {
       "uuid": "c57bf909-130f-46e6-97ca-aeed58df1a15",
       "slug": "pangram",
-      "core": false,
-      "unlocked_by": null,
+      "core": true,
       "difficulty": 2,
       "topics": [
         "Control flow (conditionals)",
@@ -71,8 +70,7 @@
     {
       "uuid": "246be5d9-b361-4893-9707-f218ede2bed6",
       "slug": "bob",
-      "core": false,
-      "unlocked_by": null,
+      "core": true,
       "difficulty": 2,
       "topics": [
         "Control flow (conditionals)",
@@ -86,18 +84,191 @@
     {
       "uuid": "49e4874b-d7e2-4305-a9bc-627fab4ada44",
       "slug": "gigasecond",
-      "core": false,
-      "unlocked_by": null,
+      "core": true,
       "difficulty": 2,
       "topics": [
         "Time"
       ]
     },
     {
+      "uuid": "b668e11a-a8ce-4e94-ba68-3a1f0fa3f6c8",
+      "slug": "space-age",
+      "core": true,
+      "difficulty": 3,
+      "topics": [
+        "Classes",
+        "Floating-point numbers",
+        "Mathematics"
+      ]
+    },
+    {
+      "uuid": "c3035180-ff4c-4afe-8019-f8364158b74e",
+      "slug": "binary",
+      "core": true,
+      "difficulty": 4,
+      "topics": [
+        "Control flow (conditionals)",
+        "Control flow (loops)",
+        "Mathematics",
+        "Integers",
+        "Strings",
+        "Regular expressions",
+        "Exception handling"
+      ]
+    },
+    {
+      "uuid": "73ecd6c2-e59b-4354-b305-64e28a60433f",
+      "slug": "prime-factors",
+      "core": true,
+      "difficulty": 4,
+      "topics": [
+        "Control flow (conditionals)",
+        "Control flow (loops)",
+        "Mathematics",
+        "Algorithms",
+        "Integers"
+      ]
+    },
+    {
+      "uuid": "fbfe6032-c209-40bd-b485-8b2881638166",
+      "slug": "matrix",
+      "core": true,
+      "difficulty": 4,
+      "topics": [
+        "Control flow (conditionals)",
+        "Control flow (loops)",
+        "Data structures",
+        "Arrays",
+        "Matrices",
+        "Text formatting"
+      ]
+    },
+    {
+      "uuid": "ecc41237-f629-458f-873e-2cc51ba1a385",
+      "slug": "linked-list",
+      "core": true,
+      "difficulty": 5,
+      "topics": [
+        "Control flow (conditionals)",
+        "Control flow (loops)",
+        "Algorithms",
+        "Data structures",
+        "Arrays",
+        "Lists",
+        "Optional values"
+      ]
+    },
+    {
+      "uuid": "a96ab45d-10a0-42cf-a754-c2466037ceaf",
+      "slug": "pascals-triangle",
+      "core": true,
+      "difficulty": 5,
+      "topics": [
+        "Control flow (conditionals)",
+        "Control flow (loops)",
+        "Mathematics",
+        "Strings",
+        "Text formatting"
+      ]
+    },
+    {
+      "uuid": "0a3a452c-f734-47eb-8e65-34c8ae710ef0",
+      "slug": "secret-handshake",
+      "core": true,
+      "difficulty": 6,
+      "topics": [
+        "Control flow (conditionals)",
+        "Control flow (loops)",
+        "Algorithms",
+        "Games",
+        "Bitwise operations",
+        "Arrays"
+      ]
+    },
+    {
+      "uuid": "029bc3ed-772d-439b-bd0a-1ba1196a79ec",
+      "slug": "grade-school",
+      "core": true,
+      "difficulty": 6,
+      "topics": [
+        "Arrays",
+        "Maps",
+        "Sorting"
+      ]
+    },
+    {
+      "uuid": "3005340b-a8d6-46ac-9075-125f9adccc2a",
+      "slug": "robot-name",
+      "core": true,
+      "difficulty": 6,
+      "topics": [
+        "Control flow (conditionals)",
+        "Exception handling",
+        "Sets",
+        "Randomness",
+        "Regular expressions"
+      ]
+    },
+    {
+      "uuid": "bb54bf08-24ba-45e1-bdf7-08db161e5843",
+      "slug": "wordy",
+      "core": true,
+      "difficulty": 7,
+      "topics": [
+        "Control flow (conditionals)",
+        "Control flow (loops)",
+        "Regular expressions",
+        "Exception handling",
+        "Strings",
+        "Pattern recognition",
+        "Parsing"
+      ]
+    },
+    {
+      "uuid": "e70defe4-5944-4392-956c-63cb92e7fd9c",
+      "slug": "list-ops",
+      "core": true,
+      "difficulty": 8,
+      "topics": [
+        "Data structures",
+        "Lists",
+        "Recursion"
+      ]
+    },
+    {
+      "uuid": "3e1358c8-2bea-41f9-bc9e-8277f354a4e0",
+      "slug": "hamming",
+      "core": false,
+      "unlocked_by": "rna-transcription",
+      "difficulty": 2,
+      "topics": [
+        "Control-flow (loops)",
+        "Control-flow (conditionals)",
+        "Equality",
+        "Strings"
+      ]
+    },
+    {
+      "uuid": "d66c2b56-b465-4922-af35-ae78944c0aac",
+      "slug": "run-length-encoding",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "Control flow (conditionals)",
+        "Exception handling",
+        "Parsing",
+        "Text formatting",
+        "Regular expressions",
+        "Pattern recognition",
+        "Strings"
+      ]
+    },
+    {
       "uuid": "35821375-5c94-4d4b-aa56-e3b079a45ca0",
       "slug": "isogram",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "pangram",
       "difficulty": 2,
       "topics": [
         "Strings",
@@ -108,7 +279,7 @@
       "uuid": "6f315fc3-095a-4387-aefb-cc5fee97110a",
       "slug": "beer-song",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "bob",
       "difficulty": 5,
       "topics": [
         "Control flow (conditionals)",
@@ -120,7 +291,7 @@
       "uuid": "347f9f54-a0d9-469d-babf-b3edb34d9d70",
       "slug": "phone-number",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "pangram",
       "difficulty": 3,
       "topics": [
         "Parsing",
@@ -131,7 +302,7 @@
       "uuid": "432ec2ce-c919-4142-aea2-389b67503252",
       "slug": "anagram",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "pangram",
       "difficulty": 1,
       "topics": [
         "Strings",
@@ -142,7 +313,7 @@
       "uuid": "a717745f-da00-4a5f-8bf3-6876e20cdf17",
       "slug": "food-chain",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "bob",
       "difficulty": 4,
       "topics": [
         "Text formatting",
@@ -150,36 +321,10 @@
       ]
     },
     {
-      "uuid": "029bc3ed-772d-439b-bd0a-1ba1196a79ec",
-      "slug": "grade-school",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 6,
-      "topics": [
-        "Arrays",
-        "Maps",
-        "Sorting"
-      ]
-    },
-    {
-      "uuid": "3005340b-a8d6-46ac-9075-125f9adccc2a",
-      "slug": "robot-name",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 6,
-      "topics": [
-        "Control flow (conditionals)",
-        "Exception handling",
-        "Sets",
-        "Randomness",
-        "Regular expressions"
-      ]
-    },
-    {
       "uuid": "a2a19f61-62ba-447a-8f57-537c8baa2e7a",
       "slug": "etl",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "rna-transcription",
       "difficulty": 2,
       "topics": [
         "Control flow (loops)",
@@ -200,22 +345,10 @@
       ]
     },
     {
-      "uuid": "b668e11a-a8ce-4e94-ba68-3a1f0fa3f6c8",
-      "slug": "space-age",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 3,
-      "topics": [
-        "Classes",
-        "Floating-point numbers",
-        "Mathematics"
-      ]
-    },
-    {
       "uuid": "c5be6908-f45c-4278-ba99-3701024f4eda",
       "slug": "grains",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "space-age",
       "difficulty": 5,
       "topics": [
         "Control flow (loops)",
@@ -227,7 +360,7 @@
       "uuid": "fde792fa-84e9-4b86-8ecb-8466ad92a99d",
       "slug": "triangle",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "leap",
       "difficulty": 3,
       "topics": [
         "Control flow (loops)",
@@ -241,7 +374,7 @@
       "uuid": "1ff85150-6c51-4758-af02-4484cf35658e",
       "slug": "clock",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "gigasecond",
       "difficulty": 5,
       "topics": [
         "Dates",
@@ -253,7 +386,7 @@
       "uuid": "51aa5429-b2db-43ad-83cf-84e2ead22cb6",
       "slug": "perfect-numbers",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "space-age",
       "difficulty": 3,
       "topics": [
         "Control flow (conditionals)",
@@ -267,7 +400,7 @@
       "uuid": "9a4ea3da-ad43-4850-bdf3-2c578c5de838",
       "slug": "word-count",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "pangram",
       "difficulty": 1,
       "topics": [
         "Control flow (loops)",
@@ -281,7 +414,7 @@
       "uuid": "0c1c4788-0372-42e7-81c1-b090bb7ebc8b",
       "slug": "acronym",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "pangram",
       "difficulty": 2,
       "topics": [
         "Strings",
@@ -294,7 +427,7 @@
       "uuid": "a6bd8126-3879-4593-8380-39ebfa87801b",
       "slug": "scrabble-score",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "rna-transcription",
       "difficulty": 5,
       "topics": [
         "Control flow (conditionals)",
@@ -333,40 +466,10 @@
       ]
     },
     {
-      "uuid": "c3035180-ff4c-4afe-8019-f8364158b74e",
-      "slug": "binary",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 4,
-      "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
-        "Mathematics",
-        "Integers",
-        "Strings",
-        "Regular expressions",
-        "Exception handling"
-      ]
-    },
-    {
-      "uuid": "73ecd6c2-e59b-4354-b305-64e28a60433f",
-      "slug": "prime-factors",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 4,
-      "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
-        "Mathematics",
-        "Algorithms",
-        "Integers"
-      ]
-    },
-    {
       "uuid": "86b1acf1-9e2d-4b04-b8b0-e9ae6beb5f3d",
       "slug": "raindrops",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "rna-transcription",
       "difficulty": 2,
       "topics": [
         "Control flow (conditionals)",
@@ -379,7 +482,7 @@
       "uuid": "23210e9e-81f6-4279-a776-00459c7ccd02",
       "slug": "allergies",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "rna-transcription",
       "difficulty": 6,
       "topics": [
         "Control flow (conditionals)",
@@ -392,7 +495,7 @@
       "uuid": "e61f3d54-55d2-4d32-9d2a-e7d6af3a3247",
       "slug": "strain",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "list-ops",
       "difficulty": 4,
       "topics": [
         "Control flow (conditionals)",
@@ -423,7 +526,7 @@
       "uuid": "dc9b2598-9757-4b20-82f9-8049ad081ac9",
       "slug": "accumulate",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "list-ops",
       "difficulty": 5,
       "topics": [
         "Control flow (loops)",
@@ -479,23 +582,6 @@
       ]
     },
     {
-      "uuid": "fff57c49-cde9-4a0c-b70b-2903cef212af",
-      "slug": "simple-cipher",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
-        "Algorithms",
-        "Mathematics",
-        "Strings",
-        "Randomness",
-        "Text formatting",
-        "Transforming"
-      ]
-    },
-    {
       "uuid": "9892d47d-97a0-4a2f-8284-6f84c86559e8",
       "slug": "octal",
       "core": false,
@@ -514,7 +600,7 @@
       "uuid": "bb46e832-8c37-45ee-9ee7-5037015b965c",
       "slug": "luhn",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "space-age",
       "difficulty": 4,
       "topics": [
         "Control flow (conditionals)",
@@ -528,7 +614,7 @@
       "uuid": "9a515ad0-34c7-4191-8784-5c4cd6385b38",
       "slug": "pig-latin",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "bob",
       "difficulty": 4,
       "topics": [
         "Control flow (conditionals)",
@@ -543,7 +629,7 @@
       "uuid": "26a973dd-d72e-40fb-abeb-0ba306356ed6",
       "slug": "pythagorean-triplet",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "space-age",
       "difficulty": 5,
       "topics": [
         "Control flow (conditionals)",
@@ -557,7 +643,7 @@
       "uuid": "06afdb06-8d2a-4cb0-baf1-48ae997cf1f5",
       "slug": "series",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "pangram",
       "difficulty": 3,
       "topics": [
         "Control flow (loops)",
@@ -570,7 +656,7 @@
       "uuid": "07110dd5-b879-40b9-9485-685cb0963d8f",
       "slug": "difference-of-squares",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "space-age",
       "difficulty": 3,
       "topics": [
         "Control flow (loops)",
@@ -580,25 +666,10 @@
       ]
     },
     {
-      "uuid": "0a3a452c-f734-47eb-8e65-34c8ae710ef0",
-      "slug": "secret-handshake",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 6,
-      "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
-        "Algorithms",
-        "Games",
-        "Bitwise operations",
-        "Arrays"
-      ]
-    },
-    {
       "uuid": "8786d591-077b-49bc-be8d-d014dc9dc308",
       "slug": "proverb",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "bob",
       "difficulty": 4,
       "topics": [
         "Control flow (conditionals)",
@@ -610,42 +681,10 @@
       ]
     },
     {
-      "uuid": "ecc41237-f629-458f-873e-2cc51ba1a385",
-      "slug": "linked-list",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 5,
-      "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
-        "Algorithms",
-        "Data structures",
-        "Arrays",
-        "Lists",
-        "Optional values"
-      ]
-    },
-    {
-      "uuid": "bb54bf08-24ba-45e1-bdf7-08db161e5843",
-      "slug": "wordy",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 7,
-      "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
-        "Regular expressions",
-        "Exception handling",
-        "Strings",
-        "Pattern recognition",
-        "Parsing"
-      ]
-    },
-    {
       "uuid": "32a0a5fa-c7de-470c-beff-118b448b3916",
       "slug": "flatten-array",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "list-ops",
       "difficulty": 1,
       "topics": [
         "Arrays",
@@ -671,7 +710,7 @@
       "uuid": "44bd02a7-0e3a-4441-ab76-524e36d4661c",
       "slug": "largest-series-product",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "pangram",
       "difficulty": 7,
       "topics": [
         "Control flow (conditionals)",
@@ -687,7 +726,7 @@
       "uuid": "2702ac90-0be2-43a2-91b6-7256a25fec87",
       "slug": "kindergarten-garden",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "wordy",
       "difficulty": 7,
       "topics": [
         "Control flow (conditionals)",
@@ -725,26 +764,11 @@
       ]
     },
     {
-      "uuid": "fbfe6032-c209-40bd-b485-8b2881638166",
-      "slug": "matrix",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 4,
-      "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
-        "Data structures",
-        "Arrays",
-        "Matrices",
-        "Text formatting"
-      ]
-    },
-    {
       "uuid": "00002977-ea1e-45e2-b66e-09d793b5c1ad",
       "slug": "robot-simulator",
       "core": false,
-      "unlocked_by": null,
-      "difficulty": 1,
+      "unlocked_by": "wordy",
+      "difficulty": 5,
       "topics": [
         "Control flow (conditionals)",
         "Control flow (loops)",
@@ -785,24 +809,10 @@
       ]
     },
     {
-      "uuid": "a96ab45d-10a0-42cf-a754-c2466037ceaf",
-      "slug": "pascals-triangle",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 5,
-      "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
-        "Mathematics",
-        "Strings",
-        "Text formatting"
-      ]
-    },
-    {
       "uuid": "01d286f6-5f29-4d4b-a4de-e217a4833bfa",
       "slug": "say",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "bob",
       "difficulty": 6,
       "topics": [
         "Control flow (conditionals)",
@@ -882,7 +892,7 @@
       "uuid": "759618b1-7ccc-46cd-889d-aea58ec88756",
       "slug": "ocr-numbers",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "matrix",
       "difficulty": 5,
       "topics": [
         "Control flow (conditionals)",
@@ -898,7 +908,7 @@
       "uuid": "86b1b6ba-c1fe-492d-a7ec-c22c525b4da8",
       "slug": "meetup",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "gigasecond",
       "difficulty": 7,
       "topics": [
         "Control flow (conditionals)",
@@ -913,7 +923,7 @@
       "uuid": "25099f87-5c3b-4a8a-b648-4639d1e9fa84",
       "slug": "bracket-push",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "pangram",
       "difficulty": 3,
       "topics": [
         "Control flow (conditionals)",
@@ -927,7 +937,7 @@
       "uuid": "4c857b17-33b0-47fa-b981-6b2fe4e394a1",
       "slug": "two-bucket",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "grade-school",
       "difficulty": 6,
       "topics": [
         "Control flow (conditionals)",
@@ -943,7 +953,7 @@
       "uuid": "c168fe1f-f84e-46e6-91fc-7553d048a4e9",
       "slug": "bowling",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "grade-school",
       "difficulty": 8,
       "topics": [
         "Control flow (conditionals)",
@@ -987,26 +997,10 @@
       ]
     },
     {
-      "uuid": "d66c2b56-b465-4922-af35-ae78944c0aac",
-      "slug": "run-length-encoding",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 2,
-      "topics": [
-        "Control flow (conditionals)",
-        "Exception handling",
-        "Parsing",
-        "Text formatting",
-        "Regular expressions",
-        "Pattern recognition",
-        "Strings"
-      ]
-    },
-    {
       "uuid": "22fa5ab4-935b-44cc-b055-9803214ae5f3",
       "slug": "minesweeper",
       "core": false,
-      "unlocked_by": "queen-attack",
+      "unlocked_by": null,
       "difficulty": 7,
       "topics": [
         "Games",
@@ -1018,7 +1012,7 @@
       "uuid": "42a7fd83-4508-403c-8b5e-f0a3126fac8a",
       "slug": "alphametics",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "grade-school",
       "difficulty": 7,
       "topics": [
         "Games",
@@ -1035,18 +1029,6 @@
         "Arrays",
         "Data structures",
         "Lists"
-      ]
-    },
-    {
-      "uuid": "e70defe4-5944-4392-956c-63cb92e7fd9c",
-      "slug": "list-ops",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 8,
-      "topics": [
-        "Data structures",
-        "Lists",
-        "Recursion"
       ]
     },
     {
