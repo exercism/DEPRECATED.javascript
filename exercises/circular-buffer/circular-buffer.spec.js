@@ -109,4 +109,12 @@ describe('CircularBuffer', function() {
     expect(buffer.read).toThrow(bufferEmptyException());
   });
 
+  xit('multiple buffers don\'t interfere with each other', function() {
+    var buffer1 = circularBuffer(1);
+    var buffer2 = circularBuffer(1);
+    buffer1.write('1');
+    expect(buffer2.read).toThrow(bufferEmptyException());
+    expect(buffer1.read()).toBe('1');
+  });
+
 });
