@@ -1032,6 +1032,14 @@
       ]
     },
     {
+       "uuid" : "910fe904-7e3c-11e7-bb31-be2e44b06b34",
+       "slug" : "change",
+       "core" :  false,
+       "unlocked_by": "prime-factors"
+       "difficulty" : 8,
+       "topics": ["Algorithms", "Mathematics", "Performance", "Searching"]
+    },
+    {
       "uuid": "1b53340d-ea40-44ee-bf2e-42e516704e7c",
       "slug": "nucleotide-count",
       "deprecated": true
