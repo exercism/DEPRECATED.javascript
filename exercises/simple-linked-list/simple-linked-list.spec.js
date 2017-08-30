@@ -141,6 +141,9 @@ describe('simple-linked-list', function () {
       expect(a.length).toBe(2);
       expect(a[0]).toBe(1);
       expect(a[1]).toBe(2);
+
+      expect(ll.head.value).toBe(1);
+      expect(ll.head.next.value).toBe(2);
     });
 
     xit('allows you to reverse a List', function () {

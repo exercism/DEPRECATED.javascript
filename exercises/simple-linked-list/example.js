@@ -97,10 +97,11 @@ List.prototype.reverse = function () {
 
 List.prototype.toArray = function () {
   var array = [];
+  var current = this.head;
 
-  while (this.head) {
-    array.push(this.head.value);
-    this.shift();
+  while (current) {
+    array.push(current.value);
+    current = current.next;
   }
 
   return array;
