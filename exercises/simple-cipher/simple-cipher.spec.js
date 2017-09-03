@@ -72,4 +72,9 @@ describe('Substitution cipher', function () {
   xit('can wrap', function () {
     expect(cipher.encode('zzzzzzzzzz')).toEqual('zabcdefghi');
   });
+  
+  xit('can handle messages longer than the key', function() {
+    expect(new Cipher('abc').encode('iamapandabear'))
+      .toEqual('iboaqcnecbfcr');
+  });
 });
