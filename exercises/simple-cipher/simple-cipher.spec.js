@@ -4,7 +4,7 @@ describe('Random key cipher', function () {
   var cipher = new Cipher();
 
   it('has a key made of letters', function () {
-    expect(cipher.key).toMatch(/[a-z]+/);
+    expect(cipher.key).toMatch(/[a-z]+$/);
   });
 
   // Here we take advantage of the fact that plaintext of "aaa..."
@@ -69,10 +69,14 @@ describe('Substitution cipher', function () {
       .toEqual('qayaeaagaciai');
   });
 
-  xit('can wrap', function () {
+  xit('can wrap on encode', function () {
     expect(cipher.encode('zzzzzzzzzz')).toEqual('zabcdefghi');
   });
-  
+
+  xit('can wrap on decode', () => {
+    expect(cipher.decode('zabcdefghi')).toEqual('zzzzzzzzzz');
+  });
+
   xit('can handle messages longer than the key', function() {
     expect(new Cipher('abc').encode('iamapandabear'))
       .toEqual('iboaqcnecbfcr');
