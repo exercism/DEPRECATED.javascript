@@ -4,8 +4,9 @@ var notAlpha = /[^a-z]+/gi,
   unique;
 
 var Pangram = function(candidate) {
+  var msg = candidate || '';
   unique = {};
-  cleaned = (candidate.replace(notAlpha, '')).toLowerCase();
+  cleaned = (msg.replace(notAlpha, '')).toLowerCase();
   cleaned.split('').forEach(function (el) {
     unique[el] = true;
   });
