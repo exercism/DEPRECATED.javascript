@@ -1,4 +1,4 @@
-# xJavaScript [![Build Status](https://travis-ci.org/exercism/xjavascript.svg?branch=master)](https://travis-ci.org/exercism/xjavascript)
+# JavaScript [![Build Status](https://travis-ci.org/exercism/javascript.svg?branch=master)](https://travis-ci.org/exercism/javascript)
 
 Exercism exercises in JavaScript
 
@@ -8,7 +8,7 @@ To run the tests, you'll need NodeJS and Jasmine. For information about how to i
 
 ## Running Unit Test Suite
 
-The following commands assume that you are in the 'xjavascript' directory:
+The following commands assume that you are in the 'javascript' directory:
 
 ### All Assignments
 
