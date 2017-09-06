@@ -1030,6 +1030,19 @@
       "uuid": "c21ab6e8-b845-49d0-a2f6-1c89c7a07626"
     },
     {
+      "core" :  false,
+      "difficulty" : 8,
+      "slug" : "change",
+       "topics": [
+          "Algorithms",
+          "Mathematics",
+          "Performance",
+          "Searching"
+      ],
+      "unlocked_by": "prime-factors",
+      "uuid" : "910fe904-7e3c-11e7-bb31-be2e44b06b34"
+    },
+    {
       "deprecated": true,
       "slug": "nucleotide-count",
       "uuid": "1b53340d-ea40-44ee-bf2e-42e516704e7c"
