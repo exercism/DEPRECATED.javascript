@@ -1,7 +1,7 @@
 With the first few exercises, you will get a skeleton file with the exported modules.
 For later ones, you can find more information about modules in the [node documentation](http://nodejs.org/api/modules.html#modules_module_exports).
 
-For running tests, install `jasmine` as described in the [Installing Javascript section](http://exercism.io/languages/javascript/installing).
+For running tests, install `jasmine` as described in the [Installing Javascript section](http://exercism.io/languages/javascript/installation).
 Move to the folder where that exercise's files are located (a path similar to {EXERCISM_HOME_DIR}/javascript/{EXERCISE}).
 
     cd ~/exercism/javascript/bob
