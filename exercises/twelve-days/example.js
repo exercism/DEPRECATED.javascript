@@ -19,7 +19,7 @@ var TwelveDays = function() {
   })();
 
   instance.startFromZero = function(oneIndexArray) {
-    var newArray = oneIndexArray.map(item => item - 1);
+    var newArray = oneIndexArray.map(function(item) { return item - 1; });
     return newArray;
   };
 
@@ -29,7 +29,7 @@ var TwelveDays = function() {
   };
 
   instance.multiVerse = function(startIndex, endIndex) {
-    var filteredList = this.verseList.filter((verse, index) => {
+    var filteredList = this.verseList.filter(function (verse, index) {
       if (index >= startIndex && index <= endIndex) {
         return verse;
       }
@@ -37,7 +37,7 @@ var TwelveDays = function() {
     return filteredList.join('\n\n').concat('\n');
   };
 
-  instance.verse = function(...args) {
+  instance.verse = function(args) {
     var indexArray = this.startFromZero(args);
 
     if (args.length === 2) {
