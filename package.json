@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/exercism/javascript",
   "author": "Katrina Owen",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.6.1"
+  }
 }
