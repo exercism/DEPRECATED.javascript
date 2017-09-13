@@ -16,76 +16,76 @@
  *     node example-gen.js
  */
 
-var fs = require('fs');
-var path = require('path');
+const fs = require('fs');
+const path = require('path');
 
-var EXERCISE_METADATA_ROOT = '../../../x-common/exercises';
-var METADATA_FILE_NAME = 'canonical-data.json';
-var METADATA_COMMENT_KEY = '#';
-var EXERCISE_DIR_NAME = 'custom-set';
-var SPEC_FILE_NAME = 'custom-set.spec.js';
+const EXERCISE_METADATA_ROOT = '../../../x-common/exercises';
+const METADATA_FILE_NAME = 'canonical-data.json';
+const METADATA_COMMENT_KEY = '#';
+const EXERCISE_DIR_NAME = 'custom-set';
+const SPEC_FILE_NAME = 'custom-set.spec.js';
 
-var TEST_BODY_TEMPLATES = {
-  empty: function ({set, expected}) {
+const TEST_BODY_TEMPLATES = {
+  empty({ set, expected }) {
     return (
-    `var actual = new CustomSet(${array(set)}).empty();
+      `var actual = new CustomSet(${array(set)}).empty();
     expect(actual).toBe(${expected});`);
   },
 
-  contains: function ({set, element, expected}) {
+  contains({ set, element, expected }) {
     return (
-    `var actual = new CustomSet(${array(set)}).contains(${element});
+      `var actual = new CustomSet(${array(set)}).contains(${element});
     expect(actual).toBe(${expected});`);
   },
 
-  subset: function ({set1, set2, expected}) {
+  subset({ set1, set2, expected }) {
     return (
-    `var actual = new CustomSet(${array(set2)}).subset(new CustomSet(${array(set1)}));
+      `var actual = new CustomSet(${array(set2)}).subset(new CustomSet(${array(set1)}));
     expect(actual).toBe(${expected});`);
   },
 
-  disjoint: function ({set1, set2, expected}) {
+  disjoint({ set1, set2, expected }) {
     return (
-    `var actual = new CustomSet(${array(set1)}).disjoint(new CustomSet(${array(set2)}));
+      `var actual = new CustomSet(${array(set1)}).disjoint(new CustomSet(${array(set2)}));
     expect(actual).toBe(${expected});`);
   },
 
-  equal: function ({set1, set2, expected}) {
+  equal({ set1, set2, expected }) {
     return (
-    `var actual = new CustomSet(${array(set1)}).eql(new CustomSet(${array(set2)}));
+      `var actual = new CustomSet(${array(set1)}).eql(new CustomSet(${array(set2)}));
     expect(actual).toBe(${expected});`);
   },
 
-  add: function ({set, element, expected}) {
+  add({ set, element, expected }) {
     return (
-    `var actual = new CustomSet(${array(set)}).add(${element});
+      `var actual = new CustomSet(${array(set)}).add(${element});
     var expected = new CustomSet(${array(expected)});
     expect(actual.eql(expected)).toBe(true);`);
   },
 
-  intersection: function ({set1, set2, expected}) {
+  intersection({ set1, set2, expected }) {
     return (
-    `var actual = new CustomSet(${array(set1)}).intersection(new CustomSet(${array(set2)}));
+      `var actual = new CustomSet(${array(set1)}).intersection(new CustomSet(${array(set2)}));
     var expected = new CustomSet(${array(expected)});
     expect(actual.eql(expected)).toBe(true);`);
   },
 
-  difference: function ({set1, set2, expected}) {
+  difference({ set1, set2, expected }) {
     return (
-    `var actual = new CustomSet(${array(set1)}).difference(new CustomSet(${array(set2)}));
+      `var actual = new CustomSet(${array(set1)}).difference(new CustomSet(${array(set2)}));
     var expected = new CustomSet(${array(expected)});
     expect(actual.eql(expected)).toBe(true);`);
   },
 
-  union: function ({set1, set2, expected}) {
+  union({ set1, set2, expected }) {
     return (
-    `var actual = new CustomSet(${array(set1)}).union(new CustomSet(${array(set2)}));
+      `var actual = new CustomSet(${array(set1)}).union(new CustomSet(${array(set2)}));
     var expected = new CustomSet(${array(expected)});
     expect(actual.eql(expected)).toBe(true);`);
-  }
-}
+  },
+};
 
-var NON_CANONICAL_TESTS = `
+const NON_CANONICAL_TESTS = `
   xit('can be emptied', function() {
     var actual = new CustomSet([1, 2]).clear();
     var expected = new CustomSet();
@@ -115,54 +115,52 @@ var NON_CANONICAL_TESTS = `
     var expected3 = [1, 2, 3];
     expect(actual3.sort()).toEqual(expected3);
   });
-`
+`;
 
-function render ({suiteData, testBodyTemplates, extraTests, suiteTemplate}) {
-  var testCases = extractTestCases(suiteData, testBodyTemplates);
-  var tests = renderTests(testCases);
+function render({
+  suiteData, testBodyTemplates, extraTests, suiteTemplate,
+}) {
+  const testCases = extractTestCases(suiteData, testBodyTemplates);
+  const tests = renderTests(testCases);
 
   return renderSuite(tests, extraTests, suiteTemplate);
 }
 
-function extractTestCases (suiteData, testBodyTemplates) {
-  var testCases = [];
+function extractTestCases(suiteData, testBodyTemplates) {
+  const testCases = [];
 
   Object.keys(suiteData)
-    .filter(function (key) {
-      return key !== METADATA_COMMENT_KEY;
-    })
-    .forEach(function (sectionName) {
-      suiteData[sectionName]['cases']
-        .forEach(function (caseData) {
+    .filter(key => key !== METADATA_COMMENT_KEY)
+    .forEach((sectionName) => {
+      suiteData[sectionName].cases
+        .forEach((caseData) => {
           testCases.push(new TestCase(caseData, testBodyTemplates[sectionName]));
-        })
-    })
+        });
+    });
 
   return testCases;
 }
 
-function TestCase (caseData, bodyTemplate) {
+function TestCase(caseData, bodyTemplate) {
   this.caseData = caseData;
   this.bodyTemplate = bodyTemplate;
 }
 
 TestCase.prototype.render = function (isEnabled) {
   return testTemplate(isEnabled, this.caseData.description, this.bodyTemplate(this.caseData));
+};
+
+function renderTests(testCases) {
+  return testCases.reduce((output, testCase, index) => output + testCase.render(index === 0), '');
 }
 
-function renderTests (testCases) {
-  return testCases.reduce(function (output, testCase, index) {
-    return output + testCase.render(index === 0);
-  }, '')
-}
-
-function renderSuite (tests, otherTests, suiteTemplate) {
+function renderSuite(tests, otherTests, suiteTemplate) {
   return suiteTemplate(tests.concat(otherTests));
 }
 
-function suiteTemplate (tests) {
+function suiteTemplate(tests) {
   return (
-`var CustomSet = require('./custom-set');
+    `var CustomSet = require('./custom-set');
 
 describe('CustomSet', function() {
 ${tests}
@@ -170,31 +168,32 @@ ${tests}
 `);
 }
 
-function testTemplate (isEnabled, description, body) {
+function testTemplate(isEnabled, description, body) {
   return (
-`
+    `
   ${isEnabled ? 'it' : 'xit'}('${description}', function() {
     ${body}
   });
 `);
 }
 
-function array (array) {
+function array(array) {
   return array.length === 0 ? '' : `[${array.join(', ')}]`;
 }
 
-function generate () {
-  var exerciseFilePath = path.join(EXERCISE_METADATA_ROOT, EXERCISE_DIR_NAME, METADATA_FILE_NAME);
-  var suiteData = JSON.parse(fs.readFileSync(exerciseFilePath));
+function generate() {
+  const exerciseFilePath = path.join(EXERCISE_METADATA_ROOT, EXERCISE_DIR_NAME, METADATA_FILE_NAME);
+  const suiteData = JSON.parse(fs.readFileSync(exerciseFilePath));
 
   return fs.writeFileSync(
     SPEC_FILE_NAME,
     render({
-      suiteData: suiteData,
+      suiteData,
       testBodyTemplates: TEST_BODY_TEMPLATES,
       extraTests: NON_CANONICAL_TESTS,
-      suiteTemplate: suiteTemplate
-    }));
+      suiteTemplate,
+    }),
+  );
 }
 
 generate();

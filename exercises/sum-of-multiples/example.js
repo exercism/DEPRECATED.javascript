@@ -1,9 +1,9 @@
-'use strict';
+
 
 function isMultiple(i) {
-  /*jshint validthis:true */
-  var result = false;
-  this.multiples.forEach(function (multiple) {
+  /* jshint validthis:true */
+  let result = false;
+  this.multiples.forEach((multiple) => {
     if (i % multiple === 0) {
       result = true;
     }
@@ -19,8 +19,8 @@ function SumOfMultiples(multiples) {
 }
 
 SumOfMultiples.prototype.to = function (limit) {
-  var sum = 0;
-  for (var i = 1; i < limit; i++) {
+  let sum = 0;
+  for (let i = 1; i < limit; i++) {
     if (isMultiple.call(this, i)) {
       sum += i;
     }

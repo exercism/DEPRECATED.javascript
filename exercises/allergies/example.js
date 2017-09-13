@@ -1,31 +1,31 @@
-'use strict';
+
 
 function Allergies(allergenIndex) {
   this.allergenIndex = allergenIndex;
 }
 
-Allergies.possibleAllergies = [ 'eggs', 'peanuts', 'shellfish', 'strawberries',
-                                 'tomatoes', 'chocolate', 'pollen', 'cats'];
+Allergies.possibleAllergies = ['eggs', 'peanuts', 'shellfish', 'strawberries',
+  'tomatoes', 'chocolate', 'pollen', 'cats'];
 
 Allergies.prototype = {
-  list: function() {
-    var possibleAllergies = Allergies.possibleAllergies;
+  list() {
+    const possibleAllergies = Allergies.possibleAllergies;
 
-    var allergicTo = [];
+    const allergicTo = [];
 
-    for (var i = 0; i < possibleAllergies.length; i++) {
-      var allergy = possibleAllergies[i];
-      if (this.allergenIndex & Math.pow(2,i)) {
+    for (let i = 0; i < possibleAllergies.length; i++) {
+      const allergy = possibleAllergies[i];
+      if (this.allergenIndex & Math.pow(2, i)) {
         allergicTo.push(allergy);
       }
     }
     return allergicTo;
   },
-  allergicTo: function(food) {
-    var isAllergic = false;
+  allergicTo(food) {
+    let isAllergic = false;
 
-    var allergyList = this.list();
-    for (var i = 0; i < allergyList.length; i++) {
+    const allergyList = this.list();
+    for (let i = 0; i < allergyList.length; i++) {
       if (allergyList[i] === food) {
         isAllergic = true;
         break;
@@ -33,7 +33,7 @@ Allergies.prototype = {
     }
 
     return isAllergic;
-  }
+  },
 };
 
 module.exports = Allergies;

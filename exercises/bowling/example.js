@@ -1,11 +1,11 @@
-'use strict';
+
 
 function Bowling(rolls) {
   this.rolls = rolls;
 }
 
-Bowling.prototype.score = function() {
-  var initialState = {
+Bowling.prototype.score = function () {
+  const initialState = {
     frameNumber: 1,
     rollNumber: 1,
     pinsRemaining: 10,
@@ -13,10 +13,10 @@ Bowling.prototype.score = function() {
     strikeLastFrame: false,
     twoStrikesInARow: false,
     fillBall: false,
-    score: 0
+    score: 0,
   };
 
-  var finalState = this.rolls.reduce(function(state, roll) {
+  const finalState = this.rolls.reduce((state, roll) => {
     if (roll < 0 || roll > 10) {
       throw new Error('Pins must have a value from 0 to 10');
     }
@@ -26,23 +26,23 @@ Bowling.prototype.score = function() {
     }
 
     if (state.frameNumber > 10) {
-      throw new Error('Should not be able to roll after game is over')
+      throw new Error('Should not be able to roll after game is over');
     }
 
-    var finalFrame = state.frameNumber === 10;
-    var strike = state.rollNumber === 1 && roll === 10;
-    var spare = state.rollNumber === 2 && roll === state.pinsRemaining;
-    var frameOver = finalFrame
+    const finalFrame = state.frameNumber === 10;
+    const strike = state.rollNumber === 1 && roll === 10;
+    const spare = state.rollNumber === 2 && roll === state.pinsRemaining;
+    const frameOver = finalFrame
       ? (!state.fillBall && !spare && state.rollNumber === 2) || state.rollNumber === 3
       : strike || spare || state.rollNumber === 2;
 
-    var score = state.score + roll;
+    let score = state.score + roll;
 
     if (state.strikeLastFrame && state.rollNumber < 3) { score += roll; }
     if (state.spareLastFrame && state.rollNumber === 1) { score += roll; }
     if (state.twoStrikesInARow && state.rollNumber === 1) { score += roll; }
 
-    var next = {};
+    const next = {};
 
     next.frameNumber = frameOver ? state.frameNumber + 1 : state.frameNumber;
     next.rollNumber = frameOver ? 1 : state.rollNumber + 1;
@@ -56,7 +56,6 @@ Bowling.prototype.score = function() {
     next.score = score;
 
     return next;
-
   }, initialState);
 
   if (finalState.frameNumber !== 11) {

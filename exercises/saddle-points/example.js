@@ -1,4 +1,4 @@
-'use strict';
+
 
 function toInt(s) {
   return parseInt(s, 10);
@@ -8,11 +8,13 @@ module.exports = function Matrix(matrix) {
   this.rows = [];
   this.columns = [];
 
-  var rows = matrix.split('\n');
-  var i, j, currentRow;
+  const rows = matrix.split('\n');
+  let i,
+    j,
+    currentRow;
 
   for (i = 0; i < rows.length; i++) {
-    currentRow = rows[i].replace(/^\s+|\s+$/g,'').split(' ').map( toInt );
+    currentRow = rows[i].replace(/^\s+|\s+$/g, '').split(' ').map(toInt);
     this.rows.push(currentRow);
   }
 
@@ -26,8 +28,11 @@ module.exports = function Matrix(matrix) {
     }
   }
 
-  this.indexesOfMaxValues = function(array) {
-    var i, currentElement, maxValue, indexes = [];
+  this.indexesOfMaxValues = function (array) {
+    let i,
+      currentElement,
+      maxValue,
+      indexes = [];
 
     for (i = 0; i < array.length; i++) {
       currentElement = array[i];
@@ -42,8 +47,11 @@ module.exports = function Matrix(matrix) {
     return indexes;
   };
 
-  this.indexesOfMinValues = function(array) {
-    var i, currentElement, minValue, indexes = [];
+  this.indexesOfMinValues = function (array) {
+    let i,
+      currentElement,
+      minValue,
+      indexes = [];
 
     for (i = 0; i < array.length; i++) {
       currentElement = array[i];
@@ -58,15 +66,18 @@ module.exports = function Matrix(matrix) {
     return indexes;
   };
 
-  this.calculateSaddlePoints = function(rows,columns) {
-    var i, j, maxIndexes, minIndexes, currentMaxIndex, saddlePoints = [];
+  this.calculateSaddlePoints = function (rows, columns) {
+    let i,
+      j,
+      maxIndexes,
+      minIndexes,
+      currentMaxIndex,
+      saddlePoints = [];
 
     for (i = 0; i < rows.length; i++) {
-
       maxIndexes = this.indexesOfMaxValues(rows[i]);
 
       for (j = 0; j < maxIndexes.length; j++) {
-
         currentMaxIndex = maxIndexes[j];
         minIndexes = this.indexesOfMinValues(columns[currentMaxIndex]);
 
@@ -74,10 +85,9 @@ module.exports = function Matrix(matrix) {
           saddlePoints.push([i, currentMaxIndex]);
         }
       }
-
     }
     return saddlePoints;
   };
 
-  this.saddlePoints = this.calculateSaddlePoints(this.rows,this.columns);
+  this.saddlePoints = this.calculateSaddlePoints(this.rows, this.columns);
 };

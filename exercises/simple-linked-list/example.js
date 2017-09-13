@@ -1,4 +1,4 @@
-function Element (value, next) {
+function Element(value, next) {
   if (!(this instanceof Element)) {
     throw new Error('Element is a constructor.');
   }
@@ -13,16 +13,16 @@ function Element (value, next) {
 
   this.value = value;
   this.next = next;
-};
+}
 
-function List () {};
+function List() {}
 
 List.prototype.push = function (value) {
   if (value === undefined) {
     throw new Error('Argument required.');
   }
 
-  var newEl = (value instanceof Element)
+  const newEl = (value instanceof Element)
     ? value
     : new Element(value);
 
@@ -31,7 +31,7 @@ List.prototype.push = function (value) {
     return;
   }
 
-  var lastEl = this.head;
+  let lastEl = this.head;
   while (lastEl.next) {
     lastEl = lastEl.next;
   }
@@ -44,7 +44,7 @@ List.prototype.unshift = function (value) {
     throw new Error('Argument required.');
   }
 
-  var newEl = (value instanceof Element)
+  const newEl = (value instanceof Element)
     ? value
     : new Element(value);
 
@@ -65,7 +65,8 @@ List.prototype.pop = function () {
     return;
   }
 
-  var penultEl, lastEl = this.head;
+  let penultEl,
+    lastEl = this.head;
   while (lastEl.next) {
     penultEl = lastEl;
     lastEl = lastEl.next;
@@ -73,8 +74,7 @@ List.prototype.pop = function () {
 
   if (!penultEl) {
     this.head = undefined;
-  }
-  else {
+  } else {
     penultEl.next = undefined;
   }
 };
@@ -84,7 +84,8 @@ List.prototype.reverse = function () {
     return;
   }
 
-  var current, previous;
+  let current,
+    previous;
   while (this.head) {
     current = this.head;
     this.shift();
@@ -96,8 +97,8 @@ List.prototype.reverse = function () {
 };
 
 List.prototype.toArray = function () {
-  var array = [];
-  var current = this.head;
+  const array = [];
+  let current = this.head;
 
   while (current) {
     array.push(current.value);
@@ -108,8 +109,8 @@ List.prototype.toArray = function () {
 };
 
 List.fromArray = function (array) {
-  var list = new List();
-  array.forEach(function (item) {
+  const list = new List();
+  array.forEach((item) => {
     list.push(new Element(item));
   });
 

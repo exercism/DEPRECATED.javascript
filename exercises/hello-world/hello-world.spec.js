@@ -1,9 +1,9 @@
-var HelloWorld = require('./hello-world');
+const HelloWorld = require('./hello-world');
 
-describe('Hello World', function() {
-  var helloWorld = new HelloWorld();
+describe('Hello World', () => {
+  const helloWorld = new HelloWorld();
 
-  it('says hello world', function() {
+  it('says hello world', () => {
     expect(helloWorld.hello()).toEqual('Hello, World!');
   });
 });

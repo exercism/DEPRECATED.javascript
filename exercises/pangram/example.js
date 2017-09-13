@@ -1,19 +1,19 @@
-var notAlpha = /[^a-z]+/gi,
+let notAlpha = /[^a-z]+/gi,
   ALPHA_LENGTH = 26,
   cleaned,
   unique;
 
-var Pangram = function(candidate) {
+const Pangram = function (candidate) {
   unique = {};
   cleaned = (candidate.replace(notAlpha, '')).toLowerCase();
-  cleaned.split('').forEach(function (el) {
+  cleaned.split('').forEach((el) => {
     unique[el] = true;
   });
 
   return {
-    isPangram: function () {
+    isPangram() {
       return Object.keys(unique).length === ALPHA_LENGTH;
-    }
+    },
   };
 };
 

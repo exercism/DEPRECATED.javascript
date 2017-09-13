@@ -1,48 +1,44 @@
-var Minesweeper = function() {
+const Minesweeper = function () {
   this.distanceXdistanceYs = [
-      [-1,-1],
-      [-1,0],
-      [-1,1],
+    [-1, -1],
+    [-1, 0],
+    [-1, 1],
 
-      [1,1],
-      [1,0],
-      [1,-1],
+    [1, 1],
+    [1, 0],
+    [1, -1],
 
-      [0,1],
-      [0,-1]
+    [0, 1],
+    [0, -1],
 
-  ]
+  ];
 };
 
 
-Minesweeper.prototype.annotate = function(rows) {
+Minesweeper.prototype.annotate = function (rows) {
   if (rows.length === 0 || rows[0].length === 0) {
     return rows;
   }
-  var board = rows.map(function(row) { return row.split(""); });
-  var outBoard = [];
+  const board = rows.map(row => row.split(''));
+  const outBoard = [];
   for (var x = 0; x < board.length; x++) {
     outBoard[x] = [];
     for (var y = 0; y < board[x].length; y++) {
-      var spot = board[x][y];
-      if (spot === "*") {
+      const spot = board[x][y];
+      if (spot === '*') {
         outBoard[x][y] = spot;
         continue;
       }
-      var bombCount = this.distanceXdistanceYs.map(function(dxdy) {
+      const bombCount = this.distanceXdistanceYs.map((dxdy) => {
         if (board[x + dxdy[0]] === undefined) {
           return 0;
         }
-        return board[x + dxdy[0]][y + dxdy[1]] === "*" ? 1 : 0;
-      }).reduce(function(total, num) {
-        return total + num;
-      });
-      outBoard[x][y] = bombCount > 0 ? bombCount : " ";
+        return board[x + dxdy[0]][y + dxdy[1]] === '*' ? 1 : 0;
+      }).reduce((total, num) => total + num);
+      outBoard[x][y] = bombCount > 0 ? bombCount : ' ';
     }
   }
-  return outBoard.map(function(row) {
-    return row.join("");
-  });
+  return outBoard.map(row => row.join(''));
 };
 
 module.exports = Minesweeper;

@@ -1,16 +1,16 @@
-'use strict';
+
 
 function ETL() {}
 
-ETL.prototype.transform = function(input) {
-  var output = {};
-  var object = Object.keys(input);
+ETL.prototype.transform = function (input) {
+  const output = {};
+  const object = Object.keys(input);
 
   function processKey(key) {
-    var items = input[key] || [];
+    const items = input[key] || [];
 
-    items.forEach(function (item) {
-      var value = item.toLowerCase();
+    items.forEach((item) => {
+      const value = item.toLowerCase();
       output[value] = Number(key);
     });
   }

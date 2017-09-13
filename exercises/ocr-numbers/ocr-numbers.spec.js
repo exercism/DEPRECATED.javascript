@@ -1,145 +1,113 @@
-var ocr = require('./ocr-numbers');
+const ocr = require('./ocr-numbers');
 
-describe('ocr', function () {
-
-  it('recognizes zero', function () {
-    expect(ocr.convert(
-      ' _ \n' +
+describe('ocr', () => {
+  it('recognizes zero', () => {
+    expect(ocr.convert(' _ \n' +
       '| |\n' +
       '|_|\n' +
-      '   '
-    )).toBe('0');
+      '   ')).toBe('0');
   });
 
-  xit('recognizes one', function () {
-    expect(ocr.convert(
-      '   \n' +
+  xit('recognizes one', () => {
+    expect(ocr.convert('   \n' +
       '  |\n' +
       '  |\n' +
-      '   '
-    )).toBe('1');
+      '   ')).toBe('1');
   });
 
-  xit('recognizes two', function () {
-    expect(ocr.convert(
-      ' _ \n' +
+  xit('recognizes two', () => {
+    expect(ocr.convert(' _ \n' +
       ' _|\n' +
       '|_ \n' +
-      '   '
-    )).toBe('2');
+      '   ')).toBe('2');
   });
 
-  xit('recognizes three', function () {
-    expect(ocr.convert(
-      ' _ \n' +
+  xit('recognizes three', () => {
+    expect(ocr.convert(' _ \n' +
       ' _|\n' +
       ' _|\n' +
-      '   '
-    )).toBe('3');
+      '   ')).toBe('3');
   });
 
-  xit('recognizes four', function () {
-    expect(ocr.convert(
-      '   \n' +
+  xit('recognizes four', () => {
+    expect(ocr.convert('   \n' +
       '|_|\n' +
       '  |\n' +
-      '   '
-    )).toBe('4');
+      '   ')).toBe('4');
   });
 
-  xit('recognizes five', function () {
-    expect(ocr.convert(
-      ' _ \n' +
+  xit('recognizes five', () => {
+    expect(ocr.convert(' _ \n' +
       '|_ \n' +
       ' _|\n' +
-      '   '
-    )).toBe('5');
+      '   ')).toBe('5');
   });
 
-  xit('recognizes six', function () {
-    expect(ocr.convert(
-      ' _ \n' +
+  xit('recognizes six', () => {
+    expect(ocr.convert(' _ \n' +
       '|_ \n' +
       '|_|\n' +
-      '   '
-    )).toBe('6');
+      '   ')).toBe('6');
   });
 
-  xit('recognizes seven', function () {
-    expect(ocr.convert(
-      ' _ \n' +
+  xit('recognizes seven', () => {
+    expect(ocr.convert(' _ \n' +
       '  |\n' +
       '  |\n' +
-      '   '
-    )).toBe('7');
+      '   ')).toBe('7');
   });
 
-  xit('recognizes eight', function () {
-    expect(ocr.convert(
-      ' _ \n' +
+  xit('recognizes eight', () => {
+    expect(ocr.convert(' _ \n' +
       '|_|\n' +
       '|_|\n' +
-      '   '
-    )).toBe('8');
+      '   ')).toBe('8');
   });
 
-  xit('recognizes nine', function () {
-    expect(ocr.convert(
-      ' _ \n' +
+  xit('recognizes nine', () => {
+    expect(ocr.convert(' _ \n' +
       '|_|\n' +
       ' _|\n' +
-      '   '
-    )).toBe('9');
+      '   ')).toBe('9');
   });
 
-  xit('recognizes ten', function () {
-    expect(ocr.convert(
-      '    _ \n' +
+  xit('recognizes ten', () => {
+    expect(ocr.convert('    _ \n' +
       '  || |\n' +
       '  ||_|\n' +
-      '      '
-    )).toBe('10');
+      '      ')).toBe('10');
   });
 
-  xit('identifies garble', function () {
-    expect(ocr.convert(
-      '   \n' +
+  xit('identifies garble', () => {
+    expect(ocr.convert('   \n' +
       '| |\n' +
       '| |\n' +
-      '   '
-    )).toBe('?');
+      '   ')).toBe('?');
   });
 
-  xit('converts 110101100', function () {
-    expect(ocr.convert(
-      '       _     _        _  _ \n' +
+  xit('converts 110101100', () => {
+    expect(ocr.convert('       _     _        _  _ \n' +
       '  |  || |  || |  |  || || |\n' +
       '  |  ||_|  ||_|  |  ||_||_|\n' +
-      '                           '
-    )).toBe('110101100');
+      '                           ')).toBe('110101100');
   });
 
-  xit('identifies garble mixed in', function () {
-    expect(ocr.convert(
-      '       _     _           _ \n' +
+  xit('identifies garble mixed in', () => {
+    expect(ocr.convert('       _     _           _ \n' +
       '  |  || |  || |     || || |\n' +
       '  |  | _|  ||_|  |  ||_||_|\n' +
-      '                           '
-    )).toBe('11?10?1?0');
+      '                           ')).toBe('11?10?1?0');
   });
 
-  xit('converts 1234567890', function () {
-    expect(ocr.convert(
-      '    _  _     _  _  _  _  _  _ \n' +
+  xit('converts 1234567890', () => {
+    expect(ocr.convert('    _  _     _  _  _  _  _  _ \n' +
       '  | _| _||_||_ |_   ||_||_|| |\n' +
       '  ||_  _|  | _||_|  ||_| _||_|\n' +
-      '                              '
-    )).toBe('1234567890');
+      '                              ')).toBe('1234567890');
   });
 
-  xit('converts 123 456 789', function () {
-    expect(ocr.convert(
-      '    _  _ \n' +
+  xit('converts 123 456 789', () => {
+    expect(ocr.convert('    _  _ \n' +
       '  | _| _|\n' +
       '  ||_  _|\n' +
       '         \n' +
@@ -150,8 +118,6 @@ describe('ocr', function () {
       ' _  _  _ \n' +
       '  ||_||_|\n' +
       '  ||_| _|\n' +
-      '         '
-    )).toBe('123,456,789');
+      '         ')).toBe('123,456,789');
   });
-
 });

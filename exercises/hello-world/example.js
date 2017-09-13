@@ -1,10 +1,10 @@
-'use strict';
 
-var HelloWorld = function() {};
 
-HelloWorld.prototype.hello = function(name) {
+const HelloWorld = function () {};
+
+HelloWorld.prototype.hello = function (name) {
   name = name || 'World';
-  return 'Hello, ' + name + '!';
+  return `Hello, ${name}!`;
 };
 
 module.exports = HelloWorld;

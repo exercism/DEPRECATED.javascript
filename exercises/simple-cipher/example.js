@@ -1,10 +1,11 @@
-'use strict';
 
-var ALPHABET = 'abcdefghijklmnopqrstuvwxyz';
+
+const ALPHABET = 'abcdefghijklmnopqrstuvwxyz';
 
 function randomKey() {
-  var i, result = '';
-  for ( i = 0; i < 100; i++ ) {
+  let i,
+    result = '';
+  for (i = 0; i < 100; i++) {
     result += ALPHABET[randomUpTo(ALPHABET.length)];
   }
   return result;
@@ -15,32 +16,31 @@ function randomUpTo(n) {
 }
 
 module.exports = function (userDefinedKey) {
-
-  var key;
+  let key;
 
   function addEncodedCharacter(character, index, array) {
-    /*jshint validthis:true */
-    var i = ALPHABET.indexOf(character) + ALPHABET.indexOf(key[index%key.length]);
+    /* jshint validthis:true */
+    let i = ALPHABET.indexOf(character) + ALPHABET.indexOf(key[index % key.length]);
     if (i >= ALPHABET.length) { i -= ALPHABET.length; }
     this.push(ALPHABET[i]);
   }
 
   function addDecodedCharacter(character, index, array) {
-    /*jshint validthis:true */
-    var i = ALPHABET.indexOf(character) - ALPHABET.indexOf(key[index%key.length]);
+    /* jshint validthis:true */
+    let i = ALPHABET.indexOf(character) - ALPHABET.indexOf(key[index % key.length]);
     if (i < 0) { i += ALPHABET.length; }
     this.push(ALPHABET[i]);
   }
 
   this.encode = function (plaintext) {
-    var characters = [];
-    plaintext.split('').forEach( addEncodedCharacter, characters );
+    const characters = [];
+    plaintext.split('').forEach(addEncodedCharacter, characters);
     return characters.join('');
   };
 
   this.decode = function (ciphertext) {
-    var characters = [];
-    ciphertext.split('').forEach( addDecodedCharacter, characters );
+    const characters = [];
+    ciphertext.split('').forEach(addDecodedCharacter, characters);
     return characters.join('');
   };
 

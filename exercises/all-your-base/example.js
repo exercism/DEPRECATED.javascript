@@ -1,4 +1,4 @@
-'use strict';
+
 
 const Converter = function () { };
 
@@ -50,9 +50,7 @@ Converter.prototype.convert = function (array, inputBase, outputBase) {
     return [1];
   }
   const decimalValue = array
-    .reduce((accumulator, value) => {
-      return accumulator * inputBase + value;
-    }, 0);
+    .reduce((accumulator, value) => accumulator * inputBase + value, 0);
   return convertFromDecimalToBase(decimalValue, outputBase);
 };
 

@@ -1,35 +1,35 @@
-var bracket = require('./bracket-push');
+const bracket = require('./bracket-push');
 
-describe('bracket push', function() {
-  it('checks for appropriate bracketing in a set of brackets', function() {
+describe('bracket push', () => {
+  it('checks for appropriate bracketing in a set of brackets', () => {
     expect(bracket('{}')).toEqual(true);
   });
 
-  xit('returns false for unclosed brackets', function() {
+  xit('returns false for unclosed brackets', () => {
     expect(bracket('{{')).toEqual(false);
   });
 
-  xit('returns false if brackets are out of order', function() {
+  xit('returns false if brackets are out of order', () => {
     expect(bracket('}{')).toEqual(false);
   });
 
-  xit('checks bracketing in more than one pair of brackets', function() {
+  xit('checks bracketing in more than one pair of brackets', () => {
     expect(bracket('{}[]')).toEqual(true);
   });
 
-  xit('checks bracketing in nested brackets', function() {
+  xit('checks bracketing in nested brackets', () => {
     expect(bracket('{[]}')).toEqual(true);
   });
 
-  xit('rejects brackets that are properly balanced but improperly nested', function() {
+  xit('rejects brackets that are properly balanced but improperly nested', () => {
     expect(bracket('{[}]')).toEqual(false);
   });
 
-  xit('checks bracket closure with deeper nesting', function() {
+  xit('checks bracket closure with deeper nesting', () => {
     expect(bracket('{[)][]}')).toEqual(false);
   });
 
-  xit('checks bracket closure in a long string of brackets', function() {
+  xit('checks bracket closure in a long string of brackets', () => {
     expect(bracket('{[]([()])}')).toEqual(true);
   });
 });

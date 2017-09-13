@@ -3,24 +3,18 @@ function MeetupDayException(message) {
   this.name = 'MeetupDayException';
 }
 
-function meetupDay (year, month, day_of_week, which) {
-  'use strict';
-
-  var candidates = _getCandidates(year, month, day_of_week),
-      d,
-      i,
-      res;
+function meetupDay(year, month, day_of_week, which) {
+  let candidates = _getCandidates(year, month, day_of_week),
+    d,
+    i,
+    res;
   which = which.toLowerCase();
 
   if (which === 'teenth') {
-    res = _find(candidates, function (d) {
-      return 13 <= d.getDate() && d.getDate() <= 19;
-    });
-  }
-  else if (which === 'last') {
+    res = _find(candidates, d => d.getDate() >= 13 && d.getDate() <= 19);
+  } else if (which === 'last') {
     res = candidates.pop();
-  }
-  else {
+  } else {
     which = parseInt(which) - 1;
     res = candidates.slice(which, which + 1).pop();
   }
@@ -30,11 +24,11 @@ function meetupDay (year, month, day_of_week, which) {
   return res;
 }
 
-function _getCandidates (year, month, day_of_week) {
-  var d,
-      i,
-      numDaysInMonth = new Date(year, month + 1, 0).getDate(),
-      res = [];
+function _getCandidates(year, month, day_of_week) {
+  let d,
+    i,
+    numDaysInMonth = new Date(year, month + 1, 0).getDate(),
+    res = [];
 
   for (i = 0; i < numDaysInMonth; i++) {
     d = new Date(year, month, i + 1);
@@ -47,15 +41,15 @@ function _getCandidates (year, month, day_of_week) {
   return res;
 }
 
-function _getDayIndex (day) {
-  var daysInd = {
-    'sunday': 0,
-    'monday': 1,
-    'tuesday': 2,
-    'wednesday': 3,
-    'thursday': 4,
-    'friday': 5,
-    'saturday': 6
+function _getDayIndex(day) {
+  const daysInd = {
+    sunday: 0,
+    monday: 1,
+    tuesday: 2,
+    wednesday: 3,
+    thursday: 4,
+    friday: 5,
+    saturday: 6,
   };
 
   day = day.toLowerCase();
@@ -64,7 +58,7 @@ function _getDayIndex (day) {
 }
 
 function _find(ary, callback) {
-  for (var i = 0; i < ary.length; i++) {
+  for (let i = 0; i < ary.length; i++) {
     if (callback(ary[i], i, ary)) { return ary[i]; }
   }
 }

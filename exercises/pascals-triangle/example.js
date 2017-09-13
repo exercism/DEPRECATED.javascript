@@ -1,15 +1,15 @@
-'use strict';
+
 
 function sumElements(element, index, array) {
-  /*jshint validthis:true */
-  this.push(element + (array[index+1] || 0));
+  /* jshint validthis:true */
+  this.push(element + (array[index + 1] || 0));
 }
 
 function fillRows(rows) {
-  var result = [[1]];
-  for (var x = 1; x < rows; x++) {
-    var newRow = [1];
-    result[x-1].forEach(sumElements, newRow);
+  const result = [[1]];
+  for (let x = 1; x < rows; x++) {
+    const newRow = [1];
+    result[x - 1].forEach(sumElements, newRow);
     result.push(newRow);
   }
   return result;

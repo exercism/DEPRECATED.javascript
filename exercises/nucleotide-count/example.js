@@ -1,18 +1,18 @@
-'use strict';
+
 
 module.exports = dna;
 
 function dna(strand) {
-  var acids = (strand || '');
-  var index = histogram(acids);
+  const acids = (strand || '');
+  const index = histogram(acids);
 
-  for (var acid in acids) {
-    if (!index.hasOwnProperty(acids[acid])) throw new RangeError('Invalid DNA ' + strand);
+  for (const acid in acids) {
+    if (!index.hasOwnProperty(acids[acid])) throw new RangeError(`Invalid DNA ${strand}`);
   }
 
   return Object.create({
     histogram: histogram.bind(null, acids),
-    count: count.bind(null, acids)
+    count: count.bind(null, acids),
   });
 }
 
@@ -25,6 +25,6 @@ function histogram(acids) {
     A: count(acids, 'A'),
     C: count(acids, 'C'),
     G: count(acids, 'G'),
-    T: count(acids, 'T')
+    T: count(acids, 'T'),
   };
 }

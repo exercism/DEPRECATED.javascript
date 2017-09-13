@@ -1,50 +1,50 @@
-'use strict';
 
-var PATTERNS = {
+
+const PATTERNS = {
   0: [' _ ',
-      '| |',
-      '|_|',
-      '   '],
+    '| |',
+    '|_|',
+    '   '],
   1: ['   ',
-      '  |',
-      '  |',
-      '   '],
+    '  |',
+    '  |',
+    '   '],
   2: [' _ ',
-      ' _|',
-      '|_ ',
-      '   '],
+    ' _|',
+    '|_ ',
+    '   '],
   3: [' _ ',
-      ' _|',
-      ' _|',
-      '   '],
+    ' _|',
+    ' _|',
+    '   '],
   4: ['   ',
-      '|_|',
-      '  |',
-      '   '],
+    '|_|',
+    '  |',
+    '   '],
   5: [' _ ',
-      '|_ ',
-      ' _|',
-      '   '],
+    '|_ ',
+    ' _|',
+    '   '],
   6: [' _ ',
-      '|_ ',
-      '|_|',
-      '   '],
+    '|_ ',
+    '|_|',
+    '   '],
   7: [' _ ',
-      '  |',
-      '  |',
-      '   '],
+    '  |',
+    '  |',
+    '   '],
   8: [' _ ',
-      '|_|',
-      '|_|',
-      '   '],
+    '|_|',
+    '|_|',
+    '   '],
   9: [' _ ',
-      '|_|',
-      ' _|',
-      '   ']
+    '|_|',
+    ' _|',
+    '   '],
 };
 
 function getDigit(text) {
-  for (var digit in PATTERNS) {
+  for (const digit in PATTERNS) {
     if (PATTERNS.hasOwnProperty(digit)) {
       if (PATTERNS[digit].join('') === text) {
         return digit;
@@ -55,11 +55,11 @@ function getDigit(text) {
 }
 
 function splitIntoDigits(row) {
-  var digits = [];
-  var rows = row.split('\n');
-  for (var digitNumber = 0; digitNumber < rows[0].length; digitNumber += 3) {
-    var digit = '';
-    for (var rowNumber = 0; rowNumber < rows.length; rowNumber++) {
+  const digits = [];
+  const rows = row.split('\n');
+  for (let digitNumber = 0; digitNumber < rows[0].length; digitNumber += 3) {
+    let digit = '';
+    for (let rowNumber = 0; rowNumber < rows.length; rowNumber++) {
       digit += rows[rowNumber].substr(digitNumber, 3);
     }
     digits.push(digit);
@@ -68,12 +68,12 @@ function splitIntoDigits(row) {
 }
 
 function splitIntoRows(text) {
-  var rows = [];
-  var lines = text.split('\n');
-  for (var rowNumber = 0; rowNumber < lines.length; rowNumber += 4) {
-    var row = '';
-    for (var rowLine = 0; rowLine < 4; rowLine++) {
-      row += lines[rowNumber + rowLine] + '\n';
+  const rows = [];
+  const lines = text.split('\n');
+  for (let rowNumber = 0; rowNumber < lines.length; rowNumber += 4) {
+    let row = '';
+    for (let rowLine = 0; rowLine < 4; rowLine++) {
+      row += `${lines[rowNumber + rowLine]}\n`;
     }
     rows.push(row.slice(0, -1));
   }
@@ -81,11 +81,11 @@ function splitIntoRows(text) {
 }
 
 function valuesInRow(row) {
-  var digits = splitIntoDigits(row);
+  const digits = splitIntoDigits(row);
   return digits.map(getDigit).join('');
 }
 
 exports.convert = function (text) {
-  var rows = splitIntoRows(text);
+  const rows = splitIntoRows(text);
   return rows.map(valuesInRow).join(',');
 };

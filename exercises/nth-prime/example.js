@@ -1,18 +1,22 @@
-'use strict';
+
 
 module.exports = {
-  nth: function(nthPrime) {
+  nth(nthPrime) {
     if (nthPrime === 0) { throw new Error('Prime is not possible'); }
     this.generatePrimes(200000);
     return this.realPrimes[nthPrime - 1];
   },
-  generatePrimes: function(uptoNumber) {
-    var i, j, currentPrime, primeCount, possiblePrimes = [];
+  generatePrimes(uptoNumber) {
+    let i,
+      j,
+      currentPrime,
+      primeCount,
+      possiblePrimes = [];
 
     if (this.realPrimes) { return this.realPrimes; }
 
     for (i = 2; i <= uptoNumber; i++) {
-      possiblePrimes.push({ number: i, prime: true});
+      possiblePrimes.push({ number: i, prime: true });
     }
 
     for (i = 2; i < Math.sqrt(possiblePrimes.length); i++) {
@@ -34,6 +38,6 @@ module.exports = {
         this.realPrimes.push(currentPrime.number);
       }
     }
-  }
+  },
 
 };

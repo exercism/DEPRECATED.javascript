@@ -1,13 +1,13 @@
-'use strict';
 
-exports.WordProblem   = WordProblem;
+
+exports.WordProblem = WordProblem;
 exports.ArgumentError = ArgumentError;
 
-var BINARY_OPERATORS = {
-  'plus':          function(l, r) { return l + r; },
-  'minus':         function(l, r) { return l - r; },
-  'multiplied by': function(l, r) { return l * r; },
-  'divided by':    function(l, r) { return l / r; }
+const BINARY_OPERATORS = {
+  plus(l, r) { return l + r; },
+  minus(l, r) { return l - r; },
+  'multiplied by': function (l, r) { return l * r; },
+  'divided by': function (l, r) { return l / r; },
 };
 
 function operators() {
@@ -15,8 +15,8 @@ function operators() {
 }
 
 function pattern() {
-  var expression = '';
-  var operations = ' (' + operators().join('|') + ') ';
+  let expression = '';
+  const operations = ` (${operators().join('|')}) `;
 
   expression += '(?:what is ([-+]?[\\d]+)';
   expression += operations;
@@ -29,23 +29,23 @@ function pattern() {
 
 function WordProblem(question) {
   this.question = question || '';
-  this.matches  = this.question.match(pattern());
+  this.matches = this.question.match(pattern());
 }
 
-WordProblem.prototype.tooComplicated = function() {
+WordProblem.prototype.tooComplicated = function () {
   return this.matches === null;
 };
 
-WordProblem.prototype.answer = function() {
+WordProblem.prototype.answer = function () {
   if (this.tooComplicated()) {
     throw new ArgumentError('I don\'t understand the question');
   }
   return this.evaluate();
 };
 
-WordProblem.prototype.evaluate = function() {
-  var out = 0;
-  var m   = this.matches;
+WordProblem.prototype.evaluate = function () {
+  let out = 0;
+  const m = this.matches;
 
   if (m[1] !== undefined && m[2] !== undefined && m[3] !== undefined) {
     out = this.operate(m[2], m[1], m[3]);
@@ -58,8 +58,8 @@ WordProblem.prototype.evaluate = function() {
   return out;
 };
 
-WordProblem.prototype.operate = function(operation, l, r) {
-  var fn = BINARY_OPERATORS[operation] || function() { return 0; };
+WordProblem.prototype.operate = function (operation, l, r) {
+  const fn = BINARY_OPERATORS[operation] || function () { return 0; };
   return fn(Number(l), Number(r));
 };
 
