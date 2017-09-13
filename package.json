@@ -1,0 +1,9 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "Exercism exercises in JavaScript.",
+  "main": "index.js",
+  "repository": "https://github.com/exercism/javascript",
+  "author": "Katrina Owen",
+  "license": "MIT"
+}
