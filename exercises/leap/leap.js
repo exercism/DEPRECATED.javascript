@@ -3,13 +3,13 @@
 // convenience to get you started writing code faster.
 //
 
-const Year = function (input) {
+var Year = function(input) {
 //
 // YOUR CODE GOES HERE
-//
+//  
 };
 
-Year.prototype.isLeap = function () {
+Year.prototype.isLeap = function() {
 //
 // YOUR CODE GOES HERE
 //

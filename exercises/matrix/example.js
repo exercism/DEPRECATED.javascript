@@ -1,9 +1,9 @@
-
+'use strict';
 
 function columnsFromRows(rows) {
-  const columns = [];
-  rows.forEach((row) => {
-    row.forEach((n, index) => {
+  var columns = [];
+  rows.forEach(function (row) {
+    row.forEach(function (n, index) {
       columns[index] = columns[index] || [];
       columns[index].push(n);
     });
@@ -12,7 +12,11 @@ function columnsFromRows(rows) {
 }
 
 function parseRows(description) {
-  return description.split('\n').map(row => row.split(' ').map(char => parseInt(char, 10)));
+  return description.split('\n').map(function (row) {
+    return row.split(' ').map(function (char) {
+      return parseInt(char, 10);
+    });
+  });
 }
 
 function Matrix(description) {

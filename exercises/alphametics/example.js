@@ -1,24 +1,24 @@
 function solve(puzzle) {
-  const parts = puzzle
+  var parts = puzzle
     .split(/[+|==]/g)
-    .map(o => o.trim())
-    .filter(o => o !== '');
+    .map(function(o) { return o.trim(); })
+    .filter(function(o) { return o !== ""; });
 
-  if (parts.length < 3) {
+  if(parts.length < 3) {
     return null;
   }
 
-  const uniqueLetters = getUniqueLetters(parts.join(''));
-  const firstLetters = getFirstLetters(parts);
+  var uniqueLetters = getUniqueLetters(parts.join(''));
+  var firstLetters = getFirstLetters(parts);
 
-  const numberCombinations = getNumberCombinations([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], uniqueLetters.length);
-  const permutations = getPermutations(Array(uniqueLetters.length).fill().map((_, i) => i));
+  var numberCombinations = getNumberCombinations([0,1,2,3,4,5,6,7,8,9], uniqueLetters.length);
+  var permutations = getPermutations(Array(uniqueLetters.length).fill().map(function(_, i) {return i; }));
 
-  while (numberCombinations.length) {
-    const numberCombination = numberCombinations.pop();
-    for (let k = 0; k < permutations.length; k++) {
-      const newNumbers = assignNumbers(numberCombination, uniqueLetters, permutations[k]);
-      if (testNumbers(newNumbers, parts, firstLetters)) {
+  while(numberCombinations.length) {
+    var numberCombination = numberCombinations.pop();
+    for(var k = 0; k < permutations.length; k++) {
+      var newNumbers = assignNumbers(numberCombination, uniqueLetters, permutations[k]);
+      if(testNumbers(newNumbers, parts, firstLetters)) {
         return newNumbers;
       }
     }
@@ -28,48 +28,47 @@ function solve(puzzle) {
 
 function getFirstLetters(words) {
   return words
-    .map(word => word[0])
-    .filter((val, i, arr) => arr.indexOf(val) === i);
+    .map(function(word) { return word[0]; })
+    .filter(function (val, i, arr) { return arr.indexOf(val) === i; });
 }
 
 function assignNumbers(numbers, letters, orders) {
-  const output = {};
-  for (let i = 0; i < letters.length; i++) {
+  var output = {};
+  for(var i = 0; i < letters.length; i++) {
     output[letters[i]] = numbers[orders[i]];
   }
   return output;
 }
 
 function getUniqueLetters(string) {
-  return string.split('').filter((val, i, arr) => arr.indexOf(val) === i);
+  return string.split('').filter(function (val, i, arr) { return arr.indexOf(val) === i; });
 }
 
 function testNumbers(numbers, puzzleParts, firstLetters) {
-  const keys = Object.keys(numbers);
-  for (let i = 0; i < keys.length; i++) {
-    if (numbers[keys[i]] === 0 && firstLetters.indexOf(keys[i]) !== -1) {
+  var keys = Object.keys(numbers);
+  for(var i = 0; i < keys.length; i++) {
+    if(numbers[keys[i]] === 0 && firstLetters.indexOf(keys[i]) !== -1) {
       return false;
     }
   }
-  const replaceRegex = new RegExp(`[${keys.join('')}]`, 'g');
+  var replaceRegex = new RegExp('[' + keys.join('') + ']', 'g');
 
   puzzleParts = puzzleParts.join(',')
-    .replace(replaceRegex, input => numbers[input])
+    .replace(replaceRegex, function(input) { return numbers[input]; })
     .split(',')
-    .map(t => parseInt(t));
+    .map(function(t) {return parseInt(t);});
 
-  const total = puzzleParts.slice(puzzleParts.length - 1)[0];
+  var total = puzzleParts.slice(puzzleParts.length-1)[0];
   return total === puzzleParts
-    .slice(0, puzzleParts.length - 1)
-    .reduce((acc, val) => acc + val, 0);
+      .slice(0,puzzleParts.length-1)
+      .reduce(function(acc, val) { return acc + val; },0);
 }
 
 function getPermutations(inputArr) {
-  const results = [];
+  var results = [];
   function permute(arr, memo) {
-    var cur,
-      memo = memo || [];
-    for (let i = 0; i < arr.length; i++) {
+    var cur, memo = memo || [];
+    for (var i = 0; i < arr.length; i++) {
       cur = arr.splice(i, 1);
       if (arr.length === 0) {
         results.push(memo.concat(cur));
@@ -83,11 +82,7 @@ function getPermutations(inputArr) {
 }
 
 function getNumberCombinations(set, k) {
-  let i,
-    j,
-    combs,
-    head,
-    tailcombs;
+  var i, j, combs, head, tailcombs;
   if (k > set.length || k <= 0) {
     return [];
   }

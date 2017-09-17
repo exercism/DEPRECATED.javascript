@@ -1,23 +1,23 @@
+'use strict';
 
+var DnaTranscriber = function(){};
 
-const DnaTranscriber = function () {};
-
-const dnaToRna = {
+var dnaToRna = {
   G: 'C',
   C: 'G',
   T: 'A',
-  A: 'U',
+  A: 'U'
 };
 
-const transcribeDna = function (dna, lookupTable) {
-  return dna.replace(/./g, (dnaNucleotide) => {
+var transcribeDna = function(dna, lookupTable) {
+  return dna.replace(/./g, function(dnaNucleotide) {
     if (!(dnaNucleotide in lookupTable)) { throw Error('Invalid input'); }
     return lookupTable[dnaNucleotide];
   });
-};
+}
 
-DnaTranscriber.prototype.toRna = function (dna) {
+DnaTranscriber.prototype.toRna = function(dna) {
   return transcribeDna(dna, dnaToRna);
-};
+}
 
 module.exports = DnaTranscriber;

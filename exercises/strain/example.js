@@ -1,10 +1,10 @@
-
+'use strict';
 
 module.exports = {
-  strain(array, filter, keepMatches) {
-    const results = [];
-    for (let i = 0; i < array.length; i++) {
-      const item = array[i];
+  strain: function(array, filter, keepMatches) {
+    var results = [];
+    for (var i=0; i < array.length; i++) {
+      var item = array[i];
       if (filter(item) === keepMatches) {
         results.push(item);
       }
@@ -12,11 +12,11 @@ module.exports = {
     return results;
   },
 
-  keep(array, filter) {
+  keep: function (array, filter) {
     return this.strain(array, filter, true);
   },
 
-  discard(array, filter) {
+  discard: function (array, filter) {
     return this.strain(array, filter, false);
-  },
+  }
 };

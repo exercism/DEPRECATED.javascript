@@ -1,4 +1,6 @@
 function Bob() {
+  'use strict';
+
   function isSilence(message) {
     return message.replace(/\s+/g, '') === '';
   }
@@ -11,16 +13,17 @@ function Bob() {
     return message[message.length - 1] === '?';
   }
 
-  this.hey = function (input) {
-    const message = input.trim();
+  this.hey = function(input) {
+    var message = input.trim();
     if (isSilence(message)) {
       return 'Fine. Be that way!';
     } else if (isShouting(message)) {
       return 'Whoa, chill out!';
     } else if (isAQuestion(message)) {
       return 'Sure.';
+    } else {
+      return 'Whatever.';
     }
-    return 'Whatever.';
   };
 }
 

@@ -1,76 +1,76 @@
-
+'use strict';
 
 function List(arr) {
   this.values = arr || [];
 }
 
 List.prototype = {
-  append(otherList) {
-    const appended = this.values;
+  append: function (otherList) {
+    var appended = this.values;
 
-    for (let i = 0; i < otherList.length(); i++) {
+    for (var i = 0; i < otherList.length(); i++) {
       appended.push(otherList.values[i]);
     }
 
     return new List(appended);
   },
 
-  concat(otherList) {
+  concat: function (otherList) {
     return this.append(otherList);
   },
 
-  cons(item, arr) {
-    const x = new List([item]);
-    const xs = new List(arr);
+  cons: function (item, arr) {
+    var x = new List([item]);
+    var xs = new List(arr)
     return x.append(xs).values;
   },
 
-  foldl(func, start) {
-    let acc = start;
+  foldl: function (func, start) {
+    var acc = start;
 
-    for (let i = 0; i < this.length(); i++) {
+    for (var i = 0; i < this.length(); i++) {
       acc = func(this.values[i], acc);
     }
 
     return acc;
   },
 
-  foldr(func, start) {
-    let acc = start;
+  foldr: function (func, start) {
+    var acc = start;
 
-    for (let i = this.length() - 1; i >= 0; i--) {
+    for (var i = this.length() - 1; i >= 0; i--) {
       acc = func(this.values[i], acc);
     }
 
     return acc;
   },
 
-  length() {
-    let count = 0;
-    this.values.forEach(() => { count++; });
+  length: function () {
+    var count = 0;
+    this.values.forEach(function () { count++; });
 
     return count;
   },
 
-  reverse() {
+  reverse: function () {
     return new List(this.foldl(this.cons, []));
   },
 
-  map(func, arr) {
-    const applyFuncThenCons = function (x, acc) {
+  map: function (func, arr) {
+    var applyFuncThenCons = function (x, acc) {
       return this.cons(func(x), acc);
-    };
+    }
 
     return new List(this.foldr(applyFuncThenCons.bind(this), []));
   },
 
-  filter(pred) {
-    const consIfPred = function (x, acc) {
+  filter: function (pred) {
+    var consIfPred = function (x, acc) {
       return pred(x) ? this.cons(x, acc) : acc;
     };
 
     return new List(this.foldr(consIfPred.bind(this), []));
-  },
-};
+  }
+}
 
 module.exports = List;

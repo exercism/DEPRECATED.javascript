@@ -1,4 +1,4 @@
-
+'use strict';
 
 module.exports = Binary;
 
@@ -11,6 +11,6 @@ function Binary(binary) {
 }
 
 Binary.prototype.toDecimal = function () {
-  const out = Number(this.binary.toString(10));
+  var out = Number(this.binary.toString(10));
   return isNaN(out) ? 0 : out;
 };

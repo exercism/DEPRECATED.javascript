@@ -1,8 +1,8 @@
-
+'use strict';
 
 exports.for = function (n) {
-  const prime_factors = [];
-  let possible_factor = 2;
+  var prime_factors = [];
+  var possible_factor = 2;
   while (possible_factor * possible_factor <= n) {
     while (n % possible_factor === 0) {
       prime_factors.push(possible_factor);

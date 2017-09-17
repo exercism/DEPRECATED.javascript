@@ -1,4 +1,4 @@
-
+'use strict';
 
 function Node(value, next, prev) {
   this.value = value;
@@ -14,8 +14,8 @@ LinkedList.prototype.push = function LinkedList_push(value) {
   if (this._front === null) {
     this._front = new Node(value);
   } else {
-    const back = this._front.prev;
-    const n = new Node(value, this._front, back);
+    var back = this._front.prev;
+    var n = new Node(value, this._front, back);
     back.next = n;
     this._front.prev = n;
   }
@@ -27,15 +27,15 @@ LinkedList.prototype.unshift = function LinkedList_unshift(value) {
 };
 
 LinkedList.prototype.pop = function LinkedList_pop() {
-  if (this._front === null) { return undefined; }
+  if (this._front === null) {return undefined;};
   this._front = this._front.prev;
   return this.shift();
 };
 
 LinkedList.prototype.shift = function LinkedList_shift() {
-  const value = this._front.value;
-  const front = this._front.next;
-  const back = this._front.prev;
+  var value = this._front.value;
+  var front = this._front.next;
+  var back = this._front.prev;
   if (front === this._front) {
     this._front = null;
   } else {
@@ -46,17 +46,18 @@ LinkedList.prototype.shift = function LinkedList_shift() {
   return value;
 };
 
-LinkedList.prototype.count = function () {
+LinkedList.prototype.count = function() {
   if (this._front === null) {
     return 0;
   } else if (this._front.next === this._front) {
     return 1;
+  } else {
+    this._front.next = this._front.next.next;
+    return this.count() + 1;
   }
-  this._front.next = this._front.next.next;
-  return this.count() + 1;
 };
 
-LinkedList.prototype.delete = function (match) {
+LinkedList.prototype.delete = function(match) {
   if (this._front.next === this._front && this._front.value === match) {
     this._front = null;
   } else if (this._front.next.value === match) {

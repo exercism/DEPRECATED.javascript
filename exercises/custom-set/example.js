@@ -1,25 +1,28 @@
-(function () {
-  const CustomSet = function (inputData) {
+(function() {
+
+  'use strict';
+
+  var CustomSet = function(inputData) {
     this.data = inputData || [];
   };
 
-  CustomSet.prototype.empty = function () {
+  CustomSet.prototype.empty = function() {
     return this.data.length === 0;
   };
 
-  CustomSet.prototype.delete = function (element) {
-    const index = this.data.indexOf(element);
+  CustomSet.prototype.delete = function(element) {
+    var index = this.data.indexOf(element);
     if (index !== -1) {
       this.data.splice(index, 1);
     }
     return this;
   };
 
-  CustomSet.prototype.difference = function (other) {
-    const thisData = this.data.sort();
-    const thatData = other.data.sort();
-    const result = [];
-    for (let i = 0; i < thisData.length; i++) {
+  CustomSet.prototype.difference = function(other) {
+    var thisData = this.data.sort();
+    var thatData = other.data.sort();
+    var result = [];
+    for (var i=0; i < thisData.length; i++) {
       if (thatData.indexOf(thisData[i]) === -1) {
         result.push(thisData[i]);
       }
@@ -27,9 +30,9 @@
     return new CustomSet(result);
   };
 
-  CustomSet.prototype.disjoint = function (other) {
-    if (this.data.length === 0) { return true; }
-    for (let i = 0; i < this.data.length; i++) {
+  CustomSet.prototype.disjoint = function(other) {
+    if (this.data.length === 0) { return true; };
+    for (var i = 0; i < this.data.length; i++) {
       if (other.data.indexOf(this.data[i]) !== -1) {
         return false;
       }
@@ -37,15 +40,15 @@
     return true;
   };
 
-  CustomSet.prototype.clear = function () {
+  CustomSet.prototype.clear = function() {
     return new CustomSet([]);
   };
 
-  CustomSet.prototype.intersection = function (other) {
-    const thisData = this.data.sort();
-    const thatData = other.data.sort();
-    const result = [];
-    for (let i = 0; i < thisData.length; i++) {
+  CustomSet.prototype.intersection = function(other) {
+    var thisData = this.data.sort();
+    var thatData = other.data.sort();
+    var result = [];
+    for (var i=0; i < thisData.length; i++) {
       if (thatData.indexOf(thisData[i]) !== -1) {
         result.push(thisData[i]);
       }
@@ -53,23 +56,23 @@
     return new CustomSet(result);
   };
 
-  CustomSet.prototype.contains = function (datum) {
+  CustomSet.prototype.contains = function(datum) {
     return this.data.indexOf(datum) !== -1;
   };
 
-  CustomSet.prototype.add = function (datum) {
+  CustomSet.prototype.add = function(datum) {
     if (this.data.indexOf(datum) === -1) {
       this.data.push(datum);
     }
     return this;
   };
 
-  CustomSet.prototype.size = function () {
+  CustomSet.prototype.size = function() {
     return arrayUnique(this.data).length;
   };
 
-  CustomSet.prototype.subset = function (other) {
-    for (let i = 0; i < other.data.length; i++) {
+  CustomSet.prototype.subset = function(other) {
+    for (var i=0; i < other.data.length; i++) {
       if (this.data.indexOf(other.data[i]) === -1) {
         return false;
       }
@@ -77,32 +80,32 @@
     return true;
   };
 
-  CustomSet.prototype.toList = function () {
+  CustomSet.prototype.toList = function() {
     return arrayUnique(this.data);
   };
 
-  CustomSet.prototype.union = function (other) {
-    const result = [];
+  CustomSet.prototype.union = function(other) {
+    var result = [];
 
-    for (let i = 0; i < this.data.length; i++) {
+    for (var i=0; i < this.data.length; i++) {
       result.push(this.data[i]);
     }
-    for (let j = 0; j < other.data.length; j++) {
+    for (var j=0; j < other.data.length; j++) {
       result.push(other.data[j]);
     }
 
     return new CustomSet(arrayUnique(result));
   };
 
-  CustomSet.prototype.eql = function (other) {
-    const thisData = this.data.sort();
-    const thatData = other.data.sort();
+  CustomSet.prototype.eql = function(other) {
+    var thisData = this.data.sort();
+    var thatData = other.data.sort();
 
     if (!other || this.data.length !== other.data.length) {
       return false;
     }
 
-    for (let i = 0; i < thisData.length; i++) {
+    for (var i = 0; i < thisData.length; i++) {
       if (thisData[i] !== thatData[i]) {
         return false;
       }
@@ -110,12 +113,12 @@
     return true;
   };
 
-  var arrayUnique = function (a) {
-    return a.reduce((p, c) => {
-      if (p.indexOf(c) < 0) p.push(c);
-      return p;
+  var arrayUnique = function(a) {
+    return a.reduce(function(p, c) {
+        if (p.indexOf(c) < 0) p.push(c);
+        return p;
     }, []);
   };
 
   module.exports = CustomSet;
-}());
+})();

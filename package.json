@@ -12,7 +12,6 @@
     "eslint-plugin-import": "^2.7.0"
   },
    "scripts": {
-    "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
+    "lint": "eslint ."
   }
 }

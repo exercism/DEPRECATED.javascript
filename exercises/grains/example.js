@@ -1,4 +1,4 @@
-const BigInt = require('./big-integer');
+var BigInt = require('./big-integer');
 
 /**
  * @author github.com/nonsensery
@@ -15,7 +15,7 @@ function Grains() {
 /**
  * Gets the number of grains on the nth square.
  */
-Grains.prototype.square = function (num) {
+Grains.prototype.square = function(num) {
   return BigInt(2).pow(num - 1).toString();
 };
 
@@ -23,9 +23,9 @@ Grains.prototype.square = function (num) {
  * Gets the total number of grains on all squares.
  */
 Grains.prototype.total = function () {
-  let total = BigInt(0);
+  var total = BigInt(0);
 
-  for (let squareNum = 1; squareNum <= 64; ++squareNum) {
+  for (var squareNum = 1; squareNum <= 64; ++squareNum) {
     total = total.add(this.square(squareNum));
   }
 

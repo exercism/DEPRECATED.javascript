@@ -1,15 +1,15 @@
-
+'use strict';
 
 function Words() {}
 
 Words.prototype.count = function (input) {
-  const counts = {};
-  const words = input.toLowerCase()
-    .replace(/[,."\/!&@$%\^\*;:{}()¡¿?]/g, ' ')
-    .replace(/\s'(\w+)'\s/, ' ' + '$1' + ' ')
-    .match(/\S+/g);
+  var counts = {};
+  var words = input.toLowerCase()
+                   .replace(/[,."\/!&@$%\^\*;:{}()¡¿?]/g, ' ')
+                   .replace(/\s'(\w+)'\s/, ' '+'$1'+' ')
+                   .match(/\S+/g);
 
-  words.forEach((word) => {
+  words.forEach(function (word) {
     counts[word] = counts.hasOwnProperty(word) ? counts[word] + 1 : 1;
   });
   return counts;

@@ -1,4 +1,4 @@
-
+'use strict';
 
 function isValid(number) {
   number = number.replace(/\s/g, '');
@@ -15,7 +15,7 @@ function isValid(number) {
       return d;
     })
     // limit to digits less than 10
-    .map((d) => {
+    .map(d => {
       if (d > 9) {
         return d - 9;
       }

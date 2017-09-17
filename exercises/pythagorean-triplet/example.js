@@ -1,4 +1,4 @@
-
+'use strict';
 
 module.exports = Triplet;
 
@@ -15,7 +15,7 @@ function Triplets(conditions) {
 }
 
 Triplet.prototype.isPythagorean = function () {
-  return this.a * this.a + this.b * this.b === this.c * this.c;
+  return this.a*this.a + this.b*this.b === this.c*this.c;
 };
 
 Triplet.prototype.product = function () {
@@ -35,11 +35,10 @@ Triplets.prototype.isDesired = function (triplet) {
 };
 
 Triplets.prototype.toArray = function () {
-  let triplet,
-    triplets = [];
-  for (let a = this.min; a < this.max - 1; a++) {
-    for (let b = a + 1; b < this.max; b++) {
-      for (let c = b + 1; c <= this.max; c++) {
+  var triplet, triplets = [];
+  for (var a = this.min; a < this.max - 1; a++) {
+    for (var b = a + 1; b < this.max; b++) {
+      for (var c = b + 1; c <= this.max; c++) {
         triplet = new Triplet(a, b, c);
         if (this.isDesired(triplet)) {
           triplets.push(triplet);

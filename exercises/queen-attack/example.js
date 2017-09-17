@@ -1,8 +1,8 @@
+'use strict';
 
-
-module.exports = function (options) {
+module.exports = function(options) {
   if (options === undefined) {
-    options = { white: [0, 3], black: [7, 3] };
+    options = { white: [0,3], black: [7,3] };
   }
 
   if (options.white[0] === options.black[0] && options.white[1] === options.black[1]) {
@@ -12,8 +12,8 @@ module.exports = function (options) {
   this.white = options.white;
   this.black = options.black;
 
-  this.canAttack = function () {
-    let canAttack = false;
+  this.canAttack = function() {
+    var canAttack = false;
 
     if (this.white[0] === this.black[0]) {
       canAttack = true;
@@ -22,8 +22,8 @@ module.exports = function (options) {
       canAttack = true;
     }
 
-    const yDistance = this.white[0] - this.black[0];
-    const xDistance = this.white[1] - this.black[1];
+    var yDistance = this.white[0] - this.black[0];
+    var xDistance = this.white[1] - this.black[1];
 
     if (xDistance === yDistance) {
       canAttack = true;
@@ -36,11 +36,11 @@ module.exports = function (options) {
     return canAttack;
   };
 
-  this.boardRepresentation = function () {
-    let boardRepresentation = '';
+  this.boardRepresentation = function() {
+    var boardRepresentation = '';
 
-    for (let i = 0; i < 8; i++) {
-      for (let j = 0; j < 8; j++) {
+    for (var i = 0; i < 8; i++) {
+      for (var j = 0; j < 8; j++) {
         if (this.white[0] === i && this.white[1] === j) {
           boardRepresentation += 'W';
         } else if (this.black[0] === i && this.black[1] === j) {
@@ -57,7 +57,7 @@ module.exports = function (options) {
     return boardRepresentation;
   };
 
-  this.toString = function () {
+  this.toString = function() {
     return this.boardRepresentation();
   };
 };

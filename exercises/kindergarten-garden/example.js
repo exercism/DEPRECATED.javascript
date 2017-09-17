@@ -1,6 +1,6 @@
+'use strict';
 
-
-const defaultChildren = [
+var defaultChildren = [
   'Alice',
   'Bob',
   'Charlie',
@@ -12,36 +12,40 @@ const defaultChildren = [
   'Ileana',
   'Joseph',
   'Kincaid',
-  'Larry',
+  'Larry'
 ];
 
-const plants = {
+var plants = {
   G: 'grass',
   V: 'violets',
   R: 'radishes',
-  C: 'clover',
+  C: 'clover'
 };
 
 function getPlants(pots, index) {
-  const plants = [];
-  const position = 2 * index;
+  var plants = [];
+  var position = 2*index;
   plants.push(pots[0][position]);
-  plants.push(pots[0][position + 1]);
+  plants.push(pots[0][position+1]);
   plants.push(pots[1][position]);
-  plants.push(pots[1][position + 1]);
+  plants.push(pots[1][position+1]);
   return plants;
 }
 
 function parse(diagram) {
-  return diagram.split('\n').map(row => row.split('').map(sign => plants[sign]));
+  return diagram.split('\n').map(function (row) {
+    return row.split('').map(function (sign) {
+      return plants[sign];
+    });
+  });
 }
 
 function Garden(diagram, students) {
-  const instance = {};
+  var instance = {};
   students = students || defaultChildren;
   students.sort();
-
-  students.forEach((student, index) => {
+  
+  students.forEach(function (student, index) {
     instance[student.toLowerCase()] = getPlants(parse(diagram), index);
   });
 

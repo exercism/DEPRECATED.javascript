@@ -1,43 +1,43 @@
-const Robot = require('./robot-name');
+var Robot = require('./robot-name');
 
-describe('Robot', () => {
+describe('Robot', function() {
   // NOTE: The 'beforeEach()' and 'afterEach()' act as setup/teardown for this
   // test suite. See more: http://jasmine.github.io/2.0/introduction.html
-  let robot;
+  var robot;
 
-  beforeEach(() => {
+  beforeEach(function() {
     robot = new Robot();
   });
 
-  afterEach(() => {
+  afterEach(function() {
     robot = null;
   });
 
-  it('has a name', () => {
+  it('has a name', function() {
     expect(robot.name).toMatch(/^[A-Z]{2}\d{3}$/);
   });
 
-  xit('name is the same each time', () => {
+  xit('name is the same each time', function() {
     expect(robot.name).toEqual(robot.name);
   });
 
-  xit('different robots have different names', () => {
-    const differentRobot = new Robot();
+  xit('different robots have different names', function() {
+    var differentRobot = new Robot();
     expect(differentRobot.name).not.toEqual(robot.name);
   });
 
-  xit('is able to reset the name', () => {
-    const originalName = robot.name;
+  xit('is able to reset the name', function() {
+    var originalName = robot.name;
     robot.reset();
-    const newName = robot.name;
+    var newName = robot.name;
     expect(newName).toMatch(/^[A-Z]{2}\d{3}$/);
     expect(originalName).not.toEqual(newName);
   });
 
-  xit('should set a unique name after reset', () => {
-    let i,
-      numResets = 10000,
-      usedNames = {};
+  xit('should set a unique name after reset', function() {
+    var i,
+        numResets = 10000,
+        usedNames = {};
 
     usedNames[robot.name] = true;
 
@@ -48,15 +48,15 @@ describe('Robot', () => {
 
     expect(Object.keys(usedNames).length).toEqual(numResets + 1);
   });
-
-  // This test is optional.
-  xit('there can be lots of robots with different names each', () => {
-    let i,
-      numRobots = 10000,
-      usedNames = {};
+  
+  //This test is optional. 
+  xit('there can be lots of robots with different names each', function() {
+    var i,
+        numRobots = 10000,
+        usedNames = {};
 
     for (i = 0; i < numRobots; i++) {
-      const newRobot = new Robot();
+      var newRobot = new Robot();
       usedNames[newRobot.name] = true;
     }
 

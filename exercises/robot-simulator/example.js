@@ -1,15 +1,17 @@
-const Robot = (function () {
-  const VALID_DIRECTIONS = ['north', 'east', 'south', 'west'];
-  const INSTRUCTION_KEYS = {
+var Robot = (function () {
+  'use strict';
+
+  var VALID_DIRECTIONS = ['north', 'east', 'south', 'west']
+  var INSTRUCTION_KEYS = {
     A: 'advance',
     L: 'turnLeft',
-    R: 'turnRight',
-  };
+    R: 'turnRight'
+  }
 
-  function Robot() {
+  function Robot () {
     this.coordinates = [0, 0];
     this.bearing = 'north';
-  }
+  };
 
   Robot.prototype.at = function (x, y) {
     this.coordinates = [x, y];
@@ -37,11 +39,11 @@ const Robot = (function () {
       case 'west':
         this.coordinates[0]--;
         break;
-    }
+    };
   };
 
   Robot.prototype.turnLeft = function () {
-    let directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
+    var directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
 
     if (directionPosition > 0) {
       this.orient(VALID_DIRECTIONS[--directionPosition]);
@@ -51,7 +53,7 @@ const Robot = (function () {
   };
 
   Robot.prototype.turnRight = function () {
-    let directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
+    var directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
 
     if (directionPosition < (VALID_DIRECTIONS.length - 1)) {
       this.orient(VALID_DIRECTIONS[++directionPosition]);
@@ -62,7 +64,9 @@ const Robot = (function () {
 
   Robot.prototype.instructions = function (instructionKeys) {
     return instructionKeys.split('')
-      .map(key => INSTRUCTION_KEYS[key]);
+      .map(function (key) {
+        return INSTRUCTION_KEYS[key];
+      });
   };
 
   Robot.prototype.place = function (args) {
@@ -77,7 +81,7 @@ const Robot = (function () {
       }, this);
   };
 
-  return Robot;
-}());
+  return Robot
+})()
 
 module.exports = Robot;

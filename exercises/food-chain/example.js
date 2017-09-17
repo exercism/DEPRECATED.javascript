@@ -1,4 +1,4 @@
-
+'use strict';
 
 function FoodChain() {}
 
@@ -15,15 +15,15 @@ function FoodChain() {}
  * corresponding portion of song
  */
 FoodChain.prototype.verses = function (first, last) {
-  let idx = first - 1;
-  const end = last;
-  const str = [];
+  var idx = first - 1;
+  var end = last;
+  var str = [];
 
   while (++idx <= end) {
     str.push(this.verse(idx));
   }
 
-  return `${str.join('\n')}\n`;
+  return str.join('\n') + '\n';
 };
 
 /**
@@ -73,7 +73,7 @@ FoodChain.prototype.verse = function (number) {
 
     case 8: return '' +
       'I know an old lady who swallowed a horse.\n' + 'She\'s dead, of course!\n';
-  }
+  };
 };
 
 FoodChain.prototype.sing = FoodChain.prototype.verses.bind(null, 1, 8);

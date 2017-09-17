@@ -1,8 +1,10 @@
-function Triangle(a, b, c) {
-  this.sides = [a, b, c];
+function Triangle(a,b,c) {
+  'use strict';
 
-  this.kind = function () {
-    let name = 'scalene';
+  this.sides = [ a, b, c ];
+
+  this.kind = function() {
+    var name = 'scalene';
 
     if (this.isIllegal()) {
       throw new TypeError('illegal');
@@ -15,41 +17,39 @@ function Triangle(a, b, c) {
     return name;
   };
 
-  this.isIllegal = function () {
+  this.isIllegal = function() {
     return this.violatesInequality() || this.hasImpossibleSides();
   };
 
-  this.violatesInequality = function () {
-    let a = this.sides[0],
-      b = this.sides[1],
-      c = this.sides[2];
+  this.violatesInequality = function() {
+    var a = this.sides[0], b = this.sides[1], c = this.sides[2];
     return (a + b < c) || (a + c < b) || (b + c < a);
   };
 
-  this.hasImpossibleSides = function () {
+  this.hasImpossibleSides = function() {
     return this.sides[0] <= 0 || this.sides[1] <= 0 || this.sides[2] <= 0;
   };
 
-  this.isEquilateral = function () {
+  this.isEquilateral = function() {
     return this.uniqueSides().length === 1;
   };
 
-  this.isIsosceles = function () {
+  this.isIsosceles = function() {
     return this.uniqueSides().length === 2;
   };
 
-  this.uniqueSides = function () {
-    const sides = this.sides;
-    const uniques = {};
+  this.uniqueSides = function() {
+    var sides = this.sides;
+    var uniques = {};
 
-    for (let i = 0; i < sides.length; i++) {
-      const currentSide = sides[i];
+    for (var i = 0; i < sides.length; i++) {
+      var currentSide = sides[i];
       uniques[currentSide] = true;
     }
 
-    const uniqueSides = [];
+    var uniqueSides = [];
 
-    for (const uniqueSide in uniques) {
+    for (var uniqueSide in uniques) {
       uniqueSides.push(uniqueSide);
     }
 

@@ -5,9 +5,9 @@ Hamming.prototype.compute = function (strand1, strand2) {
     throw new Error('DNA strands must be of equal length.');
   }
 
-  let distance = 0;
+  var distance = 0;
 
-  for (let i = 0; i < strand1.length; i++) {
+  for (var i = 0; i < strand1.length; i++) {
     if (strand1[i] !== strand2[i]) {
       distance++;
     }
