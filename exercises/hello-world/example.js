@@ -1,8 +1,8 @@
 'use strict';
 
-var HelloWorld = function() {};
+var HelloWorld = function () {};
 
-HelloWorld.prototype.hello = function(name) {
+HelloWorld.prototype.hello = function (name) {
   name = name || 'World';
   return 'Hello, ' + name + '!';
 };

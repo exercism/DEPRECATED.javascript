@@ -27,7 +27,7 @@ LinkedList.prototype.unshift = function LinkedList_unshift(value) {
 };
 
 LinkedList.prototype.pop = function LinkedList_pop() {
-  if (this._front === null) {return undefined;};
+  if (this._front === null) {return undefined;}
   this._front = this._front.prev;
   return this.shift();
 };
@@ -46,18 +46,17 @@ LinkedList.prototype.shift = function LinkedList_shift() {
   return value;
 };
 
-LinkedList.prototype.count = function() {
+LinkedList.prototype.count = function () {
   if (this._front === null) {
     return 0;
   } else if (this._front.next === this._front) {
     return 1;
-  } else {
-    this._front.next = this._front.next.next;
-    return this.count() + 1;
   }
+  this._front.next = this._front.next.next;
+  return this.count() + 1;
 };
 
-LinkedList.prototype.delete = function(match) {
+LinkedList.prototype.delete = function (match) {
   if (this._front.next === this._front && this._front.value === match) {
     this._front = null;
   } else if (this._front.next.value === match) {

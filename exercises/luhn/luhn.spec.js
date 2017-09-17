@@ -1,7 +1,6 @@
 var Luhn = require('./luhn');
 
-describe('Luhn',function() {
-
+describe('Luhn', function () {
   it('single digit strings can not be valid', function () {
     const luhn = new Luhn('1');
     expect(luhn.valid).toEqual(false);
@@ -31,5 +30,4 @@ describe('Luhn',function() {
     const luhn = new Luhn('046a 454 286');
     expect(luhn.valid).toEqual(false);
   });
-
 });

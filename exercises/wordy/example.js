@@ -4,10 +4,10 @@ exports.WordProblem   = WordProblem;
 exports.ArgumentError = ArgumentError;
 
 var BINARY_OPERATORS = {
-  'plus':          function(l, r) { return l + r; },
-  'minus':         function(l, r) { return l - r; },
-  'multiplied by': function(l, r) { return l * r; },
-  'divided by':    function(l, r) { return l / r; }
+  'plus': function (l, r) { return l + r; },
+  'minus': function (l, r) { return l - r; },
+  'multiplied by': function (l, r) { return l * r; },
+  'divided by': function (l, r) { return l / r; }
 };
 
 function operators() {
@@ -32,18 +32,18 @@ function WordProblem(question) {
   this.matches  = this.question.match(pattern());
 }
 
-WordProblem.prototype.tooComplicated = function() {
+WordProblem.prototype.tooComplicated = function () {
   return this.matches === null;
 };
 
-WordProblem.prototype.answer = function() {
+WordProblem.prototype.answer = function () {
   if (this.tooComplicated()) {
     throw new ArgumentError('I don\'t understand the question');
   }
   return this.evaluate();
 };
 
-WordProblem.prototype.evaluate = function() {
+WordProblem.prototype.evaluate = function () {
   var out = 0;
   var m   = this.matches;
 
@@ -58,8 +58,8 @@ WordProblem.prototype.evaluate = function() {
   return out;
 };
 
-WordProblem.prototype.operate = function(operation, l, r) {
-  var fn = BINARY_OPERATORS[operation] || function() { return 0; };
+WordProblem.prototype.operate = function (operation, l, r) {
+  var fn = BINARY_OPERATORS[operation] || function () { return 0; };
   return fn(Number(l), Number(r));
 };
 

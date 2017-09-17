@@ -8,13 +8,12 @@ function recordAllData(bst) {
   return out;
 }
 
-describe('BinarySearchTree', function() {
-
-  it('data is retained', function() {
+describe('BinarySearchTree', function () {
+  it('data is retained', function () {
     expect(new Bst(4).data).toEqual(4);
   });
 
-  xit('inserting less', function() {
+  xit('inserting less', function () {
     var four;
 
     four = new Bst(4);
@@ -24,7 +23,7 @@ describe('BinarySearchTree', function() {
     expect(four.left.data).toEqual(2);
   });
 
-  xit('inserting same', function() {
+  xit('inserting same', function () {
     var four;
 
     four = new Bst(4);
@@ -34,7 +33,7 @@ describe('BinarySearchTree', function() {
     expect(four.left.data).toEqual(4);
   });
 
-  xit('inserting right', function() {
+  xit('inserting right', function () {
     var four;
 
     four = new Bst(4);
@@ -44,7 +43,7 @@ describe('BinarySearchTree', function() {
     expect(four.right.data).toEqual(5);
   });
 
-  xit('complex tree', function() {
+  xit('complex tree', function () {
     var four;
 
     four = new Bst(4);
@@ -64,11 +63,11 @@ describe('BinarySearchTree', function() {
     expect(four.right.right.data).toEqual(7);
   });
 
-  xit('iterating one element', function() {
+  xit('iterating one element', function () {
     expect(recordAllData(new Bst(4))).toEqual([4]);
   });
 
-  xit('iterating over smaller element', function() {
+  xit('iterating over smaller element', function () {
     var four;
 
     four = new Bst(4);
@@ -77,7 +76,7 @@ describe('BinarySearchTree', function() {
     expect(recordAllData(four)).toEqual([2, 4]);
   });
 
-  xit('iterating over larger element', function() {
+  xit('iterating over larger element', function () {
     var four;
 
     four = new Bst(4);
@@ -86,7 +85,7 @@ describe('BinarySearchTree', function() {
     expect(recordAllData(four)).toEqual([4, 5]);
   });
 
-  xit('iterating over complex tree', function() {
+  xit('iterating over complex tree', function () {
     var four;
 
     four = new Bst(4);
@@ -99,5 +98,4 @@ describe('BinarySearchTree', function() {
 
     expect(recordAllData(four)).toEqual([1, 2, 3, 4, 5, 6, 7]);
   });
-
 });

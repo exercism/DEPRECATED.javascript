@@ -1,7 +1,6 @@
 var ocr = require('./ocr-numbers');
 
 describe('ocr', function () {
-
   it('recognizes zero', function () {
     expect(ocr.convert(
       ' _ \n' +
@@ -153,5 +152,4 @@ describe('ocr', function () {
       '         '
     )).toBe('123,456,789');
   });
-
 });

@@ -28,62 +28,62 @@ var SPEC_FILE_NAME = 'custom-set.spec.js';
 var TEST_BODY_TEMPLATES = {
   empty: function ({set, expected}) {
     return (
-    `var actual = new CustomSet(${array(set)}).empty();
+      `var actual = new CustomSet(${array(set)}).empty();
     expect(actual).toBe(${expected});`);
   },
 
   contains: function ({set, element, expected}) {
     return (
-    `var actual = new CustomSet(${array(set)}).contains(${element});
+      `var actual = new CustomSet(${array(set)}).contains(${element});
     expect(actual).toBe(${expected});`);
   },
 
   subset: function ({set1, set2, expected}) {
     return (
-    `var actual = new CustomSet(${array(set2)}).subset(new CustomSet(${array(set1)}));
+      `var actual = new CustomSet(${array(set2)}).subset(new CustomSet(${array(set1)}));
     expect(actual).toBe(${expected});`);
   },
 
   disjoint: function ({set1, set2, expected}) {
     return (
-    `var actual = new CustomSet(${array(set1)}).disjoint(new CustomSet(${array(set2)}));
+      `var actual = new CustomSet(${array(set1)}).disjoint(new CustomSet(${array(set2)}));
     expect(actual).toBe(${expected});`);
   },
 
   equal: function ({set1, set2, expected}) {
     return (
-    `var actual = new CustomSet(${array(set1)}).eql(new CustomSet(${array(set2)}));
+      `var actual = new CustomSet(${array(set1)}).eql(new CustomSet(${array(set2)}));
     expect(actual).toBe(${expected});`);
   },
 
   add: function ({set, element, expected}) {
     return (
-    `var actual = new CustomSet(${array(set)}).add(${element});
+      `var actual = new CustomSet(${array(set)}).add(${element});
     var expected = new CustomSet(${array(expected)});
     expect(actual.eql(expected)).toBe(true);`);
   },
 
   intersection: function ({set1, set2, expected}) {
     return (
-    `var actual = new CustomSet(${array(set1)}).intersection(new CustomSet(${array(set2)}));
+      `var actual = new CustomSet(${array(set1)}).intersection(new CustomSet(${array(set2)}));
     var expected = new CustomSet(${array(expected)});
     expect(actual.eql(expected)).toBe(true);`);
   },
 
   difference: function ({set1, set2, expected}) {
     return (
-    `var actual = new CustomSet(${array(set1)}).difference(new CustomSet(${array(set2)}));
+      `var actual = new CustomSet(${array(set1)}).difference(new CustomSet(${array(set2)}));
     var expected = new CustomSet(${array(expected)});
     expect(actual.eql(expected)).toBe(true);`);
   },
 
   union: function ({set1, set2, expected}) {
     return (
-    `var actual = new CustomSet(${array(set1)}).union(new CustomSet(${array(set2)}));
+      `var actual = new CustomSet(${array(set1)}).union(new CustomSet(${array(set2)}));
     var expected = new CustomSet(${array(expected)});
     expect(actual.eql(expected)).toBe(true);`);
   }
-}
+};
 
 var NON_CANONICAL_TESTS = `
   xit('can be emptied', function() {
@@ -115,16 +115,16 @@ var NON_CANONICAL_TESTS = `
     var expected3 = [1, 2, 3];
     expect(actual3.sort()).toEqual(expected3);
   });
-`
+`;
 
-function render ({suiteData, testBodyTemplates, extraTests, suiteTemplate}) {
+function render({suiteData, testBodyTemplates, extraTests, suiteTemplate}) {
   var testCases = extractTestCases(suiteData, testBodyTemplates);
   var tests = renderTests(testCases);
 
   return renderSuite(tests, extraTests, suiteTemplate);
 }
 
-function extractTestCases (suiteData, testBodyTemplates) {
+function extractTestCases(suiteData, testBodyTemplates) {
   var testCases = [];
 
   Object.keys(suiteData)
@@ -132,37 +132,37 @@ function extractTestCases (suiteData, testBodyTemplates) {
       return key !== METADATA_COMMENT_KEY;
     })
     .forEach(function (sectionName) {
-      suiteData[sectionName]['cases']
+      suiteData[sectionName].cases
         .forEach(function (caseData) {
           testCases.push(new TestCase(caseData, testBodyTemplates[sectionName]));
-        })
-    })
+        });
+    });
 
   return testCases;
 }
 
-function TestCase (caseData, bodyTemplate) {
+function TestCase(caseData, bodyTemplate) {
   this.caseData = caseData;
   this.bodyTemplate = bodyTemplate;
 }
 
 TestCase.prototype.render = function (isEnabled) {
   return testTemplate(isEnabled, this.caseData.description, this.bodyTemplate(this.caseData));
-}
+};
 
-function renderTests (testCases) {
+function renderTests(testCases) {
   return testCases.reduce(function (output, testCase, index) {
     return output + testCase.render(index === 0);
-  }, '')
+  }, '');
 }
 
-function renderSuite (tests, otherTests, suiteTemplate) {
+function renderSuite(tests, otherTests, suiteTemplate) {
   return suiteTemplate(tests.concat(otherTests));
 }
 
-function suiteTemplate (tests) {
+function suiteTemplate(tests) {
   return (
-`var CustomSet = require('./custom-set');
+    `var CustomSet = require('./custom-set');
 
 describe('CustomSet', function() {
 ${tests}
@@ -170,20 +170,20 @@ ${tests}
 `);
 }
 
-function testTemplate (isEnabled, description, body) {
+function testTemplate(isEnabled, description, body) {
   return (
-`
+    `
   ${isEnabled ? 'it' : 'xit'}('${description}', function() {
     ${body}
   });
 `);
 }
 
-function array (array) {
+function array(array) {
   return array.length === 0 ? '' : `[${array.join(', ')}]`;
 }
 
-function generate () {
+function generate() {
   var exerciseFilePath = path.join(EXERCISE_METADATA_ROOT, EXERCISE_DIR_NAME, METADATA_FILE_NAME);
   var suiteData = JSON.parse(fs.readFileSync(exerciseFilePath));
 

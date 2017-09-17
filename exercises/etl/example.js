@@ -2,7 +2,7 @@
 
 function ETL() {}
 
-ETL.prototype.transform = function(input) {
+ETL.prototype.transform = function (input) {
   var output = {};
   var object = Object.keys(input);
 

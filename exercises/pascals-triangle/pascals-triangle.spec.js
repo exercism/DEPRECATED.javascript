@@ -1,7 +1,6 @@
 var Triangle = require('./pascals-triangle');
 
 describe('Triangle', function () {
-
   it('with one row', function () {
     expect(new Triangle(1).rows).toEqual([[1]]);
   });
@@ -19,7 +18,7 @@ describe('Triangle', function () {
   });
 
   xit('fifth row', function () {
-    expect(new Triangle(5).lastRow).toEqual([1, 4, 6, 4 ,1]);
+    expect(new Triangle(5).lastRow).toEqual([1, 4, 6, 4, 1]);
   });
 
   xit('twentieth row', function () {
@@ -27,5 +26,4 @@ describe('Triangle', function () {
     expect(new Triangle(20).lastRow)
       .toEqual(twentieth);
   });
-
 });

@@ -1,4 +1,4 @@
-function Element (value, next) {
+function Element(value, next) {
   if (!(this instanceof Element)) {
     throw new Error('Element is a constructor.');
   }
@@ -13,9 +13,9 @@ function Element (value, next) {
 
   this.value = value;
   this.next = next;
-};
+}
 
-function List () {};
+function List() {}
 
 List.prototype.push = function (value) {
   if (value === undefined) {
@@ -73,8 +73,7 @@ List.prototype.pop = function () {
 
   if (!penultEl) {
     this.head = undefined;
-  }
-  else {
+  } else {
     penultEl.next = undefined;
   }
 };

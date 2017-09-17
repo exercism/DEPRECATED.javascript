@@ -1,9 +1,9 @@
-function Triangle(a,b,c) {
+function Triangle(a, b, c) {
   'use strict';
 
   this.sides = [ a, b, c ];
 
-  this.kind = function() {
+  this.kind = function () {
     var name = 'scalene';
 
     if (this.isIllegal()) {
@@ -17,28 +17,28 @@ function Triangle(a,b,c) {
     return name;
   };
 
-  this.isIllegal = function() {
+  this.isIllegal = function () {
     return this.violatesInequality() || this.hasImpossibleSides();
   };
 
-  this.violatesInequality = function() {
+  this.violatesInequality = function () {
     var a = this.sides[0], b = this.sides[1], c = this.sides[2];
     return (a + b < c) || (a + c < b) || (b + c < a);
   };
 
-  this.hasImpossibleSides = function() {
+  this.hasImpossibleSides = function () {
     return this.sides[0] <= 0 || this.sides[1] <= 0 || this.sides[2] <= 0;
   };
 
-  this.isEquilateral = function() {
+  this.isEquilateral = function () {
     return this.uniqueSides().length === 1;
   };
 
-  this.isIsosceles = function() {
+  this.isIsosceles = function () {
     return this.uniqueSides().length === 2;
   };
 
-  this.uniqueSides = function() {
+  this.uniqueSides = function () {
     var sides = this.sides;
     var uniques = {};
 

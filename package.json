@@ -15,6 +15,7 @@
     "eslint-plugin-react": "^7.3.0"
   },
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
   }
 }

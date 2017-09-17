@@ -1,24 +1,24 @@
 function solve(puzzle) {
   var parts = puzzle
     .split(/[+|==]/g)
-    .map(function(o) { return o.trim(); })
-    .filter(function(o) { return o !== ""; });
+    .map(function (o) { return o.trim(); })
+    .filter(function (o) { return o !== ''; });
 
-  if(parts.length < 3) {
+  if (parts.length < 3) {
     return null;
   }
 
   var uniqueLetters = getUniqueLetters(parts.join(''));
   var firstLetters = getFirstLetters(parts);
 
-  var numberCombinations = getNumberCombinations([0,1,2,3,4,5,6,7,8,9], uniqueLetters.length);
-  var permutations = getPermutations(Array(uniqueLetters.length).fill().map(function(_, i) {return i; }));
+  var numberCombinations = getNumberCombinations([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], uniqueLetters.length);
+  var permutations = getPermutations(Array(uniqueLetters.length).fill().map(function (_, i) {return i; }));
 
-  while(numberCombinations.length) {
+  while (numberCombinations.length) {
     var numberCombination = numberCombinations.pop();
-    for(var k = 0; k < permutations.length; k++) {
+    for (var k = 0; k < permutations.length; k++) {
       var newNumbers = assignNumbers(numberCombination, uniqueLetters, permutations[k]);
-      if(testNumbers(newNumbers, parts, firstLetters)) {
+      if (testNumbers(newNumbers, parts, firstLetters)) {
         return newNumbers;
       }
     }
@@ -28,13 +28,13 @@ function solve(puzzle) {
 
 function getFirstLetters(words) {
   return words
-    .map(function(word) { return word[0]; })
+    .map(function (word) { return word[0]; })
     .filter(function (val, i, arr) { return arr.indexOf(val) === i; });
 }
 
 function assignNumbers(numbers, letters, orders) {
   var output = {};
-  for(var i = 0; i < letters.length; i++) {
+  for (var i = 0; i < letters.length; i++) {
     output[letters[i]] = numbers[orders[i]];
   }
   return output;
@@ -46,22 +46,22 @@ function getUniqueLetters(string) {
 
 function testNumbers(numbers, puzzleParts, firstLetters) {
   var keys = Object.keys(numbers);
-  for(var i = 0; i < keys.length; i++) {
-    if(numbers[keys[i]] === 0 && firstLetters.indexOf(keys[i]) !== -1) {
+  for (var i = 0; i < keys.length; i++) {
+    if (numbers[keys[i]] === 0 && firstLetters.indexOf(keys[i]) !== -1) {
       return false;
     }
   }
   var replaceRegex = new RegExp('[' + keys.join('') + ']', 'g');
 
   puzzleParts = puzzleParts.join(',')
-    .replace(replaceRegex, function(input) { return numbers[input]; })
+    .replace(replaceRegex, function (input) { return numbers[input]; })
     .split(',')
-    .map(function(t) {return parseInt(t);});
+    .map(function (t) {return parseInt(t);});
 
-  var total = puzzleParts.slice(puzzleParts.length-1)[0];
+  var total = puzzleParts.slice(puzzleParts.length - 1)[0];
   return total === puzzleParts
-      .slice(0,puzzleParts.length-1)
-      .reduce(function(acc, val) { return acc + val; },0);
+    .slice(0, puzzleParts.length - 1)
+    .reduce(function (acc, val) { return acc + val; }, 0);
 }
 
 function getPermutations(inputArr) {

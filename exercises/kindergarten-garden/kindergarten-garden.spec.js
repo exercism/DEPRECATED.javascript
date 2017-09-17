@@ -1,7 +1,6 @@
 var Garden = require('./kindergarten-garden');
 
 describe('Garden', function () {
-
   it('for Alice', function () {
     expect(new Garden('RC\nGG').alice)
       .toEqual(['radishes', 'clover', 'grass', 'grass']);
@@ -22,7 +21,6 @@ describe('Garden', function () {
     expect(garden.bob).toEqual(['clover', 'clover', 'clover', 'clover']);
     expect(garden.charlie).toEqual(['grass', 'grass', 'grass', 'grass']);
   });
-
 });
 
 describe('Full garden', function () {
@@ -88,7 +86,6 @@ describe('Full garden', function () {
     expect(garden.larry)
       .toEqual(['grass', 'violets', 'clover', 'violets']);
   });
-
 });
 
 describe('Disordered class', function () {
@@ -115,7 +112,6 @@ describe('Disordered class', function () {
     expect(garden.xander)
       .toEqual(['radishes', 'grass', 'clover', 'violets']);
   });
-
 });
 
 describe('Two gardens, different students', function () {
@@ -133,5 +129,4 @@ describe('Two gardens, different students', function () {
     expect(garden2.charlie)
       .toEqual(['radishes', 'radishes', 'grass', 'clover']);
   });
-
 });

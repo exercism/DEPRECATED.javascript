@@ -1,21 +1,20 @@
 'use strict';
 var Palindromes = require('./palindrome-products');
 
-describe('Palindrome', function() {
-
-  it('largest palindrome from single digit factors', function() {
+describe('Palindrome', function () {
+  it('largest palindrome from single digit factors', function () {
     var palindromes = new Palindromes({maxFactor: 9});
     palindromes.generate();
 
     var largest = palindromes.largest();
     expect(largest.value).toEqual(9);
     var orderedLargestFactors = largest.factors.sort(
-      function(a, b) { return a[0] > b[0]; }
+      function (a, b) { return a[0] > b[0]; }
     );
     expect(orderedLargestFactors).toEqual([[1, 9], [3, 3]]);
   });
 
-  xit('largest palindrome from double digit factors', function() {
+  xit('largest palindrome from double digit factors', function () {
     var palindromes = new Palindromes({ maxFactor: 99, minFactor: 10 });
     palindromes.generate();
 
@@ -24,7 +23,7 @@ describe('Palindrome', function() {
     expect(largest.factors).toEqual([[91, 99]]);
   });
 
-  xit('smallest palindrome from double digit factors', function() {
+  xit('smallest palindrome from double digit factors', function () {
     var palindromes = new Palindromes({ maxFactor: 99, minFactor: 10 });
     palindromes.generate();
 
@@ -33,7 +32,7 @@ describe('Palindrome', function() {
     expect(smallest.factors).toEqual([[11, 11]]);
   });
 
-  xit('largest palindrome from triple digit factors', function() {
+  xit('largest palindrome from triple digit factors', function () {
     var palindromes = new Palindromes({ maxFactor: 999, minFactor: 100 });
     palindromes.generate();
 
@@ -42,7 +41,7 @@ describe('Palindrome', function() {
     expect(largest.factors).toEqual([[913, 993]]);
   });
 
-  xit('smallest palindrome from triple digit factors', function() {
+  xit('smallest palindrome from triple digit factors', function () {
     var palindromes = new Palindromes({ maxFactor: 999, minFactor: 100 });
     palindromes.generate();
 
@@ -50,5 +49,4 @@ describe('Palindrome', function() {
     expect(smallest.value).toEqual(10201);
     expect(smallest.factors).toEqual([[101, 101]]);
   });
-
 });

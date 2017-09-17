@@ -3,7 +3,7 @@ var notAlpha = /[^a-z]+/gi,
   cleaned,
   unique;
 
-var Pangram = function(candidate) {
+var Pangram = function (candidate) {
   unique = {};
   cleaned = (candidate.replace(notAlpha, '')).toLowerCase();
   cleaned.split('').forEach(function (el) {

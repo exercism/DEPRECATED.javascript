@@ -3,24 +3,22 @@ function MeetupDayException(message) {
   this.name = 'MeetupDayException';
 }
 
-function meetupDay (year, month, day_of_week, which) {
+function meetupDay(year, month, day_of_week, which) {
   'use strict';
 
   var candidates = _getCandidates(year, month, day_of_week),
-      d,
-      i,
-      res;
+    d,
+    i,
+    res;
   which = which.toLowerCase();
 
   if (which === 'teenth') {
     res = _find(candidates, function (d) {
-      return 13 <= d.getDate() && d.getDate() <= 19;
+      return d.getDate() >= 13 && d.getDate() <= 19;
     });
-  }
-  else if (which === 'last') {
+  } else if (which === 'last') {
     res = candidates.pop();
-  }
-  else {
+  } else {
     which = parseInt(which) - 1;
     res = candidates.slice(which, which + 1).pop();
   }
@@ -30,11 +28,11 @@ function meetupDay (year, month, day_of_week, which) {
   return res;
 }
 
-function _getCandidates (year, month, day_of_week) {
+function _getCandidates(year, month, day_of_week) {
   var d,
-      i,
-      numDaysInMonth = new Date(year, month + 1, 0).getDate(),
-      res = [];
+    i,
+    numDaysInMonth = new Date(year, month + 1, 0).getDate(),
+    res = [];
 
   for (i = 0; i < numDaysInMonth; i++) {
     d = new Date(year, month, i + 1);
@@ -47,7 +45,7 @@ function _getCandidates (year, month, day_of_week) {
   return res;
 }
 
-function _getDayIndex (day) {
+function _getDayIndex(day) {
   var daysInd = {
     'sunday': 0,
     'monday': 1,

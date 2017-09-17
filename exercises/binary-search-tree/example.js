@@ -6,7 +6,7 @@ function BinarySearchTree(data) {
   this.right = undefined;
 }
 
-BinarySearchTree.prototype.insert = function(value) {
+BinarySearchTree.prototype.insert = function (value) {
   if (value <= this.data) {
     this.insertLeft(value);
   } else {
@@ -16,7 +16,7 @@ BinarySearchTree.prototype.insert = function(value) {
   return this;
 };
 
-BinarySearchTree.prototype.insertLeft = function(value) {
+BinarySearchTree.prototype.insertLeft = function (value) {
   if (!this.left) {
     this.left = new BinarySearchTree(value);
   } else {
@@ -26,7 +26,7 @@ BinarySearchTree.prototype.insertLeft = function(value) {
   return this;
 };
 
-BinarySearchTree.prototype.insertRight = function(value) {
+BinarySearchTree.prototype.insertRight = function (value) {
   if (!this.right) {
     this.right = new BinarySearchTree(value);
   } else {
@@ -36,7 +36,7 @@ BinarySearchTree.prototype.insertRight = function(value) {
   return this;
 };
 
-BinarySearchTree.prototype.each = function(fn) {
+BinarySearchTree.prototype.each = function (fn) {
   if (this.left)  { this.left.each(fn);  }
   fn.call(this, this.data);
   if (this.right) { this.right.each(fn); }

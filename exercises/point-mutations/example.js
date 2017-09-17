@@ -4,7 +4,7 @@ var DNA = module.exports = function DNA(nucleotides) {
   this.nucleotides = nucleotides;
 };
 
-DNA.prototype.hammingDistance = function(comparison) {
+DNA.prototype.hammingDistance = function (comparison) {
   var distance = 0;
   var calculationDistance = Math.min(this.nucleotides.length, comparison.length);
 

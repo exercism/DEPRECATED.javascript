@@ -1,4 +1,4 @@
-(function() {
+(function () {
   'use strict';
 
   function bottles(number) {
@@ -38,11 +38,11 @@
 
   function BeerSong() {}
 
-  BeerSong.prototype.sing = function(first, last) {
-    if (typeof(first) === 'undefined') {
+  BeerSong.prototype.sing = function (first, last) {
+    if (typeof (first) === 'undefined') {
       first = 99;
     }
-    if (typeof(last) === 'undefined') {
+    if (typeof (last) === 'undefined') {
       last = 0;
     }
 
@@ -54,7 +54,7 @@
     return verses.join('\n');
   };
 
-  BeerSong.prototype.verse = function(number) {
+  BeerSong.prototype.verse = function (number) {
     var line1 = bottles(number) + ' of beer on the wall, ';
     var line2 = bottles(number).toLowerCase() + ' of beer.\n';
     var line3 = action(number);

@@ -1,7 +1,6 @@
 var Series = require('./series');
 
 describe('Series', function () {
-
   it('has digits (short)', function () {
     expect(new Series('01234').digits).toEqual([0, 1, 2, 3, 4]);
   });
@@ -56,5 +55,4 @@ describe('Series', function () {
       new Series('01032987583').slices(12);
     }).toThrow(new Error('Slice size is too big.'));
   });
-
 });

@@ -1,7 +1,6 @@
 var Matrix = require('./matrix');
 
 describe('Matrix', function () {
-
   it('can extract a row', function () {
     expect(new Matrix('1 2\n10 20').rows[0]).toEqual([1, 2]);
   });
@@ -14,5 +13,4 @@ describe('Matrix', function () {
     expect(new Matrix('89 1903 3\n18 3 1\n9 4 800').columns[1])
       .toEqual([1903, 3, 4]);
   });
-
 });

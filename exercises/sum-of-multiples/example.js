@@ -1,7 +1,7 @@
 'use strict';
 
 function isMultiple(i) {
-  /*jshint validthis:true */
+  /* jshint validthis:true */
   var result = false;
   this.multiples.forEach(function (multiple) {
     if (i % multiple === 0) {

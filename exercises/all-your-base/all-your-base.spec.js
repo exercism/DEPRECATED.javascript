@@ -5,7 +5,6 @@ const Converter = require('./all-your-base');
 const converter = new Converter();
 
 describe('Converter', function () {
-
   xit('single bit one to decimal', function () {
     expect(converter.convert([1], 2, 10)).toEqual([1]);
   });
@@ -137,5 +136,4 @@ describe('Converter', function () {
       converter.convert([0], 3, 2.5);
     }).toThrow(new Error('Wrong output base'));
   });
-
 });

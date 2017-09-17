@@ -15,7 +15,7 @@ function Grains() {
 /**
  * Gets the number of grains on the nth square.
  */
-Grains.prototype.square = function(num) {
+Grains.prototype.square = function (num) {
   return BigInt(2).pow(num - 1).toString();
 };
 

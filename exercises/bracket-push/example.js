@@ -1,6 +1,6 @@
 'use strict';
 
-var bracketPush = module.exports = function(input) {
+var bracketPush = module.exports = function (input) {
   if (input.length === 0) {
     return true;
   }

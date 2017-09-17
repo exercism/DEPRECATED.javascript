@@ -4,7 +4,7 @@ function Bowling(rolls) {
   this.rolls = rolls;
 }
 
-Bowling.prototype.score = function() {
+Bowling.prototype.score = function () {
   var initialState = {
     frameNumber: 1,
     rollNumber: 1,
@@ -16,7 +16,7 @@ Bowling.prototype.score = function() {
     score: 0
   };
 
-  var finalState = this.rolls.reduce(function(state, roll) {
+  var finalState = this.rolls.reduce(function (state, roll) {
     if (roll < 0 || roll > 10) {
       throw new Error('Pins must have a value from 0 to 10');
     }
@@ -26,7 +26,7 @@ Bowling.prototype.score = function() {
     }
 
     if (state.frameNumber > 10) {
-      throw new Error('Should not be able to roll after game is over')
+      throw new Error('Should not be able to roll after game is over');
     }
 
     var finalFrame = state.frameNumber === 10;
@@ -56,7 +56,6 @@ Bowling.prototype.score = function() {
     next.score = score;
 
     return next;
-
   }, initialState);
 
   if (finalState.frameNumber !== 11) {

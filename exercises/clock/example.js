@@ -46,4 +46,4 @@ function at(hours, minutes) {
   };
 
   return Object.create(clock);
-};
+}
