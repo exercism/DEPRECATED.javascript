@@ -7,11 +7,14 @@
   "author": "Katrina Owen",
   "license": "MIT",
   "devDependencies": {
+    "babel-eslint": "^8.0.0",
     "eslint": "^4.6.1",
     "eslint-config-airbnb-base": "^12.0.0",
-    "eslint-plugin-import": "^2.7.0"
+    "eslint-config-airbnb-es5": "^1.2.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-react": "^7.3.0"
   },
-   "scripts": {
+  "scripts": {
     "lint": "eslint ."
   }
 }
