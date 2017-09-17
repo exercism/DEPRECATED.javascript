@@ -1,3 +1,7 @@
 {
-    "extends": "eslint-config-airbnb-es5"
+    "plugins": ["jasmine"],
+    "extends": "eslint-config-airbnb-es5",
+    "env": {
+      "jasmine": true
+    }
 }
