@@ -1,8 +1,5 @@
 var TwelveDays = function() {
-  var instance = this;
-
-  (function() {
-    instance.verseList = [
+  this.verseList = [
       'On the first day of Christmas my true love gave to me, a Partridge in a Pear Tree.',
       'On the second day of Christmas my true love gave to me, two Turtle Doves, and a Partridge in a Pear Tree.',
       'On the third day of Christmas my true love gave to me, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.',
@@ -16,40 +13,39 @@ var TwelveDays = function() {
       'On the eleventh day of Christmas my true love gave to me, eleven Pipers Piping, ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.',
       'On the twelfth day of Christmas my true love gave to me, twelve Drummers Drumming, eleven Pipers Piping, ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.',
     ];
-  })();
 
-  instance.startFromZero = function(oneIndexArray) {
-    var newArray = oneIndexArray.map(function(item) { return item - 1; });
-    return newArray;
-  };
+  
+};
 
-  instance.singleVerse = function(verseIndex) {
-    var verse = this.verseList[verseIndex].concat('\n');
-    return verse;
-  };
+TwelveDays.prototype.startFromZero = function(oneIndexArray) {
+  var newArray = oneIndexArray.map(function(item) { return item - 1; });
+  return newArray;
+};
 
-  instance.multiVerse = function(startIndex, endIndex) {
-    var filteredList = this.verseList.filter(function (verse, index) {
-      if (index >= startIndex && index <= endIndex) {
-        return verse;
-      }
-    });
-    return filteredList.join('\n\n').concat('\n');
-  };
+TwelveDays.prototype.singleVerse = function(verseIndex) {
+  var verse = this.verseList[verseIndex].concat('\n');
+  return verse;
+};
 
-  instance.verse = function(args) {
-    var indexArray = this.startFromZero(args);
+TwelveDays.prototype.multiVerse = function(startIndex, endIndex) {
+  return this.verseList
+  .filter(function (verse, index) { return index >= startIndex; })
+  .filter(function (verse, index) { return index <= endIndex })
+  .join('\n\n').concat('\n');
+};
 
-    if (args.length === 2) {
-      return this.multiVerse(indexArray[0], indexArray[1]);
-    }
-    return this.singleVerse(indexArray[0]);
-  };
+TwelveDays.prototype.verse = function(args) {
+  var indexArray = this.startFromZero(args);
 
-  instance.sing = function() {
-    var song = this.verseList.join('\n\n').concat('\n');
-    return song;
-  };
-}
+  if (args.length === 2) {
+    return this.multiVerse(indexArray[0], indexArray[1]);
+  }
+  return this.singleVerse(indexArray[0]);
+};
+
+TwelveDays.prototype.sing = function() {
+  var song = this.verseList.join('\n\n').concat('\n');
+  return song;
+};
 
 module.exports = TwelveDays;

@@ -1,10 +1,9 @@
 var TwelveDays = require('./twelve-days');
 
 describe('TwelveDays', function () {
-  var twelveDaysObject;
+  var twelveDaysObject = new TwelveDays();
 
   beforeEach(function () {
-    twelveDaysObject = new TwelveDays();
   });
 
   it('test verse one', function () {
