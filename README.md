@@ -12,15 +12,15 @@ The following commands assume that you are in the `javascript` directory:
 
 ### Unit Tests: All Assignments
 
-    $ make test
+    make test
 
 ### Unit Tests: Single Assignment
 
-    $ make test-assignment ASSIGNMENT=wordy
+    make test-assignment ASSIGNMENT=wordy
 
 ### Code Style
 
-    $ yarn lint
+    yarn lint
 
 ## Contributing Guide
 
