@@ -1,4 +1,4 @@
-var TwelveDays = require('./twelve-days');
+var TwelveDays = new require('./twelve-days');
 
 describe('TwelveDays', function () {
 
