@@ -1,7 +1,6 @@
 var pigLatin = require('./pig-latin');
 
 describe('pigLatin', function () {
-
   it('translates a word beginning with a', function () {
     expect(pigLatin.translate('apple')).toEqual('appleay');
   });
@@ -46,5 +45,4 @@ describe('pigLatin', function () {
     expect(pigLatin.translate('quick fast run'))
       .toEqual('ickquay astfay unray');
   });
-
 });

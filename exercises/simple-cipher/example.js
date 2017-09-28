@@ -15,19 +15,18 @@ function randomUpTo(n) {
 }
 
 module.exports = function (userDefinedKey) {
-
   var key;
 
   function addEncodedCharacter(character, index, array) {
-    /*jshint validthis:true */
-    var i = ALPHABET.indexOf(character) + ALPHABET.indexOf(key[index%key.length]);
+    /* jshint validthis:true */
+    var i = ALPHABET.indexOf(character) + ALPHABET.indexOf(key[index % key.length]);
     if (i >= ALPHABET.length) { i -= ALPHABET.length; }
     this.push(ALPHABET[i]);
   }
 
   function addDecodedCharacter(character, index, array) {
-    /*jshint validthis:true */
-    var i = ALPHABET.indexOf(character) - ALPHABET.indexOf(key[index%key.length]);
+    /* jshint validthis:true */
+    var i = ALPHABET.indexOf(character) - ALPHABET.indexOf(key[index % key.length]);
     if (i < 0) { i += ALPHABET.length; }
     this.push(ALPHABET[i]);
   }

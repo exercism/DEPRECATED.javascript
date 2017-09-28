@@ -1,7 +1,6 @@
 var say = require('./say');
 
 describe('say', function () {
-
   it('zero', function () {
     expect(say.inEnglish(0)).toBe('zero');
   });
@@ -74,5 +73,4 @@ describe('say', function () {
       say.inEnglish(1000000000000);
     }).toThrow(new Error('Number must be between 0 and 999,999,999,999.'));
   });
-
 });

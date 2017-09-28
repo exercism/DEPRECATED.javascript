@@ -9,9 +9,8 @@ Raindrops.prototype.convert = function (n) {
   if (n % 7 === 0) { result += 'Plong'; }
   if (result === '') {
     return n.toString();
-  } else {
-    return result;
   }
+  return result;
 };
 
 module.exports = Raindrops;

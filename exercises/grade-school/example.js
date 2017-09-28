@@ -1,9 +1,8 @@
 module.exports = function School() {
-
   var db = {};
 
   function add(student, grade) {
-    if(db[grade]) {
+    if (db[grade]) {
       db[grade].push(student);
     } else {
       db[grade] = [student];
@@ -15,7 +14,7 @@ module.exports = function School() {
   }
 
   function roster() {
-    return sortedGrades().reduce(function(sorted, grade) {
+    return sortedGrades().reduce(function (sorted, grade) {
       sorted[grade] = clone(db[grade]).sort();
       return sorted;
     }, {});
@@ -30,7 +29,6 @@ module.exports = function School() {
     add: add,
     grade: grade
   };
-
 };
 
 function clone(array) {

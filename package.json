@@ -1,0 +1,22 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "Exercism exercises in JavaScript.",
+  "main": "index.js",
+  "repository": "https://github.com/exercism/javascript",
+  "author": "Katrina Owen",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^8.0.0",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-config-airbnb-es5": "^1.2.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jasmine": "^2.8.4",
+    "eslint-plugin-react": "^7.3.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
+  }
+}

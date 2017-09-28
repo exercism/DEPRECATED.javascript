@@ -1,17 +1,17 @@
 var Robot = (function () {
   'use strict';
 
-  var VALID_DIRECTIONS = ['north', 'east', 'south', 'west']
+  var VALID_DIRECTIONS = ['north', 'east', 'south', 'west'];
   var INSTRUCTION_KEYS = {
     A: 'advance',
     L: 'turnLeft',
     R: 'turnRight'
-  }
+  };
 
-  function Robot () {
+  function Robot() {
     this.coordinates = [0, 0];
     this.bearing = 'north';
-  };
+  }
 
   Robot.prototype.at = function (x, y) {
     this.coordinates = [x, y];
@@ -27,19 +27,19 @@ var Robot = (function () {
 
   Robot.prototype.advance = function () {
     switch (this.bearing) {
-      case 'north':
-        this.coordinates[1]++;
-        break;
-      case 'east':
-        this.coordinates[0]++;
-        break;
-      case 'south':
-        this.coordinates[1]--;
-        break;
-      case 'west':
-        this.coordinates[0]--;
-        break;
-    };
+    case 'north':
+      this.coordinates[1]++;
+      break;
+    case 'east':
+      this.coordinates[0]++;
+      break;
+    case 'south':
+      this.coordinates[1]--;
+      break;
+    case 'west':
+      this.coordinates[0]--;
+      break;
+    }
   };
 
   Robot.prototype.turnLeft = function () {
@@ -81,7 +81,7 @@ var Robot = (function () {
       }, this);
   };
 
-  return Robot
-})()
+  return Robot;
+})();
 
 module.exports = Robot;

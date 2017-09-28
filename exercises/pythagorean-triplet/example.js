@@ -15,7 +15,7 @@ function Triplets(conditions) {
 }
 
 Triplet.prototype.isPythagorean = function () {
-  return this.a*this.a + this.b*this.b === this.c*this.c;
+  return this.a * this.a + this.b * this.b === this.c * this.c;
 };
 
 Triplet.prototype.product = function () {

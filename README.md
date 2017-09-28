@@ -6,20 +6,23 @@ Exercism exercises in JavaScript
 
 To run the tests, you'll need NodeJS and Jasmine. For information about how to install these tools, see the [Javascript](http://exercism.io/languages/javascript/about) page.
 
-## Running Unit Test Suite
+## Tasks
 
-The following commands assume that you are in the 'javascript' directory:
+The following commands assume that you are in the `javascript` directory:
 
-### All Assignments
+### Unit Tests: All Assignments
 
-    % make test
+    make test
 
-### Single Assignment
+### Unit Tests: Single Assignment
 
-    % make test-assignment ASSIGNMENT=wordy
+    make test-assignment ASSIGNMENT=wordy
+
+### Code Style
+
+    npm run lint
 
 ## Contributing Guide
 
 Please see the [contributing guide](https://github.com/exercism/x-api/blob/master/CONTRIBUTING.md#the-exercise-data)
-
 

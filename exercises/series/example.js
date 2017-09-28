@@ -18,10 +18,10 @@ Series.prototype.slices = function (sliceSize) {
   if (sliceSize > this.digits.length) {
     throw new Error('Slice size is too big.');
   }
-  
+
   for (var i = 0; i < this.digits.length - sliceSize + 1; i++) {
     for (var j = 0; j < sliceSize; j++) {
-      slice.push(this.digits[i+j]);
+      slice.push(this.digits[i + j]);
     }
     result.push(slice);
     slice =  [];

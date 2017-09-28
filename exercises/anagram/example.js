@@ -10,7 +10,7 @@ Anagram.prototype.matches = function (words) {
   return words.filter(function (candidate) {
     return !sameWord(this.word, candidate) && isAnagram(this.word, candidate);
   }, this);
-}
+};
 
 function sameWord(word, candidate) {
   return word.toLowerCase() === candidate.toLowerCase();

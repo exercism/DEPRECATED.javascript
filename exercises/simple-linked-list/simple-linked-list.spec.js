@@ -3,7 +3,6 @@ var List  = SimpleLinkedList.List;
 var Element = SimpleLinkedList.Element;
 
 describe('simple-linked-list', function () {
-
   it('exports a List constructor', function () {
     expect(List).toBeDefined();
   });
@@ -13,7 +12,6 @@ describe('simple-linked-list', function () {
   });
 
   describe('Element', function () {
-
     xit('is a constructor', function () {
       var el = new Element(1);
       expect(el).toBeDefined();
@@ -66,7 +64,6 @@ describe('simple-linked-list', function () {
   });
 
   describe('List', function () {
-
     xit('is a constructor', function () {
       var ll = new List();
       expect(ll).toBeDefined();
@@ -157,7 +154,5 @@ describe('simple-linked-list', function () {
       expect(ll.head.next.value).toBe(2);
       expect(ll.head.next.next.value).toBe(1);
     });
-
   });
-
 });

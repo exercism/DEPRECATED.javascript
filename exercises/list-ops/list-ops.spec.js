@@ -4,7 +4,7 @@ describe('List', function () {
   // predicates to filter by & functions to map
   var isOdd = function (x) {
     return x % 2 === 1;
-  }
+  };
 
   var plusOne = function (x) {
     return x + 1;

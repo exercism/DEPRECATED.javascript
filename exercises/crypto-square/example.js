@@ -1,26 +1,26 @@
 'use strict';
 
-module.exports = function(input) {
+module.exports = function (input) {
   this.input = input;
 
-  this.normalizePlaintext = function() {
-    return input.toLowerCase().replace(/[^a-zA-Z0-9]/g,'');
+  this.normalizePlaintext = function () {
+    return input.toLowerCase().replace(/[^a-zA-Z0-9]/g, '');
   };
 
-  this.size = function() {
+  this.size = function () {
     var realLength = Math.sqrt(this.normalizePlaintext().length);
     return Math.ceil(realLength);
   };
 
-  this.plaintextSegments = function() {
+  this.plaintextSegments = function () {
     var plainText = this.normalizePlaintext();
     var chunkSize = this.size();
 
-    var splitRegex = new RegExp('.{1,' + chunkSize + '}','g');
+    var splitRegex = new RegExp('.{1,' + chunkSize + '}', 'g');
     return plainText.match(splitRegex);
   };
 
-  this.ciphertext = function() {
+  this.ciphertext = function () {
     var textSegments = this.plaintextSegments();
     var i, j;
     var columns = [];
@@ -47,9 +47,9 @@ module.exports = function(input) {
     return columns.join('');
   };
 
-  this.normalizeCiphertext = function() {
+  this.normalizeCiphertext = function () {
     var chunkSize = this.size();
-    var splitRegex = new RegExp('.{1,' + chunkSize + '}','g');
+    var splitRegex = new RegExp('.{1,' + chunkSize + '}', 'g');
     return this.ciphertext().match(splitRegex).join(' ');
   };
 };

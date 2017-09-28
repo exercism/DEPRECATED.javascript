@@ -1,7 +1,6 @@
 var Series = require('./largest-series-product');
 
 describe('Series', function () {
-
   it('can get the largest product of 2', function () {
     expect(new Series('0123456789').largestProduct(2)).toBe(72);
   });
@@ -37,13 +36,13 @@ describe('Series', function () {
 
   xit('rejects invalid character in input', ()=> {
     expect(function () {
-      new Series('1234a5').largestProduct('2')
+      new Series('1234a5').largestProduct('2');
     }).toThrow(new Error('Invalid input.'));
   });
 
   xit('rejects negative span', function () {
     expect(() => {
-      new Series('12345').largestProduct(-1)
+      new Series('12345').largestProduct(-1);
     }).toThrow(new Error('Invalid input.'));
   });
 
@@ -66,5 +65,4 @@ describe('Series', function () {
       new Series('').largestProduct(1);
     }).toThrow(new Error('Slice size is too big.'));
   });
-
 });

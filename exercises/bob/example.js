@@ -13,7 +13,7 @@ function Bob() {
     return message[message.length - 1] === '?';
   }
 
-  this.hey = function(input) {
+  this.hey = function (input) {
     var message = input.trim();
     if (isSilence(message)) {
       return 'Fine. Be that way!';
@@ -21,9 +21,8 @@ function Bob() {
       return 'Whoa, chill out!';
     } else if (isAQuestion(message)) {
       return 'Sure.';
-    } else {
-      return 'Whatever.';
     }
+    return 'Whatever.';
   };
 }
 

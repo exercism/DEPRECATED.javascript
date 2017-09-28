@@ -7,12 +7,12 @@ module.exports = function Squares(max) {
       for (var x = 1; x <= max; x++) {
         sum += x;
       }
-      return sum*sum;
+      return sum * sum;
     },
     get sumOfSquares() {
       var sum = 0;
       for (var x = 1; x <= max; x++) {
-        sum += x*x;
+        sum += x * x;
       }
       return sum;
     },

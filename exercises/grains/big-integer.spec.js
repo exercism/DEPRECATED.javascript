@@ -4,11 +4,11 @@ var BigInt = require('./big-integer');
 describe('The big-integer module\'s returned object', function () {
   var bigI;
 
-  beforeEach(function() {
+  beforeEach(function () {
     bigI = BigInt(42);
   });
 
-  afterEach(function() {
+  afterEach(function () {
     bigI = null;
   });
 
@@ -19,20 +19,19 @@ describe('The big-integer module\'s returned object', function () {
   });
 
   it('can be compared to a stringified number by calling \'.toString()\'',
-     function () {
-
-    expect(bigI).not.toBe(42);
-    expect(bigI).not.toBe('42');
-    expect(bigI.toString()).toBe('42');
-    // NOTE:
-    // The '==' operator calls '.toString()' here in order to compare.
-    expect(bigI == '42').toBe(true);
+    function () {
+      expect(bigI).not.toBe(42);
+      expect(bigI).not.toBe('42');
+      expect(bigI.toString()).toBe('42');
+      // NOTE:
+      // The '==' operator calls '.toString()' here in order to compare.
+      expect(bigI == '42').toBe(true);
     // While the line above is easier to write and read, we will use the
     // 'expect(bigI.toString()).toBe(expected)' way so that test failure
     // messages will be more informative. Eg,
     // "Expected '84' to be '42'." instead of
     // "Expected false to be true."
-  });
+    });
 
   it('is immutable', function () {
     bigI.add(10);

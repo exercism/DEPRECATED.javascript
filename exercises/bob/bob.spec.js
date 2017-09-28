@@ -122,5 +122,4 @@ describe('Bob', function () {
     var result = bob.hey('This is a statement ending with whitespace      ');
     expect(result).toEqual('Whatever.');
   });
-
 });

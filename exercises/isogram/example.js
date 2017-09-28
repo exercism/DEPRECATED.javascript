@@ -7,5 +7,5 @@ module.exports = function (word) {
     });
 
     return unique.length === this.word.length;
-  }
-}
+  };
+};

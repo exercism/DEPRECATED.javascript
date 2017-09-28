@@ -1,12 +1,12 @@
 'use strict';
 
 module.exports = {
-  nth: function(nthPrime) {
+  nth: function (nthPrime) {
     if (nthPrime === 0) { throw new Error('Prime is not possible'); }
     this.generatePrimes(200000);
     return this.realPrimes[nthPrime - 1];
   },
-  generatePrimes: function(uptoNumber) {
+  generatePrimes: function (uptoNumber) {
     var i, j, currentPrime, primeCount, possiblePrimes = [];
 
     if (this.realPrimes) { return this.realPrimes; }

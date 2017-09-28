@@ -21,7 +21,7 @@ List.prototype = {
 
   cons: function (item, arr) {
     var x = new List([item]);
-    var xs = new List(arr)
+    var xs = new List(arr);
     return x.append(xs).values;
   },
 
@@ -59,7 +59,7 @@ List.prototype = {
   map: function (func, arr) {
     var applyFuncThenCons = function (x, acc) {
       return this.cons(func(x), acc);
-    }
+    };
 
     return new List(this.foldr(applyFuncThenCons.bind(this), []));
   },
@@ -71,6 +71,6 @@ List.prototype = {
 
     return new List(this.foldr(consIfPred.bind(this), []));
   }
-}
+};
 
 module.exports = List;

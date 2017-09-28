@@ -8,17 +8,17 @@ function SecretHandshake(handshake) {
     throw new Error('Handshake must be a number');
   }
 
-  this.commands = function() {
+  this.commands = function () {
     return this.shakeWith;
   };
 
-  this.calculateHandshake = function(handshake) {
-    /*jshint bitwise:false */
+  this.calculateHandshake = function (handshake) {
+    /* jshint bitwise:false */
     var shakeWith = [];
 
     for (var i = 0; i < handshakeCommands.length; i++) {
       var currentCommand = handshakeCommands[i];
-      var handshakeHasCommand = (handshake & Math.pow(2,i));
+      var handshakeHasCommand = (handshake & Math.pow(2, i));
 
       if (handshakeHasCommand) {
         if (currentCommand === 'REVERSE') {
@@ -33,7 +33,6 @@ function SecretHandshake(handshake) {
   };
 
   this.shakeWith = this.calculateHandshake(handshake);
-
 }
 
 module.exports = SecretHandshake;

@@ -1,9 +1,7 @@
 var at = require('./clock').at;
 
 describe('Clock', function () {
-
   describe('Creating a new clock with an initial time', function () {
-
     it('on the hour', function () {
       expect(at(8).toString()).toEqual('08:00');
     });
@@ -81,7 +79,6 @@ describe('Clock', function () {
     });
 
     describe('Adding and subtracting minutes', function () {
-
       xit('add minutes', function () {
         expect(at(10, 0).plus(3).toString()).toEqual('10:03');
       });
@@ -145,11 +142,9 @@ describe('Clock', function () {
       xit('subtract more than two days', function () {
         expect(at(2, 20).minus(3000).toString()).toEqual('00:20');
       });
-
     });
 
     describe('Construct two separate clocks, set times, test if they are equal', function () {
-
       it('clocks with same time', function () {
         expect(at(15, 37).equals(at(15, 37))).toBeTruthy();
       });
@@ -209,9 +204,6 @@ describe('Clock', function () {
       xit('clocks with negative hours and minutes that wrap', function () {
         expect(at(18, 7).equals(at(-54, -11513))).toBeTruthy();
       });
-
     });
-
   });
-
 });

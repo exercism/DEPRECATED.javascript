@@ -60,7 +60,7 @@ describe('LinkedList', function () {
     expect(list.pop()).toBe(30);
     expect(list.shift()).toBe(10);
   });
-  xit('deletes the only element', function() {
+  xit('deletes the only element', function () {
     var list = new LinkedList();
     list.push(10);
     list.delete(10);

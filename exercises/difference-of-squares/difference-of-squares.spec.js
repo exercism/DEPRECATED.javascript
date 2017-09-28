@@ -1,7 +1,6 @@
 var Squares = require('./difference-of-squares');
 
 describe('Squares', function () {
-
   describe('up to 5', function () {
     var squares = new Squares(5);
 
@@ -16,7 +15,6 @@ describe('Squares', function () {
     xit('gets the difference', function () {
       expect(squares.difference).toBe(170);
     });
-
   });
 
   describe('up to 10', function () {
@@ -33,7 +31,6 @@ describe('Squares', function () {
     xit('gets the difference', function () {
       expect(squares.difference).toBe(2640);
     });
-
   });
 
   describe('up to 100', function () {
@@ -50,7 +47,5 @@ describe('Squares', function () {
     xit('gets the difference', function () {
       expect(squares.difference).toBe(25164150);
     });
-
   });
-
 });

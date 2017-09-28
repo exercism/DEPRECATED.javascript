@@ -9,7 +9,7 @@ function insertSpacing(s, interval) {
 }
 
 function invert(character) {
-  /*jshint validthis: true */
+  /* jshint validthis: true */
   if (character.match(/\d/)) {
     this.push(character);
   } else {

@@ -1,8 +1,8 @@
 'use strict';
 
-module.exports = function(options) {
+module.exports = function (options) {
   if (options === undefined) {
-    options = { white: [0,3], black: [7,3] };
+    options = { white: [0, 3], black: [7, 3] };
   }
 
   if (options.white[0] === options.black[0] && options.white[1] === options.black[1]) {
@@ -12,7 +12,7 @@ module.exports = function(options) {
   this.white = options.white;
   this.black = options.black;
 
-  this.canAttack = function() {
+  this.canAttack = function () {
     var canAttack = false;
 
     if (this.white[0] === this.black[0]) {
@@ -36,7 +36,7 @@ module.exports = function(options) {
     return canAttack;
   };
 
-  this.boardRepresentation = function() {
+  this.boardRepresentation = function () {
     var boardRepresentation = '';
 
     for (var i = 0; i < 8; i++) {
@@ -57,7 +57,7 @@ module.exports = function(options) {
     return boardRepresentation;
   };
 
-  this.toString = function() {
+  this.toString = function () {
     return this.boardRepresentation();
   };
 };

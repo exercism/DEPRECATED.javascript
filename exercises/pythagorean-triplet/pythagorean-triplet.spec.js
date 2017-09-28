@@ -1,7 +1,6 @@
 var Triplet = require('./pythagorean-triplet');
 
 describe('Triplet', function () {
-
   it('calculates the sum', function () {
     expect(new Triplet(3, 4, 5).sum()).toBe(12);
   });
@@ -41,5 +40,4 @@ describe('Triplet', function () {
     });
     expect(products).toEqual([118080, 168480, 202500]);
   });
-
 });
