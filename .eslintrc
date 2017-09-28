@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "indent": [1, 2],
+    "no-trailing-spaces": 1, 
+    "eol-last": [1,"unix"],
+    "semi": [1,"always"], 
+    "linebreak-style": [1,"unix"] 
+  },
+  "parserOptions": {
+    "ecmaVersion": 6
+  }
+}

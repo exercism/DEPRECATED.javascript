@@ -6,7 +6,7 @@ node_js:
   - "node"
 
 install:
-  - "npm install -g jasmine"
+  - "npm install -g jasmine eslint"
 
 script:
   - "make test"
