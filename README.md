@@ -20,7 +20,7 @@ The following commands assume that you are in the `javascript` directory:
 
 ### Code Style
 
-    yarn lint
+    npm run lint
 
 ## Contributing Guide
 
