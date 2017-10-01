@@ -1,44 +1,44 @@
 var TwoBucket = require('./two-bucket');
 
 describe('TwoBucket', function () {
-  describe('works for input of 3,5,1', function () {
-    var buckOne = 3;
-    var buckTwo = 5;
+  describe('Measure using bucket one of size 3 and bucket two of size 5 - ', function () {
+    var bucketOne = 3;
+    var bucketTwo = 5;
     var goal = 1;
 
-    it('starting with bucket one', function () {
-      var starterBuck = 'one'; // indicates which bucket to fill first
-      var twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck);
+    it('start with bucket one', function () {
+      var twoBucket = new TwoBucket(bucketOne, bucketTwo, goal, 'one');
+
       expect(twoBucket.moves()).toEqual(4); // includes the first fill
       expect(twoBucket.goalBucket).toEqual('one'); // which bucket should end up with the desired # of liters
       expect(twoBucket.otherBucket).toEqual(5); // leftover value in the "other" bucket once the goal has been reached
     });
 
-    xit('starting with bucket two', function () {
-      var starterBuck = 'two';
-      var twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck);
+    xit('start with bucket two', function () {
+      var twoBucket = new TwoBucket(bucketOne, bucketTwo, goal, 'two');
+
       expect(twoBucket.moves()).toEqual(8);
       expect(twoBucket.goalBucket).toEqual('two');
       expect(twoBucket.otherBucket).toEqual(3);
     });
   });
 
-  describe('works for input of 7,11,2', function () {
-    var buckOne = 7;
-    var buckTwo = 11;
+  describe('Measure using bucket one of size 7 and bucket two of size 11 - ', function () {
+    var bucketOne = 7;
+    var bucketTwo = 11;
     var goal = 2;
 
-    xit('starting with bucket one', function () {
-      var starterBuck = 'one';
-      var twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck);
+    xit('start with bucket one', function () {
+      var twoBucket = new TwoBucket(bucketOne, bucketTwo, goal, 'one');
+
       expect(twoBucket.moves()).toEqual(14);
       expect(twoBucket.goalBucket).toEqual('one');
       expect(twoBucket.otherBucket).toEqual(11);
     });
 
-    xit('starting with bucket two', function () {
-      var starterBuck = 'two';
-      var twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck);
+    xit('start with bucket two', function () {
+      var twoBucket = new TwoBucket(bucketOne, bucketTwo, goal, 'two');
+
       expect(twoBucket.moves()).toEqual(18);
       expect(twoBucket.goalBucket).toEqual('two');
       expect(twoBucket.otherBucket).toEqual(7);
