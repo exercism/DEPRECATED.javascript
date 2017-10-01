@@ -25,11 +25,7 @@ function TwoBucket(bucketOne, bucketTwo, goal, startBucket) {
     var currentBucketTwo = initialBucketTwo;
     var moveCount = 0;
     var pourOrReceive = true;
-    while (true) {
-      if (this.reachedGoal(currentBucketOne, currentBucketTwo)) {
-        this.recordGoal(currentBucketOne, currentBucketTwo);
-        break;
-      }
+    while (!this.reachedGoal(currentBucketOne, currentBucketTwo)) {
       if (currentBucketTwo > bucketOne && currentBucketOne === 0 && moveCount === 0) {
         currentBucketOne = bucketOne;
         currentBucketTwo = bucketTwo - currentBucketOne;
@@ -47,6 +43,7 @@ function TwoBucket(bucketOne, bucketTwo, goal, startBucket) {
       moveCount++;
       pourOrReceive ? pourOrReceive = false : pourOrReceive = true;
     }
+    this.recordGoal(currentBucketOne, currentBucketTwo);
     return moveCount;
   };
 
@@ -55,11 +52,7 @@ function TwoBucket(bucketOne, bucketTwo, goal, startBucket) {
     var currentBucketTwo = initialBucketTwo;
     var moveCount = 0;
     var pourOrReceive = true;
-    while (true) {
-      if (this.reachedGoal(currentBucketOne, currentBucketTwo)) {
-        this.recordGoal(currentBucketOne, currentBucketTwo);
-        break;
-      }
+    while (!this.reachedGoal(currentBucketOne, currentBucketTwo)) {
       if (currentBucketOne === bucketOne && moveCount === 0) {
         currentBucketOne = 0;
         currentBucketTwo = bucketOne;
@@ -78,6 +71,7 @@ function TwoBucket(bucketOne, bucketTwo, goal, startBucket) {
       moveCount++;
       pourOrReceive ? pourOrReceive = false : pourOrReceive = true;
     }
+    this.recordGoal(currentBucketOne, currentBucketTwo);
     return moveCount;
   };
 
