@@ -1,13 +1,12 @@
 'use strict';
 
 function TwoBucket(bucketOne, bucketTwo, goal, startBucket) {
-  this.startBucket = startBucket;
   this.bucketOne = bucketOne;
   this.bucketTwo = bucketTwo;
   this.goal = goal;
+  this.startBucket = startBucket;
 
   this.reachedGoal = function (measurements) {
-    var reached = false;
     if (measurements[0] === goal || measurements[1] === goal) {
       if (measurements[0] === goal) {
         this.goalBucket = 'one';
@@ -16,14 +15,15 @@ function TwoBucket(bucketOne, bucketTwo, goal, startBucket) {
         this.goalBucket = 'two';
         this.otherBucket = measurements[0];
       }
-      reached = true;
+      return true;
     }
-    return reached;
+    return false;
   };
 
-  this.bigFirst = function (measurements, moveCount, prBool) {
+  this.bigFirst = function (measurements, prBool) {
     var j = measurements[0];
     var k = measurements[1];
+    var moveCount = 0;
     while (true) {
       if (this.reachedGoal(measurements)) break;
       if (k > bucketOne && j === 0 && moveCount === 0) {
@@ -47,9 +47,10 @@ function TwoBucket(bucketOne, bucketTwo, goal, startBucket) {
     return moveCount;
   };
 
-  this.smallFirst = function (measurements, moveCount, prBool) {
+  this.smallFirst = function (measurements, prBool) {
     var j = measurements[0];
     var k = measurements[1];
+    var moveCount = 0;
     while (true) {
       if (this.reachedGoal(measurements)) break;
       if (j === bucketOne && moveCount === 0) {
@@ -73,21 +74,20 @@ function TwoBucket(bucketOne, bucketTwo, goal, startBucket) {
     }
     return moveCount;
   };
-}
 
-TwoBucket.prototype.moves = function () {
-  var j = 0; // j will be running val of bucket one,
-  var k = 0; // k will be running val of bucket two
-  this.startBucket === 'one' ? j = this.bucketOne : k = this.bucketTwo;
-  var measurements = [j, k];
-  var moveCount = 0;
-  var prBool = true; // pour / receive boolean - need to pour or receive everbucketTwo other turn
-  if (this.startBucket === 'one') {
-    moveCount = this.smallFirst(measurements, moveCount, prBool);
-  } else {
-    moveCount = this.bigFirst(measurements, moveCount, prBool);
-  }
-  return moveCount + 1; // accounts for first move made before loop (and moveCount starts at goalero before loop)
-};
+  this.moves = function () {
+    var j = 0; // j will be running val of bucket one,
+    var k = 0; // k will be running val of bucket two
+    this.startBucket === 'one' ? j = this.bucketOne : k = this.bucketTwo;
+    var measurements = [j, k];
+    var prBool = true; // pour / receive boolean - need to pour or receive everbucketTwo other turn
+    if (this.startBucket === 'one') {
+      measurements = [this.bucketOne, 0];
+      return this.smallFirst(measurements, prBool) + 1;
+    }
+    measurements = [0, this.bucketTwo];
+    return this.bigFirst(measurements, prBool) + 1;
+  };
+}
 
 module.exports = TwoBucket;
