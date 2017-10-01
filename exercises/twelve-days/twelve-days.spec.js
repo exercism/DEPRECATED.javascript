@@ -3,9 +3,6 @@ var TwelveDays = require('./twelve-days');
 describe('TwelveDays', function () {
   var twelveDaysObject = new TwelveDays();
 
-  beforeEach(function () {
-  });
-
   it('test verse one', function () {
     var expectedVerseOne =
       'On the first day of Christmas my true love gave to me, a Partridge in a Pear Tree.\n';
