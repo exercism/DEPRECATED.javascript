@@ -21,30 +21,29 @@ function TwoBucket(bucketOne, bucketTwo, goal, startBucket) {
   };
 
   this.bigFirst = function (measurements) {
-    var j = measurements[0];
-    var k = measurements[1];
+    var currentBucketOne = measurements[0];
+    var currentBucketTwo = measurements[1];
     var moveCount = 0;
     var pourOrReceive = true;
     while (true) {
-      if (this.reachedGoal(measurements)) {
-        this.recordGoal(measurements);
+      if (this.reachedGoal([currentBucketOne, currentBucketTwo])) {
+        this.recordGoal([currentBucketOne, currentBucketTwo]);
         break;
       }
-      if (k > bucketOne && j === 0 && moveCount === 0) {
-        j = bucketOne;
-        k = bucketTwo - j;
-      } else if (j === bucketOne) {
-        j = 0;
-      } else if ((k > bucketOne && j !== 0) || (k > bucketOne && pourOrReceive)) {
-        k = k - (bucketOne - j);
-        j = bucketOne;
-      } else if (k > bucketOne || j === 0) {
-        j = k;
-        k = k - j;
-      } else if (k === 0) {
-        k = bucketTwo;
+      if (currentBucketTwo > bucketOne && currentBucketOne === 0 && moveCount === 0) {
+        currentBucketOne = bucketOne;
+        currentBucketTwo = bucketTwo - currentBucketOne;
+      } else if (currentBucketOne === bucketOne) {
+        currentBucketOne = 0;
+      } else if ((currentBucketTwo > bucketOne && currentBucketOne !== 0) || (currentBucketTwo > bucketOne && pourOrReceive)) {
+        currentBucketTwo = currentBucketTwo - (bucketOne - currentBucketOne);
+        currentBucketOne = bucketOne;
+      } else if (currentBucketTwo > bucketOne || currentBucketOne === 0) {
+        currentBucketOne = currentBucketTwo;
+        currentBucketTwo = currentBucketTwo - currentBucketOne;
+      } else if (currentBucketTwo === 0) {
+        currentBucketTwo = bucketTwo;
       }
-      measurements = [j, k];
       moveCount++;
       pourOrReceive ? pourOrReceive = false : pourOrReceive = true;
     }
@@ -52,31 +51,30 @@ function TwoBucket(bucketOne, bucketTwo, goal, startBucket) {
   };
 
   this.smallFirst = function (measurements) {
-    var j = measurements[0];
-    var k = measurements[1];
+    var currentBucketOne = measurements[0];
+    var currentBucketTwo = measurements[1];
     var moveCount = 0;
     var pourOrReceive = true;
     while (true) {
-      if (this.reachedGoal(measurements)) {
-        this.recordGoal(measurements);
+      if (this.reachedGoal([currentBucketOne, currentBucketTwo])) {
+        this.recordGoal([currentBucketOne, currentBucketTwo]);
         break;
       }
-      if (j === bucketOne && moveCount === 0) {
-        j = 0;
-        k = bucketOne;
-      } else if (j === 0) {
-        j = bucketOne;
-      } else if (j === bucketOne && k < bucketTwo) {
-        var tempK = k;
-        k + j > bucketTwo ? k = bucketTwo : k = tempK + j;
-        tempK + j > bucketTwo ? j = j - (bucketTwo - tempK) : j = 0;
-      } else if (k === bucketTwo) {
-        k = 0;
-      } else if (k === 0 && j < bucketOne) {
-        k = j;
-        j = 0;
+      if (currentBucketOne === bucketOne && moveCount === 0) {
+        currentBucketOne = 0;
+        currentBucketTwo = bucketOne;
+      } else if (currentBucketOne === 0) {
+        currentBucketOne = bucketOne;
+      } else if (currentBucketOne === bucketOne && currentBucketTwo < bucketTwo) {
+        var temp = currentBucketTwo;
+        currentBucketTwo + currentBucketOne > bucketTwo ? currentBucketTwo = bucketTwo : currentBucketTwo = temp + currentBucketOne;
+        temp + currentBucketOne > bucketTwo ? currentBucketOne = currentBucketOne - (bucketTwo - temp) : currentBucketOne = 0;
+      } else if (currentBucketTwo === bucketTwo) {
+        currentBucketTwo = 0;
+      } else if (currentBucketTwo === 0 && currentBucketOne < bucketOne) {
+        currentBucketTwo = currentBucketOne;
+        currentBucketOne = 0;
       }
-      measurements = [j, k];
       moveCount++;
       pourOrReceive ? pourOrReceive = false : pourOrReceive = true;
     }
