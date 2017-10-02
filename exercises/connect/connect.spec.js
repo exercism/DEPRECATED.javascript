@@ -1,4 +1,4 @@
-var Board = require('./connect');
+var Board = require('./connect'); 
 
 describe('Judging a game of connect', function () {
   it('an empty board has no winner', function () {
