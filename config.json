@@ -1051,6 +1051,21 @@
       "deprecated": true,
       "slug": "point-mutations",
       "uuid": "e9a6b2ea-a67d-4b75-800d-7b46240094ec"
+    },
+    {
+      "uuid": "09e10522-9853-11e7-abc4-cec278b6b50a",
+      "slug": "twelve-days",
+      "core": false,
+      "unlocked_by": "bob",
+      "difficulty": 4,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Polymorphism",
+        "Strings",
+        "Pattern recognition",
+        "Regular expressions"
+      ]
     }
   ],
   "foregone": [],
