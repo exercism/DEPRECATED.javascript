@@ -1080,6 +1080,21 @@
         "Pattern recognition",
         "Regular expressions"
       ]
+    },
+    {
+      "core": false,
+      "difficulty": 1,
+      "slug": "transpose",
+      "topics": [
+        "loops",
+        "arrays",
+        "lists",
+        "matrices",
+        "strings",
+        "text_formatting"
+      ],
+      "unlocked_by": "null",
+      "uuid": "7c024853-0540-473d-b2d9-cad84953c00f"
     }
   ],
   "foregone": [],
