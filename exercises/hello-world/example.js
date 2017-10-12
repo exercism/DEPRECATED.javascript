@@ -2,9 +2,8 @@
 
 var HelloWorld = function () {};
 
-HelloWorld.prototype.hello = function (name) {
-  name = name || 'World';
-  return 'Hello, ' + name + '!';
+HelloWorld.prototype.hello = function () {
+  return 'Hello, World!';
 };
 
 module.exports = HelloWorld;
