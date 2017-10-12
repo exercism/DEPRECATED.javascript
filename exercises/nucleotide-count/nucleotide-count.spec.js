@@ -20,7 +20,7 @@ describe('DNA', function () {
     expect(acid.count('T')).toEqual(2);
   });
 
-  xit('Empty DNS strand has no nucleotides', function () {
+  xit('Empty DNA strand has no nucleotides', function () {
     var expected = {A: 0, T: 0, C: 0, G: 0};
     expect(dna().histogram()).toEqual(expected);
   });
