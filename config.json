@@ -1029,6 +1029,18 @@
       "unlocked_by": "linked-list",
       "uuid": "c21ab6e8-b845-49d0-a2f6-1c89c7a07626"
     },
+      {
+      "core": false,
+      "difficulty": 2,
+      "slug": "reverse-string",
+      "topics": [
+        "loops",
+        "for",
+        "while"
+      ],
+      "unlocked_by": "leap",
+      "uuid": "553a6be7-eecb-45dc-9cea-05126c525f1b"
+    },
     {
       "uuid": "833bd7c7-d3d8-45fd-a218-12dea646065d",
       "slug": "diffie-hellman",
