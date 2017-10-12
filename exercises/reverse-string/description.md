@@ -1,0 +1,1 @@
+With an input string, write code to reverse the string letters and return a string with reversed letters. Be sure to include error handling for an input that isn’t a string such as number or null values for inputs.
