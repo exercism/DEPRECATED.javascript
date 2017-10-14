@@ -10,7 +10,7 @@ var DiffieHellman = function(p, g){
 
   this.getPublicKeyFromPrivateKey = function (privateKey) {
     if (privateKey <= 1 || privateKey > this.p - 1) {
-      throw Error('Private key a must be greater than one but less than modulus parameter p!');
+      throw Error('Private key must be greater than one but less than modulus parameter p!');
     }
     return Math.pow(this.g, privateKey) % this.p;
   };
