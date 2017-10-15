@@ -26,7 +26,7 @@ To get started, you can download a Visual Studio solution that is already set up
 
 1. Download the [Exercism.io Visual Studio Template](https://github.com/rprouse/Exercism.VisualStudio) from GitHub by clicking the Download Zip button on the page.
 2. Unzip the template into your exercises directory, for example `C:\src\exercises`
-2. Install the [Exercism CLI](http://exercism.io/cli)
+2. Install the [Exercism CLI](http://exercism.io/clients/cli)
 3. Open a command prompt to your exercise directory
 4. Add your API key to exercism `exercism configure --key=YOUR_API_KEY`
 5. Configure your source directory in exercism `exercism configure --dir=C:\src\exercises`

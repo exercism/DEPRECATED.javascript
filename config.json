@@ -1093,8 +1093,21 @@
         "strings",
         "text_formatting"
       ],
-      "unlocked_by": "null",
+      "unlocked_by": "matrix",
       "uuid": "7c024853-0540-473d-b2d9-cad84953c00f"
+    },
+    {
+      "uuid": "52c775a4-7ddb-4cba-8a78-8544220bd1b6",
+      "slug": "protein-translation",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "control-flow-(conditionals)",
+        "control-flow-(loops)",
+        "strings",
+        "algorithms"
+      ]
     }
   ],
   "foregone": [],
