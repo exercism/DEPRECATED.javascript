@@ -1,11 +1,5 @@
 var meetupDay = require('./meetup');
 
-
-function MeetupDayException(message) {
-  this.message = message;
-  this.name = 'MeetupDayException';
-}
-
 describe('meetupDay()', function () {
   it('monteenth of may 2013', function () {
     expect(meetupDay(2013, 4, 'Monday', 'teenth')).toEqual(new Date(2013, 4, 13));
