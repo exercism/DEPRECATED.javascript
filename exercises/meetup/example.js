@@ -52,17 +52,15 @@ function _getDayIndex(day) {
     'friday': 5,
     'saturday': 6
   };
-
-  var temp = day.toLowerCase();
-
-  return daysInd[temp];
+  return daysInd[day.toLowerCase()];
 }
 
 function _find(ary, callback) {
+  var foundDay;
   for (var i = 0; i < ary.length; i++) {
-    if (callback(ary[i], i, ary)) { return ary[i]; }
+    if (callback(ary[i], i, ary)) foundDay = ary[i];
   }
-  return null;
+  return foundDay;
 }
 
 module.exports = meetupDay;
