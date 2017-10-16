@@ -1057,6 +1057,21 @@
       "uuid" : "910fe904-7e3c-11e7-bb31-be2e44b06b34"
     },
     {
+      "core" :  false,
+      "difficulty" : 1,
+      "slug" : "collatz-conjecture",
+       "topics": [
+         "Control-flow (loops)",
+         "Control-flow (conditionals)",
+         "Recursion",
+         "Integers",
+         "Algorithms",
+         "Mathematics"
+      ],
+      "unlocked_by": "null",
+      "uuid" : "fd435dad-311a-4c40-9868-70863455831e"
+    },
+    {
       "deprecated": true,
       "slug": "nucleotide-count",
       "uuid": "1b53340d-ea40-44ee-bf2e-42e516704e7c"
