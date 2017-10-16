@@ -1,43 +1,40 @@
+'use strict';
+
 function MeetupDayException(message) {
   this.message = message;
   this.name = 'MeetupDayException';
 }
 
-function meetupDay(year, month, day_of_week, which) {
-  'use strict';
+function meetupDay(year, month, dayOfWeek, which) {
+  var candidates = _getCandidates(year, month, dayOfWeek);
+  var res;
+  var day;
 
-  var candidates = _getCandidates(year, month, day_of_week),
-    d,
-    i,
-    res;
-  which = which.toLowerCase();
-
-  if (which === 'teenth') {
-    res = _find(candidates, function (d) {
-      return d.getDate() >= 13 && d.getDate() <= 19;
-    });
-  } else if (which === 'last') {
+  day = which.toLowerCase();
+  if (day === 'teenth') {
+    res = _find(candidates, function (d) {return d.getDate() >= 13 && d.getDate() <= 19; });
+  } else if (day === 'last') {
     res = candidates.pop();
   } else {
-    which = parseInt(which) - 1;
-    res = candidates.slice(which, which + 1).pop();
+    day = parseInt(day, 10) - 1;
+    res = candidates.slice(day, day + 1).pop();
   }
 
-  if (!res) { throw new MeetupDayException('Day not found! ;_;'); }
+  if (!res) { throw new MeetupDayException('Day not found!'); }
 
   return res;
 }
 
-function _getCandidates(year, month, day_of_week) {
-  var d,
-    i,
-    numDaysInMonth = new Date(year, month + 1, 0).getDate(),
-    res = [];
+function _getCandidates(year, month, dayOfWeek) {
+  var d;
+  var i;
+  var numDaysInMonth = new Date(year, month + 1, 0).getDate();
+  var res = [];
 
   for (i = 0; i < numDaysInMonth; i++) {
     d = new Date(year, month, i + 1);
 
-    if (d.getDay() === _getDayIndex(day_of_week)) {
+    if (d.getDay() === _getDayIndex(dayOfWeek)) {
       res.push(d);
     }
   }
@@ -55,16 +52,16 @@ function _getDayIndex(day) {
     'friday': 5,
     'saturday': 6
   };
-
-  day = day.toLowerCase();
-
-  return daysInd[day];
+  return daysInd[day.toLowerCase()];
 }
 
 function _find(ary, callback) {
+  var foundDay;
   for (var i = 0; i < ary.length; i++) {
-    if (callback(ary[i], i, ary)) { return ary[i]; }
+    if (callback(ary[i], i, ary)) foundDay = ary[i];
   }
+  return foundDay;
 }
 
 module.exports = meetupDay;
+
