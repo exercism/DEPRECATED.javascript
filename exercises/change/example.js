@@ -14,7 +14,7 @@ var Candidate = function () {
   var searched = false;
   var coins = [];
 
-  this.Searched = function () {
+  this.searched = function () {
     searched = true;
   };
 
@@ -52,7 +52,7 @@ Change.prototype.calculate = function (coinArray, target) {
   candidates.fill(0);
 
   // validation checks up front
-  if (target == 0) return [];
+  if (target === 0) return [];
 
   if (target < 0) {
     throw new Error( 'Negative totals are not allowed.');
@@ -64,33 +64,17 @@ Change.prototype.calculate = function (coinArray, target) {
 
 
   initialize();
-  // printAll();
-
 
   // process the arrange until everything is searched
-  while (isDone() == false) {
+  while (isDone() === false) {
     let candidate = getNext();
     branch(candidate);
-    candidate.Searched();
+    candidate.searched();
   }
-  // printAll();
-
 
   // print the result
   if (typeof (candidates[target]) !== 'number') {return candidates[target].getCoins();}
   throw new Error('The total ' + target + ' cannot be represented in the given currency.');
-
-
-  // print the candidate array
-  function printAll() {
-    for (let j = 0; j < candidates.length; j++) {
-      if (typeof (candidates[j]) === 'object') {
-        console.log('index: ' + j + ' ' + candidates[j].getCoins() + ' searched: ' + candidates[j].isSearched());
-      } else {
-        console.log('index: ' + j + ' is empty ' + typeof (candidates[j]));
-      }
-    }
-  }
 
   // initialize the candidate array with the given coins only
   function initialize() {
@@ -108,7 +92,7 @@ Change.prototype.calculate = function (coinArray, target) {
     for (let i = 0; i < candidates.length; i++) {
       let temp = candidates[i];
       if (typeof (temp) !== 'number') {
-        if (temp.isSearched() == false) {
+        if (temp.isSearched() === false) {
           done = false;
           break;
         }
@@ -122,7 +106,7 @@ Change.prototype.calculate = function (coinArray, target) {
     for (let i = 0; i < candidates.length; i++) {
       let temp = candidates[i];
       if (typeof (temp) !== 'number' &&
-                temp.isSearched() == false) return temp;
+                temp.isSearched() === false) return temp;
     }
     return null;
   }
