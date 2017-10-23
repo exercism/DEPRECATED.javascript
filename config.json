@@ -6,10 +6,10 @@
       "difficulty": 1,
       "slug": "hello-world",
       "topics": [
-        "control-flow-(conditionals)",
-        "optional-values",
+        "control_flow_conditionals",
+        "optional_values",
         "strings",
-        "text-formatting"
+        "text_formatting"
       ],
       "uuid": "4756cfc9-7509-4783-8be7-60e3376b8256"
     },
@@ -40,12 +40,12 @@
       "slug": "simple-cipher",
       "topics": [
         "algorithms",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "mathematics",
         "randomness",
         "strings",
-        "text-formatting",
+        "text_formatting",
         "transforming"
       ],
       "uuid": "fff57c49-cde9-4a0c-b70b-2903cef212af"
@@ -56,8 +56,8 @@
       "slug": "pangram",
       "topics": [
         "algorithms",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "lists",
         "maps",
         "searching",
@@ -70,10 +70,10 @@
       "difficulty": 2,
       "slug": "bob",
       "topics": [
-        "control-flow-(conditionals)",
-        "pattern-recognition",
+        "control_flow_conditionals",
+        "pattern_recognition",
         "polymorfism",
-        "regular-expressions",
+        "regular_expressions",
         "strings",
         "unicode"
       ],
@@ -94,7 +94,7 @@
       "slug": "space-age",
       "topics": [
         "classes",
-        "floating-point-numbers",
+        "floating_point_numbers",
         "mathematics"
       ],
       "uuid": "b668e11a-a8ce-4e94-ba68-3a1f0fa3f6c8"
@@ -104,12 +104,12 @@
       "difficulty": 4,
       "slug": "binary",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "integers",
         "mathematics",
-        "regular-expressions",
+        "regular_expressions",
         "strings"
       ],
       "uuid": "c3035180-ff4c-4afe-8019-f8364158b74e"
@@ -120,8 +120,8 @@
       "slug": "prime-factors",
       "topics": [
         "algorithms",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "integers",
         "mathematics"
       ],
@@ -133,11 +133,11 @@
       "slug": "matrix",
       "topics": [
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "data-structures",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "data_structures",
         "matrices",
-        "text-formatting"
+        "text_formatting"
       ],
       "uuid": "fbfe6032-c209-40bd-b485-8b2881638166"
     },
@@ -148,11 +148,11 @@
       "topics": [
         "algorithms",
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "data-structures",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "data_structures",
         "lists",
-        "optional-values"
+        "optional_values"
       ],
       "uuid": "ecc41237-f629-458f-873e-2cc51ba1a385"
     },
@@ -161,11 +161,11 @@
       "difficulty": 5,
       "slug": "pascals-triangle",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "mathematics",
         "strings",
-        "text-formatting"
+        "text_formatting"
       ],
       "uuid": "a96ab45d-10a0-42cf-a754-c2466037ceaf"
     },
@@ -176,9 +176,9 @@
       "topics": [
         "algorithms",
         "arrays",
-        "bitwise-operations",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "bitwise_operations",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "games"
       ],
       "uuid": "0a3a452c-f734-47eb-8e65-34c8ae710ef0"
@@ -199,10 +199,10 @@
       "difficulty": 6,
       "slug": "robot-name",
       "topics": [
-        "control-flow-(conditionals)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "exception_handling",
         "randomness",
-        "regular-expressions",
+        "regular_expressions",
         "sets"
       ],
       "uuid": "3005340b-a8d6-46ac-9075-125f9adccc2a"
@@ -212,12 +212,12 @@
       "difficulty": 7,
       "slug": "wordy",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "parsing",
-        "pattern-recognition",
-        "regular-expressions",
+        "pattern_recognition",
+        "regular_expressions",
         "strings"
       ],
       "uuid": "bb54bf08-24ba-45e1-bdf7-08db161e5843"
@@ -227,7 +227,7 @@
       "difficulty": 8,
       "slug": "list-ops",
       "topics": [
-        "data-structures",
+        "data_structures",
         "lists",
         "recursion"
       ],
@@ -238,8 +238,8 @@
       "difficulty": 2,
       "slug": "hamming",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "equality",
         "strings"
       ],
@@ -251,13 +251,13 @@
       "difficulty": 2,
       "slug": "run-length-encoding",
       "topics": [
-        "control-flow-(conditionals)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "exception_handling",
         "parsing",
-        "pattern-recognition",
-        "regular-expressions",
+        "pattern_recognition",
+        "regular_expressions",
         "strings",
-        "text-formatting"
+        "text_formatting"
       ],
       "unlocked_by": null,
       "uuid": "d66c2b56-b465-4922-af35-ae78944c0aac"
@@ -278,8 +278,8 @@
       "difficulty": 5,
       "slug": "beer-song",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "strings"
       ],
       "unlocked_by": "bob",
@@ -313,7 +313,7 @@
       "slug": "food-chain",
       "topics": [
         "algorithms",
-        "text-formatting"
+        "text_formatting"
       ],
       "unlocked_by": "bob",
       "uuid": "a717745f-da00-4a5f-8bf3-6876e20cdf17"
@@ -323,7 +323,7 @@
       "difficulty": 2,
       "slug": "etl",
       "topics": [
-        "control-flow-(loops)",
+        "control_flow_loops",
         "integers",
         "maps",
         "transforming"
@@ -347,7 +347,7 @@
       "difficulty": 5,
       "slug": "grains",
       "topics": [
-        "control-flow-(loops)",
+        "control_flow_loops",
         "integers",
         "mathematics"
       ],
@@ -359,9 +359,9 @@
       "difficulty": 3,
       "slug": "triangle",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "integers",
         "mathematics"
       ],
@@ -386,8 +386,8 @@
       "slug": "perfect-numbers",
       "topics": [
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "integers",
         "mathematics"
       ],
@@ -399,9 +399,9 @@
       "difficulty": 1,
       "slug": "word-count",
       "topics": [
-        "control-flow-(loops)",
+        "control_flow_loops",
         "lists",
-        "regular-expressions",
+        "regular_expressions",
         "strings",
         "unicode"
       ],
@@ -413,8 +413,8 @@
       "difficulty": 2,
       "slug": "acronym",
       "topics": [
-        "control-flow-(loops)",
-        "regular-expressions",
+        "control_flow_loops",
+        "regular_expressions",
         "strings",
         "transforming"
       ],
@@ -426,8 +426,8 @@
       "difficulty": 5,
       "slug": "scrabble-score",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "maps",
         "strings"
       ],
@@ -439,10 +439,10 @@
       "difficulty": 3,
       "slug": "roman-numerals",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "mathematics",
-        "pattern-recognition",
+        "pattern_recognition",
         "transforming"
       ],
       "unlocked_by": null,
@@ -454,10 +454,10 @@
       "slug": "circular-buffer",
       "topics": [
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "data-structures",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "data_structures",
+        "exception_handling",
         "lists"
       ],
       "unlocked_by": "linked-list",
@@ -468,7 +468,7 @@
       "difficulty": 2,
       "slug": "raindrops",
       "topics": [
-        "control-flow-(conditionals)",
+        "control_flow_conditionals",
         "integers",
         "strings",
         "transforming"
@@ -482,9 +482,9 @@
       "slug": "allergies",
       "topics": [
         "arrays",
-        "bitwise-operations",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)"
+        "bitwise_operations",
+        "control_flow_conditionals",
+        "control_flow_loops"
       ],
       "unlocked_by": "rna-transcription",
       "uuid": "23210e9e-81f6-4279-a776-00459c7ccd02"
@@ -497,8 +497,8 @@
         "algorithms",
         "arrays",
         "callbacks",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "filtering",
         "lists"
       ],
@@ -512,10 +512,10 @@
       "topics": [
         "algorithms",
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "regular-expressions",
-        "text-formatting"
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "regular_expressions",
+        "text_formatting"
       ],
       "unlocked_by": "simple-cipher",
       "uuid": "99974454-0736-4cc0-b88f-ed5701397a97"
@@ -527,7 +527,7 @@
       "topics": [
         "algorithms",
         "callbacks",
-        "control-flow-(loops)",
+        "control_flow_loops",
         "lists"
       ],
       "unlocked_by": "list-ops",
@@ -540,11 +540,11 @@
       "topics": [
         "algorithms",
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "regular-expressions",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "regular_expressions",
         "sorting",
-        "text-formatting",
+        "text_formatting",
         "transforming"
       ],
       "unlocked_by": "atbash-cipher",
@@ -555,11 +555,11 @@
       "difficulty": 4,
       "slug": "trinary",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "integers",
         "mathematics",
-        "regular-expressions",
+        "regular_expressions",
         "strings"
       ],
       "unlocked_by": "binary",
@@ -570,8 +570,8 @@
       "difficulty": 5,
       "slug": "sieve",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "integers",
         "mathematics",
         "recursion"
@@ -584,11 +584,11 @@
       "difficulty": 4,
       "slug": "octal",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "integers",
         "mathematics",
-        "regular-expressions",
+        "regular_expressions",
         "strings"
       ],
       "unlocked_by": "binary",
@@ -599,8 +599,8 @@
       "difficulty": 4,
       "slug": "luhn",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "integers",
         "mathematics",
         "strings"
@@ -613,10 +613,10 @@
       "difficulty": 4,
       "slug": "pig-latin",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "games",
-        "regular-expressions",
+        "regular_expressions",
         "strings",
         "transforming"
       ],
@@ -629,8 +629,8 @@
       "slug": "pythagorean-triplet",
       "topics": [
         "algorithms",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "integers",
         "mathematics"
       ],
@@ -642,10 +642,10 @@
       "difficulty": 3,
       "slug": "series",
       "topics": [
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_loops",
+        "exception_handling",
         "strings",
-        "text-formatting"
+        "text_formatting"
       ],
       "unlocked_by": "pangram",
       "uuid": "06afdb06-8d2a-4cb0-baf1-48ae997cf1f5"
@@ -656,7 +656,7 @@
       "slug": "difference-of-squares",
       "topics": [
         "algorithms",
-        "control-flow-(loops)",
+        "control_flow_loops",
         "integers",
         "mathematics"
       ],
@@ -669,11 +669,11 @@
       "slug": "proverb",
       "topics": [
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "optional-values",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "optional_values",
         "strings",
-        "text-formatting"
+        "text_formatting"
       ],
       "unlocked_by": "bob",
       "uuid": "8786d591-077b-49bc-be8d-d014dc9dc308"
@@ -694,11 +694,11 @@
       "difficulty": 4,
       "slug": "hexadecimal",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "integers",
         "mathematics",
-        "regular-expressions",
+        "regular_expressions",
         "strings"
       ],
       "unlocked_by": "binary",
@@ -709,12 +709,12 @@
       "difficulty": 7,
       "slug": "largest-series-product",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "integers",
         "mathematics",
-        "regular-expressions",
+        "regular_expressions",
         "strings"
       ],
       "unlocked_by": "pangram",
@@ -726,10 +726,10 @@
       "slug": "kindergarten-garden",
       "topics": [
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "strings",
-        "text-formatting"
+        "text_formatting"
       ],
       "unlocked_by": "wordy",
       "uuid": "2702ac90-0be2-43a2-91b6-7256a25fec87"
@@ -741,8 +741,8 @@
       "topics": [
         "algorithms",
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "recursion"
       ],
       "unlocked_by": "linked-list",
@@ -754,8 +754,8 @@
       "slug": "binary-search-tree",
       "topics": [
         "algorithms",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "recursion"
       ],
       "unlocked_by": "binary-search",
@@ -766,9 +766,9 @@
       "difficulty": 5,
       "slug": "robot-simulator",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "games",
         "parsing",
         "strings"
@@ -782,9 +782,9 @@
       "slug": "nth-prime",
       "topics": [
         "algorithms",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "integers",
         "mathematics"
       ],
@@ -797,9 +797,9 @@
       "slug": "palindrome-products",
       "topics": [
         "algorithms",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "integers",
         "mathematics"
       ],
@@ -811,13 +811,13 @@
       "difficulty": 6,
       "slug": "say",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "integers",
         "mathematics",
         "strings",
-        "text-formatting"
+        "text_formatting"
       ],
       "unlocked_by": "bob",
       "uuid": "01d286f6-5f29-4d4b-a4de-e217a4833bfa"
@@ -828,9 +828,9 @@
       "slug": "custom-set",
       "topics": [
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "data-structures",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "data_structures",
         "equality",
         "lists",
         "recursion",
@@ -844,8 +844,8 @@
       "difficulty": 5,
       "slug": "sum-of-multiples",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "integers",
         "lists"
       ],
@@ -857,13 +857,13 @@
       "difficulty": 8,
       "slug": "queen-attack",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "equality",
-        "exception-handling",
-        "optional-values",
+        "exception_handling",
+        "optional_values",
         "parsing",
-        "text-formatting"
+        "text_formatting"
       ],
       "unlocked_by": null,
       "uuid": "fefcfeba-59ec-4c63-a562-374201ee39a7"
@@ -873,14 +873,14 @@
       "difficulty": 6,
       "slug": "saddle-points",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "equality",
-        "exception-handling",
+        "exception_handling",
         "integers",
         "mathematics",
         "matrices",
-        "optional-values",
+        "optional_values",
         "parsing"
       ],
       "unlocked_by": "matrix",
@@ -891,13 +891,13 @@
       "difficulty": 5,
       "slug": "ocr-numbers",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "equality",
-        "exception-handling",
+        "exception_handling",
         "integers",
         "parsing",
-        "text-formatting"
+        "text_formatting"
       ],
       "unlocked_by": "matrix",
       "uuid": "759618b1-7ccc-46cd-889d-aea58ec88756"
@@ -907,11 +907,11 @@
       "difficulty": 7,
       "slug": "meetup",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "dates",
         "equality",
-        "exception-handling",
+        "exception_handling",
         "time"
       ],
       "unlocked_by": "gigasecond",
@@ -922,9 +922,9 @@
       "difficulty": 3,
       "slug": "bracket-push",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "parsing",
         "strings"
       ],
@@ -938,9 +938,9 @@
       "topics": [
         "algorithms",
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "games",
         "parsing"
       ],
@@ -953,12 +953,12 @@
       "slug": "bowling",
       "topics": [
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "games",
         "parsing",
-        "text-formatting"
+        "text_formatting"
       ],
       "unlocked_by": "grade-school",
       "uuid": "c168fe1f-f84e-46e6-91fc-7553d048a4e9"
@@ -969,12 +969,12 @@
       "slug": "diamond",
       "topics": [
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "games",
         "parsing",
-        "text-formatting"
+        "text_formatting"
       ],
       "unlocked_by": "pascals-triangle",
       "uuid": "04a4ef78-5b61-454f-8c37-798875fb4956"
@@ -984,9 +984,9 @@
       "difficulty": 5,
       "slug": "all-your-base",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "integers",
         "mathematics",
         "parsing"
@@ -1023,53 +1023,53 @@
       "slug": "simple-linked-list",
       "topics": [
         "arrays",
-        "data-structures",
+        "data_structures",
         "lists"
       ],
       "unlocked_by": "linked-list",
       "uuid": "c21ab6e8-b845-49d0-a2f6-1c89c7a07626"
     },
     {
-      "uuid": "833bd7c7-d3d8-45fd-a218-12dea646065d",
-      "slug": "diffie-hellman",
       "core": false,
-      "unlocked_by": "simple-cipher",
       "difficulty": 3,
+      "slug": "diffie-hellman",
       "topics": [
-        "Control-flow (conditionals)",
-        "Control-flow (loops)",
-        "Algorithms",
-        "Arrays",
-        "Exception handling"
-      ]
+        "algorithms",
+        "arrays",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling"
+      ],
+      "unlocked_by": "simple-cipher",
+      "uuid": "833bd7c7-d3d8-45fd-a218-12dea646065d"
     },
     {
-      "core" :  false,
-      "difficulty" : 8,
-      "slug" : "change",
-       "topics": [
-          "Algorithms",
-          "Mathematics",
-          "Performance",
-          "Searching"
+      "core": false,
+      "difficulty": 8,
+      "slug": "change",
+      "topics": [
+        "algorithms",
+        "mathematics",
+        "performance",
+        "searching"
       ],
       "unlocked_by": "prime-factors",
-      "uuid" : "910fe904-7e3c-11e7-bb31-be2e44b06b34"
+      "uuid": "910fe904-7e3c-11e7-bb31-be2e44b06b34"
     },
     {
-      "core" :  false,
-      "difficulty" : 1,
-      "slug" : "collatz-conjecture",
-       "topics": [
-         "Control-flow (loops)",
-         "Control-flow (conditionals)",
-         "Recursion",
-         "Integers",
-         "Algorithms",
-         "Mathematics"
+      "core": false,
+      "difficulty": 1,
+      "slug": "collatz-conjecture",
+      "topics": [
+        "algorithms",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "integers",
+        "mathematics",
+        "recursion"
       ],
       "unlocked_by": "null",
-      "uuid" : "fd435dad-311a-4c40-9868-70863455831e"
+      "uuid": "fd435dad-311a-4c40-9868-70863455831e"
     },
     {
       "deprecated": true,
@@ -1082,28 +1082,28 @@
       "uuid": "e9a6b2ea-a67d-4b75-800d-7b46240094ec"
     },
     {
-      "uuid": "09e10522-9853-11e7-abc4-cec278b6b50a",
-      "slug": "twelve-days",
       "core": false,
-      "unlocked_by": "bob",
       "difficulty": 4,
+      "slug": "twelve-days",
       "topics": [
-        "Control-flow (conditionals)",
-        "Control-flow (loops)",
-        "Polymorphism",
-        "Strings",
-        "Pattern recognition",
-        "Regular expressions"
-      ]
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "pattern_recognition",
+        "polymorphism",
+        "regular_expressions",
+        "strings"
+      ],
+      "unlocked_by": "bob",
+      "uuid": "09e10522-9853-11e7-abc4-cec278b6b50a"
     },
     {
       "core": false,
       "difficulty": 1,
       "slug": "transpose",
       "topics": [
-        "loops",
         "arrays",
         "lists",
+        "loops",
         "matrices",
         "strings",
         "text_formatting"
@@ -1112,17 +1112,17 @@
       "uuid": "7c024853-0540-473d-b2d9-cad84953c00f"
     },
     {
-      "uuid": "52c775a4-7ddb-4cba-8a78-8544220bd1b6",
-      "slug": "protein-translation",
       "core": false,
-      "unlocked_by": null,
       "difficulty": 1,
+      "slug": "protein-translation",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "strings",
-        "algorithms"
-      ]
+        "algorithms",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "strings"
+      ],
+      "unlocked_by": null,
+      "uuid": "52c775a4-7ddb-4cba-8a78-8544220bd1b6"
     }
   ],
   "foregone": [],
