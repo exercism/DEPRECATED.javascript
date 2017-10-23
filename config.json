@@ -1123,6 +1123,18 @@
         "strings",
         "algorithms"
       ]
+    },
+    {
+      "uuid": "f4a3d66a-04a8-3e80-6c9a-8a573ccb26fd9ed1d5c",
+      "slug": "zipper",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 8,
+      "topics": [
+        "recursion",
+        "searching",
+        "trees"
+      ]
     }
   ],
   "foregone": [],
