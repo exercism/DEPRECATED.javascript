@@ -1,4 +1,4 @@
-# Sum Of Multiples
+# Sum of Multiples
 
 Given a number, find the sum of all the multiples of particular numbers up to
 but not including that number.
