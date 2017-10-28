@@ -14,6 +14,17 @@
       "uuid": "4756cfc9-7509-4783-8be7-60e3376b8256"
     },
     {
+      "core": false,
+      "difficulty": 1,
+      "slug": "two-fer",
+      "topics": [
+        "strings",
+        "control-flow-(conditionals)"
+      ],
+      "unlocked_by": "hello-world",
+      "uuid": "5f3d1326-f0c5-44a6-b90a-6af3b7d455f1"
+    },
+    {
       "core": true,
       "difficulty": 1,
       "slug": "leap",
