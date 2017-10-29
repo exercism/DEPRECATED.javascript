@@ -12,16 +12,16 @@ describe('diffie-hellman', function () {
   var bobPublicKey = 19;
 
   it('throws an error if the constructor arguments are out of range', function () {
-    var dH = new DiffieHellman(0, 9999);
     expect(function () {
-      dH;
+      var dH = new DiffieHellman(0, 9999);
+      return dH;
     }).toThrow();
   });
 
   xit('throws an error if the constructor arguments are not prime', function () {
-    var dH = new DiffieHellman(10, 13);
     expect(function () {
-      dH;
+      var dH = new DiffieHellman(10, 13);
+      return dH;
     }).toThrow();
   });
 
