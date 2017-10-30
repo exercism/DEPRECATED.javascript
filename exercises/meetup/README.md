@@ -28,7 +28,7 @@ For example, if given "First Monday of January 2017", the correct meetup date is
 Go through the setup instructions for JavaScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/javascript
+http://exercism.io/languages/javascript/installation
 
 ## Making the Test Suite Pass
 
