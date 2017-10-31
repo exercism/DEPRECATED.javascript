@@ -13,15 +13,13 @@ describe('diffie-hellman', function () {
 
   it('throws an error if the constructor arguments are out of range', function () {
     expect(function () {
-      var dH = new DiffieHellman(0, 9999);
-      return dH;
+      return new DiffieHellman(0, 9999);
     }).toThrow();
   });
 
   xit('throws an error if the constructor arguments are not prime', function () {
     expect(function () {
-      var dH = new DiffieHellman(10, 13);
-      return dH;
+      return new DiffieHellman(10, 13);
     }).toThrow();
   });
 
