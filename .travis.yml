@@ -6,9 +6,10 @@ node_js:
   - "node"
 
 install:
-  - "npm install -g jasmine"
+  - "npm install"
 
 script:
   - "make test"
   - "./bin/fetch-configlet"
   - "./bin/configlet lint ."
+  - "npm run lint"
