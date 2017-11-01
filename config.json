@@ -1135,6 +1135,19 @@
         "searching",
         "trees"
       ]
+    },
+    {
+      "uuid": "8740af44-002c-4716-a759-a68ae4c68737",
+      "slug": "isbn-verifier",
+      "core": false,
+      "unlocked_by": "bob",
+      "difficulty": 4,
+      "topics": [
+        "conditionals",
+        "loops",
+        "pattern_matching",
+        "strings"
+      ]
     }
   ],
   "foregone": [],
