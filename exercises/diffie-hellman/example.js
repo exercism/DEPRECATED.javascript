@@ -19,14 +19,14 @@ var DiffieHellman = function (p, g) {
     return Math.pow(theirPublicKey, ourPrivateKey) % this.p;
   };
 
-  this.validateInitialArguments = function (this.p, this.g) {
+  this.validateInitialArguments = function (primeModulus, generator) {
     var BIGGEST_PRIME = this.PRIMES[this.PRIMES.length - 1];
-    return this.p >= 2
-      && this.g >= 2
-      && this.p <= BIGGEST_PRIME
-      && this.g <= BIGGEST_PRIME
-      && arrIncludes(this.PRIMES, this.p)
-      && arrIncludes(this.PRIMES, this.g);
+    return primeModulus >= 2
+      && generator >= 2
+      && primeModulus <= BIGGEST_PRIME
+      && generator <= BIGGEST_PRIME
+      && arrIncludes(this.PRIMES, primeModulus)
+      && arrIncludes(this.PRIMES, generator);
   };
 
   function arrIncludes(arr, a) {
