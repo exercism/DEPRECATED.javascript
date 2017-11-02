@@ -1,7 +1,8 @@
 'use strict';
 
 function newArrayWithRange(first, last) {
-  var i, array = [];
+  var i;
+  var array = [];
   for ( i = first; i <= last; i++ ) {
     array.push(i);
   }
@@ -13,7 +14,9 @@ function indivisibleBy(value) {
 }
 
 function sieve(n) {
-  var i, prime, possibilities, primes = [];
+  var prime;
+  var possibilities;
+  var primes = [];
 
   possibilities = newArrayWithRange(2, n);
 

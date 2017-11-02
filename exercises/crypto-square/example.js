@@ -22,7 +22,8 @@ module.exports = function (input) {
 
   this.ciphertext = function () {
     var textSegments = this.plaintextSegments();
-    var i, j;
+    var i;
+    var j;
     var columns = [];
     var currentSegment;
     var currentLetter;

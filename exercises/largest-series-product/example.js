@@ -14,7 +14,8 @@ Series.prototype.getDigits = function () {
 
 Series.prototype.largestProduct = function (size) {
   if (size < 0) throw new Error('Invalid input.');
-  var product, max = 0;
+  var product;
+  var max = 0;
   this.slices(size).forEach(function (slice) {
     product = slice.reduce(function (a, b) {
       return a * b;
