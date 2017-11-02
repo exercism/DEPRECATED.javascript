@@ -38,7 +38,7 @@ The largest palindrome product is `9009`. Its factors are `(91, 99)` and `(99, 9
 Go through the setup instructions for JavaScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/javascript
+http://exercism.io/languages/javascript/installation
 
 ## Making the Test Suite Pass
 

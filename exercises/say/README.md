@@ -67,7 +67,7 @@ Use _and_ (correctly) when spelling out the number in English:
 Go through the setup instructions for JavaScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/javascript
+http://exercism.io/languages/javascript/installation
 
 ## Making the Test Suite Pass
 
