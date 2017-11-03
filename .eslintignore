@@ -9,16 +9,13 @@ exercises/bowling
 exercises/bracket-push
 exercises/circular-buffer
 exercises/clock
-exercises/crypto-square
 exercises/custom-set
 exercises/diamond
-exercises/diffie-hellman
 exercises/flatten-array
 exercises/food-chain
 exercises/grade-school
 exercises/grains
 exercises/kindergarten-garden
-exercises/largest-series-product
 exercises/leap
 exercises/linked-list
 exercises/list-ops
@@ -38,7 +35,6 @@ exercises/saddle-points
 exercises/say
 exercises/scrabble-score
 exercises/secret-handshake
-exercises/sieve
 exercises/simple-cipher
 exercises/simple-linked-list
 exercises/sum-of-multiples
