@@ -10,7 +10,6 @@ exercises/bracket-push
 exercises/circular-buffer
 exercises/clock
 exercises/custom-set
-exercises/diamond
 exercises/flatten-array
 exercises/food-chain
 exercises/grade-school
@@ -37,7 +36,6 @@ exercises/scrabble-score
 exercises/secret-handshake
 exercises/simple-cipher
 exercises/simple-linked-list
-exercises/sum-of-multiples
 exercises/triangle
 exercises/trinary
 exercises/wordy

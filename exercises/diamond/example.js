@@ -5,8 +5,8 @@ var Diamond = function () {
     for (var i = 0; i <= inputIndex; i++) {
       output += getLine(inputIndex, i);
     }
-    for (i = inputIndex - 1; i >= 0; i--) {
-      output += getLine(inputIndex, i);
+    for (var j = inputIndex - 1; j >= 0; j--) {
+      output += getLine(inputIndex, j);
     }
     return output;
   };
