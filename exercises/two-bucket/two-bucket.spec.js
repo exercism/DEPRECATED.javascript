@@ -1,7 +1,7 @@
 var TwoBucket = require('./two-bucket');
 
 describe('TwoBucket', function () {
-  describe('Measure using bucket one of size 3 and bucket two of size 5 - ', function () {
+  describe('Measure using bucket one of size 3 and bucket two of size 5', function () {
     var bucketOne = 3;
     var bucketTwo = 5;
     var goal = 1;
@@ -23,7 +23,7 @@ describe('TwoBucket', function () {
     });
   });
 
-  describe('Measure using bucket one of size 7 and bucket two of size 11 - ', function () {
+  describe('Measure using bucket one of size 7 and bucket two of size 11', function () {
     var bucketOne = 7;
     var bucketTwo = 11;
     var goal = 2;
