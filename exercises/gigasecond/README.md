@@ -9,7 +9,7 @@ A gigasecond is 10^9 (1,000,000,000) seconds.
 Go through the setup instructions for JavaScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/javascript
+http://exercism.io/languages/javascript/installation
 
 ## Making the Test Suite Pass
 

@@ -31,7 +31,7 @@ Resulting in 9 steps. So for input n = 12, the return value would be 9.
 Go through the setup instructions for JavaScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/javascript
+http://exercism.io/languages/javascript/installation
 
 ## Making the Test Suite Pass
 

@@ -24,7 +24,7 @@ a single line. Feel free to add your own code/tests to check for degenerate tria
 Go through the setup instructions for JavaScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/javascript
+http://exercism.io/languages/javascript/installation
 
 ## Making the Test Suite Pass
 
