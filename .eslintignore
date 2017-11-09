@@ -12,7 +12,8 @@ exercises/custom-set
 exercises/flatten-array
 exercises/food-chain
 exercises/grade-school
-exercises/grains
+exercises/grains/big-integer.js
+exercises/grains/big-integer.spec.js
 exercises/kindergarten-garden
 exercises/leap
 exercises/linked-list
