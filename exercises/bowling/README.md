@@ -12,11 +12,11 @@ A game consists of 10 frames. A frame is composed of one or two balls thrown, wi
 
 * An open frame is where a score of less than 10 is recorded for the frame. In this case the score for the frame is the number of pins knocked down after the second throw.
 
-* A spare is where all ten pins are knocked down after the second throw. The total value of a spare is 10 plus the number of pins knocked down in the next throw.
+* A spare is where all 10 pins are knocked down after the second throw. The total value of a spare is 10 plus the number of pins knocked down in the next throw.
 
-* A strike is where all ten pins are knocked down after the first throw. The total value of a strike is 10 plus the number of pins knocked down in the next two throws. If a strike is immediately followed by another strike, then the first strike's value cannot be totalled until the next throw.
+* A strike is where all 10 pins are knocked down after the first throw. The total value of a strike is 10 plus the number of pins knocked down in the next two throws. If a strike is immediately followed by another strike, then the first strike's value cannot be totalled until the next throw.
 
-Here is a three frame example:
+Here is a three-frame example:
 
 | Frame 1         | Frame 2       | Frame 3                |
 | :-------------: |:-------------:| :---------------------:|
@@ -30,11 +30,11 @@ Frame 3 is (9 + 0) = 9
 
 This means the current running total is 48.
 
-The tenth frame in the game is a special case. If the player throws a strike or a spare, then they get one extra throw called a fill ball. Fill balls exist to calculate the total of the 10th frame. Scoring a strike or spare on the fill ball does not give the player more fill balls. The total value of the 10th frame is the total number of pins knocked down.
+The 10th frame in the game is a special case. If the player throws a strike or a spare, then they get one extra throw called a fill ball. Fill balls exist to calculate the total of the 10th frame. Scoring a strike or spare on the fill ball does not give the player more fill balls. The total value of the 10th frame is the total number of pins knocked down.
 
-For a tenth frame of X1/ (strike and a spare), the total value is 20.
+For a 10th frame of X1/ (strike and a spare), the total value is 20.
 
-For a tenth frame of XXX (three strikes), the total value is 30.
+For a 10th frame of XXX (three strikes), the total value is 30.
 
 ## Requirements
 
