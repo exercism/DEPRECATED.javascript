@@ -33,7 +33,7 @@ So: `101 => 1*2^2 + 0*2^1 + 1*2^0 => 1*4 + 0*2 + 1*1 => 4 + 1 => 5 base 10`.
 Go through the setup instructions for JavaScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/javascript
+http://exercism.io/languages/javascript/installation
 
 ## Making the Test Suite Pass
 

@@ -16,7 +16,7 @@ output: [1,2,3,4,5]
 Go through the setup instructions for JavaScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/javascript
+http://exercism.io/languages/javascript/installation
 
 ## Making the Test Suite Pass
 

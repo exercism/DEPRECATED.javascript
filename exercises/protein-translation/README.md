@@ -47,7 +47,7 @@ Learn more about [protein translation on Wikipedia](http://en.wikipedia.org/wiki
 Go through the setup instructions for JavaScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/javascript
+http://exercism.io/languages/javascript/installation
 
 ## Making the Test Suite Pass
 

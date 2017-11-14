@@ -34,7 +34,7 @@ Written with <3 at [Fullstack Academy](http://www.fullstackacademy.com/) by [Lin
 Go through the setup instructions for JavaScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/javascript
+http://exercism.io/languages/javascript/installation
 
 ## Making the Test Suite Pass
 

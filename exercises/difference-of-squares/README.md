@@ -1,4 +1,4 @@
-# Difference Of Squares
+# Difference of Squares
 
 Find the difference between the square of the sum and the sum of the squares of the first N natural numbers.
 
@@ -17,7 +17,7 @@ natural numbers is 3025 - 385 = 2640.
 Go through the setup instructions for JavaScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/javascript
+http://exercism.io/languages/javascript/installation
 
 ## Making the Test Suite Pass
 
