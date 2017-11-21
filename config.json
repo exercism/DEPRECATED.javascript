@@ -1016,6 +1016,22 @@
       ],
       "unlocked_by": "grade-school",
       "uuid": "42a7fd83-4508-403c-8b5e-f0a3126fac8a"
+    }
+    ,
+    {
+      "uuid": "3b779cb8-9544-4e0d-a306-e5478d741be7",
+      "slug": "connect",
+      "core": false,
+      "unlocked_by": "grade-school",
+      "difficulty": 7,
+      "topics": [
+        "Control-flow (loops)",
+        "Control-flow (conditionals)",
+        "Games",
+        "Parsing",
+        "Arrays",
+        "Maps"
+      ]
     },
     {
       "core": false,
