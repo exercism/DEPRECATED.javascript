@@ -47,11 +47,11 @@ WordProblem.prototype.evaluate = function () {
   var out = 0;
   var m   = this.matches;
 
-  if (m[1] !== undefined && m[2] !== undefined && m[3] !== undefined) {
+  if ( (typeof m[1]) === 'string'  && (typeof m[2]) === 'string'  && (typeof m[3]) === 'string') {
     out = this.operate(m[2], m[1], m[3]);
   }
 
-  if (m[4] !== undefined && m[5] !== undefined) {
+  if ( (typeof m[4]) === 'string' && (typeof m[5]) === 'string') {
     out = this.operate(m[4], out, m[5]);
   }
 
