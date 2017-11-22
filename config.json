@@ -1057,6 +1057,21 @@
       "uuid" : "910fe904-7e3c-11e7-bb31-be2e44b06b34"
     },
     {
+      "uuid": "3b779cb8-9544-4e0d-a306-e5478d741be7",
+      "slug": "connect",
+      "core": false,
+      "unlocked_by": "grade-school",
+      "difficulty": 7,
+      "topics": [
+        "Control-flow (loops)",
+        "Control-flow (conditionals)",
+        "Games",
+        "Parsing",
+        "Arrays",
+        "Maps"
+      ]
+    },
+    {
       "core" :  false,
       "difficulty" : 1,
       "slug" : "collatz-conjecture",
