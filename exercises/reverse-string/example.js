@@ -1,14 +1,14 @@
 'use strict';
 
-function reverseString(s) {}
+function ReverseString(string) {}
 
-ReverseString.prototype.convert = function (s) {
+ReverseString.prototype.convert = function (string) {
 	
-  var rString = '';
-  for (var i=s.length-1; i>=0; i--){
-  	rString += s[i];
+  var revString = '';
+  for (var i=string.length-1; i>=0; i--){
+  	revString += string[i];
   }
-  return rString;
+  return revString;
 };
 
 module.exports = ReverseString;

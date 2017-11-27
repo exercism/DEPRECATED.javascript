@@ -1,51 +1,43 @@
 var ReverseString = require('./reverse-string');
 
 describe('ReverseString', function () {
-  it('no matches', function () {
-    var subject = new ReverseString('car');
-    var matches = subject.matches([ 'girl', 'Japan', 'bear', 'candy']);
+  it('empty string', function () {
+    var subject = new ReverseString("");
+    var matches = subject.matches([ ""]);
 
-    expect(matches).toEqual([]);
+    expect(matches).toEqual([""]);
   });
 
-  xit('detects simple reverse string', function () {
-    var subject = new ReverseString('ant');
-    var matches = subject.matches(['tna']);
+  xit('a word', function () {
+    var subject = new ReverseString('robot');
+    var matches = subject.matches(['tobor']);
 
-    expect(matches).toEqual(['tna']);
-  });
-
-
-
-  xit('detects anagram', function () {
-    var subject = new ReverseString('listen');
-    var matches = subject.matches(['netsil']);
-
-    expect(matches).toEqual(['netsil']);
+    expect(matches).toEqual(['tobor']);
   });
 
 
+  xit('a capitalized word', function () {
+    var subject = new ReverseString('Ramen');
+    var matches = subject.matches(['nemaR']);
 
-  xit('detects anagrams case-insensitively', function () {
-    var subject = new ReverseString('NinJa');
-    var matches = subject.matches(['ajnin']);
-
-    expect(matches).toEqual(['ajnin']);
+    expect(matches).toEqual(['nemaR']);
   });
 
 
+  xit('a sentence with punctuation', function () {
+    var subject = new ReverseString("I'm hungry");
+    var matches = subject.matches(["!!yrgnuh m'I"]);
 
-  xit('matches() accepts string arguments', function () {
-    var subject = new ReverseString('ant');
-    var matches = subject.matches('tna');
-
-    expect(matches).toEqual(['tna']);
+    expect(matches).toEqual(["!yrgnuh m'I"]);
   });
 
-  xit('matches() accepts single string argument', function () {
-    var subject = new ReverseString('ant');
-    var matches = subject.matches('tna');
 
-    expect(matches).toEqual(['tna']);
+  xit('a palindrome', function () {
+    var subject = new ReverseString('racecar');
+    var matches = subject.matches('racecar');
+
+    expect(matches).toEqual(['racecar']);
   });
+
+
 });
