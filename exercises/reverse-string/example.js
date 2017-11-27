@@ -1,6 +1,8 @@
 'use strict';
 
-function ReverseString(string) {}
+function ReverseString(string) {
+	this.string = string;
+}
 
 ReverseString.prototype.convert = function (string) {
 	

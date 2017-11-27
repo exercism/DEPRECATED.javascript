@@ -2,10 +2,10 @@ var ReverseString = require('./reverse-string');
 
 describe('ReverseString', function () {
   it('empty string', function () {
-    var subject = new ReverseString("");
-    var matches = subject.matches([ ""]);
+    var subject = new ReverseString('');
+    var matches = subject.matches([ '']);
 
-    expect(matches).toEqual([""]);
+    expect(matches).toEqual(['']);
   });
 
   xit('a word', function () {
@@ -25,10 +25,10 @@ describe('ReverseString', function () {
 
 
   xit('a sentence with punctuation', function () {
-    var subject = new ReverseString("I'm hungry");
-    var matches = subject.matches(["!!yrgnuh m'I"]);
+    var subject = new ReverseString('I am hungry!');
+    var matches = subject.matches(['!yrgnuh ma I']);
 
-    expect(matches).toEqual(["!yrgnuh m'I"]);
+    expect(matches).toEqual(['!yrgnuh ma I']);
   });
 
 
@@ -38,6 +38,5 @@ describe('ReverseString', function () {
 
     expect(matches).toEqual(['racecar']);
   });
-
 
 });
