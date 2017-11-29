@@ -15,7 +15,6 @@ describe('ReverseString', function () {
     expect(matches).toEqual(['tobor']);
   });
 
-
   xit('a capitalized word', function () {
     var subject = new ReverseString('Ramen');
     var matches = subject.matches(['nemaR']);
@@ -23,14 +22,12 @@ describe('ReverseString', function () {
     expect(matches).toEqual(['nemaR']);
   });
 
-
   xit('a sentence with punctuation', function () {
     var subject = new ReverseString('I am hungry!');
     var matches = subject.matches(['!yrgnuh ma I']);
 
     expect(matches).toEqual(['!yrgnuh ma I']);
   });
-
 
   xit('a palindrome', function () {
     var subject = new ReverseString('racecar');
