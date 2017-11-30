@@ -35,5 +35,4 @@ describe('ReverseString', function () {
 
     expect(matches).toEqual('racecar');
   });
-
 });
