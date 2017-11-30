@@ -10,21 +10,21 @@ describe('ReverseString', function () {
 
   xit('a word', function () {
     var subject = new ReverseString('robot');
-    var matches = subject.matches('tobor');
+    var matches = subject.matches('robot');
 
     expect(matches).toEqual('tobor');
   });
 
   xit('a capitalized word', function () {
     var subject = new ReverseString('Ramen');
-    var matches = subject.matches('nemaR');
+    var matches = subject.matches('Ramen');
 
     expect(matches).toEqual('nemaR');
   });
 
   xit('a sentence with punctuation', function () {
     var subject = new ReverseString('I am hungry!');
-    var matches = subject.matches('!yrgnuh ma I');
+    var matches = subject.matches('I am hungry!');
 
     expect(matches).toEqual('!yrgnuh ma I');
   });
