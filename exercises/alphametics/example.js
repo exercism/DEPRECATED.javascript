@@ -53,21 +53,21 @@ function testNumbers(numbers, puzzleParts, firstLetters) {
   }
   var replaceRegex = new RegExp('[' + keys.join('') + ']', 'g');
 
-  puzzleParts = puzzleParts.join(',')
+  var puzzlePartsJoined = puzzleParts.join(',')
     .replace(replaceRegex, function (input) { return numbers[input]; })
     .split(',')
-    .map(function (t) {return parseInt(t);});
+    .map(function (t) {return parseInt(t, 10);});
 
-  var total = puzzleParts.slice(puzzleParts.length - 1)[0];
-  return total === puzzleParts
-    .slice(0, puzzleParts.length - 1)
+  var total = puzzlePartsJoined.slice(puzzlePartsJoined.length - 1)[0];
+  return total === puzzlePartsJoined
+    .slice(0, puzzlePartsJoined.length - 1)
     .reduce(function (acc, val) { return acc + val; }, 0);
 }
 
 function getPermutations(inputArr) {
   var results = [];
-  function permute(arr, memo) {
-    var cur, memo = memo || [];
+  function permute(arr, memo = []) {
+    var cur = memo;
     for (var i = 0; i < arr.length; i++) {
       cur = arr.splice(i, 1);
       if (arr.length === 0) {
@@ -82,7 +82,11 @@ function getPermutations(inputArr) {
 }
 
 function getNumberCombinations(set, k) {
-  var i, j, combs, head, tailcombs;
+  var i;
+  var j;
+  var combs;
+  var head;
+  var tailcombs;
   if (k > set.length || k <= 0) {
     return [];
   }
