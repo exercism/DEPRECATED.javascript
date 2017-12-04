@@ -249,6 +249,18 @@
     {
       "core": false,
       "difficulty": 2,
+      "slug": "reverse-string",
+      "topics": [
+        "strings",
+        "loops",
+        "for"
+      ],
+      "unlocked_by": "leap",
+      "uuid": "553a6be7-eecb-45dc-9cea-05126c525f1b"
+    },
+    {
+      "core": false,
+      "difficulty": 2,
       "slug": "run-length-encoding",
       "topics": [
         "control-flow-(conditionals)",
