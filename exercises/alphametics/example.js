@@ -66,7 +66,7 @@ function testNumbers(numbers, puzzleParts, firstLetters) {
 
 function getPermutations(inputArr) {
   var results = [];
-  function permute(arr, memo = []) {
+  function permute(arr, memo) {
     var cur = memo;
     for (var i = 0; i < arr.length; i++) {
       cur = arr.splice(i, 1);
@@ -78,7 +78,7 @@ function getPermutations(inputArr) {
     }
     return results;
   }
-  return permute(inputArr);
+  return permute(inputArr, []);
 }
 
 function getNumberCombinations(set, k) {
