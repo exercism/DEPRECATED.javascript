@@ -14,9 +14,8 @@ function letterScore(letter) {
   return letterScores[letter] || 0;
 }
 
-module.exports = function (word) {
-  word || (word = '');
-  word = word.toLowerCase();
+module.exports = function (wrd) {
+  var word = wrd ? wrd.toLowerCase() : '';
 
   var sum = 0;
   var idx = -1;
