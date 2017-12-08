@@ -68,7 +68,7 @@ function CircularBuffer(capacity) {
   }
 
   function isEmpty(data) {
-    return data === null || data === undefined;
+    return !data;
   }
 }
 
