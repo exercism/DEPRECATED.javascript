@@ -41,7 +41,8 @@ var bigNumbers = {
 };
 
 function bigPart(number) {
-  var factor, result = '';
+  var factor;
+  var result = '';
   for (var bigNumber = 1000000000; bigNumber >= 1000; bigNumber /= 1000) {
     if (number.current >= bigNumber) {
       factor = Math.floor(number.current / bigNumber);
@@ -58,6 +59,7 @@ function sayDecade(n) {
       return decades[decade] + '-' + smallNumbers[n - decade];
     }
   }
+  throw new Error('Number must be between 10 and 99.');
 }
 
 function twoDigit(n) {
@@ -78,7 +80,8 @@ function threeDigit(n) {
 }
 
 exports.inEnglish = function (n) {
-  var result, number = {current: n};
+  var result;
+  var number = {current: n};
   if (n >= 0 && n < 1000000000000) {
     result = bigPart(number);
     result += threeDigit(number.current);
