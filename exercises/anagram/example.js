@@ -4,8 +4,8 @@ function Anagram(word) {
   this.word = word;
 }
 
-Anagram.prototype.matches = function (words) {
-  words = Array.isArray(words) ? words : [].slice.call(arguments, 0);
+Anagram.prototype.matches = function (wordList) {
+  var words = Array.isArray(wordList) ? wordList : [].slice.call(arguments, 0);
 
   return words.filter(function (candidate) {
     return !sameWord(this.word, candidate) && isAnagram(this.word, candidate);
