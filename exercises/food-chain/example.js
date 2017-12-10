@@ -35,8 +35,8 @@ FoodChain.prototype.verses = function (first, last) {
  * @return {String}
  * song verse
  */
-FoodChain.prototype.verse = function (number) {
-  switch (number) {
+FoodChain.prototype.verse = function (verse) {
+  switch (verse) {
   case 1: return '' +
       'I know an old lady who swallowed a fly.\n' + 'I don\'t know why she swallowed the fly. Perhaps she\'ll die.\n';
 
@@ -73,6 +73,8 @@ FoodChain.prototype.verse = function (number) {
 
   case 8: return '' +
       'I know an old lady who swallowed a horse.\n' + 'She\'s dead, of course!\n';
+
+  default: return '';
   }
 };
 
