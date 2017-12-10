@@ -1,9 +1,10 @@
-var notAlpha = /[^a-z]+/gi,
-  ALPHA_LENGTH = 26,
-  cleaned,
-  unique;
 
 var Pangram = function (candidate) {
+  var notAlpha = /[^a-z]+/gi;
+  var ALPHA_LENGTH = 26;
+  var cleaned;
+  var unique;
+
   unique = {};
   cleaned = (candidate.replace(notAlpha, '')).toLowerCase();
   cleaned.split('').forEach(function (el) {
