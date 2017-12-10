@@ -17,7 +17,7 @@ Octal.prototype.digitValue = function (value) {
 };
 
 Octal.prototype.accumulator = function (decimal, digit, index) {
-  return decimal += digit * Math.pow(BASE, index);
+  return decimal + digit * Math.pow(BASE, index);
 };
 
 module.exports = Octal;
