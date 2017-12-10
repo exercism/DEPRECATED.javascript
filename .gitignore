@@ -8,3 +8,5 @@ bin/configlet.exe
 .idea
 
 *.js~
+
+package-lock.json
