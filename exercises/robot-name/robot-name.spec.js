@@ -35,9 +35,9 @@ describe('Robot', function () {
   });
 
   xit('should set a unique name after reset', function () {
-    var i,
-      numResets = 10000,
-      usedNames = {};
+    var i;
+    var numResets = 10000;
+    var usedNames = {};
 
     usedNames[robot.name] = true;
 
@@ -49,11 +49,11 @@ describe('Robot', function () {
     expect(Object.keys(usedNames).length).toEqual(numResets + 1);
   });
 
-  // This test is optional. 
+  // This test is optional.
   xit('there can be lots of robots with different names each', function () {
-    var i,
-      numRobots = 10000,
-      usedNames = {};
+    var i;
+    var numRobots = 10000;
+    var usedNames = {};
 
     for (i = 0; i < numRobots; i++) {
       var newRobot = new Robot();
