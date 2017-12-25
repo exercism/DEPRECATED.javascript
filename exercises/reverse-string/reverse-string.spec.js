@@ -20,7 +20,7 @@ describe('ReverseString', function () {
   });
 
   it('a sentence with punctuation', function () {
-    var expected = '!yrgnuh ma I';    
+    var expected = '!yrgnuh ma I';
     var actual = reverseString('I am hungry!');
     expect(actual).toEqual(expected);
   });
