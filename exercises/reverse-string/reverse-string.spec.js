@@ -2,37 +2,31 @@ var ReverseString = require('./reverse-string');
 
 describe('ReverseString', function () {
   it('empty string', function () {
-    var subject = new ReverseString('');
-    var matches = subject.matches('');
-
-    expect(matches).toEqual('');
+    var expected = '';                
+    var actual = ReverseString(''); 
+    expect(actual).toEqual(expected);  
+  });
+  it('a word', function () {
+    var expected = 'tac';                
+    var actual = ReverseString('cat');  
+    expect(actual).toEqual(expected);  
   });
 
-  xit('a word', function () {
-    var subject = new ReverseString('robot');
-    var matches = subject.matches('robot');
-
-    expect(matches).toEqual('tobor');
+  it('a capitalized word', function () {
+    var expected = 'nemaR';                
+    var actual = ReverseString('Ramen');  
+    expect(actual).toEqual(expected);  
   });
 
-  xit('a capitalized word', function () {
-    var subject = new ReverseString('Ramen');
-    var matches = subject.matches('Ramen');
-
-    expect(matches).toEqual('nemaR');
+  it('a sentence with punctuation', function () {
+    var expected = '!yrgnuh ma I';                
+    var actual = ReverseString('I am hungry!');  
+    expect(actual).toEqual(expected);  
   });
 
-  xit('a sentence with punctuation', function () {
-    var subject = new ReverseString('I am hungry!');
-    var matches = subject.matches('I am hungry!');
-
-    expect(matches).toEqual('!yrgnuh ma I');
-  });
-
-  xit('a palindrome', function () {
-    var subject = new ReverseString('racecar');
-    var matches = subject.matches('racecar');
-
-    expect(matches).toEqual('racecar');
+  it('a palindrome', function () {
+    var expected = 'racecar';                
+    var actual = ReverseString('racecar');  
+    expect(actual).toEqual(expected);  
   });
 });
