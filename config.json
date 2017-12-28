@@ -1128,10 +1128,8 @@
       "topics": [
         "Control-flow (conditionals)",
         "Control-flow (loops)",
-        "Polymorphism",
         "Strings",
-        "Pattern recognition",
-        "Regular expressions"
+        "Pattern recognition"
       ]
     },
     {
