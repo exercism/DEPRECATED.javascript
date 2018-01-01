@@ -8,15 +8,12 @@ var MILLIS_IN_AN_HOUR = MINUTES_IN_AN_HOUR * MILLIS_IN_A_MINUTE;
 var MILLIS_IN_A_DAY = HOURS_IN_A_DAY * MILLIS_IN_AN_HOUR;
 
 function makePositive(time, maxValue) {
-  time %= maxValue;
-  time += maxValue;
-  return time;
+  return time % maxValue + maxValue;
 }
 
-function at(hours, minutes) {
-  minutes = minutes || 0;
-  hours = makePositive(hours, HOURS_IN_A_DAY);
-  minutes = makePositive(minutes, MINUTES_IN_A_DAY);
+function at(inputHours, inputMinutes) {
+  var minutes = makePositive(inputMinutes || 0, MINUTES_IN_A_DAY);
+  var hours = makePositive(inputHours, HOURS_IN_A_DAY);
 
   var clock = {};
   var value = (hours * MILLIS_IN_AN_HOUR) + (minutes * MILLIS_IN_A_MINUTE);
@@ -31,13 +28,13 @@ function at(hours, minutes) {
     return time[0] + ':' + time[1];
   };
 
-  clock.plus = function (minutes) {
-    value += minutes * MILLIS_IN_A_MINUTE;
+  clock.plus = function (addMinutes) {
+    value += addMinutes * MILLIS_IN_A_MINUTE;
     return clock;
   };
 
-  clock.minus = function (minutes) {
-    value -= minutes * MILLIS_IN_A_MINUTE;
+  clock.minus = function (subMinutes) {
+    value -= subMinutes * MILLIS_IN_A_MINUTE;
     return clock;
   };
 
