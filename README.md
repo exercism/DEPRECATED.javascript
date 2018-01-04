@@ -1,4 +1,4 @@
-# JavaScript [![Build Status](https://travis-ci.org/exercism/javascript.svg?branch=master)](https://travis-ci.org/exercism/javascript)
+# JavaScript [![Build Status](https://travis-ci.org/exercism/javascript.svg?branch=master)](https://travis-ci.org/exercism/javascript)[![Join the chat at https://gitter.im/exercism/xecmascript](https://badges.gitter.im/exercism/xecmascript.svg)](https://gitter.im/exercism/xecmascript?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Exercism exercises in JavaScript
 
