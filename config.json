@@ -1184,6 +1184,18 @@
         "pattern_matching",
         "strings"
       ]
+    },
+    {
+      "uuid": "b3dbc935-536e-4910-994d-4a519b511b6a",
+      "slug": "forth",
+      "core": false,
+      "unlocked_by": "saddle-points",
+      "difficulty": 8,
+      "topics": [
+        "stacks",
+        "parsing",
+        "domain_specific_languages"
+      ]
     }
   ],
   "foregone": [],
