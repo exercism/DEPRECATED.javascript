@@ -14,16 +14,16 @@ module.exports = function Palindromes(options) {
     for (var i = minFactor; i <= maxFactor; i++) {
       for (var j = minFactor; j <= maxFactor; j++) {
         var result = i * j;
-        if ( ! this.isPalindrome(result) ) { continue; }
+        if (!this.isPalindrome(result)) { continue; }
 
         var newFactor = [i, j].sort();
 
-        if (palindromes[result] === undefined) {
+        if (!Array.isArray(palindromes[result])) {
           palindromes[result] = [];
           palindromeIndexes.push(result);
         }
 
-        if ( ! arrayContainsArray(palindromes[result], newFactor) ) {
+        if (!arrayContainsArray(palindromes[result], newFactor)) {
           palindromes[result].push(newFactor);
         }
       }
