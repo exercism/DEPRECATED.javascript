@@ -26,7 +26,7 @@ and `r` is the number of rows.
 Our normalized text is 54 characters long, dictating a rectangle with
 `c = 8` and `r = 7`:
 
-```plain
+```text
 ifmanwas
 meanttos
 tayonthe
@@ -41,22 +41,24 @@ right.
 
 The message above is coded as:
 
-```plain
+```text
 imtgdvsfearwermayoogoanouuiontnnlvtwttddesaohghnsseoau
 ```
 
-Output the encoded text in chunks.  Phrases that fill perfect squares
-`(r X r)` should be output in `r`-length chunks separated by spaces.
-Imperfect squares will have `n` empty spaces.  Those spaces should be distributed evenly across the last `n` rows.
+Output the encoded text in chunks.  Phrases that fill perfect rectangles
+`(r X c)` should be output `c` chunks of `r` length, separated by spaces.
+Phrases that do not fill perfect rectangles will have `n` empty spaces.
+Those spaces should be distributed evenly, added to the end of the last
+`n` chunks.
 
-```plain
-imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn sseoau
+```text
+imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau 
 ```
 
 Notice that were we to stack these, we could visually decode the
 cyphertext back in to the original message:
 
-```plain
+```text
 imtgdvs
 fearwer
 mayoogo
@@ -69,26 +71,29 @@ sseoau
 
 ## Setup
 
-Go through the setup instructions for JavaScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
 http://exercism.io/languages/javascript/installation
 
-## Making the Test Suite Pass
+## Running the test suite
 
-Execute the tests with:
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
-    jasmine <exercise-name>.spec.js
+```sh
+npm install -g jasmine
+```
 
-Replace `<exercise-name>` with the name of the current exercise. E.g., to
-test the Hello World exercise:
+Run the test suite from the exercise directory with:
 
-    jasmine hello-world.spec.js
+```sh
+jasmine crypto-square.spec.js
+```
 
-In many test suites all but the first test have been skipped.
-
-Once you get a test passing, you can unskip the next one by
-changing `xit` to `it`.
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Source
 
