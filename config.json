@@ -1196,6 +1196,17 @@
         "parsing",
         "domain_specific_languages"
       ]
+    },
+    {
+      "uuid": "f82e470d-0bcc-4eba-b9b0-8a0c50a6fd19",
+      "slug": "variable-length-quantity",
+      "core": false,
+      "unlocked_by": "two-bucket",
+      "difficulty": 5,
+      "topics": [
+        "bitwise_operations",
+        "transforming"
+      ]
     }
   ],
   "foregone": [],
