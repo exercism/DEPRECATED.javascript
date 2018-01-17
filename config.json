@@ -1196,6 +1196,23 @@
         "parsing",
         "domain_specific_languages"
       ]
+    },
+    {
+      "uuid": "180bc8a0-76cf-4c08-a689-d2702a48bfd1",
+      "slug": "grep",
+      "core": false,
+      "unlocked_by": "flatten-array",
+      "difficulty": 10,
+      "topics": [
+        "callbacks",
+        "concurrency",
+        "files",
+        "optional-values",
+        "pattern_matching",
+        "parsing",
+        "regular_expressions",
+        "text_formatting"
+      ]
     }
   ],
   "foregone": [],
