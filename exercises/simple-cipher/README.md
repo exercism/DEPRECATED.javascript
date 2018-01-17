@@ -58,15 +58,13 @@ would get the same thing as the Caesar Cipher.
 
 The weakest link in any cipher is the human being. Let's make your
 substitution cipher a little more fault tolerant by providing a source
-of randomness and ensuring that the key is not composed of numbers or
-capital letters.
+of randomness and ensuring that the key contains only lowercase letters.
 
 If someone doesn't submit a key at all, generate a truly random key of
-at least 100 characters in length, accessible via Cipher#key (the #
-syntax means instance variable)
+at least 100 characters in length.
 
-If the key submitted has capital letters or numbers, throw an
-ArgumentError with a message to that effect.
+If the key submitted is not composed only of lowercase letters, your
+solution should handle the error in a language-appropriate way.
 
 ## Extensions
 
@@ -85,26 +83,29 @@ on Wikipedia][dh] for one of the first implementations of this scheme.
 
 ## Setup
 
-Go through the setup instructions for JavaScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
 http://exercism.io/languages/javascript/installation
 
-## Making the Test Suite Pass
+## Running the test suite
 
-Execute the tests with:
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
-    jasmine <exercise-name>.spec.js
+```sh
+npm install -g jasmine
+```
 
-Replace `<exercise-name>` with the name of the current exercise. E.g., to
-test the Hello World exercise:
+Run the test suite from the exercise directory with:
 
-    jasmine hello-world.spec.js
+```sh
+jasmine simple-cipher.spec.js
+```
 
-In many test suites all but the first test have been skipped.
-
-Once you get a test passing, you can unskip the next one by
-changing `xit` to `it`.
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Source
 

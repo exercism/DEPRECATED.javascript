@@ -2,7 +2,6 @@
 
 Parse and evaluate simple math word problems returning the answer as an integer.
 
-
 ## Iteration 1 — Addition
 
 Add two numbers together.
@@ -12,7 +11,6 @@ Add two numbers together.
 Evaluates to 18.
 
 Handle large numbers and negative numbers.
-
 
 ## Iteration 2 — Subtraction, Multiplication and Division
 
@@ -30,7 +28,6 @@ Now, perform the other three operations.
 
 5
 
-
 ## Iteration 3 — Multiple Operations
 
 Handle a set of operations, in sequence.
@@ -46,7 +43,6 @@ left-to-right, _ignoring the typical order of operations._
 
 15  (i.e. not 9)
 
-
 ## Bonus — Exponentials
 
 If you'd like, handle exponentials.
@@ -55,29 +51,31 @@ If you'd like, handle exponentials.
 
 32
 
-
 ## Setup
 
-Go through the setup instructions for JavaScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
 http://exercism.io/languages/javascript/installation
 
-## Making the Test Suite Pass
+## Running the test suite
 
-Execute the tests with:
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
-    jasmine <exercise-name>.spec.js
+```sh
+npm install -g jasmine
+```
 
-Replace `<exercise-name>` with the name of the current exercise. E.g., to
-test the Hello World exercise:
+Run the test suite from the exercise directory with:
 
-    jasmine hello-world.spec.js
+```sh
+jasmine wordy.spec.js
+```
 
-In many test suites all but the first test have been skipped.
-
-Once you get a test passing, you can unskip the next one by
-changing `xit` to `it`.
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Source
 

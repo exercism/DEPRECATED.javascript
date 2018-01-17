@@ -3,19 +3,19 @@
 Given a diagram, determine which plants each child in the kindergarten class is
 responsible for.
 
-The kindergarten class is learning about growing plants. The teachers
+The kindergarten class is learning about growing plants. The teacher
 thought it would be a good idea to give them actual seeds, plant them in
 actual dirt, and grow actual plants.
 
 They've chosen to grow grass, clover, radishes, and violets.
 
-To this end, they've put little styrofoam cups along the window sills,
-and planted one type of plant in each cup, choosing randomly from the
-available types of seeds.
+To this end, the children have put little cups along the window sills, and
+planted one type of plant in each cup, choosing randomly from the available
+types of seeds.
 
-```plain
+```text
 [window][window][window]
-........................ # each dot represents a styrofoam cup
+........................ # each dot represents a cup
 ........................
 ```
 
@@ -25,27 +25,27 @@ There are 12 children in the class:
 - Eve, Fred, Ginny, Harriet,
 - Ileana, Joseph, Kincaid, and Larry.
 
-Each child gets 4 cups, two on each row. The children are assigned to
-cups in alphabetical order.
+Each child gets 4 cups, two on each row. Their teacher assigns cups to
+the children alphabetically by their names.
 
 The following diagram represents Alice's plants:
 
-```plain
+```text
 [window][window][window]
 VR......................
 RG......................
 ```
 
-So in the row nearest the window, she has a violet and a radish; in the
-row behind that, she has a radish and some grass.
+In the first row, nearest the windows, she has a violet and a radish.  In the
+second row she has a radish and some grass.
 
 Your program will be given the plants from left-to-right starting with
 the row nearest the windows. From this, it should be able to determine
-which plants belong to which students.
+which plants belong to each student.
 
 For example, if it's told that the garden looks like so:
 
-```plain
+```text
 [window][window][window]
 VRCGVVRVCGGCCGVRGCVCGCGV
 VRCCCGCRRGVCGCRVVCVGCGCV
@@ -61,26 +61,29 @@ While asking for Bob's plants would yield:
 
 ## Setup
 
-Go through the setup instructions for JavaScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
 http://exercism.io/languages/javascript/installation
 
-## Making the Test Suite Pass
+## Running the test suite
 
-Execute the tests with:
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
-    jasmine <exercise-name>.spec.js
+```sh
+npm install -g jasmine
+```
 
-Replace `<exercise-name>` with the name of the current exercise. E.g., to
-test the Hello World exercise:
+Run the test suite from the exercise directory with:
 
-    jasmine hello-world.spec.js
+```sh
+jasmine kindergarten-garden.spec.js
+```
 
-In many test suites all but the first test have been skipped.
-
-Once you get a test passing, you can unskip the next one by
-changing `xit` to `it`.
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Source
 

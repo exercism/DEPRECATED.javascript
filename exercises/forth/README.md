@@ -1,3 +1,5 @@
+# Forth
+
 Implement an evaluator for a very simple subset of Forth.
 
 [Forth](https://en.wikipedia.org/wiki/Forth_%28programming_language%29)
@@ -25,32 +27,29 @@ Words are case-insensitive.
 
 ## Setup
 
-Go through the setup instructions for JavaScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
 http://exercism.io/languages/javascript/installation
 
-## Making the Test Suite Pass
+## Running the test suite
 
-Execute the tests with:
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
-    jasmine <exercise-name>.spec.js
+```sh
+npm install -g jasmine
+```
 
-Replace `<exercise-name>` with the name of the current exercise. E.g., to
-test the Hello World exercise:
+Run the test suite from the exercise directory with:
 
-    jasmine hello-world.spec.js
+```sh
+jasmine forth.spec.js
+```
 
-In many test suites all but the first test have been skipped.
-
-Once you get a test passing, you can unskip the next one by
-changing `xit` to `it`.
-
-## Source
-
-Wikipedia
-[Stack-oriented programming language](https://en.wikipedia.org/wiki/Stack-oriented_programming_language)
-[Forth programming language](https://en.wikipedia.org/wiki/Forth_(programming_language))
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

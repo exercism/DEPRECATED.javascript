@@ -6,14 +6,15 @@ The **North American Numbering Plan (NANP)** is a telephone numbering system use
 
 NANP numbers are ten-digit numbers consisting of a three-digit Numbering Plan Area code, commonly known as *area code*, followed by a seven-digit local number. The first three digits of the local number represent the *exchange code*, followed by the unique four-digit number which is the *subscriber number*.
 
-
 The format is usually represented as
-```
+
+```text
 (NXX)-NXX-XXXX
 ```
+
 where `N` is any digit from 2 through 9 and `X` is any digit from 0 through 9.
 
-Your task is to clean up differently formated telephone numbers by removing punctuation and the country code (1) if present.
+Your task is to clean up differently formatted telephone numbers by removing punctuation and the country code (1) if present.
 
 For example, the inputs
 - `+1 (613)-995-0253`
@@ -29,26 +30,29 @@ should all produce the output
 
 ## Setup
 
-Go through the setup instructions for JavaScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
 http://exercism.io/languages/javascript/installation
 
-## Making the Test Suite Pass
+## Running the test suite
 
-Execute the tests with:
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
-    jasmine <exercise-name>.spec.js
+```sh
+npm install -g jasmine
+```
 
-Replace `<exercise-name>` with the name of the current exercise. E.g., to
-test the Hello World exercise:
+Run the test suite from the exercise directory with:
 
-    jasmine hello-world.spec.js
+```sh
+jasmine phone-number.spec.js
+```
 
-In many test suites all but the first test have been skipped.
-
-Once you get a test passing, you can unskip the next one by
-changing `xit` to `it`.
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Source
 
