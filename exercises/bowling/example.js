@@ -1,82 +1,135 @@
 'use strict';
 
-function Bowling(rolls) {
-  this.rolls = rolls;
-}
-
-Bowling.prototype.score = function () {
-  var maxFrames = 10;
+function Bowling() {
   var maxPins = 10;
+  var maxFrames = 10;
+  var frames = [];
+  var frameScores = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-  var initialState = {
-    frameNumber: 1,
-    rollNumber: 1,
-    pinsRemaining: 10,
-    spareLastFrame: false,
-    strikeLastFrame: false,
-    twoStrikesInARow: false,
-    fillBall: false,
-    score: 0
-  };
+  var currentFrame = 0;
+  var frameRoll = 1;
+  var remainingPins = maxPins;
 
-  var finalState = this.rolls.reduce(function (state, roll) {
-    if (roll < 0 || roll > maxFrames ) {
-      throw new Error('Pins must have a value from 0 to 10');
+  initializeFrame();
+
+  function initializeFrame() {
+    frameRoll = 1;
+    remainingPins = maxPins;
+    currentFrame++;
+  }
+
+  function incrementScore(pins) {
+    if (currentFrame > maxFrames) return;
+    frameScores[currentFrame - 1] += pins;
+  }
+
+  function scoreStrike() {
+    frames[currentFrame - 1] = 'X';
+    applyStrikeBonus(maxPins);
+    applySpareBonus(maxPins);
+    frameRoll++;
+  }
+
+  function scoreFirstRoll(pins) {
+    remainingPins = remainingPins - pins;
+    applySpareBonus(pins);
+    applyStrikeBonus(pins);
+    frameRoll++;
+  }
+
+  function scoreSpare(pins) {
+    frames[currentFrame - 1] = 'S';
+    applyStrikeBonus(pins);
+    frameRoll++;
+  }
+
+  function scoreOpenFrame(pins) {
+    frames[currentFrame - 1] = (maxPins - remainingPins) + pins;
+    applyStrikeBonus(pins);
+    frameRoll++;
+  }
+
+  function applySpareBonus(pins) {
+    // pins on the first roll after a spare are counted twice (on the frame of spare)
+    if (frames[currentFrame - 2] === 'S' ) {
+      frameScores[currentFrame - 2] += pins;
+    }
+  }
+
+  function applyStrikeBonus(pins) {
+    // on the two rolls after a strike are counted twice (on the frame of the strike)
+    if (frames[currentFrame - 3] === 'X' && frames[currentFrame - 2] === 'X' &&
+        frameRoll === 1  && currentFrame <= (maxFrames + 2)) {
+      frameScores[currentFrame - 3] += pins;
+    }
+    if (frames[currentFrame - 2] === 'X' && currentFrame <= (maxFrames + 1)) {
+      frameScores[currentFrame - 2] += pins;
+    }
+  }
+
+  function isGameOver() {
+    if (currentFrame <= maxFrames) return false;
+
+    if (frames[maxFrames - 1] !== 'X' && frames[maxFrames - 1] !== 'S') return true;
+
+    // spare in the last frame gets no more than bonus roll
+    if (frames[maxFrames - 1] === 'S' && frameRoll > 1) return true;
+
+    // bonus roll after the spare in the last frame may get a strike but then the games ends without another roll
+    if (frames[maxFrames - 1] === 'S' && frames[maxFrames] === 'X') return true;
+
+    if (frames[maxFrames - 1] === 'X') {
+      // if the first bonus roll is not a strike then finish the bonus frame
+      if (frames[maxFrames] !== 'X' && currentFrame > maxFrames + 1) return true;
+
+      if (frames[maxFrames] === 'X') {
+        // if the second bonus roll is a strike, but was still used, the game is over
+        if (frames[maxFrames + 1] !== 'X' && frameRoll > 1) return true;
+        // if the second bonus roll is a strike the game is over
+        if (frames[maxFrames + 1] === 'X') return true;
+      }
+    }
+    return false;
+  }
+
+  this.roll = function (pins) {
+    if (pins < 0) {
+      throw new Error( 'Negative roll is invalid');
     }
 
-    if (roll > state.pinsRemaining) {
+    if (pins > remainingPins) {
       throw new Error('Pin count exceeds pins on the lane');
     }
 
-    if (state.frameNumber > maxFrames ) {
-      throw new Error('Should not be able to roll after game is over');
+    if (isGameOver()) {
+      throw new Error('Cannot roll after game is over');
     }
 
-    var finalFrame = state.frameNumber === maxFrames;
-    var strike = state.rollNumber === 1 && roll === 10;
-    var spare = state.rollNumber === 2 && roll === state.pinsRemaining;
-    var frameOver = finalFrame
-      ? (!state.fillBall && !spare && state.rollNumber === 2) || state.rollNumber === 3
-      : strike || spare || state.rollNumber === 2;
+    incrementScore(pins);
 
-    var score = state.score + roll;
-
-    if (state.strikeLastFrame && state.rollNumber < 3) { score = incrementScore(score, roll); }
-    if (state.spareLastFrame && state.rollNumber === 1) { score = incrementScore(score, roll); }
-    if (state.twoStrikesInARow && state.rollNumber === 1) { score = incrementScore(score, roll); }
-
-    var next = {};
-
-    next.frameNumber = frameOver ? state.frameNumber + 1 : state.frameNumber;
-    next.rollNumber = frameOver ? 1 : state.rollNumber + 1;
-    if ( finalFrame ) {
-      next.pinsRemaining = (strike || spare) ? maxPins : pinsRemaining(state.pinsRemaining, roll);
+    if (frameRoll === 1) {
+      if (pins === maxPins) {
+        scoreStrike();
+        initializeFrame();
+      } else {
+        scoreFirstRoll(pins);
+      }
     } else {
-      next.pinsRemaining = frameOver ? maxPins : pinsRemaining(state.pinsRemaining, roll);
+      if (pins === remainingPins) {
+        scoreSpare(pins);
+      } else {
+        scoreOpenFrame(pins);
+      }
+      initializeFrame();
     }
-    next.spareLastFrame = frameOver ? spare : state.spareLastFrame;
-    next.strikeLastFrame = frameOver ? strike : state.strikeLastFrame;
-    next.twoStrikesInARow = frameOver ? strike && state.strikeLastFrame : state.twoStrikesInARow;
-    next.fillBall = next.fillBall || (finalFrame && (strike || spare));
-    next.score = score;
+  };
 
-    return next;
-  }, initialState);
-
-  if (finalState.frameNumber <= maxFrames ) {
-    throw new Error('Score cannot be taken until the end of the game');
-  }
-
-  return finalState.score;
-};
-
-function incrementScore(score, roll) {
-  return score + roll;
+  this.score = function () {
+    if (!isGameOver()) {
+      throw new Error('Score cannot be taken until the end of the game');
+    }
+    return frameScores.reduce(function (total, num) {return total + num;});
+  };
 }
-
-function pinsRemaining(pins, roll) {
-  return pins - roll;
-}
-
 
 module.exports = Bowling;
