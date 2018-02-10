@@ -1,11 +1,11 @@
-var BigInt = require('./big-integer');
+var bigInt = require('./big-integer');
 
 
 describe('The big-integer module\'s returned object', function () {
   var bigI;
 
   beforeEach(function () {
-    bigI = BigInt(42);
+    bigI = bigInt(42);
   });
 
   afterEach(function () {
@@ -25,7 +25,7 @@ describe('The big-integer module\'s returned object', function () {
       expect(bigI.toString()).toBe('42');
       // NOTE:
       // The '==' operator calls '.toString()' here in order to compare.
-      expect(bigI == '42').toBe(true);
+      expect(bigI === '42').toBe(true);
     // While the line above is easier to write and read, we will use the
     // 'expect(bigI.toString()).toBe(expected)' way so that test failure
     // messages will be more informative. Eg,
@@ -47,7 +47,7 @@ describe('The big-integer module\'s returned object', function () {
   });
 
   it('can perform power operations', function () {
-    bigI = BigInt(10);
+    bigI = bigInt(10);
     bigI = bigI.pow(2);
     expect(bigI.toString()).toBe('100');
   });
