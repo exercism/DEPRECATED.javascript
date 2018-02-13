@@ -2,6 +2,7 @@
 
 module.exports = function (number) {
   var result = '';
+  var numbers = number;
   var mappings = [
     {arabic: 1000, roman: 'M'},
     {arabic: 900, roman: 'CM'},
@@ -20,9 +21,9 @@ module.exports = function (number) {
 
   for (var i = 0; i < mappings.length; i++) {
     var mapping = mappings[i];
-    while (number >= mapping.arabic) {
+    while (numbers >= mapping.arabic) {
       result = result + mapping.roman;
-      number = number - mapping.arabic;
+      numbers = numbers - mapping.arabic;
     }
   }
 
