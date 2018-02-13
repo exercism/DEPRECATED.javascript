@@ -2,8 +2,8 @@
 
 function BinarySearchTree(data) {
   this.data  = data;
-  this.left  = undefined;
-  this.right = undefined;
+  this.left  = null;
+  this.right = null;
 }
 
 BinarySearchTree.prototype.insert = function (value) {

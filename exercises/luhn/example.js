@@ -1,8 +1,8 @@
 'use strict';
 
 function isValid(number) {
-  number = number.replace(/\s/g, '');
-  const digits = [...number];
+  var numbers = number.replace(/\s/g, '');
+  const digits = [...numbers];
 
   const sum = digits
     // convert to integers

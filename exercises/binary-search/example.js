@@ -18,7 +18,7 @@ function BinarySearch(array) {
 
 
 function recursiveSearch(array, value, start, end) {
-  if (start == end) return -1;
+  if (start === end) return -1;
 
   var mid = Math.floor((start + end) / 2);
 
