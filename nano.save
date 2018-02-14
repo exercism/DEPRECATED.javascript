@@ -1,0 +1,6 @@
+Fixes: Binary-search-tree Lint Fixes
+
+Tested the files, found an error
+Fixed it by changing 'undefined' to 'null'
+Removed the dile from .eslintignore
+
