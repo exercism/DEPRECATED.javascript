@@ -21,19 +21,13 @@
     "lint-fix": "eslint . --fix"
   },
   "eslintConfig": {
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module"
-    },
+    "plugins": ["jasmine"],
     "env": {
-      "es6": true,
-      "node": true,
       "jasmine": true 
     },
-    "extends": "airbnb",
+    "extends": "eslint-config-airbnb-es5",
     "rules": {
-      "import/no-unresolved": "off",
-      "import/extensions": "off"
+      "func-names": "off"
     }
   }
 }
