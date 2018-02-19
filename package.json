@@ -19,5 +19,15 @@
   "scripts": {
     "lint": "eslint .",
     "lint-fix": "eslint . --fix"
+  },
+  "eslintConfig": {
+    "plugins": ["jasmine"],
+    "env": {
+      "jasmine": true 
+    },
+    "extends": "eslint-config-airbnb-es5",
+    "rules": {
+      "func-names": "off"
+    }
   }
 }
