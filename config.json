@@ -207,6 +207,18 @@
       "uuid": "0a3a452c-f734-47eb-8e65-34c8ae710ef0"
     },
     {
+      "core": false,
+      "difficulty": 6,
+      "slug": "rotational-cipher",
+      "topics": [
+        "cryptography",
+        "integers",
+        "strings"
+      ],
+      "unlocked_by": "secret-handshake",
+      "uuid": "7078b1a4-ef73-4c02-809d-b2de62e9af11"
+    },
+    {
       "core": true,
       "difficulty": 6,
       "slug": "grade-school",
