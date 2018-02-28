@@ -270,7 +270,7 @@
     },
     {
       "core": false,
-      "difficulty": 8,
+      "difficulty": 5,
       "slug": "rational-numbers",
       "topics": [
         "floating_point_numbers",
