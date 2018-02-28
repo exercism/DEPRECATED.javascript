@@ -1,5 +1,3 @@
-'user strict';
-
 function Rational(numerator, denominator) {
   if (denominator === 0) {throw new Error('Denominator must not be zero.');}
 
