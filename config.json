@@ -270,6 +270,18 @@
     },
     {
       "core": false,
+      "difficulty": 8,
+      "slug": "rational-numbers",
+      "topics": [
+        "floating_point_numbers",
+        "mathematics",
+        "algorithms"
+      ],
+      "unlocked_by": "pascals-triangle",
+      "uuid": "2de5677e-5759-4a21-93c7-39a3d88242e8"
+    },
+    {
+      "core": false,
       "difficulty": 2,
       "slug": "hamming",
       "topics": [
