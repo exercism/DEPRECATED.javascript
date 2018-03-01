@@ -7,44 +7,47 @@ Run-length encoding (RLE) is a simple form of data compression, where runs
 
 For example we can represent the original 53 characters with only 13.
 
-```
+```text
 "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB"  ->  "12WB12W3B24WB"
 ```
 
 RLE allows the original data to be perfectly reconstructed from
 the compressed data, which makes it a lossless data compression.
 
-```
+```text
 "AABCCCDEEEE"  ->  "2AB3CD4E"  ->  "AABCCCDEEEE"
 ```
 
 For simplicity, you can assume that the unencoded string will only contain
-the letters A through Z (either lower or upper case) and whitespace. This way 
-data to be encoded will never contain any numbers and numbers inside data to 
+the letters A through Z (either lower or upper case) and whitespace. This way
+data to be encoded will never contain any numbers and numbers inside data to
 be decoded always represent the count for the following character.
 
 ## Setup
 
-Go through the setup instructions for JavaScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
 http://exercism.io/languages/javascript/installation
 
-## Making the Test Suite Pass
+## Running the test suite
 
-Execute the tests with:
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
-    jasmine <exercise-name>.spec.js
+```sh
+npm install -g jasmine
+```
 
-Replace `<exercise-name>` with the name of the current exercise. E.g., to
-test the Hello World exercise:
+Run the test suite from the exercise directory with:
 
-    jasmine hello-world.spec.js
+```sh
+jasmine run-length-encoding.spec.js
+```
 
-In many test suites all but the first test have been skipped.
-
-Once you get a test passing, you can unskip the next one by
-changing `xit` to `it`.
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Source
 

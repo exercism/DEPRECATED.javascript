@@ -35,7 +35,8 @@ Triplets.prototype.isDesired = function (triplet) {
 };
 
 Triplets.prototype.toArray = function () {
-  var triplet, triplets = [];
+  var triplet = [];
+  var triplets = [];
   for (var a = this.min; a < this.max - 1; a++) {
     for (var b = a + 1; b < this.max; b++) {
       for (var c = b + 1; c <= this.max; c++) {

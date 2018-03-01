@@ -4,7 +4,7 @@ Given a year, report if it is a leap year.
 
 The tricky thing here is that a leap year in the Gregorian calendar occurs:
 
-```plain
+```text
 on every year that is evenly divisible by 4
   except every year that is evenly divisible by 100
     unless the year is also evenly divisible by 400
@@ -28,26 +28,29 @@ phenomenon, go watch [this youtube video][video].
 
 ## Setup
 
-Go through the setup instructions for JavaScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
 http://exercism.io/languages/javascript/installation
 
-## Making the Test Suite Pass
+## Running the test suite
 
-Execute the tests with:
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
-    jasmine <exercise-name>.spec.js
+```sh
+npm install -g jasmine
+```
 
-Replace `<exercise-name>` with the name of the current exercise. E.g., to
-test the Hello World exercise:
+Run the test suite from the exercise directory with:
 
-    jasmine hello-world.spec.js
+```sh
+jasmine leap.spec.js
+```
 
-In many test suites all but the first test have been skipped.
-
-Once you get a test passing, you can unskip the next one by
-changing `xit` to `it`.
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Source
 

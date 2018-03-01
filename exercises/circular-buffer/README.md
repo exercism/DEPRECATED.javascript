@@ -31,40 +31,50 @@ If the buffer has 7 elements then it is completely full:
 When the buffer is full an error will be raised, alerting the client
 that further writes are blocked until a slot becomes free.
 
-The client can opt to overwrite the oldest data with a forced write. In
-this case, two more elements — A & B — are added and they overwrite the
-3 & 4:
+When the buffer is full, the client can opt to overwrite the oldest
+data with a forced write. In this case, two more elements — A & B —
+are added and they overwrite the 3 & 4:
 
     [6][7][8][9][A][B][5]
 
-Finally, if two elements are now removed then what would be returned is
-not 3 & 4 but 5 & 6 because A & B overwrote the 3 & the 4 yielding the
-buffer with:
+3 & 4 have been replaced by A & B making 5 now the oldest data in the
+buffer. Finally, if two elements are removed then what would be
+returned is 5 & 6 yielding the buffer:
 
     [ ][7][8][9][A][B][ ]
 
+Because there is space available, if the client again uses overwrite
+to store C & D then the space where 5 & 6 were stored previously will
+be used not the location of 7 & 8. 7 is still the oldest element and
+the buffer is once again full.
+
+    [D][7][8][9][A][B][C]
+
 ## Setup
 
-Go through the setup instructions for JavaScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
 http://exercism.io/languages/javascript/installation
 
-## Making the Test Suite Pass
+## Running the test suite
 
-Execute the tests with:
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
-    jasmine <exercise-name>.spec.js
+```sh
+npm install -g jasmine
+```
 
-Replace `<exercise-name>` with the name of the current exercise. E.g., to
-test the Hello World exercise:
+Run the test suite from the exercise directory with:
 
-    jasmine hello-world.spec.js
+```sh
+jasmine circular-buffer.spec.js
+```
 
-In many test suites all but the first test have been skipped.
-
-Once you get a test passing, you can unskip the next one by
-changing `xit` to `it`.
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Source
 

@@ -39,31 +39,29 @@ secret s.
 
 ## Setup
 
-Go through the setup instructions for JavaScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
 http://exercism.io/languages/javascript/installation
 
-## Requirements
+## Running the test suite
 
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
+```sh
+npm install -g jasmine
+```
 
-## Making the test suite pass
+Run the test suite from the exercise directory with:
 
-Execute the tests with:
+```sh
+jasmine diffie-hellman.spec.js
+```
 
-    jasmine <exercise-name>.spec.js
-
-Replace `<exercise-name>` with the name of the current exercise. E.g., to
-test the Hello World exercise:
-
-    jasmine hello-world.spec.js
-
-In many test suites all but the first test have been skipped.
-
-Once you get a test passing, you can unskip the next one by
-changing `xit` to `it`.
-
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Source
 

@@ -2,7 +2,7 @@
 
 Output the lyrics to 'The Twelve Days of Christmas'.
 
-```
+```text
 On the first day of Christmas my true love gave to me, a Partridge in a Pear Tree.
 
 On the second day of Christmas my true love gave to me, two Turtle Doves, and a Partridge in a Pear Tree.
@@ -28,30 +28,31 @@ On the eleventh day of Christmas my true love gave to me, eleven Pipers Piping, 
 On the twelfth day of Christmas my true love gave to me, twelve Drummers Drumming, eleven Pipers Piping, ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.
 ```
 
-
 ## Setup
 
-Go through the setup instructions for JavaScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
 http://exercism.io/languages/javascript/installation
 
-## Making the test suite pass
+## Running the test suite
 
-Execute the tests with:
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
-    jasmine <exercise-name>.spec.js
+```sh
+npm install -g jasmine
+```
 
-Replace `<exercise-name>` with the name of the current exercise. E.g., to
-test the Hello World exercise:
+Run the test suite from the exercise directory with:
 
-    jasmine hello-world.spec.js
+```sh
+jasmine twelve-days.spec.js
+```
 
-In many test suites all but the first test have been skipped.
-
-Once you get a test passing, you can unskip the next one by
-changing `xit` to `it`.
-
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Source
 

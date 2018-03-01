@@ -11,7 +11,7 @@ Trinary numbers contain three symbols: 0, 1, and 2.
 The last place in a trinary number is the 1's place. The second to last
 is the 3's place, the third to last is the 9's place, etc.
 
-```bash
+```shell
 # "102012"
     1       0       2       0       1       2    # the number
 1*3^5 + 0*3^4 + 2*3^3 + 0*3^2 + 1*3^1 + 2*3^0    # the value
@@ -23,26 +23,29 @@ conversion, pretend it doesn't exist and implement it yourself.
 
 ## Setup
 
-Go through the setup instructions for JavaScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
 http://exercism.io/languages/javascript/installation
 
-## Making the Test Suite Pass
+## Running the test suite
 
-Execute the tests with:
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
-    jasmine <exercise-name>.spec.js
+```sh
+npm install -g jasmine
+```
 
-Replace `<exercise-name>` with the name of the current exercise. E.g., to
-test the Hello World exercise:
+Run the test suite from the exercise directory with:
 
-    jasmine hello-world.spec.js
+```sh
+jasmine trinary.spec.js
+```
 
-In many test suites all but the first test have been skipped.
-
-Once you get a test passing, you can unskip the next one by
-changing `xit` to `it`.
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Source
 

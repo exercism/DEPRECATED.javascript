@@ -1,4 +1,4 @@
-# Ocr Numbers
+# OCR Numbers
 
 Given a 3 x 4 grid of pipes, underscores, and spaces, determine which number is
 represented, or whether it is garbled.
@@ -9,7 +9,7 @@ To begin with, convert a simple binary font to a string containing 0 or 1.
 
 The binary font uses pipes and underscores, four rows high and three columns wide.
 
-```
+```text
      _   #
     | |  # zero.
     |_|  #
@@ -18,7 +18,7 @@ The binary font uses pipes and underscores, four rows high and three columns wid
 
 Is converted to "0"
 
-```
+```text
          #
       |  # one.
       |  #
@@ -39,7 +39,7 @@ Update your program to recognize multi-character binary strings, replacing garbl
 
 Update your program to recognize all numbers 0 through 9, both individually and as part of a larger string.
 
-```
+```text
  _ 
  _|
 |_ 
@@ -48,7 +48,7 @@ Update your program to recognize all numbers 0 through 9, both individually and 
 
 Is converted to "2"
 
-```
+```text
       _  _     _  _  _  _  _  _  #
     | _| _||_||_ |_   ||_||_|| | # decimal numbers.
     ||_  _|  | _||_|  ||_| _||_| #
@@ -61,7 +61,7 @@ Is converted to "1234567890"
 
 Update your program to handle multiple numbers, one per line. When converting several lines, join the lines with commas.
 
-```
+```text
     _  _ 
   | _| _|
   ||_  _|
@@ -80,26 +80,29 @@ Is converted to "123,456,789"
 
 ## Setup
 
-Go through the setup instructions for JavaScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
 http://exercism.io/languages/javascript/installation
 
-## Making the Test Suite Pass
+## Running the test suite
 
-Execute the tests with:
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
-    jasmine <exercise-name>.spec.js
+```sh
+npm install -g jasmine
+```
 
-Replace `<exercise-name>` with the name of the current exercise. E.g., to
-test the Hello World exercise:
+Run the test suite from the exercise directory with:
 
-    jasmine hello-world.spec.js
+```sh
+jasmine ocr-numbers.spec.js
+```
 
-In many test suites all but the first test have been skipped.
-
-Once you get a test passing, you can unskip the next one by
-changing `xit` to `it`.
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Source
 

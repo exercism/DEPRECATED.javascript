@@ -1,53 +1,42 @@
 # Nucleotide Count
 
-Given a DNA string, compute how many times each nucleotide occurs in the string.
+Given a single stranded DNA string, compute how many times each nucleotide occurs in the string.
 
-DNA is represented by an alphabet of the following symbols: 'A', 'C',
-'G', and 'T'.
+The genetic language of every living thing on the planet is DNA.
+DNA is a large molecule that is built from an extremely long sequence of individual elements called nucleotides.
+4 types exist in DNA and these differ only slightly and can be represented as the following symbols: 'A' for adenine, 'C' for cytosine, 'G' for guanine, and 'T' thymine.
 
-Each symbol represents a nucleotide, which is a fancy name for the
-particular molecules that happen to make up a large part of DNA.
-
-Shortest intro to biochemistry EVAR:
-
+Here is an analogy:
 - twigs are to birds nests as
-- nucleotides are to DNA and RNA as
-- amino acids are to proteins as
-- sugar is to starch as
-- oh crap lipids
-
-I'm not going to talk about lipids because they're crazy complex.
-
-So back to nucleotides.
-
-DNA contains four types of them: adenine (`A`), cytosine (`C`), guanine
-(`G`), and thymine (`T`).
-
-RNA contains a slightly different set of nucleotides, but we don't care
-about that for now.
+- nucleotides are to DNA as
+- legos are to lego houses as
+- words are to sentences as...
 
 ## Setup
 
-Go through the setup instructions for JavaScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
 http://exercism.io/languages/javascript/installation
 
-## Making the Test Suite Pass
+## Running the test suite
 
-Execute the tests with:
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
-    jasmine <exercise-name>.spec.js
+```sh
+npm install -g jasmine
+```
 
-Replace `<exercise-name>` with the name of the current exercise. E.g., to
-test the Hello World exercise:
+Run the test suite from the exercise directory with:
 
-    jasmine hello-world.spec.js
+```sh
+jasmine nucleotide-count.spec.js
+```
 
-In many test suites all but the first test have been skipped.
-
-Once you get a test passing, you can unskip the next one by
-changing `xit` to `it`.
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Source
 

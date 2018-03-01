@@ -56,7 +56,7 @@ List.prototype = {
     return new List(this.foldl(this.cons, []));
   },
 
-  map: function (func, arr) {
+  map: function (func) {
     var applyFuncThenCons = function (x, acc) {
       return this.cons(func(x), acc);
     };

@@ -10,17 +10,17 @@ Codons: `"AUG", "UUU", "UCU"`
 => which become a polypeptide with the following sequence =>
 
 Protein: `"Methionine", "Phenylalanine", "Serine"`
- 
-There are 64 codons which in turn correspond to 20 amino acids; however, all of the codon sequences and resulting amino acids are not important in this exercise.  If it works for one codon, the program should work for all of them.
-However, feel free to expand the list in the test suite to include them all.  
 
-There are also four terminating codons (also known as 'STOP' codons); if any of these codons are encountered (by the ribosome), all translation ends and the protein is terminated.
+There are 64 codons which in turn correspond to 20 amino acids; however, all of the codon sequences and resulting amino acids are not important in this exercise.  If it works for one codon, the program should work for all of them.
+However, feel free to expand the list in the test suite to include them all.
+
+There are also three terminating codons (also known as 'STOP' codons); if any of these codons are encountered (by the ribosome), all translation ends and the protein is terminated.
 
 All subsequent codons after are ignored, like this:
 
 RNA: `"AUGUUUUCUUAAAUG"` =>
 
-Codons: `"AUG", "UUU", "UCU", "UAG", "AUG"` => 
+Codons: `"AUG", "UUU", "UCU", "UAG", "AUG"` =>
 
 Protein: `"Methionine", "Phenylalanine", "Serine"`
 
@@ -39,31 +39,33 @@ UGU, UGC              | Cysteine
 UGG                   | Tryptophan
 UAA, UAG, UGA         | STOP
 
-
 Learn more about [protein translation on Wikipedia](http://en.wikipedia.org/wiki/Translation_(biology))
 
 ## Setup
 
-Go through the setup instructions for JavaScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
 http://exercism.io/languages/javascript/installation
 
-## Making the Test Suite Pass
+## Running the test suite
 
-Execute the tests with:
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
-    jasmine <exercise-name>.spec.js
+```sh
+npm install -g jasmine
+```
 
-Replace `<exercise-name>` with the name of the current exercise. E.g., to
-test the Hello World exercise:
+Run the test suite from the exercise directory with:
 
-    jasmine hello-world.spec.js
+```sh
+jasmine protein-translation.spec.js
+```
 
-In many test suites all but the first test have been skipped.
-
-Once you get a test passing, you can unskip the next one by
-changing `xit` to `it`.
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Source
 
