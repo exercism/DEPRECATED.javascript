@@ -1220,6 +1220,18 @@
         "parsing",
         "domain_specific_languages"
       ]
+    },
+    {
+      "uuid": "cb09212c-f2ae-4acf-9177-6c7f42594c1d",
+      "slug": "rectangles",
+      "core": false,
+      "unlocked_by": "grade-school",
+      "difficulty": 6,
+      "topics": [
+        "parsing",
+        "searching",
+        "pattern_recognition"
+      ]
     }
   ],
   "foregone": [],
