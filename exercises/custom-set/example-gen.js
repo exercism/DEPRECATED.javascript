@@ -160,7 +160,7 @@ function renderSuite(tests, otherTests, suiteTemplate) {
   return suiteTemplate(tests.concat(otherTests));
 }
 
-function suiteTemplate(tests) {
+function suiteTemplateFn(tests) {
   return (
     `var CustomSet = require('./custom-set');
 
@@ -179,8 +179,8 @@ function testTemplate(isEnabled, description, body) {
 `);
 }
 
-function array(array) {
-  return array.length === 0 ? '' : `[${array.join(', ')}]`;
+function array(arr) {
+  return arr.length === 0 ? '' : `[${arr.join(', ')}]`;
 }
 
 function generate() {
@@ -193,7 +193,7 @@ function generate() {
       suiteData: suiteData,
       testBodyTemplates: TEST_BODY_TEMPLATES,
       extraTests: NON_CANONICAL_TESTS,
-      suiteTemplate: suiteTemplate
+      suiteTemplate: suiteTemplateFn
     }));
 }
 
