@@ -7,7 +7,7 @@ function Element(value, next) {
     throw new Error('Value required.');
   }
 
-  if (next !== 'undefined' && !(next instanceof Element)) {
+  if (next !== undefined && !(next instanceof Element)) {
     throw new Error('A Element instance as next value is required.');
   }
 
