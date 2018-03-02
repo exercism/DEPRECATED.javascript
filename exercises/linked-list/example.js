@@ -10,7 +10,7 @@ function LinkedList() {
   this._front = null;
 }
 
-LinkedList.prototype.push = function LinkedList_push(value) {
+LinkedList.prototype.push = function LinkedListPush(value) {
   if (this._front === null) {
     this._front = new Node(value);
   } else {
@@ -21,18 +21,18 @@ LinkedList.prototype.push = function LinkedList_push(value) {
   }
 };
 
-LinkedList.prototype.unshift = function LinkedList_unshift(value) {
+LinkedList.prototype.unshift = function LinkedListUnshift(value) {
   this.push(value);
   this._front = this._front.prev;
 };
 
-LinkedList.prototype.pop = function LinkedList_pop() {
-  if (this._front === null) {return undefined;}
+LinkedList.prototype.pop = function LinkedListPop() {
+  if (this._front === null) {return 'undefined';}
   this._front = this._front.prev;
   return this.shift();
 };
 
-LinkedList.prototype.shift = function LinkedList_shift() {
+LinkedList.prototype.shift = function LinkedListShift() {
   var value = this._front.value;
   var front = this._front.next;
   var back = this._front.prev;
@@ -63,8 +63,7 @@ LinkedList.prototype.delete = function (match) {
     this._front.next = this._front.next.next;
   } else {
     this._front = this._front.next;
-    return this.delete(match);
-  }
+  } return this.delete(match);
 };
 
 module.exports = LinkedList;
