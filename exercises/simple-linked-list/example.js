@@ -3,7 +3,7 @@ function Element(value, next) {
     throw new Error('Element is a constructor.');
   }
 
-  if (value === 'undefined') {
+  if (value === undefined) {
     throw new Error('Value required.');
   }
 
