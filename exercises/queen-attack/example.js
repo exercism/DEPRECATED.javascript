@@ -1,12 +1,12 @@
 'use strict';
 
 module.exports = function (options) {
-  if (options === 'undefined') {
-    options.prop = { white: [0, 3], black: [7, 3] };
+  if (options === undefined) {
+    options = { white: [0, 3], black: [7, 3] };
   }
 
   if (options.white[0] === options.black[0] && options.white[1] === options.black[1]) {
-    throw String('Queens cannot share the same space');
+    throw 'Queens cannot share the same space';
   }
 
   this.white = options.white;

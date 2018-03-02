@@ -18,7 +18,6 @@ describe('Queens', function () {
 
     try {
       var queens = new Queens(positioning);
-      expect(queens.prop).toEqual([2, 4]);
     } catch (error) {
       expect(error).toEqual('Queens cannot share the same space');
     }
@@ -27,15 +26,15 @@ describe('Queens', function () {
   xit('toString representation', function () {
     var positioning = {white: [2, 4], black: [6, 6]};
     var queens = new Queens(positioning);
-    var board = '_ _ _ _ _ _ _ _\n' +
-'_ _ _ _ _ _ _ _\n' +
-'_ _ _ _ W _ _ _\n' +
-'_ _ _ _ _ _ _ _\n' +
-'_ _ _ _ _ _ _ _\n' +
-'_ _ _ _ _ _ _ _\n' +
-'_ _ _ _ _ _ B _\n' +
-'_ _ _ _ _ _ _ _\n'
-;
+    var board = '_ _ _ _ _ _ _ _\n\
+_ _ _ _ _ _ _ _\n\
+_ _ _ _ W _ _ _\n\
+_ _ _ _ _ _ _ _\n\
+_ _ _ _ _ _ _ _\n\
+_ _ _ _ _ _ _ _\n\
+_ _ _ _ _ _ B _\n\
+_ _ _ _ _ _ _ _\n\
+';
     expect(queens.toString()).toEqual(board);
   });
 
