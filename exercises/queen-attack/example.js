@@ -2,8 +2,7 @@
 
 
 module.exports = function (passedInOptions) {
-  var options = {};
-  options = passedInOptions || {white: [0, 3], black: [7, 3]};
+  var options = passedInOptions || {white: [0, 3], black: [7, 3]};
 
   if (options.white[0] === options.black[0] && options.white[1] === options.black[1]) {
     throw String('Queens cannot share the same space');
