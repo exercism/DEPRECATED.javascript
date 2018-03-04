@@ -17,7 +17,7 @@ describe('simple-linked-list', function () {
       expect(el).toBeDefined();
 
       expect(function () {
-        var el = Element(1);
+        el = Element(1);
       }).toThrow();
     });
 
@@ -26,7 +26,7 @@ describe('simple-linked-list', function () {
       expect(el).toBeDefined();
 
       expect(function () {
-        var el = new Element();
+        el = new Element();
       }).toThrow();
     });
 
@@ -49,7 +49,7 @@ describe('simple-linked-list', function () {
 
   xit('requires an instance of Element as next element', function () {
     expect(function () {
-      var el = new Element(1, true);
+      // var el = new Element(1, true);
       var el = new Element(1, false);
     }).toThrow();
     expect(function () {

@@ -3,11 +3,11 @@ function Element(value, next) {
     throw new Error('Element is a constructor.');
   }
 
-  if (value === undefined) {
+  if (typeof value === 'undefined') {
     throw new Error('Value required.');
   }
 
-  if (next !== undefined && !(next instanceof Element)) {
+  if (typeof next !== 'undefined' && !(next instanceof Element)) {
     throw new Error('A Element instance as next value is required.');
   }
 
@@ -18,7 +18,7 @@ function Element(value, next) {
 function List() {}
 
 List.prototype.push = function (value) {
-  if (value === undefined) {
+  if (typeof value === 'undefined') {
     throw new Error('Argument required.');
   }
 
@@ -40,7 +40,7 @@ List.prototype.push = function (value) {
 };
 
 List.prototype.unshift = function (value) {
-  if (value === undefined) {
+  if (typeof value === 'undefined') {
     throw new Error('Argument required.');
   }
 
@@ -65,7 +65,8 @@ List.prototype.pop = function () {
     return;
   }
 
-  var penultEl, lastEl = this.head;
+  var penultEl;
+  var lastEl = this.head;
   while (lastEl.next) {
     penultEl = lastEl;
     lastEl = lastEl.next;
@@ -83,7 +84,8 @@ List.prototype.reverse = function () {
     return;
   }
 
-  var current, previous;
+  var current;
+  var previous;
   while (this.head) {
     current = this.head;
     this.shift();
