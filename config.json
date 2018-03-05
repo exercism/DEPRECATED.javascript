@@ -1243,6 +1243,17 @@
         "searching",
         "pattern_recognition"
       ]
+    },
+    {
+      "uuid": "0e4b628c-870d-446b-a400-3cc72457f2bc",
+      "slug": "armstrong-numbers",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "mathematics",
+        "algorithms"
+      ]
     }
   ],
   "foregone": [],
