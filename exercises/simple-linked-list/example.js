@@ -72,11 +72,13 @@ List.prototype.pop = function () {
     lastEl = lastEl.next;
   }
 
+  /* eslint-disable no-undefined */
   if (!penultEl) {
     this.head = undefined;
   } else {
     penultEl.next = undefined;
   }
+  /* eslint-enable no-undefined */
 };
 
 List.prototype.reverse = function () {
