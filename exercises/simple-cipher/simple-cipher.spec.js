@@ -2,7 +2,6 @@ var Cipher = require('./simple-cipher');
 
 describe('Random key cipher', function () {
   var cipher = new Cipher();
-
   it('has a key made of letters', function () {
     expect(cipher.key).toMatch(/^[a-z]+$/);
   });
@@ -25,29 +24,28 @@ describe('Random key cipher', function () {
 });
 
 describe('Incorrect key cipher', function () {
+  var key = 'ACBDEF';
+  var cipher = new Cipher(key);
   xit('throws an error with an all caps key', function () {
-    expect( function () {
-      new Cipher('ABCDEF');
-    }).toThrow(new Error('Bad key'));
+    expect(cipher.key).toThrow(new Error('Bad key'));
   });
 
+  var key2 = '12345';
+  var cipher2 = new Cipher(key2);
   xit('throws an error with a numeric key', function () {
-    expect( function () {
-      new Cipher('12345');
-    }).toThrow(new Error('Bad key'));
+    expect(cipher2.key2).toThrow(new Error('Bad key'));
   });
 
+  var key3 = '';
+  var cipher3 = new Cipher(key3);
   xit('throws an error with an empty key', function () {
-    expect( function () {
-      new Cipher('');
-    }).toThrow(new Error('Bad key'));
+    expect(cipher3.key3).toThrow(new Error('Bad key'));
   });
 });
 
 describe('Substitution cipher', function () {
   var key = 'abcdefghij';
   var cipher = new Cipher(key);
-
   xit('keeps the submitted key', function () {
     expect(cipher.key).toEqual(key);
   });
