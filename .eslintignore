@@ -3,7 +3,6 @@ exercises/custom-set
 exercises/flatten-array
 exercises/grains/big-integer.js
 exercises/grains/big-integer.spec.js
-exercises/linked-list
 exercises/queen-attack
 exercises/robot-simulator
 exercises/saddle-points
