@@ -10,7 +10,7 @@ function LinkedList() {
   this._front = null;
 }
 
-LinkedList.prototype.push = function LinkedListPush(value) {
+LinkedList.prototype.push = function (value) {
   if (this._front === null) {
     this._front = new Node(value);
   } else {
@@ -21,18 +21,18 @@ LinkedList.prototype.push = function LinkedListPush(value) {
   }
 };
 
-LinkedList.prototype.unshift = function LinkedListUnshift(value) {
+LinkedList.prototype.unshift = function (value) {
   this.push(value);
   this._front = this._front.prev;
 };
 
-LinkedList.prototype.pop = function LinkedListPop() {
+LinkedList.prototype.pop = function () {
   if (this._front === null) {return null;}
   this._front = this._front.prev;
   return this.shift();
 };
 
-LinkedList.prototype.shift = function LinkedListShift() {
+LinkedList.prototype.shift = function () {
   var value = this._front.value;
   var front = this._front.next;
   var back = this._front.prev;
