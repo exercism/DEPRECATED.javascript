@@ -1,4 +1,4 @@
-var Robot = (function () {
+var robotOne  = (function () {
   'use strict';
 
   var VALID_DIRECTIONS = ['north', 'east', 'south', 'west'];
@@ -39,6 +39,8 @@ var Robot = (function () {
     case 'west':
       this.coordinates[0]--;
       break;
+    default:
+      this.coordinates[1]++;
     }
   };
 
@@ -84,4 +86,4 @@ var Robot = (function () {
   return Robot;
 })();
 
-module.exports = Robot;
+module.exports = robotOne;
