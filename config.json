@@ -594,7 +594,7 @@
         "text-formatting",
         "transforming"
       ],
-      "unlocked_by": "atbash-cipher",
+      "unlocked_by": "simple-cipher",
       "uuid": "a98e3593-d5b4-4c2b-8569-ae3ae7e07dad"
     },
     {
@@ -805,7 +805,7 @@
         "control-flow-(loops)",
         "recursion"
       ],
-      "unlocked_by": "binary-search",
+      "unlocked_by": "linked-list",
       "uuid": "865806e0-950f-49a5-a6e5-26472b90ab85"
     },
     {
@@ -1130,7 +1130,7 @@
          "Algorithms",
          "Mathematics"
       ],
-      "unlocked_by": "null",
+      "unlocked_by": null,
       "uuid" : "fd435dad-311a-4c40-9868-70863455831e"
     },
     {
@@ -1213,7 +1213,7 @@
       "uuid": "b3dbc935-536e-4910-994d-4a519b511b6a",
       "slug": "forth",
       "core": false,
-      "unlocked_by": "saddle-points",
+      "unlocked_by": "matrix",
       "difficulty": 8,
       "topics": [
         "stacks",
@@ -1225,7 +1225,7 @@
       "uuid": "f82e470d-0bcc-4eba-b9b0-8a0c50a6fd19",
       "slug": "variable-length-quantity",
       "core": false,
-      "unlocked_by": "two-bucket",
+      "unlocked_by": "grade-school",
       "difficulty": 5,
       "topics": [
         "bitwise_operations",
