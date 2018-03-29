@@ -7,12 +7,13 @@ module.exports = {
     return this.realPrimes[nthPrime - 1];
   },
   generatePrimes: function (uptoNumber) {
-    var i, j, currentPrime, primeCount, possiblePrimes = [];
-
-    if (this.realPrimes) { return this.realPrimes; }
+    var i;
+    var j;
+    var currentPrime;
+    var possiblePrimes = [];
 
     for (i = 2; i <= uptoNumber; i++) {
-      possiblePrimes.push({ number: i, prime: true});
+      possiblePrimes.push({ number: i, prime: true });
     }
 
     for (i = 2; i < Math.sqrt(possiblePrimes.length); i++) {
@@ -24,8 +25,6 @@ module.exports = {
       }
     }
 
-    primeCount = 0;
-
     this.realPrimes = [];
 
     for (i = 0; i < possiblePrimes.length; i++) {
@@ -34,6 +33,7 @@ module.exports = {
         this.realPrimes.push(currentPrime.number);
       }
     }
+    return this.realPrimes;
   }
 
 };

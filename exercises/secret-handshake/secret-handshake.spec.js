@@ -38,7 +38,8 @@ describe('Secret Handshake', function () {
 
   xit('text is an invalid secret handshake', function () {
     expect( function () {
-      var handshake = new SecretHandshake('piggies');
+      /* eslint no-unused-vars: ["error", { "varsIgnorePattern": "[iI]gnored" }]*/
+      var ignoredHandshake = new SecretHandshake('piggies');
     }).toThrow(new Error('Handshake must be a number'));
   });
 });

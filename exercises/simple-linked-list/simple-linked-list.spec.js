@@ -16,9 +16,11 @@ describe('simple-linked-list', function () {
       var el = new Element(1);
       expect(el).toBeDefined();
 
+      /* eslint-disable new-cap */
       expect(function () {
-        var el = Element(1);
+        el = Element(1);
       }).toThrow();
+      /* eslint-enable new-cap */
     });
 
     xit('requires an argument', function () {
@@ -26,7 +28,7 @@ describe('simple-linked-list', function () {
       expect(el).toBeDefined();
 
       expect(function () {
-        var el = new Element();
+        el = new Element();
       }).toThrow();
     });
 
@@ -47,9 +49,9 @@ describe('simple-linked-list', function () {
     expect(elTwo.next).toBe(elOne);
   });
 
+  /* eslint-disable no-unused-vars */
   xit('requires an instance of Element as next element', function () {
     expect(function () {
-      var el = new Element(1, true);
       var el = new Element(1, false);
     }).toThrow();
     expect(function () {
@@ -62,6 +64,7 @@ describe('simple-linked-list', function () {
       var el = new Element(1, {});
     }).toThrow();
   });
+  /* eslint-enable no-unused-vars */
 
   describe('List', function () {
     xit('is a constructor', function () {

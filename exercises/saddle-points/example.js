@@ -1,78 +1,57 @@
 'use strict';
 
-function toInt(s) {
-  return parseInt(s, 10);
-}
-
 module.exports = function Matrix(matrix) {
-  this.rows = [];
-  this.columns = [];
+  this.rows = matrix.split('\n').map(function (row) {
+    return row.split(' ').map(function (val) { return parseInt(val, 10); });
+  });
 
-  var rows = matrix.split('\n');
-  var i, j, currentRow;
-
-  for (i = 0; i < rows.length; i++) {
-    currentRow = rows[i].replace(/^\s+|\s+$/g, '').split(' ').map( toInt );
-    this.rows.push(currentRow);
-  }
-
-  for (i = 0; i < this.rows[0].length; i++) {
-    this.columns.push([]);
-  }
-
-  for (i = 0; i < this.rows.length; i++) {
-    for (j = 0; j < this.columns.length; j++) {
-      this.columns[j].push(this.rows[i][j]);
-    }
-  }
+  this.columns = this.rows[0].map(function () {
+    return [];
+  }).map(function (column, index) {
+    return this.rows.map(function (row) { return row[index]; });
+  }, this);
 
   this.indexesOfMaxValues = function (array) {
-    var i, currentElement, maxValue, indexes = [];
+    var maxValue = array.reduce(function (acc, curr) {
+      return Math.max(acc, curr);
+    });
 
-    for (i = 0; i < array.length; i++) {
-      currentElement = array[i];
-      if (maxValue === undefined || currentElement > maxValue) {
-        maxValue = currentElement;
-        indexes = [i];
-      } else if (currentElement === maxValue) {
-        indexes.push(i);
-      }
-    }
-
-    return indexes;
+    return this.indexsOf(array, maxValue);
   };
 
   this.indexesOfMinValues = function (array) {
-    var i, currentElement, minValue, indexes = [];
+    var minValue = array.reduce(function (acc, curr) {
+      return Math.min(acc, curr);
+    });
 
-    for (i = 0; i < array.length; i++) {
-      currentElement = array[i];
-      if (minValue === undefined || currentElement < minValue) {
-        minValue = currentElement;
-        indexes = [i];
-      } else if (currentElement === minValue) {
-        indexes.push(i);
-      }
-    }
+    return this.indexsOf(array, minValue);
+  };
 
-    return indexes;
+  this.indexsOf = function (array, value) {
+    return array.map(function (val, index) {
+      return val === value ? index : null;
+    }).filter(function (val) {
+      return val !== null;
+    });
   };
 
   this.calculateSaddlePoints = function (rows, columns) {
-    var i, j, maxIndexes, minIndexes, currentMaxIndex, saddlePoints = [];
+    var maxIndexes;
+    var minIndexes;
+    var saddlePoints = [];
 
-    for (i = 0; i < rows.length; i++) {
-      maxIndexes = this.indexesOfMaxValues(rows[i]);
+    rows.forEach(function (row, i) {
+      maxIndexes = this.indexesOfMaxValues(row);
 
-      for (j = 0; j < maxIndexes.length; j++) {
-        currentMaxIndex = maxIndexes[j];
+      maxIndexes.forEach(function (currentMaxIndex) {
         minIndexes = this.indexesOfMinValues(columns[currentMaxIndex]);
 
         if (minIndexes.indexOf(i) >= 0) {
           saddlePoints.push([i, currentMaxIndex]);
         }
-      }
-    }
+      }, this);
+    }, this);
+
     return saddlePoints;
   };
 

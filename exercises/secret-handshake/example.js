@@ -12,8 +12,7 @@ function SecretHandshake(handshake) {
     return this.shakeWith;
   };
 
-  this.calculateHandshake = function (handshake) {
-    /* jshint bitwise:false */
+  this.calculateHandshake = function () {
     var shakeWith = [];
 
     for (var i = 0; i < handshakeCommands.length; i++) {

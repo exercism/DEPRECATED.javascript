@@ -23,13 +23,13 @@ var plants = {
 };
 
 function getPlants(pots, index) {
-  var plants = [];
+  var plantsArr = [];
   var position = 2 * index;
-  plants.push(pots[0][position]);
-  plants.push(pots[0][position + 1]);
-  plants.push(pots[1][position]);
-  plants.push(pots[1][position + 1]);
-  return plants;
+  plantsArr.push(pots[0][position]);
+  plantsArr.push(pots[0][position + 1]);
+  plantsArr.push(pots[1][position]);
+  plantsArr.push(pots[1][position + 1]);
+  return plantsArr;
 }
 
 function parse(diagram) {
@@ -42,10 +42,10 @@ function parse(diagram) {
 
 function Garden(diagram, students) {
   var instance = {};
-  students = students || defaultChildren;
-  students.sort();
+  var kids = students || defaultChildren;
+  kids.sort();
 
-  students.forEach(function (student, index) {
+  kids.forEach(function (student, index) {
     instance[student.toLowerCase()] = getPlants(parse(diagram), index);
   });
 

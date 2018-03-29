@@ -1,17 +1,5 @@
 big-integer.js
-exercises/custom-set
-exercises/flatten-array
-exercises/grade-school
 exercises/grains/big-integer.js
 exercises/grains/big-integer.spec.js
-exercises/kindergarten-garden
-exercises/linked-list
-exercises/minesweeper
-exercises/nth-prime
-exercises/perfect-numbers
-exercises/queen-attack
 exercises/robot-simulator
-exercises/saddle-points
-exercises/secret-handshake
 exercises/simple-cipher
-exercises/simple-linked-list
