@@ -1,89 +1,85 @@
-const RobotSimulator = (function () {
-  'use strict';
+'use strict';
 
-  const VALID_DIRECTIONS = ['north', 'east', 'south', 'west'];
-  const INSTRUCTION_KEYS = {
-    A: 'advance',
-    L: 'turnLeft',
-    R: 'turnRight'
-  };
+const VALID_DIRECTIONS = ['north', 'east', 'south', 'west'];
+const INSTRUCTION_KEYS = {
+  A: 'advance',
+  L: 'turnLeft',
+  R: 'turnRight'
+};
 
-  function Robot() {
-    this.coordinates = [0, 0];
-    this.bearing = 'north';
+function Robot() {
+  this.coordinates = [0, 0];
+  this.bearing = 'north';
+}
+
+Robot.prototype.at = function (x, y) {
+  this.coordinates = [x, y];
+};
+
+Robot.prototype.orient = function (direction) {
+  if (VALID_DIRECTIONS.indexOf(direction) === -1) {
+    throw new Error('Invalid Robot Bearing');
   }
 
-  Robot.prototype.at = function (x, y) {
-    this.coordinates = [x, y];
-  };
+  this.bearing = direction;
+};
 
-  Robot.prototype.orient = function (direction) {
-    if (VALID_DIRECTIONS.indexOf(direction) === -1) {
-      throw new Error('Invalid Robot Bearing');
-    }
+Robot.prototype.advance = function () {
+  switch (this.bearing) {
+  case 'north':
+    this.coordinates[1]++;
+    break;
+  case 'east':
+    this.coordinates[0]++;
+    break;
+  case 'south':
+    this.coordinates[1]--;
+    break;
+  case 'west':
+    this.coordinates[0]--;
+    break;
+  default:
+    break;
+  }
+};
 
-    this.bearing = direction;
-  };
+Robot.prototype.turnLeft = function () {
+  let directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
 
-  Robot.prototype.advance = function () {
-    switch (this.bearing) {
-    case 'north':
-      this.coordinates[1]++;
-      break;
-    case 'east':
-      this.coordinates[0]++;
-      break;
-    case 'south':
-      this.coordinates[1]--;
-      break;
-    case 'west':
-      this.coordinates[0]--;
-      break;
-    default:
-      break;
-    }
-  };
+  if (directionPosition > 0) {
+    this.orient(VALID_DIRECTIONS[--directionPosition]);
+  } else {
+    this.orient(VALID_DIRECTIONS[VALID_DIRECTIONS.length - 1]);
+  }
+};
 
-  Robot.prototype.turnLeft = function () {
-    let directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
+Robot.prototype.turnRight = function () {
+  let directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
 
-    if (directionPosition > 0) {
-      this.orient(VALID_DIRECTIONS[--directionPosition]);
-    } else {
-      this.orient(VALID_DIRECTIONS[VALID_DIRECTIONS.length - 1]);
-    }
-  };
+  if (directionPosition < (VALID_DIRECTIONS.length - 1)) {
+    this.orient(VALID_DIRECTIONS[++directionPosition]);
+  } else {
+    this.orient(VALID_DIRECTIONS[0]);
+  }
+};
 
-  Robot.prototype.turnRight = function () {
-    let directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
+Robot.prototype.instructions = function (instructionKeys) {
+  return instructionKeys.split('')
+    .map(function (key) {
+      return INSTRUCTION_KEYS[key];
+    });
+};
 
-    if (directionPosition < (VALID_DIRECTIONS.length - 1)) {
-      this.orient(VALID_DIRECTIONS[++directionPosition]);
-    } else {
-      this.orient(VALID_DIRECTIONS[0]);
-    }
-  };
+Robot.prototype.place = function (args) {
+  this.coordinates = [args.x, args.y];
+  this.bearing = args.direction;
+};
 
-  Robot.prototype.instructions = function (instructionKeys) {
-    return instructionKeys.split('')
-      .map(function (key) {
-        return INSTRUCTION_KEYS[key];
-      });
-  };
+Robot.prototype.evaluate = function (instructionKeys) {
+  this.instructions(instructionKeys)
+    .forEach(function (instruction) {
+      this[instruction]();
+    }, this);
+};
 
-  Robot.prototype.place = function (args) {
-    this.coordinates = [args.x, args.y];
-    this.bearing = args.direction;
-  };
-
-  Robot.prototype.evaluate = function (instructionKeys) {
-    this.instructions(instructionKeys)
-      .forEach(function (instruction) {
-        this[instruction]();
-      }, this);
-  };
-
-  return Robot;
-})();
-
-module.exports = RobotSimulator;
+module.exports = Robot;
