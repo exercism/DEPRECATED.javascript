@@ -1,8 +1,8 @@
-var Robot = (function () {
+const RobotSimulator = (function () {
   'use strict';
 
-  var VALID_DIRECTIONS = ['north', 'east', 'south', 'west'];
-  var INSTRUCTION_KEYS = {
+  const VALID_DIRECTIONS = ['north', 'east', 'south', 'west'];
+  const INSTRUCTION_KEYS = {
     A: 'advance',
     L: 'turnLeft',
     R: 'turnRight'
@@ -39,11 +39,13 @@ var Robot = (function () {
     case 'west':
       this.coordinates[0]--;
       break;
+    default:
+      break;
     }
   };
 
   Robot.prototype.turnLeft = function () {
-    var directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
+    let directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
 
     if (directionPosition > 0) {
       this.orient(VALID_DIRECTIONS[--directionPosition]);
@@ -53,7 +55,7 @@ var Robot = (function () {
   };
 
   Robot.prototype.turnRight = function () {
-    var directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
+    let directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
 
     if (directionPosition < (VALID_DIRECTIONS.length - 1)) {
       this.orient(VALID_DIRECTIONS[++directionPosition]);
@@ -84,4 +86,4 @@ var Robot = (function () {
   return Robot;
 })();
 
-module.exports = Robot;
+module.exports = RobotSimulator;
