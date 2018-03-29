@@ -7,10 +7,12 @@ var PerfectNumbers = function () {
 /**
  * Calculate all the divisors for a given number and return them as an array.
  * Note: the actual number is not include in the returned array.
+ * @param {number} number - a number input.
+ * @returns {array} - the array of divisors
  */
 PerfectNumbers.prototype.getDivisors = function (number) {
   var i;
-  var divs = new Array();
+  var divs = [];
 
   // Accepts only natura numbers greater than 1.
   if (number <= 1) {
@@ -31,7 +33,9 @@ PerfectNumbers.prototype.getDivisors = function (number) {
 };
 
 PerfectNumbers.prototype.classify = function (number) {
-  var i, sum, result;
+  var i;
+  var sum;
+  var result;
 
   // Check if the input is valid
   if (number <= 0) {
