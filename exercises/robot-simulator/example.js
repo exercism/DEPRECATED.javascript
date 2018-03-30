@@ -1,7 +1,7 @@
 'use strict';
 
-const VALID_DIRECTIONS = ['north', 'east', 'south', 'west'];
-const INSTRUCTION_KEYS = {
+var VALID_DIRECTIONS = ['north', 'east', 'south', 'west'];
+var INSTRUCTION_KEYS = {
   A: 'advance',
   L: 'turnLeft',
   R: 'turnRight'
@@ -44,7 +44,7 @@ Robot.prototype.advance = function () {
 };
 
 Robot.prototype.turnLeft = function () {
-  let directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
+  var directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
 
   if (directionPosition > 0) {
     this.orient(VALID_DIRECTIONS[--directionPosition]);
@@ -54,7 +54,7 @@ Robot.prototype.turnLeft = function () {
 };
 
 Robot.prototype.turnRight = function () {
-  let directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
+  var directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
 
   if (directionPosition < (VALID_DIRECTIONS.length - 1)) {
     this.orient(VALID_DIRECTIONS[++directionPosition]);
