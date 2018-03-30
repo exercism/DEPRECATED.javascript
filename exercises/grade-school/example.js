@@ -9,7 +9,7 @@ module.exports = function School() {
     }
   }
 
-  function grade(level) {
+  function checkGrade(level) {
     return db[level] ? clone(db[level]).sort() : [];
   }
 
@@ -27,7 +27,7 @@ module.exports = function School() {
   return {
     roster: roster,
     add: add,
-    grade: grade
+    grade: checkGrade
   };
 };
 
