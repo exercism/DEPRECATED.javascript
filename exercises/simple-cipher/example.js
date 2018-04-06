@@ -3,8 +3,8 @@
 var ALPHABET = 'abcdefghijklmnopqrstuvwxyz';
 
 function randomKey() {
-  var i, result = '';
-  for ( i = 0; i < 100; i++ ) {
+  var result;
+  for ( var i = 0; i < 100; i++ ) {
     result += ALPHABET[randomUpTo(ALPHABET.length)];
   }
   return result;
@@ -17,15 +17,13 @@ function randomUpTo(n) {
 module.exports = function (userDefinedKey) {
   var key;
 
-  function addEncodedCharacter(character, index, array) {
-    /* jshint validthis:true */
+  function addEncodedCharacter(character, index) {
     var i = ALPHABET.indexOf(character) + ALPHABET.indexOf(key[index % key.length]);
     if (i >= ALPHABET.length) { i -= ALPHABET.length; }
     this.push(ALPHABET[i]);
   }
 
-  function addDecodedCharacter(character, index, array) {
-    /* jshint validthis:true */
+  function addDecodedCharacter(character, index) {
     var i = ALPHABET.indexOf(character) - ALPHABET.indexOf(key[index % key.length]);
     if (i < 0) { i += ALPHABET.length; }
     this.push(ALPHABET[i]);
