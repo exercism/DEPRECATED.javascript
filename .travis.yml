@@ -6,7 +6,7 @@ node_js:
   - "lts/*"
 
 install:
-  - "npm install"
+  - "npm ci"
 
 script:
   - "make test"
