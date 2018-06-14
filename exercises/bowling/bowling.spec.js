@@ -208,5 +208,21 @@ describe('Bowling', function () {
       expect(function () { bowling.score(); }).toThrow(
         new Error('Score cannot be taken until the end of the game'));
     });
+
+    xit('cannot roll after bonus roll for a spare', function () {
+      var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 2];
+      var bowling = new Bowling();
+      previousRolls(bowling, rolls);
+      expect(function () { bowling.roll(2); }).toThrow(
+        new Error('Cannot roll after game is over'));
+    });
+
+    xit('cannot roll after bonus rolls for a strike', function () {
+      var rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 3, 2];
+      var bowling = new Bowling();
+      previousRolls(bowling, rolls);
+      expect(function () { bowling.roll(2); }).toThrow(
+        new Error('Cannot roll after game is over'));
+    });
   });
 });

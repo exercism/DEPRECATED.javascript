@@ -1,1192 +1,1221 @@
 {
+  "language": "JavaScript",
   "active": true,
+  "blurb": "",
+  "test_pattern": ".*[.]spec[.]js$",
   "exercises": [
     {
-      "core": true,
-      "difficulty": 1,
       "slug": "hello-world",
-      "topics": [
-        "control-flow-(conditionals)",
-        "optional-values",
-        "strings",
-        "text-formatting"
-      ],
-      "uuid": "4756cfc9-7509-4783-8be7-60e3376b8256"
-    },
-    {
-      "core": false,
-      "difficulty": 1,
-      "slug": "two-fer",
-      "topics": [
-        "strings",
-        "control-flow-(conditionals)"
-      ],
-      "unlocked_by": "hello-world",
-      "uuid": "5f3d1326-f0c5-44a6-b90a-6af3b7d455f1"
-    },
-    {
+      "uuid": "4756cfc9-7509-4783-8be7-60e3376b8256",
       "core": true,
+      "unlocked_by": null,
       "difficulty": 1,
+      "topics": [
+        "control_flow_conditionals",
+        "optional_values",
+        "strings",
+        "text_formatting"
+      ]
+    },
+    {
+      "slug": "two-fer",
+      "uuid": "5f3d1326-f0c5-44a6-b90a-6af3b7d455f1",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 1,
+      "topics": [
+        "control_flow_conditionals",
+        "strings"
+      ]
+    },
+    {
       "slug": "leap",
+      "uuid": "0c231a1c-55f7-47b6-8a54-ccae4ab0c65b",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
         "booleans",
         "integers",
         "logic"
-      ],
-      "uuid": "0c231a1c-55f7-47b6-8a54-ccae4ab0c65b"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 2,
       "slug": "reverse-string",
-      "topics": [
-        "loops",
-        "for",
-        "strings"
-      ],
+      "uuid": "553a6be7-eecb-45dc-9cea-05126c525f1b",
+      "core": false,
       "unlocked_by": "leap",
-      "uuid": "553a6be7-eecb-45dc-9cea-05126c525f1b"
+      "difficulty": 2,
+      "topics": [
+        "for",
+        "loops",
+        "strings"
+      ]
     },
     {
-      "core": true,
-      "difficulty": 1,
       "slug": "rna-transcription",
+      "uuid": "d7f57ab9-2edb-44cb-a04e-c575c0f4be4c",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
         "strings",
         "transforming"
-      ],
-      "uuid": "d7f57ab9-2edb-44cb-a04e-c575c0f4be4c"
+      ]
     },
     {
-      "core": true,
-      "difficulty": 1,
       "slug": "simple-cipher",
+      "uuid": "fff57c49-cde9-4a0c-b70b-2903cef212af",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
         "algorithms",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "mathematics",
         "randomness",
         "strings",
-        "text-formatting",
+        "text_formatting",
         "transforming"
-      ],
-      "uuid": "fff57c49-cde9-4a0c-b70b-2903cef212af"
+      ]
     },
     {
-      "core": true,
-      "difficulty": 2,
       "slug": "pangram",
+      "uuid": "c57bf909-130f-46e6-97ca-aeed58df1a15",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
       "topics": [
         "algorithms",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "lists",
         "maps",
         "searching",
         "strings"
-      ],
-      "uuid": "c57bf909-130f-46e6-97ca-aeed58df1a15"
+      ]
     },
     {
-      "core": true,
-      "difficulty": 2,
       "slug": "bob",
+      "uuid": "246be5d9-b361-4893-9707-f218ede2bed6",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
       "topics": [
-        "control-flow-(conditionals)",
-        "pattern-recognition",
+        "control_flow_conditionals",
+        "pattern_recognition",
         "polymorfism",
-        "regular-expressions",
+        "regular_expressions",
         "strings",
         "unicode"
-      ],
-      "uuid": "246be5d9-b361-4893-9707-f218ede2bed6"
+      ]
     },
     {
-      "core": true,
-      "difficulty": 2,
       "slug": "gigasecond",
+      "uuid": "49e4874b-d7e2-4305-a9bc-627fab4ada44",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
       "topics": [
         "time"
-      ],
-      "uuid": "49e4874b-d7e2-4305-a9bc-627fab4ada44"
+      ]
     },
     {
-      "core": true,
-      "difficulty": 3,
       "slug": "space-age",
+      "uuid": "b668e11a-a8ce-4e94-ba68-3a1f0fa3f6c8",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 3,
       "topics": [
         "classes",
-        "floating-point-numbers",
+        "floating_point_numbers",
         "mathematics"
-      ],
-      "uuid": "b668e11a-a8ce-4e94-ba68-3a1f0fa3f6c8"
+      ]
     },
     {
-      "core": true,
-      "difficulty": 4,
       "slug": "binary",
+      "uuid": "c3035180-ff4c-4afe-8019-f8364158b74e",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 4,
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "integers",
         "mathematics",
-        "regular-expressions",
+        "regular_expressions",
         "strings"
-      ],
-      "uuid": "c3035180-ff4c-4afe-8019-f8364158b74e"
+      ]
     },
     {
-      "core": true,
-      "difficulty": 4,
       "slug": "prime-factors",
+      "uuid": "73ecd6c2-e59b-4354-b305-64e28a60433f",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 4,
       "topics": [
         "algorithms",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "integers",
         "mathematics"
-      ],
-      "uuid": "73ecd6c2-e59b-4354-b305-64e28a60433f"
+      ]
     },
     {
-      "core": true,
-      "difficulty": 4,
       "slug": "matrix",
+      "uuid": "fbfe6032-c209-40bd-b485-8b2881638166",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 4,
       "topics": [
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "data-structures",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "data_structures",
         "matrices",
-        "text-formatting"
-      ],
-      "uuid": "fbfe6032-c209-40bd-b485-8b2881638166"
+        "text_formatting"
+      ]
     },
     {
-      "core": true,
-      "difficulty": 5,
       "slug": "linked-list",
+      "uuid": "ecc41237-f629-458f-873e-2cc51ba1a385",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 5,
       "topics": [
         "algorithms",
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "data-structures",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "data_structures",
         "lists",
-        "optional-values"
-      ],
-      "uuid": "ecc41237-f629-458f-873e-2cc51ba1a385"
+        "optional_values"
+      ]
     },
     {
-      "core": true,
-      "difficulty": 5,
       "slug": "pascals-triangle",
+      "uuid": "a96ab45d-10a0-42cf-a754-c2466037ceaf",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 5,
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "mathematics",
         "strings",
-        "text-formatting"
-      ],
-      "uuid": "a96ab45d-10a0-42cf-a754-c2466037ceaf"
+        "text_formatting"
+      ]
     },
     {
-      "core": true,
-      "difficulty": 6,
       "slug": "secret-handshake",
+      "uuid": "0a3a452c-f734-47eb-8e65-34c8ae710ef0",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 6,
       "topics": [
         "algorithms",
         "arrays",
-        "bitwise-operations",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "bitwise_operations",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "games"
-      ],
-      "uuid": "0a3a452c-f734-47eb-8e65-34c8ae710ef0"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 6,
       "slug": "rotational-cipher",
+      "uuid": "7078b1a4-ef73-4c02-809d-b2de62e9af11",
+      "core": false,
+      "unlocked_by": "secret-handshake",
+      "difficulty": 6,
       "topics": [
         "cryptography",
         "integers",
         "strings"
-      ],
-      "unlocked_by": "secret-handshake",
-      "uuid": "7078b1a4-ef73-4c02-809d-b2de62e9af11"
+      ]
     },
     {
-      "core": true,
-      "difficulty": 6,
       "slug": "grade-school",
+      "uuid": "029bc3ed-772d-439b-bd0a-1ba1196a79ec",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 6,
       "topics": [
         "arrays",
         "maps",
         "sorting"
-      ],
-      "uuid": "029bc3ed-772d-439b-bd0a-1ba1196a79ec"
+      ]
     },
     {
-      "core": true,
-      "difficulty": 6,
       "slug": "robot-name",
+      "uuid": "3005340b-a8d6-46ac-9075-125f9adccc2a",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 6,
       "topics": [
-        "control-flow-(conditionals)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "exception_handling",
         "randomness",
-        "regular-expressions",
+        "regular_expressions",
         "sets"
-      ],
-      "uuid": "3005340b-a8d6-46ac-9075-125f9adccc2a"
+      ]
     },
     {
-      "core": true,
-      "difficulty": 7,
       "slug": "wordy",
+      "uuid": "bb54bf08-24ba-45e1-bdf7-08db161e5843",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 7,
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "parsing",
-        "pattern-recognition",
-        "regular-expressions",
+        "pattern_recognition",
+        "regular_expressions",
         "strings"
-      ],
-      "uuid": "bb54bf08-24ba-45e1-bdf7-08db161e5843"
+      ]
     },
     {
-      "core": true,
-      "difficulty": 8,
       "slug": "list-ops",
+      "uuid": "e70defe4-5944-4392-956c-63cb92e7fd9c",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 8,
       "topics": [
-        "data-structures",
+        "data_structures",
         "lists",
         "recursion"
-      ],
-      "uuid": "e70defe4-5944-4392-956c-63cb92e7fd9c"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 5,
       "slug": "rational-numbers",
-      "topics": [
-        "floating_point_numbers",
-        "mathematics",
-        "algorithms"
-      ],
+      "uuid": "2de5677e-5759-4a21-93c7-39a3d88242e8",
+      "core": false,
       "unlocked_by": "pascals-triangle",
-      "uuid": "2de5677e-5759-4a21-93c7-39a3d88242e8"
+      "difficulty": 5,
+      "topics": [
+        "algorithms",
+        "floating_point_numbers",
+        "mathematics"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 2,
       "slug": "hamming",
+      "uuid": "3e1358c8-2bea-41f9-bc9e-8277f354a4e0",
+      "core": false,
+      "unlocked_by": "rna-transcription",
+      "difficulty": 2,
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "equality",
         "strings"
-      ],
-      "unlocked_by": "rna-transcription",
-      "uuid": "3e1358c8-2bea-41f9-bc9e-8277f354a4e0"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 2,
       "slug": "run-length-encoding",
-      "topics": [
-        "control-flow-(conditionals)",
-        "exception-handling",
-        "parsing",
-        "pattern-recognition",
-        "regular-expressions",
-        "strings",
-        "text-formatting"
-      ],
+      "uuid": "d66c2b56-b465-4922-af35-ae78944c0aac",
+      "core": false,
       "unlocked_by": null,
-      "uuid": "d66c2b56-b465-4922-af35-ae78944c0aac"
+      "difficulty": 2,
+      "topics": [
+        "control_flow_conditionals",
+        "exception_handling",
+        "parsing",
+        "pattern_recognition",
+        "regular_expressions",
+        "strings",
+        "text_formatting"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 2,
       "slug": "isogram",
+      "uuid": "35821375-5c94-4d4b-aa56-e3b079a45ca0",
+      "core": false,
+      "unlocked_by": "pangram",
+      "difficulty": 2,
       "topics": [
         "filtering",
         "strings"
-      ],
-      "unlocked_by": "pangram",
-      "uuid": "35821375-5c94-4d4b-aa56-e3b079a45ca0"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 5,
       "slug": "beer-song",
-      "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "strings"
-      ],
+      "uuid": "6f315fc3-095a-4387-aefb-cc5fee97110a",
+      "core": false,
       "unlocked_by": "bob",
-      "uuid": "6f315fc3-095a-4387-aefb-cc5fee97110a"
+      "difficulty": 5,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "strings"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 3,
       "slug": "phone-number",
+      "uuid": "347f9f54-a0d9-469d-babf-b3edb34d9d70",
+      "core": false,
+      "unlocked_by": "pangram",
+      "difficulty": 3,
       "topics": [
         "parsing",
         "transforming"
-      ],
-      "unlocked_by": "pangram",
-      "uuid": "347f9f54-a0d9-469d-babf-b3edb34d9d70"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 1,
       "slug": "anagram",
+      "uuid": "432ec2ce-c919-4142-aea2-389b67503252",
+      "core": false,
+      "unlocked_by": "pangram",
+      "difficulty": 1,
       "topics": [
         "filtering",
         "strings"
-      ],
-      "unlocked_by": "pangram",
-      "uuid": "432ec2ce-c919-4142-aea2-389b67503252"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 4,
       "slug": "food-chain",
+      "uuid": "a717745f-da00-4a5f-8bf3-6876e20cdf17",
+      "core": false,
+      "unlocked_by": "bob",
+      "difficulty": 4,
       "topics": [
         "algorithms",
-        "text-formatting"
-      ],
-      "unlocked_by": "bob",
-      "uuid": "a717745f-da00-4a5f-8bf3-6876e20cdf17"
+        "text_formatting"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 2,
       "slug": "etl",
+      "uuid": "a2a19f61-62ba-447a-8f57-537c8baa2e7a",
+      "core": false,
+      "unlocked_by": "rna-transcription",
+      "difficulty": 2,
       "topics": [
-        "control-flow-(loops)",
+        "control_flow_loops",
         "integers",
         "maps",
         "transforming"
-      ],
-      "unlocked_by": "rna-transcription",
-      "uuid": "a2a19f61-62ba-447a-8f57-537c8baa2e7a"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 4,
       "slug": "sublist",
+      "uuid": "4a83a72c-db0a-45b6-b77c-1949cb24fbae",
+      "core": false,
+      "unlocked_by": "linked-list",
+      "difficulty": 4,
       "topics": [
         "arrays",
         "lists"
-      ],
-      "unlocked_by": "linked-list",
-      "uuid": "4a83a72c-db0a-45b6-b77c-1949cb24fbae"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 5,
       "slug": "grains",
-      "topics": [
-        "control-flow-(loops)",
-        "integers",
-        "mathematics"
-      ],
+      "uuid": "c5be6908-f45c-4278-ba99-3701024f4eda",
+      "core": false,
       "unlocked_by": "space-age",
-      "uuid": "c5be6908-f45c-4278-ba99-3701024f4eda"
-    },
-    {
-      "core": false,
-      "difficulty": 3,
-      "slug": "triangle",
+      "difficulty": 5,
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_loops",
         "integers",
         "mathematics"
-      ],
-      "unlocked_by": "leap",
-      "uuid": "fde792fa-84e9-4b86-8ecb-8466ad92a99d"
+      ]
     },
     {
+      "slug": "triangle",
+      "uuid": "fde792fa-84e9-4b86-8ecb-8466ad92a99d",
       "core": false,
-      "difficulty": 5,
+      "unlocked_by": "leap",
+      "difficulty": 3,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
+        "integers",
+        "mathematics"
+      ]
+    },
+    {
       "slug": "clock",
+      "uuid": "1ff85150-6c51-4758-af02-4484cf35658e",
+      "core": false,
+      "unlocked_by": "gigasecond",
+      "difficulty": 5,
       "topics": [
         "dates",
         "globalization",
         "time"
-      ],
-      "unlocked_by": "gigasecond",
-      "uuid": "1ff85150-6c51-4758-af02-4484cf35658e"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 3,
       "slug": "perfect-numbers",
+      "uuid": "51aa5429-b2db-43ad-83cf-84e2ead22cb6",
+      "core": false,
+      "unlocked_by": "space-age",
+      "difficulty": 3,
       "topics": [
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "integers",
         "mathematics"
-      ],
-      "unlocked_by": "space-age",
-      "uuid": "51aa5429-b2db-43ad-83cf-84e2ead22cb6"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 1,
       "slug": "word-count",
+      "uuid": "9a4ea3da-ad43-4850-bdf3-2c578c5de838",
+      "core": false,
+      "unlocked_by": "pangram",
+      "difficulty": 1,
       "topics": [
-        "control-flow-(loops)",
+        "control_flow_loops",
         "lists",
-        "regular-expressions",
+        "regular_expressions",
         "strings",
         "unicode"
-      ],
-      "unlocked_by": "pangram",
-      "uuid": "9a4ea3da-ad43-4850-bdf3-2c578c5de838"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 2,
       "slug": "acronym",
+      "uuid": "0c1c4788-0372-42e7-81c1-b090bb7ebc8b",
+      "core": false,
+      "unlocked_by": "pangram",
+      "difficulty": 2,
       "topics": [
-        "control-flow-(loops)",
-        "regular-expressions",
+        "control_flow_loops",
+        "regular_expressions",
         "strings",
         "transforming"
-      ],
-      "unlocked_by": "pangram",
-      "uuid": "0c1c4788-0372-42e7-81c1-b090bb7ebc8b"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 5,
       "slug": "scrabble-score",
+      "uuid": "a6bd8126-3879-4593-8380-39ebfa87801b",
+      "core": false,
+      "unlocked_by": "rna-transcription",
+      "difficulty": 5,
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "maps",
         "strings"
-      ],
-      "unlocked_by": "rna-transcription",
-      "uuid": "a6bd8126-3879-4593-8380-39ebfa87801b"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 3,
       "slug": "roman-numerals",
-      "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "mathematics",
-        "pattern-recognition",
-        "transforming"
-      ],
+      "uuid": "4226e3c6-99d4-406d-998a-bcf11845b211",
+      "core": false,
       "unlocked_by": null,
-      "uuid": "4226e3c6-99d4-406d-998a-bcf11845b211"
+      "difficulty": 3,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "mathematics",
+        "pattern_recognition",
+        "transforming"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 8,
       "slug": "circular-buffer",
+      "uuid": "f1943e87-182a-44f5-a885-3d68a0c0a0dc",
+      "core": false,
+      "unlocked_by": "linked-list",
+      "difficulty": 8,
       "topics": [
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "data-structures",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "data_structures",
+        "exception_handling",
         "lists"
-      ],
-      "unlocked_by": "linked-list",
-      "uuid": "f1943e87-182a-44f5-a885-3d68a0c0a0dc"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 2,
       "slug": "raindrops",
+      "uuid": "86b1acf1-9e2d-4b04-b8b0-e9ae6beb5f3d",
+      "core": false,
+      "unlocked_by": "rna-transcription",
+      "difficulty": 2,
       "topics": [
-        "control-flow-(conditionals)",
+        "control_flow_conditionals",
         "integers",
         "strings",
         "transforming"
-      ],
-      "unlocked_by": "rna-transcription",
-      "uuid": "86b1acf1-9e2d-4b04-b8b0-e9ae6beb5f3d"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 6,
       "slug": "allergies",
+      "uuid": "23210e9e-81f6-4279-a776-00459c7ccd02",
+      "core": false,
+      "unlocked_by": "rna-transcription",
+      "difficulty": 6,
       "topics": [
         "arrays",
-        "bitwise-operations",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)"
-      ],
-      "unlocked_by": "rna-transcription",
-      "uuid": "23210e9e-81f6-4279-a776-00459c7ccd02"
+        "bitwise_operations",
+        "control_flow_conditionals",
+        "control_flow_loops"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 4,
       "slug": "strain",
+      "uuid": "e61f3d54-55d2-4d32-9d2a-e7d6af3a3247",
+      "core": false,
+      "unlocked_by": "list-ops",
+      "difficulty": 4,
       "topics": [
         "algorithms",
         "arrays",
         "callbacks",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "filtering",
         "lists"
-      ],
-      "unlocked_by": "list-ops",
-      "uuid": "e61f3d54-55d2-4d32-9d2a-e7d6af3a3247"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 7,
       "slug": "atbash-cipher",
+      "uuid": "99974454-0736-4cc0-b88f-ed5701397a97",
+      "core": false,
+      "unlocked_by": "simple-cipher",
+      "difficulty": 7,
       "topics": [
         "algorithms",
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "regular-expressions",
-        "text-formatting"
-      ],
-      "unlocked_by": "simple-cipher",
-      "uuid": "99974454-0736-4cc0-b88f-ed5701397a97"
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "regular_expressions",
+        "text_formatting"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 5,
       "slug": "accumulate",
+      "uuid": "dc9b2598-9757-4b20-82f9-8049ad081ac9",
+      "core": false,
+      "unlocked_by": "list-ops",
+      "difficulty": 5,
       "topics": [
         "algorithms",
         "callbacks",
-        "control-flow-(loops)",
+        "control_flow_loops",
         "lists"
-      ],
-      "unlocked_by": "list-ops",
-      "uuid": "dc9b2598-9757-4b20-82f9-8049ad081ac9"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 9,
       "slug": "crypto-square",
-      "topics": [
-        "algorithms",
-        "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "regular-expressions",
-        "sorting",
-        "text-formatting",
-        "transforming"
-      ],
+      "uuid": "a98e3593-d5b4-4c2b-8569-ae3ae7e07dad",
+      "core": false,
       "unlocked_by": "simple-cipher",
-      "uuid": "a98e3593-d5b4-4c2b-8569-ae3ae7e07dad"
+      "difficulty": 9,
+      "topics": [
+        "algorithms",
+        "arrays",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "regular_expressions",
+        "sorting",
+        "text_formatting",
+        "transforming"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 4,
       "slug": "trinary",
+      "uuid": "f317721d-e1f5-4e68-9fdc-f9bc7b6b004d",
+      "core": false,
+      "unlocked_by": "binary",
+      "difficulty": 4,
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "integers",
         "mathematics",
-        "regular-expressions",
+        "regular_expressions",
         "strings"
-      ],
-      "unlocked_by": "binary",
-      "uuid": "f317721d-e1f5-4e68-9fdc-f9bc7b6b004d"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 5,
       "slug": "sieve",
+      "uuid": "4cad8ee8-40be-4d4d-8c14-45d8c6e29a32",
+      "core": false,
+      "unlocked_by": "prime-factors",
+      "difficulty": 5,
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "integers",
         "mathematics",
         "recursion"
-      ],
-      "unlocked_by": "prime-factors",
-      "uuid": "4cad8ee8-40be-4d4d-8c14-45d8c6e29a32"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 4,
       "slug": "octal",
-      "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "integers",
-        "mathematics",
-        "regular-expressions",
-        "strings"
-      ],
+      "uuid": "9892d47d-97a0-4a2f-8284-6f84c86559e8",
+      "core": false,
       "unlocked_by": "binary",
-      "uuid": "9892d47d-97a0-4a2f-8284-6f84c86559e8"
+      "difficulty": 4,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "integers",
+        "mathematics",
+        "regular_expressions",
+        "strings"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 4,
       "slug": "luhn",
+      "uuid": "bb46e832-8c37-45ee-9ee7-5037015b965c",
+      "core": false,
+      "unlocked_by": "space-age",
+      "difficulty": 4,
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "integers",
         "mathematics",
         "strings"
-      ],
-      "unlocked_by": "space-age",
-      "uuid": "bb46e832-8c37-45ee-9ee7-5037015b965c"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 4,
       "slug": "pig-latin",
+      "uuid": "9a515ad0-34c7-4191-8784-5c4cd6385b38",
+      "core": false,
+      "unlocked_by": "bob",
+      "difficulty": 4,
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "games",
-        "regular-expressions",
+        "regular_expressions",
         "strings",
         "transforming"
-      ],
-      "unlocked_by": "bob",
-      "uuid": "9a515ad0-34c7-4191-8784-5c4cd6385b38"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 5,
       "slug": "pythagorean-triplet",
-      "topics": [
-        "algorithms",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "integers",
-        "mathematics"
-      ],
+      "uuid": "26a973dd-d72e-40fb-abeb-0ba306356ed6",
+      "core": false,
       "unlocked_by": "space-age",
-      "uuid": "26a973dd-d72e-40fb-abeb-0ba306356ed6"
-    },
-    {
-      "core": false,
-      "difficulty": 3,
-      "slug": "series",
-      "topics": [
-        "control-flow-(loops)",
-        "exception-handling",
-        "strings",
-        "text-formatting"
-      ],
-      "unlocked_by": "pangram",
-      "uuid": "06afdb06-8d2a-4cb0-baf1-48ae997cf1f5"
-    },
-    {
-      "core": false,
-      "difficulty": 3,
-      "slug": "difference-of-squares",
-      "topics": [
-        "algorithms",
-        "control-flow-(loops)",
-        "integers",
-        "mathematics"
-      ],
-      "unlocked_by": "space-age",
-      "uuid": "07110dd5-b879-40b9-9485-685cb0963d8f"
-    },
-    {
-      "core": false,
-      "difficulty": 4,
-      "slug": "proverb",
-      "topics": [
-        "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "optional-values",
-        "strings",
-        "text-formatting"
-      ],
-      "unlocked_by": "bob",
-      "uuid": "8786d591-077b-49bc-be8d-d014dc9dc308"
-    },
-    {
-      "core": false,
-      "difficulty": 1,
-      "slug": "flatten-array",
-      "topics": [
-        "arrays",
-        "recursion"
-      ],
-      "unlocked_by": "list-ops",
-      "uuid": "32a0a5fa-c7de-470c-beff-118b448b3916"
-    },
-    {
-      "core": false,
-      "difficulty": 4,
-      "slug": "hexadecimal",
-      "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "integers",
-        "mathematics",
-        "regular-expressions",
-        "strings"
-      ],
-      "unlocked_by": "binary",
-      "uuid": "33b8f4c0-3210-478a-9225-5c30ad6df870"
-    },
-    {
-      "core": false,
-      "difficulty": 7,
-      "slug": "largest-series-product",
-      "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
-        "integers",
-        "mathematics",
-        "regular-expressions",
-        "strings"
-      ],
-      "unlocked_by": "pangram",
-      "uuid": "44bd02a7-0e3a-4441-ab76-524e36d4661c"
-    },
-    {
-      "core": false,
-      "difficulty": 7,
-      "slug": "kindergarten-garden",
-      "topics": [
-        "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "strings",
-        "text-formatting"
-      ],
-      "unlocked_by": "wordy",
-      "uuid": "2702ac90-0be2-43a2-91b6-7256a25fec87"
-    },
-    {
-      "core": false,
-      "difficulty": 7,
-      "slug": "binary-search",
-      "topics": [
-        "algorithms",
-        "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "recursion"
-      ],
-      "unlocked_by": "linked-list",
-      "uuid": "5991c379-f033-4b46-9702-6b7fd03640e8"
-    },
-    {
-      "core": false,
-      "difficulty": 6,
-      "slug": "binary-search-tree",
-      "topics": [
-        "algorithms",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "recursion"
-      ],
-      "unlocked_by": "linked-list",
-      "uuid": "865806e0-950f-49a5-a6e5-26472b90ab85"
-    },
-    {
-      "core": false,
       "difficulty": 5,
-      "slug": "robot-simulator",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "algorithms",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "integers",
+        "mathematics"
+      ]
+    },
+    {
+      "slug": "series",
+      "uuid": "06afdb06-8d2a-4cb0-baf1-48ae997cf1f5",
+      "core": false,
+      "unlocked_by": "pangram",
+      "difficulty": 3,
+      "topics": [
+        "control_flow_loops",
+        "exception_handling",
+        "strings",
+        "text_formatting"
+      ]
+    },
+    {
+      "slug": "difference-of-squares",
+      "uuid": "07110dd5-b879-40b9-9485-685cb0963d8f",
+      "core": false,
+      "unlocked_by": "space-age",
+      "difficulty": 3,
+      "topics": [
+        "algorithms",
+        "control_flow_loops",
+        "integers",
+        "mathematics"
+      ]
+    },
+    {
+      "slug": "proverb",
+      "uuid": "8786d591-077b-49bc-be8d-d014dc9dc308",
+      "core": false,
+      "unlocked_by": "bob",
+      "difficulty": 4,
+      "topics": [
+        "arrays",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "optional_values",
+        "strings",
+        "text_formatting"
+      ]
+    },
+    {
+      "slug": "flatten-array",
+      "uuid": "32a0a5fa-c7de-470c-beff-118b448b3916",
+      "core": false,
+      "unlocked_by": "list-ops",
+      "difficulty": 1,
+      "topics": [
+        "arrays",
+        "recursion"
+      ]
+    },
+    {
+      "slug": "hexadecimal",
+      "uuid": "33b8f4c0-3210-478a-9225-5c30ad6df870",
+      "core": false,
+      "unlocked_by": "binary",
+      "difficulty": 4,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "integers",
+        "mathematics",
+        "regular_expressions",
+        "strings"
+      ]
+    },
+    {
+      "slug": "largest-series-product",
+      "uuid": "44bd02a7-0e3a-4441-ab76-524e36d4661c",
+      "core": false,
+      "unlocked_by": "pangram",
+      "difficulty": 7,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
+        "integers",
+        "mathematics",
+        "regular_expressions",
+        "strings"
+      ]
+    },
+    {
+      "slug": "kindergarten-garden",
+      "uuid": "2702ac90-0be2-43a2-91b6-7256a25fec87",
+      "core": false,
+      "unlocked_by": "wordy",
+      "difficulty": 7,
+      "topics": [
+        "arrays",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "strings",
+        "text_formatting"
+      ]
+    },
+    {
+      "slug": "binary-search",
+      "uuid": "5991c379-f033-4b46-9702-6b7fd03640e8",
+      "core": false,
+      "unlocked_by": "linked-list",
+      "difficulty": 7,
+      "topics": [
+        "algorithms",
+        "arrays",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "recursion"
+      ]
+    },
+    {
+      "slug": "binary-search-tree",
+      "uuid": "865806e0-950f-49a5-a6e5-26472b90ab85",
+      "core": false,
+      "unlocked_by": "linked-list",
+      "difficulty": 6,
+      "topics": [
+        "algorithms",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "recursion"
+      ]
+    },
+    {
+      "slug": "robot-simulator",
+      "uuid": "00002977-ea1e-45e2-b66e-09d793b5c1ad",
+      "core": false,
+      "unlocked_by": "wordy",
+      "difficulty": 5,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "games",
         "parsing",
         "strings"
-      ],
-      "unlocked_by": "wordy",
-      "uuid": "00002977-ea1e-45e2-b66e-09d793b5c1ad"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 5,
       "slug": "nth-prime",
+      "uuid": "8fa51380-ec2c-4806-8833-cf543579de17",
+      "core": false,
+      "unlocked_by": "prime-factors",
+      "difficulty": 5,
       "topics": [
         "algorithms",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "integers",
         "mathematics"
-      ],
-      "unlocked_by": "prime-factors",
-      "uuid": "8fa51380-ec2c-4806-8833-cf543579de17"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 7,
       "slug": "palindrome-products",
+      "uuid": "fde83f66-d927-48f8-a599-efb98927f0b1",
+      "core": false,
+      "unlocked_by": "prime-factors",
+      "difficulty": 7,
       "topics": [
         "algorithms",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "integers",
         "mathematics"
-      ],
-      "unlocked_by": "prime-factors",
-      "uuid": "fde83f66-d927-48f8-a599-efb98927f0b1"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 6,
       "slug": "say",
+      "uuid": "01d286f6-5f29-4d4b-a4de-e217a4833bfa",
+      "core": false,
+      "unlocked_by": "bob",
+      "difficulty": 6,
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "integers",
         "mathematics",
         "strings",
-        "text-formatting"
-      ],
-      "unlocked_by": "bob",
-      "uuid": "01d286f6-5f29-4d4b-a4de-e217a4833bfa"
+        "text_formatting"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 6,
       "slug": "custom-set",
+      "uuid": "d4ec15c4-2742-493b-97fe-9d5121f0b659",
+      "core": false,
+      "unlocked_by": "linked-list",
+      "difficulty": 6,
       "topics": [
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "data-structures",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "data_structures",
         "equality",
         "lists",
         "recursion",
         "sets"
-      ],
-      "unlocked_by": "linked-list",
-      "uuid": "d4ec15c4-2742-493b-97fe-9d5121f0b659"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 5,
       "slug": "sum-of-multiples",
+      "uuid": "f30463c4-9d8c-4238-a691-e594291b4425",
+      "core": false,
+      "unlocked_by": "prime-factors",
+      "difficulty": 5,
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "integers",
         "lists"
-      ],
-      "unlocked_by": "prime-factors",
-      "uuid": "f30463c4-9d8c-4238-a691-e594291b4425"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 8,
       "slug": "queen-attack",
-      "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "equality",
-        "exception-handling",
-        "optional-values",
-        "parsing",
-        "text-formatting"
-      ],
+      "uuid": "fefcfeba-59ec-4c63-a562-374201ee39a7",
+      "core": false,
       "unlocked_by": null,
-      "uuid": "fefcfeba-59ec-4c63-a562-374201ee39a7"
+      "difficulty": 8,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "equality",
+        "exception_handling",
+        "optional_values",
+        "parsing",
+        "text_formatting"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 6,
       "slug": "saddle-points",
+      "uuid": "98cbae4f-78b6-4745-b922-39e8db9a12bb",
+      "core": false,
+      "unlocked_by": "matrix",
+      "difficulty": 6,
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "equality",
-        "exception-handling",
+        "exception_handling",
         "integers",
         "mathematics",
         "matrices",
-        "optional-values",
+        "optional_values",
         "parsing"
-      ],
-      "unlocked_by": "matrix",
-      "uuid": "98cbae4f-78b6-4745-b922-39e8db9a12bb"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 5,
       "slug": "ocr-numbers",
+      "uuid": "759618b1-7ccc-46cd-889d-aea58ec88756",
+      "core": false,
+      "unlocked_by": "matrix",
+      "difficulty": 5,
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "equality",
-        "exception-handling",
+        "exception_handling",
         "integers",
         "parsing",
-        "text-formatting"
-      ],
-      "unlocked_by": "matrix",
-      "uuid": "759618b1-7ccc-46cd-889d-aea58ec88756"
+        "text_formatting"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 7,
       "slug": "meetup",
+      "uuid": "86b1b6ba-c1fe-492d-a7ec-c22c525b4da8",
+      "core": false,
+      "unlocked_by": "gigasecond",
+      "difficulty": 7,
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
+        "control_flow_conditionals",
+        "control_flow_loops",
         "dates",
         "equality",
-        "exception-handling",
+        "exception_handling",
         "time"
-      ],
-      "unlocked_by": "gigasecond",
-      "uuid": "86b1b6ba-c1fe-492d-a7ec-c22c525b4da8"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 3,
       "slug": "bracket-push",
+      "uuid": "25099f87-5c3b-4a8a-b648-4639d1e9fa84",
+      "core": false,
+      "unlocked_by": "pangram",
+      "difficulty": 3,
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "parsing",
         "strings"
-      ],
-      "unlocked_by": "pangram",
-      "uuid": "25099f87-5c3b-4a8a-b648-4639d1e9fa84"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 6,
       "slug": "two-bucket",
+      "uuid": "4c857b17-33b0-47fa-b981-6b2fe4e394a1",
+      "core": false,
+      "unlocked_by": "grade-school",
+      "difficulty": 6,
       "topics": [
         "algorithms",
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "games",
         "parsing"
-      ],
-      "unlocked_by": "grade-school",
-      "uuid": "4c857b17-33b0-47fa-b981-6b2fe4e394a1"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 8,
       "slug": "bowling",
-      "topics": [
-        "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
-        "games",
-        "parsing",
-        "text-formatting"
-      ],
+      "uuid": "c168fe1f-f84e-46e6-91fc-7553d048a4e9",
+      "core": false,
       "unlocked_by": "grade-school",
-      "uuid": "c168fe1f-f84e-46e6-91fc-7553d048a4e9"
-    },
-    {
-      "core": false,
-      "difficulty": 5,
-      "slug": "diamond",
+      "difficulty": 8,
       "topics": [
         "arrays",
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "games",
         "parsing",
-        "text-formatting"
-      ],
-      "unlocked_by": "pascals-triangle",
-      "uuid": "04a4ef78-5b61-454f-8c37-798875fb4956"
+        "text_formatting"
+      ]
     },
     {
+      "slug": "diamond",
+      "uuid": "04a4ef78-5b61-454f-8c37-798875fb4956",
       "core": false,
+      "unlocked_by": "pascals-triangle",
       "difficulty": 5,
-      "slug": "all-your-base",
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "exception-handling",
+        "arrays",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
+        "games",
+        "parsing",
+        "text_formatting"
+      ]
+    },
+    {
+      "slug": "all-your-base",
+      "uuid": "cdfcec62-f2f3-4408-ad2c-8b5e1e56e791",
+      "core": false,
+      "unlocked_by": "binary",
+      "difficulty": 5,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
         "integers",
         "mathematics",
         "parsing"
-      ],
-      "unlocked_by": "binary",
-      "uuid": "cdfcec62-f2f3-4408-ad2c-8b5e1e56e791"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 7,
       "slug": "minesweeper",
-      "topics": [
-        "algorithms",
-        "arrays",
-        "games"
-      ],
+      "uuid": "22fa5ab4-935b-44cc-b055-9803214ae5f3",
+      "core": false,
       "unlocked_by": null,
-      "uuid": "22fa5ab4-935b-44cc-b055-9803214ae5f3"
+      "difficulty": 7,
+      "topics": [
+        "algorithms",
+        "arrays",
+        "games"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 7,
       "slug": "alphametics",
+      "uuid": "42a7fd83-4508-403c-8b5e-f0a3126fac8a",
+      "core": false,
+      "unlocked_by": "grade-school",
+      "difficulty": 7,
       "topics": [
         "algorithms",
         "games"
-      ],
-      "unlocked_by": "grade-school",
-      "uuid": "42a7fd83-4508-403c-8b5e-f0a3126fac8a"
+      ]
     },
     {
-      "core": false,
-      "difficulty": 8,
       "slug": "simple-linked-list",
+      "uuid": "c21ab6e8-b845-49d0-a2f6-1c89c7a07626",
+      "core": false,
+      "unlocked_by": "linked-list",
+      "difficulty": 8,
       "topics": [
         "arrays",
-        "data-structures",
+        "data_structures",
         "lists"
-      ],
-      "unlocked_by": "linked-list",
-      "uuid": "c21ab6e8-b845-49d0-a2f6-1c89c7a07626"
+      ]
     },
     {
-      "uuid": "833bd7c7-d3d8-45fd-a218-12dea646065d",
       "slug": "diffie-hellman",
+      "uuid": "833bd7c7-d3d8-45fd-a218-12dea646065d",
       "core": false,
       "unlocked_by": "simple-cipher",
       "difficulty": 3,
       "topics": [
-        "Control-flow (conditionals)",
-        "Control-flow (loops)",
-        "Algorithms",
-        "Arrays",
-        "Exception handling"
+        "algorithms",
+        "arrays",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling"
       ]
     },
     {
-      "core" :  false,
-      "difficulty" : 8,
-      "slug" : "change",
-       "topics": [
-          "Algorithms",
-          "Mathematics",
-          "Performance",
-          "Searching"
-      ],
+      "slug": "change",
+      "uuid": "910fe904-7e3c-11e7-bb31-be2e44b06b34",
+      "core": false,
       "unlocked_by": "prime-factors",
-      "uuid" : "910fe904-7e3c-11e7-bb31-be2e44b06b34"
+      "difficulty": 8,
+      "topics": [
+        "algorithms",
+        "mathematics",
+        "performance",
+        "searching"
+      ]
     },
     {
-      "uuid": "3b779cb8-9544-4e0d-a306-e5478d741be7",
       "slug": "connect",
+      "uuid": "3b779cb8-9544-4e0d-a306-e5478d741be7",
       "core": false,
       "unlocked_by": "grade-school",
       "difficulty": 7,
       "topics": [
-        "Control-flow (loops)",
-        "Control-flow (conditionals)",
-        "Games",
-        "Parsing",
-        "Arrays",
-        "Maps"
+        "arrays",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "games",
+        "maps",
+        "parsing"
       ]
     },
     {
-      "core" :  false,
-      "difficulty" : 1,
-      "slug" : "collatz-conjecture",
-       "topics": [
-         "Control-flow (loops)",
-         "Control-flow (conditionals)",
-         "Recursion",
-         "Integers",
-         "Algorithms",
-         "Mathematics"
-      ],
+      "slug": "collatz-conjecture",
+      "uuid": "fd435dad-311a-4c40-9868-70863455831e",
+      "core": false,
       "unlocked_by": null,
-      "uuid" : "fd435dad-311a-4c40-9868-70863455831e"
+      "difficulty": 1,
+      "topics": [
+        "algorithms",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "integers",
+        "mathematics",
+        "recursion"
+      ]
     },
     {
-      "deprecated": true,
       "slug": "nucleotide-count",
-      "uuid": "1b53340d-ea40-44ee-bf2e-42e516704e7c"
+      "uuid": "1b53340d-ea40-44ee-bf2e-42e516704e7c",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 0,
+      "topics": null,
+      "deprecated": true
     },
     {
-      "deprecated": true,
       "slug": "point-mutations",
-      "uuid": "e9a6b2ea-a67d-4b75-800d-7b46240094ec"
+      "uuid": "e9a6b2ea-a67d-4b75-800d-7b46240094ec",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 0,
+      "topics": null,
+      "deprecated": true
     },
     {
-      "uuid": "09e10522-9853-11e7-abc4-cec278b6b50a",
       "slug": "twelve-days",
+      "uuid": "09e10522-9853-11e7-abc4-cec278b6b50a",
       "core": false,
       "unlocked_by": "bob",
       "difficulty": 4,
       "topics": [
-        "Control-flow (conditionals)",
-        "Control-flow (loops)",
-        "Strings",
-        "Pattern recognition"
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "pattern_recognition",
+        "strings"
       ]
     },
     {
-      "core": false,
-      "difficulty": 1,
       "slug": "transpose",
+      "uuid": "7c024853-0540-473d-b2d9-cad84953c00f",
+      "core": false,
+      "unlocked_by": "matrix",
+      "difficulty": 1,
       "topics": [
-        "loops",
         "arrays",
         "lists",
+        "loops",
         "matrices",
         "strings",
         "text_formatting"
-      ],
-      "unlocked_by": "matrix",
-      "uuid": "7c024853-0540-473d-b2d9-cad84953c00f"
+      ]
     },
     {
-      "uuid": "52c775a4-7ddb-4cba-8a78-8544220bd1b6",
       "slug": "protein-translation",
+      "uuid": "52c775a4-7ddb-4cba-8a78-8544220bd1b6",
       "core": false,
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "control-flow-(conditionals)",
-        "control-flow-(loops)",
-        "strings",
-        "algorithms"
+        "algorithms",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "strings"
       ]
     },
     {
-      "uuid": "f4a3d66a-04a8-3e80-6c9a-8a573ccb26fd9ed1d5c",
       "slug": "zipper",
+      "uuid": "f4a3d66a-04a8-3e80-6c9a-8a573ccb26fd9ed1d5c",
       "core": false,
       "unlocked_by": null,
       "difficulty": 8,
@@ -1197,8 +1226,8 @@
       ]
     },
     {
-      "uuid": "8740af44-002c-4716-a759-a68ae4c68737",
       "slug": "isbn-verifier",
+      "uuid": "8740af44-002c-4716-a759-a68ae4c68737",
       "core": false,
       "unlocked_by": "bob",
       "difficulty": 4,
@@ -1210,20 +1239,20 @@
       ]
     },
     {
-      "uuid": "b3dbc935-536e-4910-994d-4a519b511b6a",
       "slug": "forth",
+      "uuid": "b3dbc935-536e-4910-994d-4a519b511b6a",
       "core": false,
       "unlocked_by": "matrix",
       "difficulty": 8,
       "topics": [
-        "stacks",
+        "domain_specific_languages",
         "parsing",
-        "domain_specific_languages"
+        "stacks"
       ]
     },
     {
-      "uuid": "f82e470d-0bcc-4eba-b9b0-8a0c50a6fd19",
       "slug": "variable-length-quantity",
+      "uuid": "f82e470d-0bcc-4eba-b9b0-8a0c50a6fd19",
       "core": false,
       "unlocked_by": "grade-school",
       "difficulty": 5,
@@ -1233,30 +1262,27 @@
       ]
     },
     {
-      "uuid": "cb09212c-f2ae-4acf-9177-6c7f42594c1d",
       "slug": "rectangles",
+      "uuid": "cb09212c-f2ae-4acf-9177-6c7f42594c1d",
       "core": false,
       "unlocked_by": "grade-school",
       "difficulty": 6,
       "topics": [
         "parsing",
-        "searching",
-        "pattern_recognition"
+        "pattern_recognition",
+        "searching"
       ]
     },
     {
-      "uuid": "0e4b628c-870d-446b-a400-3cc72457f2bc",
       "slug": "armstrong-numbers",
+      "uuid": "0e4b628c-870d-446b-a400-3cc72457f2bc",
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
-        "mathematics",
-        "algorithms"
+        "algorithms",
+        "mathematics"
       ]
     }
-  ],
-  "foregone": [],
-  "language": "JavaScript",
-  "test_pattern": ".*[.]spec[.]js$"
+  ]
 }
