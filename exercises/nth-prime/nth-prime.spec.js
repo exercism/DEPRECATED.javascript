@@ -17,6 +17,14 @@ describe('Prime', function () {
     expect(prime.nth(10001)).toEqual(104743);
   });
 
+  xit('massive prime', function () {
+    expect(prime.nth(20000)).toEqual(224737);
+  });
+
+  xit('extreme prime', function () {
+    expect(prime.nth(30000)).toEqual(350377);
+  });
+
   xit('weird case', function () {
     expect( function () {
       prime.nth(0);

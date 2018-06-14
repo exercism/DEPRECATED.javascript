@@ -3,7 +3,11 @@
 module.exports = {
   nth: function (nthPrime) {
     if (nthPrime === 0) { throw new Error('Prime is not possible'); }
-    this.generatePrimes(200000);
+
+    // Using prime number theory to approximate the prime
+    // See https://en.wikipedia.org/wiki/Prime_number_theorem#Approximations_for_the_nth_prime_number
+    var upperBound = (nthPrime + 2) * Math.log((nthPrime + 2) * Math.log((nthPrime + 2)));
+    this.generatePrimes(upperBound);
     return this.realPrimes[nthPrime - 1];
   },
   generatePrimes: function (uptoNumber) {
