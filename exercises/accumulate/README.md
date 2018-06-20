@@ -25,35 +25,17 @@ Keep your hands off that collect/map/fmap/whatchamacallit functionality
 provided by your standard library!
 Solve this one yourself using other basic tools instead.
 
-## Setup
+## Steps
 
-Go through the setup instructions for JavaScript to install the
- necessary dependencies:
+1. in your terminal, enter the exercise directory e.g. `cd accumulate`
+2. create a file in this directory named `accumulate.js` containing this code:
 
-http://exercism.io/languages/javascript/installation
+        module.exports = function(values, operation) {
+        };
 
-## Running the test suite
-
-The provided test suite uses [Jasmine](https://jasmine.github.io/).
-You can install it by opening a terminal window and running the
-following command:
-
-```sh
-npm install -g jasmine
-```
-
-Run the test suite from the exercise directory with:
-
-```sh
-jasmine accumulate.spec.js
-```
-
-In many test suites all but the first test have been marked "pending".
-Once you get a test passing, activate the next one by changing `xit` to `it`.
+3. run `jasmine --fail-fast=true accumulate.spec.js` and keep coding until all specs pass
+4. run `exercism submit accumulate.js`
 
 ## Source
 
 Conversation with James Edward Gray II [https://twitter.com/jeg2](https://twitter.com/jeg2)
-
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
