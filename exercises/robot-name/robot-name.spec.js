@@ -34,7 +34,7 @@ describe('Robot', function () {
     expect(originalName).not.toEqual(newName);
   });
 
-  xit('should set a unique name after reset', function () {
+  xit('should set a unique valid name after reset', function () {
     var i;
     var numResets = 10000;
     var usedNames = {};
@@ -43,6 +43,7 @@ describe('Robot', function () {
 
     for (i = 0; i < numResets; i++) {
       robot.reset();
+      expect(robot.name).toMatch(/^[A-Z]{2}\d{3}$/);
       usedNames[robot.name] = true;
     }
 
