@@ -1,3 +1,12 @@
+# DEPRECATION NOTICE
+
+This track will be deprecated as part of the migration of Exercism to V2.  Going forward, the EcmaScript track will replace the JavaScript track as "the new JavaScript" track.  
+- User's old submissions will be migrated
+- PRs unrelated to the deprecation will be closed as `wontfix`
+- Issues unrelated to deprecation will be closed as `wontfix`
+
+Thank you to all the many invested and hardworking contributors who have helped to make this track a success!!
+
 # JavaScript [![Build Status](https://travis-ci.org/exercism/javascript.svg?branch=master)](https://travis-ci.org/exercism/javascript)[![Join the chat at https://gitter.im/exercism/xecmascript](https://badges.gitter.im/exercism/xecmascript.svg)](https://gitter.im/exercism/xecmascript?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Exercism exercises in JavaScript
